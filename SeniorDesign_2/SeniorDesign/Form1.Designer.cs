@@ -35,6 +35,7 @@ namespace SeniorDesign
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -51,6 +52,7 @@ namespace SeniorDesign
             // 
             // nextbutton
             // 
+            this.nextbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nextbutton.Location = new System.Drawing.Point(357, 230);
             this.nextbutton.Name = "nextbutton";
             this.nextbutton.Size = new System.Drawing.Size(75, 23);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SeniorDesign
 {
@@ -19,11 +20,14 @@ namespace SeniorDesign
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
         }
+
 
         private void nextbutton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CitySelectionFrm form2 = new CitySelectionFrm();
             form2.Show();
         }

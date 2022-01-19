@@ -19,15 +19,16 @@ namespace SeniorDesign
 
         private void submitbutton_Click(object sender, EventArgs e)
         {
+            this.Close();
             DataSelectionFrm form3 = new DataSelectionFrm();
             form3.Show();
         }
 
         private void backbutton_Click(object sender, EventArgs e)
         {
+            this.Close();
             StartFrm form1 = new StartFrm();
             form1.Show();
-
         }
     }
 }
