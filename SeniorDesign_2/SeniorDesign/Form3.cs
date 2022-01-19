@@ -18,24 +18,26 @@ namespace SeniorDesign
         }
         private void covidbutton_Click(object sender, EventArgs e)
         {
+            //this.Hide();
             CovidDataFrm form4 = new CovidDataFrm();
             form4.Show();
         }
- 
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //this.Hide();
             FBIdatafrm form5 = new FBIdatafrm();
             form5.Show();
         }
-       private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-        
-            
+
+
         }
 
         private void terrordatabutton_Click(object sender, EventArgs e)
         {
+            //this.Hide();
             TerrorismDataFrm form6 = new TerrorismDataFrm();
             form6.Show();
         }
