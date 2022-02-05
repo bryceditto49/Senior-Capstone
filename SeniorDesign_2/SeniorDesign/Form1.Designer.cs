@@ -35,7 +35,7 @@ namespace SeniorDesign
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -44,31 +44,36 @@ namespace SeniorDesign
             "Arkansas",
             "Alabama",
             "Mississippi"});
-            this.comboBox1.Location = new System.Drawing.Point(302, 190);
+            this.comboBox1.Location = new System.Drawing.Point(326, 232);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 21);
+            this.comboBox1.Size = new System.Drawing.Size(256, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Please Enter A State";
             // 
             // nextbutton
             // 
             this.nextbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nextbutton.Location = new System.Drawing.Point(357, 230);
+            this.nextbutton.Image = global::SeniorDesign.Properties.Resources.submit_button;
+            this.nextbutton.Location = new System.Drawing.Point(605, 231);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(4);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(75, 23);
+            this.nextbutton.Size = new System.Drawing.Size(104, 24);
             this.nextbutton.TabIndex = 1;
-            this.nextbutton.Text = "Submit";
             this.nextbutton.UseVisualStyleBackColor = true;
             this.nextbutton.Click += new System.EventHandler(this.nextbutton_Click);
             // 
             // StartFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::SeniorDesign.Properties.Resources.background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.nextbutton);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartFrm";
             this.Text = "Working Title";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -37,9 +37,10 @@ namespace SeniorDesign
             // 
             // Exportbutton
             // 
-            this.Exportbutton.Location = new System.Drawing.Point(713, 415);
+            this.Exportbutton.Location = new System.Drawing.Point(951, 511);
+            this.Exportbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Exportbutton.Name = "Exportbutton";
-            this.Exportbutton.Size = new System.Drawing.Size(75, 23);
+            this.Exportbutton.Size = new System.Drawing.Size(100, 28);
             this.Exportbutton.TabIndex = 0;
             this.Exportbutton.Text = "Export All";
             this.Exportbutton.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@ namespace SeniorDesign
             // 
             // covidbutton
             // 
-            this.covidbutton.Location = new System.Drawing.Point(69, 126);
+            this.covidbutton.Location = new System.Drawing.Point(92, 155);
+            this.covidbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.covidbutton.Name = "covidbutton";
-            this.covidbutton.Size = new System.Drawing.Size(215, 162);
+            this.covidbutton.Size = new System.Drawing.Size(287, 199);
             this.covidbutton.TabIndex = 1;
             this.covidbutton.Text = "COVID 19";
             this.covidbutton.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@ namespace SeniorDesign
             // 
             // crimedatabutton
             // 
-            this.crimedatabutton.Location = new System.Drawing.Point(290, 126);
+            this.crimedatabutton.Location = new System.Drawing.Point(387, 155);
+            this.crimedatabutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crimedatabutton.Name = "crimedatabutton";
-            this.crimedatabutton.Size = new System.Drawing.Size(215, 162);
+            this.crimedatabutton.Size = new System.Drawing.Size(287, 199);
             this.crimedatabutton.TabIndex = 2;
             this.crimedatabutton.Text = "Violent Crime Data";
             this.crimedatabutton.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@ namespace SeniorDesign
             // 
             // terrordatabutton
             // 
-            this.terrordatabutton.Location = new System.Drawing.Point(511, 126);
+            this.terrordatabutton.Location = new System.Drawing.Point(681, 155);
+            this.terrordatabutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.terrordatabutton.Name = "terrordatabutton";
-            this.terrordatabutton.Size = new System.Drawing.Size(215, 162);
+            this.terrordatabutton.Size = new System.Drawing.Size(287, 199);
             this.terrordatabutton.TabIndex = 3;
             this.terrordatabutton.Text = "Terrorism Data";
             this.terrordatabutton.UseVisualStyleBackColor = true;
@@ -77,14 +81,17 @@ namespace SeniorDesign
             // 
             // DataSelectionFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::SeniorDesign.Properties.Resources.background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.terrordatabutton);
             this.Controls.Add(this.crimedatabutton);
             this.Controls.Add(this.covidbutton);
             this.Controls.Add(this.Exportbutton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DataSelectionFrm";
             this.Text = "Data Selection";
             this.ResumeLayout(false);
