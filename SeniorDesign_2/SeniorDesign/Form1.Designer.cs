@@ -44,36 +44,35 @@ namespace SeniorDesign
             "Arkansas",
             "Alabama",
             "Mississippi"});
-            this.comboBox1.Location = new System.Drawing.Point(326, 232);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(244, 188);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 24);
+            this.comboBox1.Size = new System.Drawing.Size(193, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Please Enter A State";
             // 
             // nextbutton
             // 
             this.nextbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nextbutton.Image = global::SeniorDesign.Properties.Resources.submit_button;
-            this.nextbutton.Location = new System.Drawing.Point(605, 231);
-            this.nextbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.nextbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextbutton.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.nextbutton.Image = global::SeniorDesign.Properties.Resources.submitbutton;
+            this.nextbutton.Location = new System.Drawing.Point(443, 188);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(104, 24);
+            this.nextbutton.Size = new System.Drawing.Size(79, 21);
             this.nextbutton.TabIndex = 1;
             this.nextbutton.UseVisualStyleBackColor = true;
             this.nextbutton.Click += new System.EventHandler(this.nextbutton_Click);
             // 
             // StartFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::SeniorDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.nextbutton);
             this.Controls.Add(this.comboBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartFrm";
             this.Text = "Working Title";
             this.Load += new System.EventHandler(this.Form1_Load);

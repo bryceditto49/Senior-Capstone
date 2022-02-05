@@ -141,7 +141,16 @@
     <None Include="Resources\backbutton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\submit-button.png" />
+    <None Include="Resources\medicalcross.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handcufficon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terrorismicon2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submitbutton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
