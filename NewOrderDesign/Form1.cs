@@ -32,5 +32,17 @@ namespace NewOrderDesign
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        string username;
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            username = textBox1.Text;
+        }
+
+        string password;
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            password = textBox2.Text;
+        }
     }
 }

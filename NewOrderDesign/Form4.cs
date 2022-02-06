@@ -21,5 +21,11 @@ namespace NewOrderDesign
         {
 
         }
+
+        string state;
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            state = textBox1.Text;
+        }
     }
 }
