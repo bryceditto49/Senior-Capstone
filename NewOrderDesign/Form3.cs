@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeniorDesign
+namespace NewOrderDesign
 {
-    public partial class FBIdatafrm : Form
+    public partial class Form3 : Form
     {
-        public FBIdatafrm()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+
         }
     }
 }

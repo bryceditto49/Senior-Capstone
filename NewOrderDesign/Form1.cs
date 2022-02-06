@@ -7,28 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
-namespace SeniorDesign
+namespace NewOrderDesign
 {
-    public partial class StartFrm : Form
+    public partial class Form1 : Form
     {
-        public StartFrm()
+        public Form1()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
-            this.WindowState = FormWindowState.Maximized;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void nextbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CitySelectionFrm form2 = new CitySelectionFrm();
+            Form2 form2 = new Form2();
             form2.Show();
         }
     }

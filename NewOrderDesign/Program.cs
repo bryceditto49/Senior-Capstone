@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeniorDesign
+namespace NewOrderDesign
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace SeniorDesign
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartFrm());
+            Application.Run(new Form1());
         }
     }
 }

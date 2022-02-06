@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeniorDesign
+namespace NewOrderDesign
 {
-    public partial class CovidDataFrm : Form
+    public partial class UserControl1 : UserControl
     {
-        public CovidDataFrm()
+        public UserControl1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }
