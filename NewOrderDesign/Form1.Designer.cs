@@ -83,12 +83,13 @@ namespace NewOrderDesign
             this.registerlink.TabIndex = 3;
             this.registerlink.TabStop = true;
             this.registerlink.Text = "Register";
+            this.registerlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerlink_LinkClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(282, 81);
+            this.label1.Location = new System.Drawing.Point(294, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 4;

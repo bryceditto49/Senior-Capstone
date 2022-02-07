@@ -44,5 +44,10 @@ namespace NewOrderDesign
         {
             password = textBox2.Text;
         }
+
+        private void registerlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
