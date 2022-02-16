@@ -46,34 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CovidDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CovidDataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CovidDataNYTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FBIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LandingPage.Designer.cs">
+      <DependentUpon>LandingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="DataSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="DataSelection.Designer.cs">
+      <DependentUpon>DataSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="CovidStateData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="CovidStateData.Designer.cs">
+      <DependentUpon>CovidStateData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="FBIStateDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FBIStateDashboard.Designer.cs">
+      <DependentUpon>FBIStateDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBIUSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBIUSView.Designer.cs">
+      <DependentUpon>FBIUSView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,17 +104,20 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LandingPage.resx">
+      <DependentUpon>LandingPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="DataSelection.resx">
+      <DependentUpon>DataSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="CovidStateData.resx">
+      <DependentUpon>CovidStateData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FBIStateDashboard.resx">
+      <DependentUpon>FBIStateDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBIUSView.resx">
+      <DependentUpon>FBIUSView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +129,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="CovidDataDataSet.xsc">
+      <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet.xss">
+      <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet1.xsc">
+      <DependentUpon>CovidDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet1.xss">
+      <DependentUpon>CovidDataDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="CovidDataNYTDataSet.xsc">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
     </None>
@@ -115,6 +161,17 @@
     </None>
     <None Include="CovidDataNYTDataSet.xss">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet.xsc">
+      <DependentUpon>FBIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet.xss">
+      <DependentUpon>FBIDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace NewOrderDesign
 {
-    public partial class Form3 : Form
+    public partial class CovidStateData : Form
     {
-        public Form3()
+        public CovidStateData()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = DESKTOP-GMQRRJB\sqlexpress; Database = CovidDataNYT; Trusted_Connection = True;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = CovidData; Trusted_Connection = True;";
 
             try
             {
@@ -74,8 +74,8 @@ namespace NewOrderDesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'covidDataNYTDataSet.states' table. You can move, or remove it, as needed.
-            this.statesTableAdapter.Fill(this.covidDataNYTDataSet.states);
+            // TODO: This line of code loads data into the 'covidDataDataSet1.states' table. You can move, or remove it, as needed.
+            this.statesTableAdapter2.Fill(this.covidDataDataSet1.states);
 
         }
 

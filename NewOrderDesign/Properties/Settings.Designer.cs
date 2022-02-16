@@ -33,5 +33,27 @@ namespace NewOrderDesign.Properties {
                 return ((string)(this["CovidDataNYTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RU1AMPT\\SQLEXPRESS;Initial Catalog=CovidData;Integrated Secur" +
+            "ity=True")]
+        public string CovidDataConnectionString {
+            get {
+                return ((string)(this["CovidDataConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RU1AMPT\\SQLEXPRESS;Initial Catalog=FBI;Integrated Security=Tr" +
+            "ue")]
+        public string FBIConnectionString {
+            get {
+                return ((string)(this["FBIConnectionString"]));
+            }
+        }
     }
 }

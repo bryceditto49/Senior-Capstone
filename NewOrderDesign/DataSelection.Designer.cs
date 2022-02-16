@@ -1,7 +1,7 @@
 ﻿
 namespace NewOrderDesign
 {
-    partial class Form2
+    partial class DataSelection
     {
         /// <summary>
         /// Required designer variable.

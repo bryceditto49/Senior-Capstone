@@ -1,7 +1,7 @@
 ﻿
 namespace NewOrderDesign
 {
-    partial class Form1
+    partial class LandingPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace NewOrderDesign
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingPage));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.nextbutton = new System.Windows.Forms.Button();

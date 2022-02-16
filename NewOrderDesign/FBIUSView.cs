@@ -10,22 +10,20 @@ using System.Windows.Forms;
 
 namespace NewOrderDesign
 {
-    public partial class Form4 : Form
+    public partial class FBIUSView : Form
     {
-        public Form4()
+        public FBIUSView()
         {
             InitializeComponent();
         }
 
-        private void submitbutton_Click(object sender, EventArgs e)
+        private void continueFBIUSView_Click(object sender, EventArgs e)
         {
-
-        }
-
-        string state;
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            state = textBox1.Text;
+            this.Hide();
+            FBIStateDashboard form4 = new FBIStateDashboard();
+            form4.Show();
         }
     }
+
+
 }

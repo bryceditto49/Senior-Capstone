@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NewOrderDesign
 {
-    public partial class Form2 : Form
+    public partial class DataSelection : Form
     {
-        public Form2()
+        public DataSelection()
         {
             InitializeComponent();
         }
@@ -35,15 +35,15 @@ namespace NewOrderDesign
         private void covidbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 form3 = new Form3();
+            CovidStateData form3 = new CovidStateData();
             form3.Show();
         }
 
         private void fbibutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form4 form4 = new Form4();
-            form4.Show();
+            FBIUSView form5 = new FBIUSView();
+            form5.Show();
         }
     }
 }

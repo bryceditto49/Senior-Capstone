@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NewOrderDesign
 {
-    public partial class Form1 : Form
+    public partial class LandingPage : Form
     {
-        public Form1()
+        public LandingPage()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace NewOrderDesign
         private void nextbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            DataSelection form2 = new DataSelection();
             form2.Show();
         }
 
