@@ -55,5 +55,38 @@ namespace NewOrderDesign.Properties {
                 return ((string)(this["FBIConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Persist Security Info=True;User ID=ape" +
+            "user;Password=daylonswallows123")]
+        public string ConnectionString {
+            get {
+                return ((string)(this["ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security I" +
+            "nfo=True;User ID=apeuser;Password=daylonswallows123")]
+        public string FBIConnectionString1 {
+            get {
+                return ((string)(this["FBIConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Secu" +
+            "rity Info=True;User ID=apeuser;Password=daylonswallows123")]
+        public string CovidDataConnectionString1 {
+            get {
+                return ((string)(this["CovidDataConnectionString1"]));
+            }
+        }
     }
 }

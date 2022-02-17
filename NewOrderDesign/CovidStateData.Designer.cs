@@ -40,22 +40,29 @@ namespace NewOrderDesign
             this.statefipscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deathsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet3 = new NewOrderDesign.CovidDataDataSet3();
+            this.statesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet1 = new NewOrderDesign.CovidDataDataSet1();
             this.statesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.covidDataDataSet = new NewOrderDesign.CovidDataDataSet();
             this.statesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.covidDataNYTDataSet = new NewOrderDesign.CovidDataNYTDataSet();
             this.statesTableAdapter = new NewOrderDesign.CovidDataNYTDataSetTableAdapters.statesTableAdapter();
             this.statesTableAdapter1 = new NewOrderDesign.CovidDataDataSetTableAdapters.statesTableAdapter();
-            this.covidDataDataSet1 = new NewOrderDesign.CovidDataDataSet1();
-            this.statesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter2 = new NewOrderDesign.CovidDataDataSet1TableAdapters.statesTableAdapter();
+            this.statesTableAdapter3 = new NewOrderDesign.CovidDataDataSet3TableAdapters.statesTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -63,11 +70,12 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(97, 15);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 31);
+            this.textBox1.Size = new System.Drawing.Size(367, 37);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Please Enter A U.S. State";
+            this.textBox1.Text = "Please Enter a U.S. State";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // submitbutton
@@ -76,9 +84,10 @@ namespace NewOrderDesign
             this.submitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbutton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.submitbutton.Location = new System.Drawing.Point(313, 12);
+            this.submitbutton.Location = new System.Drawing.Point(495, 15);
+            this.submitbutton.Margin = new System.Windows.Forms.Padding(4);
             this.submitbutton.Name = "submitbutton";
-            this.submitbutton.Size = new System.Drawing.Size(58, 31);
+            this.submitbutton.Size = new System.Drawing.Size(77, 38);
             this.submitbutton.TabIndex = 1;
             this.submitbutton.Text = "Go";
             this.submitbutton.UseVisualStyleBackColor = false;
@@ -87,9 +96,10 @@ namespace NewOrderDesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 246);
+            this.label1.Location = new System.Drawing.Point(435, 303);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 13);
+            this.label1.Size = new System.Drawing.Size(286, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -97,9 +107,10 @@ namespace NewOrderDesign
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(713, 12);
+            this.button1.Location = new System.Drawing.Point(951, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "View More";
             this.button1.UseVisualStyleBackColor = false;
@@ -116,14 +127,14 @@ namespace NewOrderDesign
             this.statefipscodeDataGridViewTextBoxColumn,
             this.confirmedcasesDataGridViewTextBoxColumn,
             this.deathsDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.statesBindingSource2;
+            this.dataGridView1.DataSource = this.statesBindingSource3;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(9, 92);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 302);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -167,6 +178,26 @@ namespace NewOrderDesign
             this.deathsDataGridViewTextBoxColumn.Name = "deathsDataGridViewTextBoxColumn";
             this.deathsDataGridViewTextBoxColumn.Width = 125;
             // 
+            // statesBindingSource3
+            // 
+            this.statesBindingSource3.DataMember = "states";
+            this.statesBindingSource3.DataSource = this.covidDataDataSet3;
+            // 
+            // covidDataDataSet3
+            // 
+            this.covidDataDataSet3.DataSetName = "CovidDataDataSet3";
+            this.covidDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statesBindingSource2
+            // 
+            this.statesBindingSource2.DataMember = "states";
+            this.statesBindingSource2.DataSource = this.covidDataDataSet1;
+            // 
+            // covidDataDataSet1
+            // 
+            this.covidDataDataSet1.DataSetName = "CovidDataDataSet1";
+            this.covidDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // statesBindingSource1
             // 
             this.statesBindingSource1.DataMember = "states";
@@ -195,42 +226,61 @@ namespace NewOrderDesign
             // 
             this.statesTableAdapter1.ClearBeforeFill = true;
             // 
-            // covidDataDataSet1
-            // 
-            this.covidDataDataSet1.DataSetName = "CovidDataDataSet1";
-            this.covidDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // statesBindingSource2
-            // 
-            this.statesBindingSource2.DataMember = "states";
-            this.statesBindingSource2.DataSource = this.covidDataDataSet1;
-            // 
             // statesTableAdapter2
             // 
             this.statesTableAdapter2.ClearBeforeFill = true;
             // 
-            // Form3
+            // statesTableAdapter3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.statesTableAdapter3.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 47);
+            this.button2.TabIndex = 10;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // CovidStateData
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.submitbutton);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form3";
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "CovidStateData";
             this.Text = "COVID-19 Data";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +307,10 @@ namespace NewOrderDesign
         private CovidDataDataSet1 covidDataDataSet1;
         private System.Windows.Forms.BindingSource statesBindingSource2;
         private CovidDataDataSet1TableAdapters.statesTableAdapter statesTableAdapter2;
+        private CovidDataDataSet3 covidDataDataSet3;
+        private System.Windows.Forms.BindingSource statesBindingSource3;
+        private CovidDataDataSet3TableAdapters.statesTableAdapter statesTableAdapter3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
