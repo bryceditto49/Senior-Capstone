@@ -25,7 +25,7 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = CovidData; Trusted_Connection = True;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
 
             try
             {
@@ -74,14 +74,21 @@ namespace NewOrderDesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'covidDataDataSet1.states' table. You can move, or remove it, as needed.
-            this.statesTableAdapter2.Fill(this.covidDataDataSet1.states);
+            // TODO: This line of code loads data into the 'covidDataDataSet3.states' table. You can move, or remove it, as needed.
+            this.statesTableAdapter3.Fill(this.covidDataDataSet3.states);
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DataSelection form2 = new DataSelection();
+            form2.Show();
         }
     }
 }

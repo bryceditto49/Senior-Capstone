@@ -23,6 +23,13 @@ namespace NewOrderDesign
             FBIStateDashboard form4 = new FBIStateDashboard();
             form4.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DataSelection form2 = new DataSelection();
+            form2.Show();
+        }
     }
 
 

@@ -56,15 +56,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CovidDataDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CovidDataDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CovidDataDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CovidDataNYTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDataSet.cs">
+      <DependentUpon>FBIDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FBIDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FBIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
@@ -151,6 +174,28 @@
     <None Include="CovidDataDataSet1.xss">
       <DependentUpon>CovidDataDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="CovidDataDataSet2.xsc">
+      <DependentUpon>CovidDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet2.xss">
+      <DependentUpon>CovidDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet3.xsc">
+      <DependentUpon>CovidDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet3.xss">
+      <DependentUpon>CovidDataDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="CovidDataNYTDataSet.xsc">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
     </None>
@@ -162,6 +207,17 @@
     <None Include="CovidDataNYTDataSet.xss">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
     </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="FBIDataSet.xsc">
       <DependentUpon>FBIDataSet.xsd</DependentUpon>
     </None>
@@ -172,6 +228,17 @@
     </None>
     <None Include="FBIDataSet.xss">
       <DependentUpon>FBIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet1.xsc">
+      <DependentUpon>FBIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet1.xss">
+      <DependentUpon>FBIDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -197,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\terrorismicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

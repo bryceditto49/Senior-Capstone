@@ -45,5 +45,12 @@ namespace NewOrderDesign
             FBIUSView form5 = new FBIUSView();
             form5.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LandingPage form1 = new LandingPage();
+            form1.Show();
+        }
     }
 }

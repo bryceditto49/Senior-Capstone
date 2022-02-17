@@ -21,7 +21,7 @@ namespace NewOrderDesign
         private void submitbutton_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; Trusted_Connection = True;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
 
             try
             {
@@ -71,14 +71,21 @@ namespace NewOrderDesign
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fBIDataSet.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
-
+            // TODO: This line of code loads data into the 'fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FBIUSView form4 = new FBIUSView();
+            form4.Show();
         }
     }
 }

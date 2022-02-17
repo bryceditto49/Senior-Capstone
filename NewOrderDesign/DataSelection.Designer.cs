@@ -34,6 +34,7 @@ namespace NewOrderDesign
             this.dhsbutton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // covidbutton
@@ -42,9 +43,10 @@ namespace NewOrderDesign
             this.covidbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.covidbutton.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.covidbutton.Image = global::NewOrderDesign.Properties.Resources.medicalcross;
-            this.covidbutton.Location = new System.Drawing.Point(211, 12);
+            this.covidbutton.Location = new System.Drawing.Point(281, 15);
+            this.covidbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.covidbutton.Name = "covidbutton";
-            this.covidbutton.Size = new System.Drawing.Size(185, 149);
+            this.covidbutton.Size = new System.Drawing.Size(247, 183);
             this.covidbutton.TabIndex = 0;
             this.covidbutton.Text = "COVID-19";
             this.covidbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -58,9 +60,10 @@ namespace NewOrderDesign
             this.fbibutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fbibutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.fbibutton.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fbibutton.Location = new System.Drawing.Point(402, 12);
+            this.fbibutton.Location = new System.Drawing.Point(536, 15);
+            this.fbibutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fbibutton.Name = "fbibutton";
-            this.fbibutton.Size = new System.Drawing.Size(191, 149);
+            this.fbibutton.Size = new System.Drawing.Size(255, 183);
             this.fbibutton.TabIndex = 1;
             this.fbibutton.Text = "Violent Crime Data";
             this.fbibutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -75,9 +78,10 @@ namespace NewOrderDesign
             this.dhsbutton.Cursor = System.Windows.Forms.Cursors.Default;
             this.dhsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dhsbutton.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dhsbutton.Location = new System.Drawing.Point(599, 12);
+            this.dhsbutton.Location = new System.Drawing.Point(799, 15);
+            this.dhsbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dhsbutton.Name = "dhsbutton";
-            this.dhsbutton.Size = new System.Drawing.Size(189, 149);
+            this.dhsbutton.Size = new System.Drawing.Size(252, 183);
             this.dhsbutton.TabIndex = 2;
             this.dhsbutton.Text = "Terrorism";
             this.dhsbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -88,36 +92,50 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 55);
+            this.textBox1.Location = new System.Drawing.Point(32, 68);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 58);
+            this.textBox1.Size = new System.Drawing.Size(172, 71);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Welcome User";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(474, 307);
+            this.textBox2.Location = new System.Drawing.Point(632, 378);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
+            this.textBox2.Size = new System.Drawing.Size(228, 22);
             this.textBox2.TabIndex = 8;
             this.textBox2.Text = "previous saved queries saved here";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // Form2
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.button1.Location = new System.Drawing.Point(33, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DataSelection
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dhsbutton);
             this.Controls.Add(this.fbibutton);
             this.Controls.Add(this.covidbutton);
-            this.Name = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "DataSelection";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,5 +149,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button dhsbutton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
