@@ -21,7 +21,7 @@ namespace NewOrderDesign
         private void submitbutton_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; Trusted_Connection = True;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123";
 
             try
             {

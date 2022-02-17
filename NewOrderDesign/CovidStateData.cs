@@ -25,7 +25,7 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = CovidData; Trusted_Connection = True;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = CovidData; User Id = apeuser; Password = daylonswallows123";
 
             try
             {
