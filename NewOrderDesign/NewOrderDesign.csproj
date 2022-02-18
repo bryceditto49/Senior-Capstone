@@ -89,6 +89,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FBIDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FBIDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIPropertyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIPropertyDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIPropertyDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +254,39 @@
     </None>
     <None Include="FBIDataSet1.xss">
       <DependentUpon>FBIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet2.xsc">
+      <DependentUpon>FBIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet2.xss">
+      <DependentUpon>FBIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FBIPropertyDataSet.xsc">
+      <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FBIPropertyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIPropertyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIPropertyDataSet.xss">
+      <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FBIPropertyDataSet2.xsc">
+      <DependentUpon>FBIPropertyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FBIPropertyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIPropertyDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIPropertyDataSet2.xss">
+      <DependentUpon>FBIPropertyDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
