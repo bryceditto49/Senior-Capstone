@@ -70,7 +70,7 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(97, 15);
+            this.textBox1.Location = new System.Drawing.Point(94, 44);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(367, 37);
@@ -84,7 +84,7 @@ namespace NewOrderDesign
             this.submitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbutton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.submitbutton.Location = new System.Drawing.Point(495, 15);
+            this.submitbutton.Location = new System.Drawing.Point(497, 44);
             this.submitbutton.Margin = new System.Windows.Forms.Padding(4);
             this.submitbutton.Name = "submitbutton";
             this.submitbutton.Size = new System.Drawing.Size(77, 38);

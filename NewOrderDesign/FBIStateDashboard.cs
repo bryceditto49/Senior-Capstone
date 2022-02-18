@@ -130,8 +130,7 @@ namespace NewOrderDesign
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             table = comboBox1.Text;
-            // TODO: This line of code loads data into the 'fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            //this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            submitbutton.PerformClick();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -140,6 +139,16 @@ namespace NewOrderDesign
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
 
         }
