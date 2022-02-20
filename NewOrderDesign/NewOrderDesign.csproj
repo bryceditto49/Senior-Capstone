@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CovidDataDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CovidDataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CovidDataNYTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -210,6 +215,17 @@
     </None>
     <None Include="CovidDataDataSet3.xss">
       <DependentUpon>CovidDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet4.xsc">
+      <DependentUpon>CovidDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet4.xss">
+      <DependentUpon>CovidDataDataSet4.xsd</DependentUpon>
     </None>
     <None Include="CovidDataNYTDataSet.xsc">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>
