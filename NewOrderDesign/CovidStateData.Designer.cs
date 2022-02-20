@@ -57,6 +57,8 @@ namespace NewOrderDesign
             this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter4 = new NewOrderDesign.CovidDataDataSet4TableAdapters.statesTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).BeginInit();
@@ -265,13 +267,39 @@ namespace NewOrderDesign
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(115, 88);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(603, 59);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 23);
+            this.button3.Size = new System.Drawing.Size(88, 28);
             this.button3.TabIndex = 11;
             this.button3.Text = "1 Week\r\n";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(716, 59);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(96, 28);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "2 Weeks";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(842, 59);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(97, 28);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "3 Weeks";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // CovidStateData
             // 
@@ -281,9 +309,11 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.submitbutton);
@@ -338,5 +368,7 @@ namespace NewOrderDesign
         private System.Windows.Forms.BindingSource statesBindingSource4;
         private CovidDataDataSet4TableAdapters.statesTableAdapter statesTableAdapter4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

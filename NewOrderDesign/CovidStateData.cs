@@ -103,8 +103,104 @@ namespace NewOrderDesign
                 {
 
                     //retrieve the SQL Server instance version
-                    string query = $"SELECT * FROM states WHERE state_name = '{state}' AND date BETWEEN '2022-01-25' AND '2022-02-01'";
+                    string query = $"SELECT * FROM (SELECT TOP 7 * FROM states WHERE state_name = '{state}' ORDER BY date DESC) SQ ORDER BY date ASC";
 
+
+                    //AND date BETWEEN '2022-01-25' AND '2022-02-01'//
+                    //define the SqlCommand object
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+
+                    //Set the SqlDataAdapter object
+                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+                    //define dataset
+                    DataSet ds = new DataSet();
+
+                    //fill dataset with query results
+                    dAdapter.Fill(ds);
+
+                    //set DataGridView control to read-only
+                    dataGridView1.ReadOnly = true;
+
+                    //set the DataGridView control's data source/data table
+                    dataGridView1.DataSource = ds.Tables[0];
+
+
+                    //close connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                //display error message
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //set the connection string
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+
+            try
+            {
+                //sql connection object
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+
+                    //retrieve the SQL Server instance version
+                    string query = $"SELECT * FROM (SELECT TOP 14 * FROM states WHERE state_name = '{state}' ORDER BY date DESC) SQ ORDER BY date ASC";
+
+
+                    //AND date BETWEEN '2022-01-25' AND '2022-02-01'//
+                    //define the SqlCommand object
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+
+                    //Set the SqlDataAdapter object
+                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+                    //define dataset
+                    DataSet ds = new DataSet();
+
+                    //fill dataset with query results
+                    dAdapter.Fill(ds);
+
+                    //set DataGridView control to read-only
+                    dataGridView1.ReadOnly = true;
+
+                    //set the DataGridView control's data source/data table
+                    dataGridView1.DataSource = ds.Tables[0];
+
+
+                    //close connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                //display error message
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //set the connection string
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+
+            try
+            {
+                //sql connection object
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+
+                    //retrieve the SQL Server instance version
+                    string query = $"SELECT * FROM (SELECT TOP 21 * FROM states WHERE state_name = '{state}' ORDER BY date DESC) SQ ORDER BY date ASC";
+
+
+                    //AND date BETWEEN '2022-01-25' AND '2022-02-01'//
                     //define the SqlCommand object
                     SqlCommand cmd = new SqlCommand(query, conn);
 
