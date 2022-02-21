@@ -39,6 +39,8 @@ namespace NewOrderDesign
             this.statenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deathsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet4 = new NewOrderDesign.CovidDataDataSet4();
             this.statesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.covidDataDataSet3 = new NewOrderDesign.CovidDataDataSet3();
             this.statesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -53,13 +55,15 @@ namespace NewOrderDesign
             this.statesTableAdapter3 = new NewOrderDesign.CovidDataDataSet3TableAdapters.statesTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.covidDataDataSet4 = new NewOrderDesign.CovidDataDataSet4();
-            this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter4 = new NewOrderDesign.CovidDataDataSet4TableAdapters.statesTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.Export_button = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).BeginInit();
@@ -68,8 +72,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -176,6 +178,16 @@ namespace NewOrderDesign
             this.deathsDataGridViewTextBoxColumn.Name = "deathsDataGridViewTextBoxColumn";
             this.deathsDataGridViewTextBoxColumn.Width = 125;
             // 
+            // statesBindingSource4
+            // 
+            this.statesBindingSource4.DataMember = "states";
+            this.statesBindingSource4.DataSource = this.covidDataDataSet4;
+            // 
+            // covidDataDataSet4
+            // 
+            this.covidDataDataSet4.DataSetName = "CovidDataDataSet4";
+            this.covidDataDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // statesBindingSource3
             // 
             this.statesBindingSource3.DataMember = "states";
@@ -251,16 +263,6 @@ namespace NewOrderDesign
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // covidDataDataSet4
-            // 
-            this.covidDataDataSet4.DataSetName = "CovidDataDataSet4";
-            this.covidDataDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // statesBindingSource4
-            // 
-            this.statesBindingSource4.DataMember = "states";
-            this.statesBindingSource4.DataSource = this.covidDataDataSet4;
-            // 
             // statesTableAdapter4
             // 
             this.statesTableAdapter4.ClearBeforeFill = true;
@@ -301,6 +303,26 @@ namespace NewOrderDesign
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // Export_button
+            // 
+            this.Export_button.Location = new System.Drawing.Point(951, 430);
+            this.Export_button.Name = "Export_button";
+            this.Export_button.Size = new System.Drawing.Size(100, 38);
+            this.Export_button.TabIndex = 14;
+            this.Export_button.Text = "Export\r\n";
+            this.Export_button.UseVisualStyleBackColor = true;
+            this.Export_button.Click += new System.EventHandler(this.Export_button_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 431);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(163, 37);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "State with most cases\r\n";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // CovidStateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,6 +331,8 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Export_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -324,6 +348,8 @@ namespace NewOrderDesign
             this.Text = "COVID-19 Data";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource2)).EndInit();
@@ -332,8 +358,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,5 +394,7 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Export_button;
+        private System.Windows.Forms.Button button6;
     }
 }
