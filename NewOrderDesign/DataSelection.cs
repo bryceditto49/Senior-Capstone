@@ -49,8 +49,8 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LandingPage form1 = new LandingPage();
-            form1.Show();
+            Form6 form6 = new Form6();
+            form6.Show();
         }
     }
 }
