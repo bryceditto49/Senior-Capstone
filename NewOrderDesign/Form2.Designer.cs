@@ -119,6 +119,7 @@ namespace NewOrderDesign
             this.Controls.Add(this.covidbutton);
             this.Name = "Form2";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

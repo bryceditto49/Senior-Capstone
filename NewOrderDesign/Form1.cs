@@ -13,10 +13,7 @@ namespace NewOrderDesign
 {
     public partial class Form1 : Form
     {
-        SqlCommand cmd;
-        SqlConnection cn;
-        SqlDataReader dr;
-        
+        string connectionString = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=***********");
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +21,7 @@ namespace NewOrderDesign
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\varat\source\repos\bryceditto49\Senior-Capstone\NewOrderDesign\Database1.mdf;Integrated Security=True");
-            cn.Open();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,21 +35,15 @@ namespace NewOrderDesign
             {
                 if (txtpass.Text == txtcon.Text)
                 {
-                    cmd = new SqlCommand("select * from Table where username='" + txtuser.Text + "'", cn);
-                    dr = cmd.ExecuteReader();
-                    if (dr.Read())
+                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
-                        dr.Close();
-                        MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        dr.Close();
-                        cmd = new SqlCommand("insert into Table values(@username,@password)", cn);
-                        cmd.Parameters.AddWithValue("username", txtuser.Text);
-                        cmd.Parameters.AddWithValue("password", txtpass.Text);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Account Created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        sqlCon.Open();
+                        SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@password", txtpass.Text.Trim());
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Registration is complete");
                     }
                 }
                 else
@@ -87,13 +77,6 @@ namespace NewOrderDesign
         private void label4_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btguess_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
         }
     }
 }

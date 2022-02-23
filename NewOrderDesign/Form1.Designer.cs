@@ -33,7 +33,6 @@ namespace NewOrderDesign
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.btsubmit = new System.Windows.Forms.Button();
-            this.btguess = new System.Windows.Forms.Button();
             this.lbuser = new System.Windows.Forms.Label();
             this.lbpass = new System.Windows.Forms.Label();
             this.lbfirst = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@ namespace NewOrderDesign
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Location = new System.Drawing.Point(151, 78);
             this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(215, 20);
             this.txtpass.TabIndex = 1;
             this.txtpass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -66,26 +66,13 @@ namespace NewOrderDesign
             this.btsubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btsubmit.Location = new System.Drawing.Point(151, 181);
+            this.btsubmit.Location = new System.Drawing.Point(215, 183);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(75, 23);
             this.btsubmit.TabIndex = 2;
             this.btsubmit.Text = "Register";
             this.btsubmit.UseVisualStyleBackColor = false;
             this.btsubmit.Click += new System.EventHandler(this.btsubmit_Click);
-            // 
-            // btguess
-            // 
-            this.btguess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.btguess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btguess.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btguess.Location = new System.Drawing.Point(291, 181);
-            this.btguess.Name = "btguess";
-            this.btguess.Size = new System.Drawing.Size(75, 23);
-            this.btguess.TabIndex = 7;
-            this.btguess.Text = "Guest Login";
-            this.btguess.UseVisualStyleBackColor = false;
-            this.btguess.Click += new System.EventHandler(this.btguess_Click);
             // 
             // lbuser
             // 
@@ -124,6 +111,7 @@ namespace NewOrderDesign
             this.txtcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcon.Location = new System.Drawing.Point(151, 125);
             this.txtcon.Name = "txtcon";
+            this.txtcon.PasswordChar = '*';
             this.txtcon.Size = new System.Drawing.Size(215, 20);
             this.txtcon.TabIndex = 5;
             // 
@@ -136,7 +124,6 @@ namespace NewOrderDesign
             this.ClientSize = new System.Drawing.Size(475, 313);
             this.Controls.Add(this.lbfirst);
             this.Controls.Add(this.lbpass);
-            this.Controls.Add(this.btguess);
             this.Controls.Add(this.txtcon);
             this.Controls.Add(this.lbuser);
             this.Controls.Add(this.btsubmit);
@@ -156,7 +143,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button btsubmit;
-        private System.Windows.Forms.Button btguess;
         private System.Windows.Forms.Label lbuser;
         private System.Windows.Forms.Label lbpass;
         private System.Windows.Forms.Label lbfirst;

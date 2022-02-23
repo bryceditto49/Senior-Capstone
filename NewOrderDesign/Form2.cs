@@ -45,5 +45,10 @@ namespace NewOrderDesign
             Form4 form4 = new Form4();
             form4.Show();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
