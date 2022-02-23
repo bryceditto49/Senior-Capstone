@@ -74,8 +74,9 @@ namespace NewOrderDesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'covidDataDataSet4.states' table. You can move, or remove it, as needed.
+            this.statesTableAdapter4.Fill(this.covidDataDataSet4.states);
             // TODO: This line of code loads data into the 'covidDataDataSet3.states' table. You can move, or remove it, as needed.
-            this.statesTableAdapter3.Fill(this.covidDataDataSet3.states);
 
         }
 

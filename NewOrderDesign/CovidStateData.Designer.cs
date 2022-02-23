@@ -37,7 +37,6 @@ namespace NewOrderDesign
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statefipscodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deathsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -54,6 +53,9 @@ namespace NewOrderDesign
             this.statesTableAdapter3 = new NewOrderDesign.CovidDataDataSet3TableAdapters.statesTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.covidDataDataSet4 = new NewOrderDesign.CovidDataDataSet4();
+            this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.statesTableAdapter4 = new NewOrderDesign.CovidDataDataSet4TableAdapters.statesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet3)).BeginInit();
@@ -63,6 +65,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -99,7 +103,7 @@ namespace NewOrderDesign
             this.label1.Location = new System.Drawing.Point(435, 303);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 17);
+            this.label1.Size = new System.Drawing.Size(266, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -124,10 +128,9 @@ namespace NewOrderDesign
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDataGridViewTextBoxColumn,
             this.statenameDataGridViewTextBoxColumn,
-            this.statefipscodeDataGridViewTextBoxColumn,
             this.confirmedcasesDataGridViewTextBoxColumn,
             this.deathsDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.statesBindingSource3;
+            this.dataGridView1.DataSource = this.statesBindingSource4;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 113);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -153,14 +156,6 @@ namespace NewOrderDesign
             this.statenameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statenameDataGridViewTextBoxColumn.Name = "statenameDataGridViewTextBoxColumn";
             this.statenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statefipscodeDataGridViewTextBoxColumn
-            // 
-            this.statefipscodeDataGridViewTextBoxColumn.DataPropertyName = "state_fips_code";
-            this.statefipscodeDataGridViewTextBoxColumn.HeaderText = "state_fips_code";
-            this.statefipscodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statefipscodeDataGridViewTextBoxColumn.Name = "statefipscodeDataGridViewTextBoxColumn";
-            this.statefipscodeDataGridViewTextBoxColumn.Width = 125;
             // 
             // confirmedcasesDataGridViewTextBoxColumn
             // 
@@ -253,6 +248,20 @@ namespace NewOrderDesign
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // covidDataDataSet4
+            // 
+            this.covidDataDataSet4.DataSetName = "CovidDataDataSet4";
+            this.covidDataDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statesBindingSource4
+            // 
+            this.statesBindingSource4.DataMember = "states";
+            this.statesBindingSource4.DataSource = this.covidDataDataSet4;
+            // 
+            // statesTableAdapter4
+            // 
+            this.statesTableAdapter4.ClearBeforeFill = true;
+            // 
             // CovidStateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,6 +290,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +309,6 @@ namespace NewOrderDesign
         private CovidDataNYTDataSetTableAdapters.statesTableAdapter statesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statefipscodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmedcasesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deathsDataGridViewTextBoxColumn;
         private CovidDataDataSet covidDataDataSet;
@@ -312,5 +322,8 @@ namespace NewOrderDesign
         private CovidDataDataSet3TableAdapters.statesTableAdapter statesTableAdapter3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList imageList1;
+        private CovidDataDataSet4 covidDataDataSet4;
+        private System.Windows.Forms.BindingSource statesBindingSource4;
+        private CovidDataDataSet4TableAdapters.statesTableAdapter statesTableAdapter4;
     }
 }

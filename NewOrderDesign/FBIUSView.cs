@@ -67,6 +67,7 @@ namespace NewOrderDesign
                     string query2;
                     string query3;
                     string query4;
+                    Int32 totalassaultoffenses;
 
                     if (DropDownCrimesAgainstPersons.Equals("Assault"))
                     {
@@ -78,6 +79,14 @@ namespace NewOrderDesign
                                  $"GROUP BY State, Assault_Offenses " +
                                  $"ORDER BY Assault_Offenses desc";
                         query4 = $"";
+                 
+                        SqlCommand cmdtotalassault = conn.CreateCommand();
+                        cmdtotalassault.CommandText = query1;
+
+                        conn.Open();
+                        totalassaultoffenses = (Int32)cmdtotalassault.ExecuteScalar();
+                        conn.Close();   
+
                     }
                     else if (DropDownCrimesAgainstPersons.Equals("Homicide"))
                     {
@@ -89,6 +98,7 @@ namespace NewOrderDesign
                                  $"GROUP BY State, Homicide_Offenses " +
                                  $"ORDER BY Homicide_Offenses desc";
                         query4 = $"";
+
 
                     }
                     else if (DropDownCrimesAgainstPersons.Equals("Human Trafficking"))
