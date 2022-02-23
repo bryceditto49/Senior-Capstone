@@ -13,7 +13,7 @@ namespace NewOrderDesign
 {
     public partial class Form1 : Form
     {
-        string connectionString = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=***********");
+        string connectionString = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=daylonswallows123");
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +44,7 @@ namespace NewOrderDesign
                         sqlCmd.Parameters.AddWithValue("@password", txtpass.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Registration is complete");
+                        Clear();
                     }
                 }
                 else
@@ -56,7 +57,10 @@ namespace NewOrderDesign
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        void Clear()
+        {
+            txtuser.Text = txtpass.Text = txtcon.Text = "";
+        }
         string username;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -75,6 +79,11 @@ namespace NewOrderDesign
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcon_TextChanged(object sender, EventArgs e)
         {
 
         }
