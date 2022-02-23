@@ -42,7 +42,7 @@ namespace NewOrderDesign
         private void fbibutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FBIUSView form5 = new FBIUSView();
+            USOverview form5 = new USOverview();
             form5.Show();
         }
 
