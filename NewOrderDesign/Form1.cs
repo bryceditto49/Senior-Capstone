@@ -38,7 +38,7 @@ namespace NewOrderDesign
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
                         sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                        SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@password", txtpass.Text.Trim());

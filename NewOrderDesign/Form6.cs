@@ -35,7 +35,7 @@ namespace NewOrderDesign
             else
             {
                 SqlConnection con = new SqlConnection(conn);
-                SqlCommand cmd = new SqlCommand("select * from LoginTable where username=@username and password=@password", con);
+                SqlCommand cmd = new SqlCommand("select * from LoginTable1 where username=@username and password=@password", con);
                 cmd.Parameters.AddWithValue("@username", txtuser.Text);
                 cmd.Parameters.AddWithValue("@password", txtpass.Text);
 
