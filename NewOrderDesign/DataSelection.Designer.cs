@@ -35,6 +35,7 @@ namespace NewOrderDesign
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // covidbutton
@@ -98,7 +99,7 @@ namespace NewOrderDesign
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(172, 71);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Welcome User";
+            this.textBox1.Text = "Welcome";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -124,6 +125,16 @@ namespace NewOrderDesign
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(30, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 33);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            // 
             // DataSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,6 +142,7 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -154,5 +166,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

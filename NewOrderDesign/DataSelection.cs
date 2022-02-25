@@ -12,9 +12,11 @@ namespace NewOrderDesign
 {
     public partial class DataSelection : Form
     {
+        string user = Form6.username;
         public DataSelection()
         {
             InitializeComponent();
+            label1.Text = user;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace NewOrderDesign
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -51,6 +53,11 @@ namespace NewOrderDesign
             this.Hide();
             Form6 form6 = new Form6();
             form6.Show();
+        }
+
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
