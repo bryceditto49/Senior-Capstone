@@ -34,6 +34,15 @@ namespace NewOrderDesign
             this.submitbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.populationCoveredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assaultOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homicideOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.humanTraffickingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kidnappingAbductionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fBIDataSet1 = new NewOrderDesign.FBIDataSet1();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,21 +57,6 @@ namespace NewOrderDesign
             this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter = new NewOrderDesign.FBIPropertyDataSetTableAdapters.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fBIDataSet2 = new NewOrderDesign.FBIDataSet2();
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter = new NewOrderDesign.FBIDataSet2TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.populationCoveredDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalOffensesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalCrueltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gamblingOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prostitutionOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weaponLawViolationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberofParticipatingAgenciesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.populationCoveredDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,15 +73,21 @@ namespace NewOrderDesign
             this.motorVehicleTheftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.robberyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stolenPropertyOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.populationCoveredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assaultOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homicideOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.humanTraffickingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kidnappingAbductionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.populationCoveredDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalOffensesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.animalCrueltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gamblingOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prostitutionOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weaponLawViolationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet2 = new NewOrderDesign.FBIDataSet2();
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter = new NewOrderDesign.FBIDataSet2TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet1)).BeginInit();
@@ -165,6 +165,78 @@ namespace NewOrderDesign
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numberofParticipatingAgenciesDataGridViewTextBoxColumn
+            // 
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.DataPropertyName = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.HeaderText = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Width = 185;
+            // 
+            // populationCoveredDataGridViewTextBoxColumn
+            // 
+            this.populationCoveredDataGridViewTextBoxColumn.DataPropertyName = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn.HeaderText = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.populationCoveredDataGridViewTextBoxColumn.Name = "populationCoveredDataGridViewTextBoxColumn";
+            this.populationCoveredDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // totalOffensesDataGridViewTextBoxColumn
+            // 
+            this.totalOffensesDataGridViewTextBoxColumn.DataPropertyName = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn.HeaderText = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalOffensesDataGridViewTextBoxColumn.Name = "totalOffensesDataGridViewTextBoxColumn";
+            this.totalOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // assaultOffensesDataGridViewTextBoxColumn
+            // 
+            this.assaultOffensesDataGridViewTextBoxColumn.DataPropertyName = "Assault_Offenses";
+            this.assaultOffensesDataGridViewTextBoxColumn.HeaderText = "Assault_Offenses";
+            this.assaultOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.assaultOffensesDataGridViewTextBoxColumn.Name = "assaultOffensesDataGridViewTextBoxColumn";
+            this.assaultOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // homicideOffensesDataGridViewTextBoxColumn
+            // 
+            this.homicideOffensesDataGridViewTextBoxColumn.DataPropertyName = "Homicide_Offenses";
+            this.homicideOffensesDataGridViewTextBoxColumn.HeaderText = "Homicide_Offenses";
+            this.homicideOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homicideOffensesDataGridViewTextBoxColumn.Name = "homicideOffensesDataGridViewTextBoxColumn";
+            this.homicideOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // humanTraffickingDataGridViewTextBoxColumn
+            // 
+            this.humanTraffickingDataGridViewTextBoxColumn.DataPropertyName = "Human_Trafficking";
+            this.humanTraffickingDataGridViewTextBoxColumn.HeaderText = "Human_Trafficking";
+            this.humanTraffickingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.humanTraffickingDataGridViewTextBoxColumn.Name = "humanTraffickingDataGridViewTextBoxColumn";
+            this.humanTraffickingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // kidnappingAbductionDataGridViewTextBoxColumn
+            // 
+            this.kidnappingAbductionDataGridViewTextBoxColumn.DataPropertyName = "Kidnapping_Abduction";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.HeaderText = "Kidnapping_Abduction";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kidnappingAbductionDataGridViewTextBoxColumn.Name = "kidnappingAbductionDataGridViewTextBoxColumn";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sexOffensesDataGridViewTextBoxColumn
+            // 
+            this.sexOffensesDataGridViewTextBoxColumn.DataPropertyName = "Sex_Offenses";
+            this.sexOffensesDataGridViewTextBoxColumn.HeaderText = "Sex_Offenses";
+            this.sexOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sexOffensesDataGridViewTextBoxColumn.Name = "sexOffensesDataGridViewTextBoxColumn";
+            this.sexOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
             // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1
             // 
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
@@ -213,11 +285,12 @@ namespace NewOrderDesign
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Persons",
-            "Property",
-            "Society"});
+            "Crimes Against Persons",
+            "Crimes Against Property",
+            "Crimes Against Society"});
             this.comboBox1.Location = new System.Drawing.Point(100, 76);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(245, 24);
@@ -272,137 +345,6 @@ namespace NewOrderDesign
             this.dataGridView2.Size = new System.Drawing.Size(1035, 335);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stateDataGridViewTextBoxColumn2,
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2,
-            this.populationCoveredDataGridViewTextBoxColumn2,
-            this.totalOffensesDataGridViewTextBoxColumn2,
-            this.animalCrueltyDataGridViewTextBoxColumn,
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn,
-            this.gamblingOffensesDataGridViewTextBoxColumn,
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn,
-            this.prostitutionOffensesDataGridViewTextBoxColumn,
-            this.weaponLawViolationsDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(16, 123);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(1035, 335);
-            this.dataGridView3.TabIndex = 15;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource
-            // 
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataSource = this.fBIDataSet2;
-            // 
-            // fBIDataSet2
-            // 
-            this.fBIDataSet2.DataSetName = "FBIDataSet2";
-            this.fBIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter
-            // 
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(100, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(513, 15);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
-    "d";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
-            // stateDataGridViewTextBoxColumn2
-            // 
-            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn2.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
-            this.stateDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // numberofParticipatingAgenciesDataGridViewTextBoxColumn2
-            // 
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.DataPropertyName = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.HeaderText = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn2";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.Width = 185;
-            // 
-            // populationCoveredDataGridViewTextBoxColumn2
-            // 
-            this.populationCoveredDataGridViewTextBoxColumn2.DataPropertyName = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn2.HeaderText = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.populationCoveredDataGridViewTextBoxColumn2.Name = "populationCoveredDataGridViewTextBoxColumn2";
-            this.populationCoveredDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // totalOffensesDataGridViewTextBoxColumn2
-            // 
-            this.totalOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn2.HeaderText = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.totalOffensesDataGridViewTextBoxColumn2.Name = "totalOffensesDataGridViewTextBoxColumn2";
-            this.totalOffensesDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // animalCrueltyDataGridViewTextBoxColumn
-            // 
-            this.animalCrueltyDataGridViewTextBoxColumn.DataPropertyName = "Animal_Cruelty";
-            this.animalCrueltyDataGridViewTextBoxColumn.HeaderText = "Animal_Cruelty";
-            this.animalCrueltyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.animalCrueltyDataGridViewTextBoxColumn.Name = "animalCrueltyDataGridViewTextBoxColumn";
-            this.animalCrueltyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // drugNarcoticOffensesDataGridViewTextBoxColumn
-            // 
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn.DataPropertyName = "Drug_Narcotic_Offenses";
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn.HeaderText = "Drug_Narcotic_Offenses";
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn.Name = "drugNarcoticOffensesDataGridViewTextBoxColumn";
-            this.drugNarcoticOffensesDataGridViewTextBoxColumn.Width = 135;
-            // 
-            // gamblingOffensesDataGridViewTextBoxColumn
-            // 
-            this.gamblingOffensesDataGridViewTextBoxColumn.DataPropertyName = "Gambling_Offenses";
-            this.gamblingOffensesDataGridViewTextBoxColumn.HeaderText = "Gambling_Offenses";
-            this.gamblingOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gamblingOffensesDataGridViewTextBoxColumn.Name = "gamblingOffensesDataGridViewTextBoxColumn";
-            this.gamblingOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pornographyObsceneMaterialDataGridViewTextBoxColumn
-            // 
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.DataPropertyName = "Pornography_Obscene_Material";
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.HeaderText = "Pornography_Obscene_Material";
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.Name = "pornographyObsceneMaterialDataGridViewTextBoxColumn";
-            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // prostitutionOffensesDataGridViewTextBoxColumn
-            // 
-            this.prostitutionOffensesDataGridViewTextBoxColumn.DataPropertyName = "Prostitution_Offenses";
-            this.prostitutionOffensesDataGridViewTextBoxColumn.HeaderText = "Prostitution_Offenses";
-            this.prostitutionOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prostitutionOffensesDataGridViewTextBoxColumn.Name = "prostitutionOffensesDataGridViewTextBoxColumn";
-            this.prostitutionOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // weaponLawViolationsDataGridViewTextBoxColumn
-            // 
-            this.weaponLawViolationsDataGridViewTextBoxColumn.DataPropertyName = "Weapon_Law_Violations";
-            this.weaponLawViolationsDataGridViewTextBoxColumn.HeaderText = "Weapon_Law_Violations";
-            this.weaponLawViolationsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.weaponLawViolationsDataGridViewTextBoxColumn.Name = "weaponLawViolationsDataGridViewTextBoxColumn";
-            this.weaponLawViolationsDataGridViewTextBoxColumn.Width = 135;
             // 
             // stateDataGridViewTextBoxColumn1
             // 
@@ -532,77 +474,136 @@ namespace NewOrderDesign
             this.stolenPropertyOffensesDataGridViewTextBoxColumn.Name = "stolenPropertyOffensesDataGridViewTextBoxColumn";
             this.stolenPropertyOffensesDataGridViewTextBoxColumn.Width = 135;
             // 
-            // stateDataGridViewTextBoxColumn
+            // dataGridView3
             // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stateDataGridViewTextBoxColumn2,
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2,
+            this.populationCoveredDataGridViewTextBoxColumn2,
+            this.totalOffensesDataGridViewTextBoxColumn2,
+            this.animalCrueltyDataGridViewTextBoxColumn,
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn,
+            this.gamblingOffensesDataGridViewTextBoxColumn,
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn,
+            this.prostitutionOffensesDataGridViewTextBoxColumn,
+            this.weaponLawViolationsDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(16, 123);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.Size = new System.Drawing.Size(1035, 335);
+            this.dataGridView3.TabIndex = 15;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // numberofParticipatingAgenciesDataGridViewTextBoxColumn
+            // stateDataGridViewTextBoxColumn2
             // 
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.DataPropertyName = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.HeaderText = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Width = 185;
+            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn2.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
+            this.stateDataGridViewTextBoxColumn2.Width = 125;
             // 
-            // populationCoveredDataGridViewTextBoxColumn
+            // numberofParticipatingAgenciesDataGridViewTextBoxColumn2
             // 
-            this.populationCoveredDataGridViewTextBoxColumn.DataPropertyName = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn.HeaderText = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.populationCoveredDataGridViewTextBoxColumn.Name = "populationCoveredDataGridViewTextBoxColumn";
-            this.populationCoveredDataGridViewTextBoxColumn.Width = 125;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.DataPropertyName = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.HeaderText = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn2";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2.Width = 185;
             // 
-            // totalOffensesDataGridViewTextBoxColumn
+            // populationCoveredDataGridViewTextBoxColumn2
             // 
-            this.totalOffensesDataGridViewTextBoxColumn.DataPropertyName = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn.HeaderText = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totalOffensesDataGridViewTextBoxColumn.Name = "totalOffensesDataGridViewTextBoxColumn";
-            this.totalOffensesDataGridViewTextBoxColumn.Width = 125;
+            this.populationCoveredDataGridViewTextBoxColumn2.DataPropertyName = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn2.HeaderText = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.populationCoveredDataGridViewTextBoxColumn2.Name = "populationCoveredDataGridViewTextBoxColumn2";
+            this.populationCoveredDataGridViewTextBoxColumn2.Width = 125;
             // 
-            // assaultOffensesDataGridViewTextBoxColumn
+            // totalOffensesDataGridViewTextBoxColumn2
             // 
-            this.assaultOffensesDataGridViewTextBoxColumn.DataPropertyName = "Assault_Offenses";
-            this.assaultOffensesDataGridViewTextBoxColumn.HeaderText = "Assault_Offenses";
-            this.assaultOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.assaultOffensesDataGridViewTextBoxColumn.Name = "assaultOffensesDataGridViewTextBoxColumn";
-            this.assaultOffensesDataGridViewTextBoxColumn.Width = 125;
+            this.totalOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn2.HeaderText = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.totalOffensesDataGridViewTextBoxColumn2.Name = "totalOffensesDataGridViewTextBoxColumn2";
+            this.totalOffensesDataGridViewTextBoxColumn2.Width = 125;
             // 
-            // homicideOffensesDataGridViewTextBoxColumn
+            // animalCrueltyDataGridViewTextBoxColumn
             // 
-            this.homicideOffensesDataGridViewTextBoxColumn.DataPropertyName = "Homicide_Offenses";
-            this.homicideOffensesDataGridViewTextBoxColumn.HeaderText = "Homicide_Offenses";
-            this.homicideOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homicideOffensesDataGridViewTextBoxColumn.Name = "homicideOffensesDataGridViewTextBoxColumn";
-            this.homicideOffensesDataGridViewTextBoxColumn.Width = 125;
+            this.animalCrueltyDataGridViewTextBoxColumn.DataPropertyName = "Animal_Cruelty";
+            this.animalCrueltyDataGridViewTextBoxColumn.HeaderText = "Animal_Cruelty";
+            this.animalCrueltyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.animalCrueltyDataGridViewTextBoxColumn.Name = "animalCrueltyDataGridViewTextBoxColumn";
+            this.animalCrueltyDataGridViewTextBoxColumn.Width = 125;
             // 
-            // humanTraffickingDataGridViewTextBoxColumn
+            // drugNarcoticOffensesDataGridViewTextBoxColumn
             // 
-            this.humanTraffickingDataGridViewTextBoxColumn.DataPropertyName = "Human_Trafficking";
-            this.humanTraffickingDataGridViewTextBoxColumn.HeaderText = "Human_Trafficking";
-            this.humanTraffickingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.humanTraffickingDataGridViewTextBoxColumn.Name = "humanTraffickingDataGridViewTextBoxColumn";
-            this.humanTraffickingDataGridViewTextBoxColumn.Width = 125;
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn.DataPropertyName = "Drug_Narcotic_Offenses";
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn.HeaderText = "Drug_Narcotic_Offenses";
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn.Name = "drugNarcoticOffensesDataGridViewTextBoxColumn";
+            this.drugNarcoticOffensesDataGridViewTextBoxColumn.Width = 135;
             // 
-            // kidnappingAbductionDataGridViewTextBoxColumn
+            // gamblingOffensesDataGridViewTextBoxColumn
             // 
-            this.kidnappingAbductionDataGridViewTextBoxColumn.DataPropertyName = "Kidnapping_Abduction";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.HeaderText = "Kidnapping_Abduction";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kidnappingAbductionDataGridViewTextBoxColumn.Name = "kidnappingAbductionDataGridViewTextBoxColumn";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.Width = 125;
+            this.gamblingOffensesDataGridViewTextBoxColumn.DataPropertyName = "Gambling_Offenses";
+            this.gamblingOffensesDataGridViewTextBoxColumn.HeaderText = "Gambling_Offenses";
+            this.gamblingOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gamblingOffensesDataGridViewTextBoxColumn.Name = "gamblingOffensesDataGridViewTextBoxColumn";
+            this.gamblingOffensesDataGridViewTextBoxColumn.Width = 125;
             // 
-            // sexOffensesDataGridViewTextBoxColumn
+            // pornographyObsceneMaterialDataGridViewTextBoxColumn
             // 
-            this.sexOffensesDataGridViewTextBoxColumn.DataPropertyName = "Sex_Offenses";
-            this.sexOffensesDataGridViewTextBoxColumn.HeaderText = "Sex_Offenses";
-            this.sexOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sexOffensesDataGridViewTextBoxColumn.Name = "sexOffensesDataGridViewTextBoxColumn";
-            this.sexOffensesDataGridViewTextBoxColumn.Width = 125;
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.DataPropertyName = "Pornography_Obscene_Material";
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.HeaderText = "Pornography_Obscene_Material";
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.Name = "pornographyObsceneMaterialDataGridViewTextBoxColumn";
+            this.pornographyObsceneMaterialDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // prostitutionOffensesDataGridViewTextBoxColumn
+            // 
+            this.prostitutionOffensesDataGridViewTextBoxColumn.DataPropertyName = "Prostitution_Offenses";
+            this.prostitutionOffensesDataGridViewTextBoxColumn.HeaderText = "Prostitution_Offenses";
+            this.prostitutionOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prostitutionOffensesDataGridViewTextBoxColumn.Name = "prostitutionOffensesDataGridViewTextBoxColumn";
+            this.prostitutionOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // weaponLawViolationsDataGridViewTextBoxColumn
+            // 
+            this.weaponLawViolationsDataGridViewTextBoxColumn.DataPropertyName = "Weapon_Law_Violations";
+            this.weaponLawViolationsDataGridViewTextBoxColumn.HeaderText = "Weapon_Law_Violations";
+            this.weaponLawViolationsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.weaponLawViolationsDataGridViewTextBoxColumn.Name = "weaponLawViolationsDataGridViewTextBoxColumn";
+            this.weaponLawViolationsDataGridViewTextBoxColumn.Width = 135;
+            // 
+            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource
+            // 
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataSource = this.fBIDataSet2;
+            // 
+            // fBIDataSet2
+            // 
+            this.fBIDataSet2.DataSetName = "FBIDataSet2";
+            this.fBIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter
+            // 
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(100, 6);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(513, 15);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
+    "d";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // FBIStateDashboard
             // 
