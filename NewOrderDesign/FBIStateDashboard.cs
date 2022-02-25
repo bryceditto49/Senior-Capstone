@@ -16,7 +16,7 @@ namespace NewOrderDesign
         public FBIStateDashboard()
         {
             InitializeComponent();
-            comboBox1.SelectedItem = "Persons";
+            comboBox1.SelectedItem = "Crimes Against Persons";
         }
 
         private void submitbutton_Click(object sender, EventArgs e)
@@ -129,7 +129,18 @@ namespace NewOrderDesign
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            table = comboBox1.Text;
+            if (comboBox1.Text.Equals("Crimes Against Persons"))
+            {
+                table = "Persons";
+            }
+            else if (comboBox1.Text.Equals("Crimes Against Property"))
+            {
+                table = "Property";
+            }
+            else if (comboBox1.Text.Equals("Crimes Against Society"))
+            {
+                table = "Society";
+            }
             submitbutton.PerformClick();
         }
 
