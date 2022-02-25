@@ -21,8 +21,10 @@ namespace NewOrderDesign
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public static bool button2_Clicked = false;
+        public void button2_Click(object sender, EventArgs e)
         {
+            button2_Clicked = true;
             this.Hide();
             DataSelection form2 = new DataSelection();
             form2.Show();

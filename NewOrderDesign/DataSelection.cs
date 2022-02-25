@@ -16,7 +16,14 @@ namespace NewOrderDesign
         public DataSelection()
         {
             InitializeComponent();
-            label1.Text = user;
+            if (Form6.button2_Clicked == true)
+            {
+                label1.Text = "Guest";
+            }
+            else
+            {
+                label1.Text = user;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
