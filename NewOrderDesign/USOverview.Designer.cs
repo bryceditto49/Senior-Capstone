@@ -42,12 +42,16 @@ namespace NewOrderDesign
             this.label4 = new System.Windows.Forms.Label();
             this.PersonsComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstPropertyTab = new System.Windows.Forms.TabPage();
+            this.TotalCrimesAgainstPropertyTabLabel1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.PropertyComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstSocietyTab = new System.Windows.Forms.TabPage();
             this.SocietyComboBox = new System.Windows.Forms.ComboBox();
             this.FormHeading = new System.Windows.Forms.Label();
             this.continueFBIUSView = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TotalCrimesAgainstSocietyTabLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.OverviewTab.SuspendLayout();
             this.CrimesAgainstPersonsTab.SuspendLayout();
@@ -139,6 +143,7 @@ namespace NewOrderDesign
             // 
             // CrimesAgainstPersonsTab
             // 
+            this.CrimesAgainstPersonsTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPersonsTab.Controls.Add(this.TotalCrimesAgainstPersonsTabLabel1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.label4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.PersonsComboBox);
@@ -188,6 +193,8 @@ namespace NewOrderDesign
             // CrimesAgainstPropertyTab
             // 
             this.CrimesAgainstPropertyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
+            this.CrimesAgainstPropertyTab.Controls.Add(this.TotalCrimesAgainstPropertyTabLabel1);
+            this.CrimesAgainstPropertyTab.Controls.Add(this.label5);
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
             this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 25);
             this.CrimesAgainstPropertyTab.Margin = new System.Windows.Forms.Padding(4);
@@ -196,6 +203,23 @@ namespace NewOrderDesign
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
+            // 
+            // TotalCrimesAgainstPropertyTabLabel1
+            // 
+            this.TotalCrimesAgainstPropertyTabLabel1.AutoSize = true;
+            this.TotalCrimesAgainstPropertyTabLabel1.Location = new System.Drawing.Point(170, 93);
+            this.TotalCrimesAgainstPropertyTabLabel1.Name = "TotalCrimesAgainstPropertyTabLabel1";
+            this.TotalCrimesAgainstPropertyTabLabel1.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPropertyTabLabel1.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(62, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Total Number: ";
             // 
             // PropertyComboBox
             // 
@@ -219,9 +243,13 @@ namespace NewOrderDesign
             this.PropertyComboBox.Name = "PropertyComboBox";
             this.PropertyComboBox.Size = new System.Drawing.Size(160, 24);
             this.PropertyComboBox.TabIndex = 0;
+            this.PropertyComboBox.SelectedIndexChanged += new System.EventHandler(this.PropertyComboBox_SelectedIndexChanged);
             // 
             // CrimesAgainstSocietyTab
             // 
+            this.CrimesAgainstSocietyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
+            this.CrimesAgainstSocietyTab.Controls.Add(this.TotalCrimesAgainstSocietyTabLabel1);
+            this.CrimesAgainstSocietyTab.Controls.Add(this.label6);
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
             this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 25);
             this.CrimesAgainstSocietyTab.Margin = new System.Windows.Forms.Padding(4);
@@ -247,6 +275,7 @@ namespace NewOrderDesign
             this.SocietyComboBox.Name = "SocietyComboBox";
             this.SocietyComboBox.Size = new System.Drawing.Size(160, 24);
             this.SocietyComboBox.TabIndex = 0;
+            this.SocietyComboBox.SelectedIndexChanged += new System.EventHandler(this.SocietyComboBox_SelectedIndexChanged);
             // 
             // FormHeading
             // 
@@ -261,7 +290,7 @@ namespace NewOrderDesign
             // 
             // continueFBIUSView
             // 
-            this.continueFBIUSView.Location = new System.Drawing.Point(915, 490);
+            this.continueFBIUSView.Location = new System.Drawing.Point(915, 499);
             this.continueFBIUSView.Margin = new System.Windows.Forms.Padding(4);
             this.continueFBIUSView.Name = "continueFBIUSView";
             this.continueFBIUSView.Size = new System.Drawing.Size(135, 42);
@@ -284,6 +313,23 @@ namespace NewOrderDesign
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 17);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Total Number: ";
+            // 
+            // TotalCrimesAgainstSocietyTabLabel1
+            // 
+            this.TotalCrimesAgainstSocietyTabLabel1.AutoSize = true;
+            this.TotalCrimesAgainstSocietyTabLabel1.Location = new System.Drawing.Point(171, 91);
+            this.TotalCrimesAgainstSocietyTabLabel1.Name = "TotalCrimesAgainstSocietyTabLabel1";
+            this.TotalCrimesAgainstSocietyTabLabel1.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstSocietyTabLabel1.TabIndex = 4;
+            // 
             // USOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,7 +349,9 @@ namespace NewOrderDesign
             this.CrimesAgainstPersonsTab.ResumeLayout(false);
             this.CrimesAgainstPersonsTab.PerformLayout();
             this.CrimesAgainstPropertyTab.ResumeLayout(false);
+            this.CrimesAgainstPropertyTab.PerformLayout();
             this.CrimesAgainstSocietyTab.ResumeLayout(false);
+            this.CrimesAgainstSocietyTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +378,9 @@ namespace NewOrderDesign
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button continueFBIUSView;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label TotalCrimesAgainstPropertyTabLabel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label TotalCrimesAgainstSocietyTabLabel1;
+        private System.Windows.Forms.Label label6;
     }
 }

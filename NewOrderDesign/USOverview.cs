@@ -22,6 +22,26 @@ namespace NewOrderDesign
         public static Int16 overviewtotalhumantrafficking;
         public static Int16 overviewtotalkidnapping;
         public static Int32 overviewtotalsex;
+        public static Int16 overviewtotalarson;
+        public static Int16 overviewtotalbribery;
+        public static Int32 overviewtotalburglary;
+        public static Int32 overviewtotalcounterfeiting;
+        public static Int32 overviewtotaldestruction;
+        public static Int16 overviewtotalembezzlement;
+        public static Int16 overviewtotalextortion;
+        public static Int32 overviewtotalfraud;
+        public static Int32 overviewtotallarceny;
+        public static Int32 overviewtotalmotor;
+        public static Int32 overviewtotalrobbery;
+        public static Int32 overviewtotalstolen;
+        public static Int16 overviewtotalanimal;
+        public static Int32 overviewtotaldrug;
+        public static Int16 overviewtotalgambling;
+        public static Int16 overviewtotalpornography;
+        public static Int16 overviewtotalprostitution;
+        public static Int32 overviewtotalweapon;
+
+
         public USOverview()
         {
             InitializeComponent();
@@ -194,5 +214,274 @@ namespace NewOrderDesign
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
+
+        private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    if (PropertyComboBox.Text.Equals("Arson"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Arson FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalarson = conn.CreateCommand();
+                        cmdtotalarson.CommandText = query1;
+                        USOverview.overviewtotalarson = (Int16)cmdtotalarson.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalarson.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Bribery"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Bribery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalbribery = conn.CreateCommand();
+                        cmdtotalbribery.CommandText = query1;
+                        USOverview.overviewtotalbribery = (Int16)cmdtotalbribery.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalbribery.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Burglary / Breaking & Entering"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Burglary_Breaking_Entering FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalburglary = conn.CreateCommand();
+                        cmdtotalburglary.CommandText = query1;
+                        USOverview.overviewtotalburglary = (Int32)cmdtotalburglary.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalburglary.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Counterfeiting / Forgery"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Counterfeiting_Forgery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalcounterfeiting = conn.CreateCommand();
+                        cmdtotalcounterfeiting.CommandText = query1;
+                        USOverview.overviewtotalcounterfeiting = (Int32)cmdtotalcounterfeiting.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalcounterfeiting.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Destruction / Damage / Vandalism"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Destruction_Damage_Vandalism FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotaldestruction = conn.CreateCommand();
+                        cmdtotaldestruction.CommandText = query1;
+                        USOverview.overviewtotaldestruction = (Int32)cmdtotaldestruction.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotaldestruction.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Embezzlement"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Embezzlement FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalembezzlement = conn.CreateCommand();
+                        cmdtotalembezzlement.CommandText = query1;
+                        USOverview.overviewtotalembezzlement = (Int16)cmdtotalembezzlement.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalembezzlement.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Extortion / Blackmail"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Extortion_Blackmail FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalextortion = conn.CreateCommand();
+                        cmdtotalextortion.CommandText = query1;
+                        USOverview.overviewtotalextortion = (Int16)cmdtotalextortion.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalextortion.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Fraud"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Fraud_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalfraud = conn.CreateCommand();
+                        cmdtotalfraud.CommandText = query1;
+                        USOverview.overviewtotalfraud = (Int32)cmdtotalfraud.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalfraud.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Larceny / Theft"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Larceny_Theft_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotallarceny = conn.CreateCommand();
+                        cmdtotallarceny.CommandText = query1;
+                        USOverview.overviewtotallarceny = (Int32)cmdtotallarceny.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotallarceny.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Motor Vehicle Theft"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Motor_Vehicle_Theft FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalmotor = conn.CreateCommand();
+                        cmdtotalmotor.CommandText = query1;
+                        USOverview.overviewtotalmotor = (Int32)cmdtotalmotor.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalmotor.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Robbery"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Robbery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalrobbery = conn.CreateCommand();
+                        cmdtotalrobbery.CommandText = query1;
+                        USOverview.overviewtotalrobbery = (Int32)cmdtotalrobbery.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalrobbery.ToString();
+
+                        conn.Close();
+                    }
+                    else if (PropertyComboBox.Text.Equals("Stolen Property"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Stolen_Property_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalstolen = conn.CreateCommand();
+                        cmdtotalstolen.CommandText = query1;
+                        USOverview.overviewtotalstolen = (Int32)cmdtotalstolen.ExecuteScalar();
+                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalstolen.ToString();
+
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //display error message
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }
+
+        private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    if (SocietyComboBox.Text.Equals("Animal Cruelty"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Animal_Cruelty FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalanimal = conn.CreateCommand();
+                        cmdtotalanimal.CommandText = query1;
+                        USOverview.overviewtotalanimal = (Int16)cmdtotalanimal.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalanimal.ToString();
+
+                        conn.Close();
+                    }
+                    else if (SocietyComboBox.Text.Equals("Drug / Narcotics"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Drug_Narcotic_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotaldrug = conn.CreateCommand();
+                        cmdtotaldrug.CommandText = query1;
+                        USOverview.overviewtotaldrug = (Int32)cmdtotaldrug.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotaldrug.ToString();
+
+                        conn.Close();
+                    }
+                    if (SocietyComboBox.Text.Equals("Gambling"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Gambling_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalgambling = conn.CreateCommand();
+                        cmdtotalgambling.CommandText = query1;
+                        USOverview.overviewtotalgambling = (Int16)cmdtotalgambling.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalgambling.ToString();
+
+                        conn.Close();
+                    }
+                    if (SocietyComboBox.Text.Equals("Pornography / Obscene Material"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Pornography_Obscene_Material FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalpornography = conn.CreateCommand();
+                        cmdtotalpornography.CommandText = query1;
+                        USOverview.overviewtotalpornography = (Int16)cmdtotalpornography.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalpornography.ToString();
+
+                        conn.Close();
+                    }
+                    if (SocietyComboBox.Text.Equals("Prostitution"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Prostitution_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalprostitution = conn.CreateCommand();
+                        cmdtotalprostitution.CommandText = query1;
+                        USOverview.overviewtotalprostitution = (Int16)cmdtotalprostitution.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalprostitution.ToString();
+
+                        conn.Close();
+                    }
+                    if (SocietyComboBox.Text.Equals("Weapon Law Violations"))
+                    {
+                        conn.Open();
+
+                        string query1 = $"SELECT Weapon_Law_Violations FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+
+                        SqlCommand cmdtotalweapon = conn.CreateCommand();
+                        cmdtotalweapon.CommandText = query1;
+                        USOverview.overviewtotalweapon = (Int32)cmdtotalweapon.ExecuteScalar();
+                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalweapon.ToString();
+
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //display error message
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }
     }
 }
+
