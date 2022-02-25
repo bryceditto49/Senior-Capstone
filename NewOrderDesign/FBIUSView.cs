@@ -99,6 +99,61 @@ namespace NewOrderDesign
         //the queries are made here for the Persons tab
         private void CrimesAgainstPersonTab_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        string DropDownCrimesAgainstProperty;
+        private void CrimesAgainstPropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownCrimesAgainstProperty = CrimesAgainstPropertyComboBox.Text;
+        }
+
+        private void CrimesAgainstPropertyTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        string DropDownCrimesAgainstSociety;
+        private void CrimesAgainstSocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownCrimesAgainstSociety = CrimesAgainstSocietyComboBox.Text;
+        }
+        private void CrimesAgainstSocietyTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //From here down is all the code for the text boxes on each tab
+
+        //Persons tab//////////////////////////////////////////////////////////////////
+        private void PersonsDefaultTotalNumber_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void PercofTotalCrimesTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatesWithMostOffensesTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalNumberofOffensesTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalOffensesAgainstPersonsLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
             string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
             try
             {
@@ -127,6 +182,7 @@ namespace NewOrderDesign
                             SqlCommand cmdtotalassault = conn.CreateCommand();
                             cmdtotalassault.CommandText = query1;
                             FBIUSView.totalassaultoffenses = (Int32)cmdtotalassault.ExecuteScalar();
+                            toggle = 0;
 
                         }
                         else if (DropDownCrimesAgainstPersons.Equals("Homicide"))
@@ -194,56 +250,6 @@ namespace NewOrderDesign
                 //display error message
                 MessageBox.Show("Exception: " + ex.Message);
             }
-        }
-
-        string DropDownCrimesAgainstProperty;
-        private void CrimesAgainstPropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DropDownCrimesAgainstProperty = CrimesAgainstPropertyComboBox.Text;
-        }
-
-        private void CrimesAgainstPropertyTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        string DropDownCrimesAgainstSociety;
-        private void CrimesAgainstSocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DropDownCrimesAgainstSociety = CrimesAgainstSocietyComboBox.Text;
-        }
-        private void CrimesAgainstSocietyTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //From here down is all the code for the text boxes on each tab
-
-        //Persons tab//////////////////////////////////////////////////////////////////
-        private void PersonsDefaultTotalNumber_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void PercofTotalCrimesTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StatesWithMostOffensesTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TotalNumberofOffensesTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TotalOffensesAgainstPersonsLabel_Click(object sender, EventArgs e)
-        {
-            
         }
 
         //Property Tab/////////////////////////////////////////////////////////////////////
