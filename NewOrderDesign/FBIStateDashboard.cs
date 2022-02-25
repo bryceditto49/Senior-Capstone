@@ -123,7 +123,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FBIUSView form4 = new FBIUSView();
+            USOverview form4 = new USOverview();
             form4.Show();
         }
 
