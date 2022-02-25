@@ -95,5 +95,12 @@ namespace NewOrderDesign
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar);
         }
+
+        private void btback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form6 form6 = new Form6();
+            form6.Show();
+        }
     }
 }
