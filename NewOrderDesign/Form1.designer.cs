@@ -45,18 +45,19 @@ namespace NewOrderDesign
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtuser.Location = new System.Drawing.Point(201, 39);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(286, 22);
             this.txtuser.TabIndex = 0;
             this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // txtpass
             // 
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Location = new System.Drawing.Point(201, 96);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(286, 22);
@@ -69,7 +70,7 @@ namespace NewOrderDesign
             this.btsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btsubmit.Location = new System.Drawing.Point(287, 225);
-            this.btsubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btsubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(100, 28);
             this.btsubmit.TabIndex = 2;
@@ -116,7 +117,7 @@ namespace NewOrderDesign
             this.txtcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcon.Location = new System.Drawing.Point(201, 154);
-            this.txtcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcon.Margin = new System.Windows.Forms.Padding(4);
             this.txtcon.Name = "txtcon";
             this.txtcon.PasswordChar = '*';
             this.txtcon.Size = new System.Drawing.Size(286, 22);
@@ -139,7 +140,7 @@ namespace NewOrderDesign
             this.Controls.Add(this.txtuser);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -45,6 +45,9 @@ namespace NewOrderDesign
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Registration is complete");
                         Clear();
+                        this.Hide(); 
+                        Form6 form6 = new Form6();
+                        form6.Show();
                     }
                 }
                 else
@@ -86,6 +89,11 @@ namespace NewOrderDesign
         private void txtcon_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar);
         }
     }
 }
