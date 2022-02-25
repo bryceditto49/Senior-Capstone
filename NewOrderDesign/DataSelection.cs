@@ -19,6 +19,7 @@ namespace NewOrderDesign
             if (Form6.button2_Clicked == true)
             {
                 label1.Text = "Guest";
+                Form6.button2_Clicked = false;
             }
             else
             {
