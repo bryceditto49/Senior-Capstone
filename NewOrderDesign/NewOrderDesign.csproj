@@ -117,6 +117,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FBIDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FBIDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FBIPropertyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,6 +187,12 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="USOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USOverview.Designer.cs">
+      <DependentUpon>USOverview.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +224,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="USOverview.resx">
+      <DependentUpon>USOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CovidDataDataSet.xsc">
       <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
     </None>
@@ -317,6 +336,28 @@
     </None>
     <None Include="FBIDataSet2.xss">
       <DependentUpon>FBIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet3.xsc">
+      <DependentUpon>FBIDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet3.xss">
+      <DependentUpon>FBIDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet4.xsc">
+      <DependentUpon>FBIDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet4.xss">
+      <DependentUpon>FBIDataSet4.xsd</DependentUpon>
     </None>
     <None Include="FBIPropertyDataSet.xsc">
       <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>

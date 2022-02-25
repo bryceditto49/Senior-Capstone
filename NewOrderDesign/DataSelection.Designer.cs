@@ -127,6 +127,7 @@ namespace NewOrderDesign
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(30, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 33);

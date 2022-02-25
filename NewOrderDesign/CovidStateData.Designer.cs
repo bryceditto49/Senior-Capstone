@@ -72,6 +72,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -358,6 +360,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
