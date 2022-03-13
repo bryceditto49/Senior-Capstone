@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+
 
 
 namespace NewOrderDesign
@@ -29,7 +31,17 @@ namespace NewOrderDesign
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
-
+        private static string getHash(string text)
+        {
+            // SHA512 is disposable by inheritance.  
+            using (var sha256 = SHA256.Create())
+            {
+                // Send a sample text to hash.  
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(text));
+                // Get the hashed string.  
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
         private void btlogin_Click(object sender, EventArgs e)
         {
             
@@ -39,10 +51,13 @@ namespace NewOrderDesign
                 }
                 else
                 {
+                    string hashedpass = getHash(txtpass.Text.Trim());
                     SqlConnection con = new SqlConnection(conn);
-                    SqlCommand cmd = new SqlCommand("select * from LoginTable1 where username=@username and password=@password", con);
+                    SqlCommand cmd = new SqlCommand("select * from LoginTable2 where username=@username and password=@password", con);
                     cmd.Parameters.AddWithValue("@username", txtuser.Text);
-                    cmd.Parameters.AddWithValue("@password", txtpass.Text);
+                    cmd.Parameters.AddWithValue("@password", hashedpass);
+                    //var dbhash = cmd.Parameters.Add("@password");
+                    Console.WriteLine(hashedpass);
 
                     con.Open();
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
@@ -81,6 +96,13 @@ namespace NewOrderDesign
         private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar);
+
+        }
+
+
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
 
         }
     }

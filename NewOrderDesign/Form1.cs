@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace NewOrderDesign
 {
@@ -37,11 +38,12 @@ namespace NewOrderDesign
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
+                        string hashpass = getHash(txtpass.Text.Trim());
                         sqlCon.Open();
                         SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@password", txtpass.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@password", hashpass);
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Registration is complete");
                         Clear();
@@ -58,6 +60,18 @@ namespace NewOrderDesign
             else
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private static string getHash(string text)
+        {
+            // SHA512 is disposable by inheritance.  
+            using (var sha256 = SHA256.Create())
+            {
+                // Send a sample text to hash.  
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(text));
+                // Get the hashed string.  
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
         void Clear()
