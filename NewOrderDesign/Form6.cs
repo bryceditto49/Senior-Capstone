@@ -42,6 +42,12 @@ namespace NewOrderDesign
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
+
+        private static string CreateSaltedPassword(string pwd, string salt)
+        {
+            string saltAndPwd = String.Concat(pwd, salt);
+            return saltAndPwd;
+        }
         private void btlogin_Click(object sender, EventArgs e)
         {
             
@@ -51,14 +57,17 @@ namespace NewOrderDesign
                 }
                 else
                 {
-                    string hashedpass = getHash(txtpass.Text.Trim());
                     SqlConnection con = new SqlConnection(conn);
-                    SqlCommand cmd = new SqlCommand("select * from LoginTable2 where username=@username and password=@password", con);
+                    SqlCommand cmd = new SqlCommand("select * from LoginTable1 where username=@username and password=@password", con);
+                    SqlCommand getSalt = new SqlCommand("select salt from LoginTable1 where username=@username and password=@password and salt=@salt");
+                    string salt = (string)getSalt.ExecuteScalar();
+                    string saltandpass = CreateSaltedPassword(txtpass.Text.Trim(), salt);
+                    string hashedpass = getHash(saltandpass);
+                    int length = salt.Length;
+                    hashedpass = hashedpass.Remove(50, 14+length);
                     cmd.Parameters.AddWithValue("@username", txtuser.Text);
                     cmd.Parameters.AddWithValue("@password", hashedpass);
                     //var dbhash = cmd.Parameters.Add("@password");
-                    Console.WriteLine(hashedpass);
-
                     con.Open();
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();

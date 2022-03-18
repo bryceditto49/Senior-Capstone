@@ -38,12 +38,17 @@ namespace NewOrderDesign
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
+                        Random random = new Random();
+                        int salt = random.Next();
+                        string saltString= salt.ToString();
+                        string updatedpass = CreateSaltedPassword(txtuser.Text.Trim(), saltString);
                         string hashpass = getHash(txtpass.Text.Trim());
                         sqlCon.Open();
                         SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@password", hashpass);
+                        sqlCmd.Parameters.AddWithValue("@salt", saltString);
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Registration is complete");
                         Clear();
@@ -74,6 +79,13 @@ namespace NewOrderDesign
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
+
+        private static string CreateSaltedPassword(string pwd, string salt)
+        {
+            string saltAndPwd = String.Concat(pwd, salt);
+            return saltAndPwd;
+        }
+
         void Clear()
         {
             txtuser.Text = txtpass.Text = txtcon.Text = "";
@@ -89,6 +101,8 @@ namespace NewOrderDesign
         {
             password = txtpass.Text;
         }
+
+
 
         private void btsubmit_Clicked(object sender, EventArgs e)
         {
