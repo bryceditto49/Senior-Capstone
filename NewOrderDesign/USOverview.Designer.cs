@@ -62,12 +62,16 @@ namespace NewOrderDesign
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.OverviewTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstPersonsTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstPropertyTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstSocietyTab);
             this.tabControl1.Location = new System.Drawing.Point(17, 58);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(1033, 438);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1033, 438);
@@ -303,9 +307,10 @@ namespace NewOrderDesign
             // 
             // FormHeading
             // 
+            this.FormHeading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FormHeading.AutoSize = true;
             this.FormHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormHeading.Location = new System.Drawing.Point(371, -2);
+            this.FormHeading.Location = new System.Drawing.Point(659, 9);
             this.FormHeading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FormHeading.Name = "FormHeading";
             this.FormHeading.Size = new System.Drawing.Size(316, 58);
@@ -314,6 +319,7 @@ namespace NewOrderDesign
             // 
             // continueFBIUSView
             // 
+            this.continueFBIUSView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.continueFBIUSView.Location = new System.Drawing.Point(915, 499);
             this.continueFBIUSView.Margin = new System.Windows.Forms.Padding(4);
             this.continueFBIUSView.Name = "continueFBIUSView";
@@ -329,7 +335,7 @@ namespace NewOrderDesign
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(17, 5);
+            this.button2.Location = new System.Drawing.Point(21, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(47, 47);
@@ -345,10 +351,11 @@ namespace NewOrderDesign
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.continueFBIUSView);
-            this.Controls.Add(this.FormHeading);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.FormHeading);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "USOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrimeSight";
