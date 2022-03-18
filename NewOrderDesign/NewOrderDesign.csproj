@@ -167,11 +167,11 @@
     <Compile Include="CovidStateData.Designer.cs">
       <DependentUpon>CovidStateData.cs</DependentUpon>
     </Compile>
-    <Compile Include="FBIStateDashboard.cs">
+    <Compile Include="FBIViewMore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FBIStateDashboard.Designer.cs">
-      <DependentUpon>FBIStateDashboard.cs</DependentUpon>
+    <Compile Include="FBIViewMore.Designer.cs">
+      <DependentUpon>FBIViewMore.cs</DependentUpon>
     </Compile>
     <Compile Include="FBIUSView.cs">
       <SubType>Form</SubType>
@@ -208,8 +208,8 @@
     <EmbeddedResource Include="CovidStateData.resx">
       <DependentUpon>CovidStateData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FBIStateDashboard.resx">
-      <DependentUpon>FBIStateDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="FBIViewMore.resx">
+      <DependentUpon>FBIViewMore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FBIUSView.resx">
       <DependentUpon>FBIUSView.cs</DependentUpon>

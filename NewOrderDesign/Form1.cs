@@ -102,5 +102,13 @@ namespace NewOrderDesign
             Form6 form6 = new Form6();
             form6.Show();
         }
+
+        private void txtcon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btsubmit.PerformClick();
+            }
+        }
     }
 }

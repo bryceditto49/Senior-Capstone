@@ -72,8 +72,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -88,6 +86,7 @@ namespace NewOrderDesign
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Please Enter a U.S. State";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // submitbutton
             // 
@@ -347,7 +346,7 @@ namespace NewOrderDesign
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CovidStateData";
-            this.Text = "COVID-19 Data";
+            this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
@@ -360,8 +359,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

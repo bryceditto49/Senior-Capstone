@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace NewOrderDesign
 {
-    public partial class FBIStateDashboard : Form
+    public partial class FBIViewMore : Form
     {
-        public FBIStateDashboard()
+        public FBIViewMore()
         {
             InitializeComponent();
             comboBox1.SelectedItem = "Crimes Against Persons";
@@ -162,6 +162,14 @@ namespace NewOrderDesign
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                submitbutton.PerformClick();
+            }
         }
     }
 }

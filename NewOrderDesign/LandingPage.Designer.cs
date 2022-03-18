@@ -42,7 +42,7 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(597, 65);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(286, 22);
             this.textBox1.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace NewOrderDesign
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(597, 124);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(286, 22);
             this.textBox2.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace NewOrderDesign
             this.nextbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextbutton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.nextbutton.Location = new System.Drawing.Point(784, 174);
-            this.nextbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(4);
             this.nextbutton.Name = "nextbutton";
             this.nextbutton.Size = new System.Drawing.Size(100, 28);
             this.nextbutton.TabIndex = 2;
@@ -101,9 +101,9 @@ namespace NewOrderDesign
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LandingPage";
-            this.Text = "Working Title";
+            this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

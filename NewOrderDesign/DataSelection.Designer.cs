@@ -153,7 +153,7 @@ namespace NewOrderDesign
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DataSelection";
-            this.Text = "Dashboard";
+            this.Text = "CrimeSight";
             this.ResumeLayout(false);
             this.PerformLayout();
 

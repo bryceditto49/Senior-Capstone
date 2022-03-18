@@ -347,7 +347,7 @@ namespace NewOrderDesign
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "USOverview";
-            this.Text = "Overview";
+            this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.USOverview_Load);
             this.tabControl1.ResumeLayout(false);
             this.OverviewTab.ResumeLayout(false);
