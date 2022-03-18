@@ -30,6 +30,7 @@ namespace NewOrderDesign
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CovidStateData));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.submitbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,8 +73,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -110,7 +109,7 @@ namespace NewOrderDesign
             this.label1.Location = new System.Drawing.Point(435, 303);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 16);
+            this.label1.Size = new System.Drawing.Size(286, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -345,9 +344,11 @@ namespace NewOrderDesign
             this.Controls.Add(this.submitbutton);
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CovidStateData";
-            this.Text = "COVID-19 Data";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
@@ -360,8 +361,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

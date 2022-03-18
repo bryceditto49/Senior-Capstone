@@ -30,6 +30,7 @@ namespace NewOrderDesign
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBIStateDashboard));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.submitbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -622,9 +623,11 @@ namespace NewOrderDesign
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FBIStateDashboard";
-            this.Text = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).EndInit();

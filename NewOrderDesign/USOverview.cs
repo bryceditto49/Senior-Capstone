@@ -482,6 +482,11 @@ namespace NewOrderDesign
                 MessageBox.Show("Exception: " + ex.Message);
             }
         }
+
+        private void OverviewTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

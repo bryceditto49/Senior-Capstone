@@ -19,9 +19,10 @@ namespace NewOrderDesign
             InitializeComponent();
         }
 
+        private Size oldsize;
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            oldsize = base.Size;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -101,6 +102,26 @@ namespace NewOrderDesign
             this.Hide();
             Form6 form6 = new Form6();
             form6.Show();
+        }
+
+        protected override void OnResize(System.EventArgs e)
+        {
+            base.OnResize(e);
+
+            foreach (Control cnt in this.Controls)
+                ResizeAll(cnt, base.Size);
+
+            oldsize = base.Size;
+        }
+        private void ResizeAll(Control control, Size newSize)
+        {
+            int width = newSize.Width - oldsize.Width;
+            control.Left += (control.Left * width) / oldsize.Width;
+            control.Width += (control.Width * width) / oldsize.Width;
+
+            int height = newSize.Height - oldsize.Height;
+            control.Top += (control.Top * height) / oldsize.Height;
+            control.Height += (control.Height * height) / oldsize.Height;
         }
     }
 }
