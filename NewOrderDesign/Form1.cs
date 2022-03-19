@@ -41,8 +41,9 @@ namespace NewOrderDesign
                         Random random = new Random();
                         int salt = random.Next();
                         string saltString= salt.ToString();
-                        string updatedpass = CreateSaltedPassword(txtuser.Text.Trim(), saltString);
-                        string hashpass = getHash(txtpass.Text.Trim());
+                        string updatedpass = CreateSaltedPassword(txtpass.Text.Trim(), saltString);
+                        Console.WriteLine(updatedpass);
+                        string hashpass = getHash(updatedpass);
                         sqlCon.Open();
                         SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;

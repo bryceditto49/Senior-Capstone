@@ -56,19 +56,26 @@ namespace NewOrderDesign
                     MessageBox.Show("Please fill in the Blanks");
                 }
                 else
-                {
+                {     
+                    
+
                     SqlConnection con = new SqlConnection(conn);
                     SqlCommand cmd = new SqlCommand("select * from LoginTable1 where username=@username and password=@password", con);
-                    SqlCommand getSalt = new SqlCommand("select salt from LoginTable1 where username=@username and password=@password and salt=@salt");
+                    SqlCommand getSalt = new SqlCommand("select salt from LoginTable1 where username=@username", con);
+                    getSalt.Parameters.AddWithValue("@username", txtuser.Text);
+                    con.Open();
                     string salt = (string)getSalt.ExecuteScalar();
                     string saltandpass = CreateSaltedPassword(txtpass.Text.Trim(), salt);
+                    Console.WriteLine(salt);
                     string hashedpass = getHash(saltandpass);
-                    int length = salt.Length;
-                    hashedpass = hashedpass.Remove(50, 14+length);
+                    Console.WriteLine(hashedpass);
+                    //int length = salt.Length;
+                    //int digitcount = 14 + length;
+                    hashedpass = hashedpass.Remove(50, 14);
                     cmd.Parameters.AddWithValue("@username", txtuser.Text);
                     cmd.Parameters.AddWithValue("@password", hashedpass);
                     //var dbhash = cmd.Parameters.Add("@password");
-                    con.Open();
+                    
                     SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adpt.Fill(ds);
