@@ -106,6 +106,7 @@ namespace NewOrderDesign
             this.OverviewTab.TabIndex = 0;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
+            this.OverviewTab.Click += new System.EventHandler(this.OverviewTab_Click);
             // 
             // TotalCrimesAgainstSocietyLabel
             // 

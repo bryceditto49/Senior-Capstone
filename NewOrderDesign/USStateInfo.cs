@@ -16,5 +16,10 @@ namespace NewOrderDesign
         {
             InitializeComponent();
         }
+
+        private void OverviewTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

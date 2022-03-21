@@ -143,6 +143,12 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="USStateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USStateInfo.Designer.cs">
+      <DependentUpon>USStateInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form6.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USStateInfo.resx">
+      <DependentUpon>USStateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
