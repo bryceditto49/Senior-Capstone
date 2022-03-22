@@ -30,7 +30,7 @@ namespace NewOrderDesign
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USStateInfo));
-            this.continueFBIUSView = new System.Windows.Forms.Button();
+            this.continueFBIStateView = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OverviewTab = new System.Windows.Forms.TabPage();
             this.TotalCrimesAgainstSocietyLabel = new System.Windows.Forms.Label();
@@ -60,16 +60,17 @@ namespace NewOrderDesign
             this.CrimesAgainstSocietyTab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // continueFBIUSView
+            // continueFBIStateView
             // 
-            this.continueFBIUSView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.continueFBIUSView.Location = new System.Drawing.Point(915, 503);
-            this.continueFBIUSView.Margin = new System.Windows.Forms.Padding(4);
-            this.continueFBIUSView.Name = "continueFBIUSView";
-            this.continueFBIUSView.Size = new System.Drawing.Size(135, 42);
-            this.continueFBIUSView.TabIndex = 15;
-            this.continueFBIUSView.Text = "Continue";
-            this.continueFBIUSView.UseVisualStyleBackColor = true;
+            this.continueFBIStateView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.continueFBIStateView.Location = new System.Drawing.Point(915, 503);
+            this.continueFBIStateView.Margin = new System.Windows.Forms.Padding(4);
+            this.continueFBIStateView.Name = "continueFBIStateView";
+            this.continueFBIStateView.Size = new System.Drawing.Size(135, 42);
+            this.continueFBIStateView.TabIndex = 15;
+            this.continueFBIStateView.Text = "View Raw Data";
+            this.continueFBIStateView.UseVisualStyleBackColor = true;
+            this.continueFBIStateView.Click += new System.EventHandler(this.continueFBIStateView_Click);
             // 
             // tabControl1
             // 
@@ -112,7 +113,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstSocietyLabel.AutoSize = true;
             this.TotalCrimesAgainstSocietyLabel.Location = new System.Drawing.Point(360, 300);
             this.TotalCrimesAgainstSocietyLabel.Name = "TotalCrimesAgainstSocietyLabel";
-            this.TotalCrimesAgainstSocietyLabel.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstSocietyLabel.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstSocietyLabel.TabIndex = 5;
             // 
             // TotalCrimesAgainstPropertyLabel
@@ -120,7 +121,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyLabel.AutoSize = true;
             this.TotalCrimesAgainstPropertyLabel.Location = new System.Drawing.Point(363, 180);
             this.TotalCrimesAgainstPropertyLabel.Name = "TotalCrimesAgainstPropertyLabel";
-            this.TotalCrimesAgainstPropertyLabel.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPropertyLabel.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstPropertyLabel.TabIndex = 4;
             // 
             // TotalCrimesAgainstPersonsLabel
@@ -128,7 +129,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsLabel.AutoSize = true;
             this.TotalCrimesAgainstPersonsLabel.Location = new System.Drawing.Point(360, 67);
             this.TotalCrimesAgainstPersonsLabel.Name = "TotalCrimesAgainstPersonsLabel";
-            this.TotalCrimesAgainstPersonsLabel.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPersonsLabel.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstPersonsLabel.TabIndex = 3;
             // 
             // label3
@@ -136,7 +137,7 @@ namespace NewOrderDesign
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(55, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 17);
+            this.label3.Size = new System.Drawing.Size(251, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total Reports for Crimes Against Society:\r\n";
             // 
@@ -145,7 +146,7 @@ namespace NewOrderDesign
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 34);
+            this.label2.Size = new System.Drawing.Size(254, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Total Reports for Crimes Against Property\r\n:\r\n";
             // 
@@ -154,7 +155,7 @@ namespace NewOrderDesign
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(55, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 17);
+            this.label1.Size = new System.Drawing.Size(256, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Reports for Crimes Against Persons:\r\n";
             // 
@@ -179,7 +180,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsStateTotal.AutoSize = true;
             this.TotalCrimesAgainstPersonsStateTotal.Location = new System.Drawing.Point(185, 92);
             this.TotalCrimesAgainstPersonsStateTotal.Name = "TotalCrimesAgainstPersonsStateTotal";
-            this.TotalCrimesAgainstPersonsStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPersonsStateTotal.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstPersonsStateTotal.TabIndex = 2;
             // 
             // label4
@@ -187,7 +188,7 @@ namespace NewOrderDesign
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(67, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.Size = new System.Drawing.Size(95, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Total Number: ";
             // 
@@ -248,6 +249,7 @@ namespace NewOrderDesign
             this.PersonsComboBox.Name = "PersonsComboBox";
             this.PersonsComboBox.Size = new System.Drawing.Size(160, 24);
             this.PersonsComboBox.TabIndex = 0;
+            this.PersonsComboBox.SelectedIndexChanged += new System.EventHandler(this.PersonsComboBox_SelectedIndexChanged);
             // 
             // CrimesAgainstPropertyTab
             // 
@@ -269,7 +271,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyStateTotal.AutoSize = true;
             this.TotalCrimesAgainstPropertyStateTotal.Location = new System.Drawing.Point(170, 93);
             this.TotalCrimesAgainstPropertyStateTotal.Name = "TotalCrimesAgainstPropertyStateTotal";
-            this.TotalCrimesAgainstPropertyStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPropertyStateTotal.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstPropertyStateTotal.TabIndex = 3;
             // 
             // label5
@@ -277,7 +279,7 @@ namespace NewOrderDesign
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(62, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 17);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "Total Number: ";
             // 
@@ -338,6 +340,7 @@ namespace NewOrderDesign
             this.PropertyComboBox.Name = "PropertyComboBox";
             this.PropertyComboBox.Size = new System.Drawing.Size(160, 24);
             this.PropertyComboBox.TabIndex = 0;
+            this.PropertyComboBox.SelectedIndexChanged += new System.EventHandler(this.PropertyComboBox_SelectedIndexChanged);
             // 
             // CrimesAgainstSocietyTab
             // 
@@ -359,7 +362,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstSocietyStateTotal.AutoSize = true;
             this.TotalCrimesAgainstSocietyStateTotal.Location = new System.Drawing.Point(171, 91);
             this.TotalCrimesAgainstSocietyStateTotal.Name = "TotalCrimesAgainstSocietyStateTotal";
-            this.TotalCrimesAgainstSocietyStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstSocietyStateTotal.Size = new System.Drawing.Size(0, 16);
             this.TotalCrimesAgainstSocietyStateTotal.TabIndex = 4;
             // 
             // label6
@@ -367,7 +370,7 @@ namespace NewOrderDesign
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(63, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 17);
+            this.label6.Size = new System.Drawing.Size(95, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Total Number: ";
             // 
@@ -428,6 +431,7 @@ namespace NewOrderDesign
             this.SocietyComboBox.Name = "SocietyComboBox";
             this.SocietyComboBox.Size = new System.Drawing.Size(160, 24);
             this.SocietyComboBox.TabIndex = 0;
+            this.SocietyComboBox.SelectedIndexChanged += new System.EventHandler(this.SocietyComboBox_SelectedIndexChanged);
             // 
             // FormHeading
             // 
@@ -454,6 +458,7 @@ namespace NewOrderDesign
             this.button2.Size = new System.Drawing.Size(47, 47);
             this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // USStateInfo
             // 
@@ -462,7 +467,7 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.continueFBIUSView);
+            this.Controls.Add(this.continueFBIStateView);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.FormHeading);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -486,7 +491,7 @@ namespace NewOrderDesign
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button continueFBIUSView;
+        private System.Windows.Forms.Button continueFBIStateView;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage OverviewTab;
         private System.Windows.Forms.Label TotalCrimesAgainstSocietyLabel;

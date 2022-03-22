@@ -204,7 +204,7 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FBIStateDashboard form4 = new FBIStateDashboard();
+            USStateInfo form4 = new USStateInfo();
             form4.Show();
         }
 

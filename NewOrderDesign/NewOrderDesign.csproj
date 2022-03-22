@@ -193,6 +193,12 @@
     <Compile Include="USOverview.Designer.cs">
       <DependentUpon>USOverview.cs</DependentUpon>
     </Compile>
+    <Compile Include="USStateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USStateInfo.Designer.cs">
+      <DependentUpon>USStateInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +232,9 @@
     </Compile>
     <EmbeddedResource Include="USOverview.resx">
       <DependentUpon>USOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USStateInfo.resx">
+      <DependentUpon>USStateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CovidDataDataSet.xsc">
       <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
