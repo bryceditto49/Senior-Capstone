@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 
 namespace NewOrderDesign
 {
@@ -162,6 +163,54 @@ namespace NewOrderDesign
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void printDataGridViewDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap printDataGridViewDocumentBitmap = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
+            dataGridView1.DrawToBitmap(printDataGridViewDocumentBitmap, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+            e.Graphics.DrawImage(printDataGridViewDocumentBitmap, 0, 0);
+        }
+
+        private void exportfunction_Click(object sender, EventArgs e)
+        {
+            /*
+            PrintDialog printDlg = new PrintDialog();
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.DocumentName = "Exported FBI Data";
+
+
+            //start SQL connection and grab data
+            string connectionString = "Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            string sql = "SELECT * FROM Crimes_Against_" + table + $"_Offenses_Offense_Category_by_State_2020";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand command = new SqlCommand(sql, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            conn.Close();
+
+
+            printDlg.Document = printDoc;
+            printDlg.AllowSelection = true;
+            printDlg.AllowSomePages = true;
+            //Call ShowDialog  
+            if (printDlg.ShowDialog() == DialogResult.OK) printDoc.Print();
+            */
+            PrintDialog printDataGridViewDocumentPrintDialog = new PrintDialog();
+            PrintDocument printDataGridViewDocument1 = new PrintDocument();
+            printDataGridViewDocumentPrintDialog.Document = printDataGridViewDocument1;
+            printDataGridViewDocumentPrintDialog.UseEXDialog = true;
+
+            DialogResult printDataGridViewDocumentDialogResult = printDataGridViewDocumentPrintDialog.ShowDialog();
+
+            //If Print is clicked
+            if (printDataGridViewDocumentDialogResult == DialogResult.OK)
+            {
+                printDataGridViewDocument1.DocumentName = "FBI Statistical Export";
+                printDataGridViewDocument1.Print();
+            }
         }
     }
 }
