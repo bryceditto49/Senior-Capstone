@@ -32,7 +32,7 @@ namespace NewOrderDesign
 
         private void btsubmit_Click(object sender, EventArgs e)
         {
-            if (txtcon.Text != string.Empty || txtpass.Text != string.Empty || txtuser.Text != string.Empty)
+            if (txtcon.Text == "" && txtpass.Text == "" && txtuser.Text == "")
             {
                 if (txtpass.Text == txtcon.Text)
                 {
