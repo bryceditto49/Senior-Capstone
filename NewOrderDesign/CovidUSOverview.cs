@@ -35,35 +35,7 @@ namespace NewOrderDesign
 
         private void OverviewTab_Click(object sender, EventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connString))
-                {
-                    conn.Open();
-
-                    string query1 = $"SELECT SUM(confirmed_cases) FROM states; ";
-                    string query2 = $"SELECT sum(deaths) FROM states";
-
-                    SqlCommand cmdconfirmedcases = conn.CreateCommand();
-                    cmdconfirmedcases.CommandText = query1;
-                    CovidUSOverview.confirmed_cases = (Int32)cmdconfirmedcases.ExecuteScalar();
-                    CovidUSTotalLabel.Text = CovidUSOverview.confirmed_cases.ToString();
-
-                    SqlCommand cmddeaths = conn.CreateCommand();
-                    cmddeaths.CommandText = query2;
-                    CovidUSOverview.deaths = (Int32)cmddeaths.ExecuteScalar();
-                    CovidUSTotalLabel2.Text = CovidUSOverview.deaths.ToString();
-
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                //display error message
-                MessageBox.Show("Exception: " + ex.Message);
-            }
-
+            
         }
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,6 +83,38 @@ namespace NewOrderDesign
             this.Hide();
             CovidStateData CovidStateData = new CovidStateData();
             CovidStateData.Show();
+        }
+
+        private void CovidUSOverview_Load(object sender, EventArgs e)
+        {
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+
+                    string query1 = $"SELECT SUM(confirmed_cases) FROM states; ";
+                    string query2 = $"SELECT sum(deaths) FROM states";
+
+                    SqlCommand cmdconfirmedcases = conn.CreateCommand();
+                    cmdconfirmedcases.CommandText = query1;
+                    CovidUSOverview.confirmed_cases = (Int32)cmdconfirmedcases.ExecuteScalar();
+                    CovidUSTotalLabel.Text = CovidUSOverview.confirmed_cases.ToString();
+
+                    SqlCommand cmddeaths = conn.CreateCommand();
+                    cmddeaths.CommandText = query2;
+                    CovidUSOverview.deaths = (Int32)cmddeaths.ExecuteScalar();
+                    CovidUSTotalLabel2.Text = CovidUSOverview.deaths.ToString();
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                //display error message
+                MessageBox.Show("Exception: " + ex.Message);
+            }
         }
     }
 

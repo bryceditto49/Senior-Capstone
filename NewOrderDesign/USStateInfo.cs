@@ -122,6 +122,11 @@ namespace NewOrderDesign
                 MessageBox.Show("Exception: " + ex.Message);
             }
         }
+
+        private void USStateInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

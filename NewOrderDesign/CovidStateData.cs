@@ -35,9 +35,17 @@ namespace NewOrderDesign
                 //sql connection object
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
+                    string query;
 
                     //retrieve the SQL Server instance version
-                    string query = $"SELECT * FROM states WHERE state_name = '{state}'";
+                    if (String.IsNullOrEmpty(state))
+                    {
+                        query = $"SELECT * FROM states";
+                    }
+                    else
+                    {
+                        query = $"SELECT * FROM states WHERE state_name = '{state}'";
+                    }
 
                     //define the SqlCommand object
                     SqlCommand cmd = new SqlCommand(query, conn);

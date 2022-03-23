@@ -61,6 +61,7 @@ namespace NewOrderDesign
             this.button5 = new System.Windows.Forms.Button();
             this.Export_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
@@ -109,7 +110,7 @@ namespace NewOrderDesign
             this.label1.Location = new System.Drawing.Point(435, 303);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 17);
+            this.label1.Size = new System.Drawing.Size(266, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -319,6 +320,18 @@ namespace NewOrderDesign
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(94, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(513, 15);
+            this.textBox2.TabIndex = 17;
+            this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
+    "d";
+            // 
             // CovidStateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,6 +340,7 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.Export_button);
             this.Controls.Add(this.dataGridView1);
@@ -393,5 +407,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Export_button;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
