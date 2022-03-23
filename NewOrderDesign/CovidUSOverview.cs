@@ -20,6 +20,7 @@ namespace NewOrderDesign
         public CovidUSOverview()
         {
             InitializeComponent();
+            PersonsComboBox.SelectedItem = "Alabama";
         }
 
         string stateCovid;

@@ -18,6 +18,7 @@ namespace NewOrderDesign
         public CovidStateData()
         {
             InitializeComponent();
+
         }
         public static string state;
         public void textBox1_TextChanged(object sender, EventArgs e)
@@ -89,7 +90,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DataSelection form2 = new DataSelection();
+            CovidUSOverview form2 = new CovidUSOverview();
             form2.Show();
         }
 

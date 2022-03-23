@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CovidUSOverview));
             this.button2 = new System.Windows.Forms.Button();
             this.FormHeading = new System.Windows.Forms.Label();
             this.OverviewTab = new System.Windows.Forms.TabPage();
@@ -261,7 +262,7 @@
             this.RawDataButton.Name = "RawDataButton";
             this.RawDataButton.Size = new System.Drawing.Size(107, 47);
             this.RawDataButton.TabIndex = 9;
-            this.RawDataButton.Text = "Continue";
+            this.RawDataButton.Text = "Raw Data";
             this.RawDataButton.UseVisualStyleBackColor = true;
             this.RawDataButton.Click += new System.EventHandler(this.RawDataButton_Click);
             // 
@@ -275,6 +276,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.FormHeading);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "CovidUSOverview";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
