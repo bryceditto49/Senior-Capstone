@@ -45,8 +45,8 @@ namespace NewOrderDesign
         private void covidbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CovidStateData form3 = new CovidStateData();
-            form3.Show();
+            CovidUSOverview form2 = new CovidUSOverview();
+            form2.Show();
         }
 
         private void fbibutton_Click(object sender, EventArgs e)

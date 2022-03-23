@@ -143,6 +143,12 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="CovidUSOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CovidUSOverview.Designer.cs">
+      <DependentUpon>CovidUSOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form6.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     <Compile Include="USOverview.Designer.cs">
       <DependentUpon>USOverview.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CovidUSOverview.resx">
+      <DependentUpon>CovidUSOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
