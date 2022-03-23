@@ -42,11 +42,11 @@ namespace NewOrderDesign
             // 
             // txtuser
             // 
-            this.txtuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtuser.Location = new System.Drawing.Point(201, 39);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtuser.Location = new System.Drawing.Point(374, 149);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(286, 22);
             this.txtuser.TabIndex = 0;
@@ -57,8 +57,9 @@ namespace NewOrderDesign
             // 
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpass.Location = new System.Drawing.Point(201, 96);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpass.Location = new System.Drawing.Point(374, 203);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(286, 22);
@@ -70,11 +71,12 @@ namespace NewOrderDesign
             this.btsubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btsubmit.Location = new System.Drawing.Point(201, 226);
-            this.btsubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.btsubmit.Location = new System.Drawing.Point(374, 333);
+            this.btsubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btsubmit.MinimumSize = new System.Drawing.Size(100, 28);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(100, 28);
-            this.btsubmit.TabIndex = 2;
+            this.btsubmit.TabIndex = 5;
             this.btsubmit.Text = "Register";
             this.btsubmit.UseVisualStyleBackColor = false;
             this.btsubmit.Click += new System.EventHandler(this.btsubmit_Click);
@@ -83,10 +85,11 @@ namespace NewOrderDesign
             // 
             this.lbuser.AutoSize = true;
             this.lbuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbuser.Location = new System.Drawing.Point(47, 42);
+            this.lbuser.Location = new System.Drawing.Point(220, 149);
             this.lbuser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbuser.MinimumSize = new System.Drawing.Size(111, 17);
             this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(104, 16);
+            this.lbuser.Size = new System.Drawing.Size(111, 17);
             this.lbuser.TabIndex = 4;
             this.lbuser.Text = "Enter Username";
             this.lbuser.Click += new System.EventHandler(this.label1_Click);
@@ -95,10 +98,11 @@ namespace NewOrderDesign
             // 
             this.lbpass.AutoSize = true;
             this.lbpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbpass.Location = new System.Drawing.Point(47, 98);
+            this.lbpass.Location = new System.Drawing.Point(220, 205);
             this.lbpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbpass.MinimumSize = new System.Drawing.Size(107, 17);
             this.lbpass.Name = "lbpass";
-            this.lbpass.Size = new System.Drawing.Size(101, 16);
+            this.lbpass.Size = new System.Drawing.Size(107, 17);
             this.lbpass.TabIndex = 8;
             this.lbpass.Text = "Enter Password";
             // 
@@ -106,10 +110,11 @@ namespace NewOrderDesign
             // 
             this.lbfirst.AutoSize = true;
             this.lbfirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbfirst.Location = new System.Drawing.Point(47, 156);
+            this.lbfirst.Location = new System.Drawing.Point(220, 263);
             this.lbfirst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbfirst.MinimumSize = new System.Drawing.Size(121, 17);
             this.lbfirst.Name = "lbfirst";
-            this.lbfirst.Size = new System.Drawing.Size(115, 16);
+            this.lbfirst.Size = new System.Drawing.Size(121, 17);
             this.lbfirst.TabIndex = 9;
             this.lbfirst.Text = "Confirm Password";
             // 
@@ -117,12 +122,13 @@ namespace NewOrderDesign
             // 
             this.txtcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcon.Location = new System.Drawing.Point(201, 154);
-            this.txtcon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcon.Location = new System.Drawing.Point(374, 261);
+            this.txtcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcon.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtcon.Name = "txtcon";
             this.txtcon.PasswordChar = '*';
             this.txtcon.Size = new System.Drawing.Size(286, 22);
-            this.txtcon.TabIndex = 5;
+            this.txtcon.TabIndex = 4;
             this.txtcon.TextChanged += new System.EventHandler(this.txtcon_TextChanged);
             this.txtcon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcon_KeyDown);
             // 
@@ -131,8 +137,9 @@ namespace NewOrderDesign
             this.btback.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.btback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btback.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btback.Location = new System.Drawing.Point(388, 226);
-            this.btback.Margin = new System.Windows.Forms.Padding(4);
+            this.btback.Location = new System.Drawing.Point(561, 333);
+            this.btback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btback.MinimumSize = new System.Drawing.Size(100, 28);
             this.btback.Name = "btback";
             this.btback.Size = new System.Drawing.Size(100, 28);
             this.btback.TabIndex = 10;
@@ -144,9 +151,10 @@ namespace NewOrderDesign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(633, 385);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btback);
             this.Controls.Add(this.lbfirst);
             this.Controls.Add(this.lbpass);
@@ -157,8 +165,9 @@ namespace NewOrderDesign
             this.Controls.Add(this.txtuser);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrimeSight";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

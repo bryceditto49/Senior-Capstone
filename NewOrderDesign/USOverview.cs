@@ -204,7 +204,7 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FBIViewMore form4 = new FBIViewMore();
+            USStateInfo form4 = new USStateInfo();
             form4.Show();
         }
 
@@ -481,6 +481,11 @@ namespace NewOrderDesign
                 //display error message
                 MessageBox.Show("Exception: " + ex.Message);
             }
+        }
+
+        private void OverviewTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
