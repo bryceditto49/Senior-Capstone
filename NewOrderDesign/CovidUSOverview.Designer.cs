@@ -96,7 +96,7 @@
             this.CovidUSTotalLabel2.AutoSize = true;
             this.CovidUSTotalLabel2.Location = new System.Drawing.Point(386, 180);
             this.CovidUSTotalLabel2.Name = "CovidUSTotalLabel2";
-            this.CovidUSTotalLabel2.Size = new System.Drawing.Size(0, 16);
+            this.CovidUSTotalLabel2.Size = new System.Drawing.Size(0, 17);
             this.CovidUSTotalLabel2.TabIndex = 5;
             // 
             // CovidUSTotalLabel
@@ -104,7 +104,7 @@
             this.CovidUSTotalLabel.AutoSize = true;
             this.CovidUSTotalLabel.Location = new System.Drawing.Point(386, 68);
             this.CovidUSTotalLabel.Name = "CovidUSTotalLabel";
-            this.CovidUSTotalLabel.Size = new System.Drawing.Size(0, 16);
+            this.CovidUSTotalLabel.Size = new System.Drawing.Size(0, 17);
             this.CovidUSTotalLabel.TabIndex = 4;
             // 
             // TotalConfirmedDeaths
@@ -112,7 +112,7 @@
             this.TotalConfirmedDeaths.AutoSize = true;
             this.TotalConfirmedDeaths.Location = new System.Drawing.Point(55, 180);
             this.TotalConfirmedDeaths.Name = "TotalConfirmedDeaths";
-            this.TotalConfirmedDeaths.Size = new System.Drawing.Size(299, 16);
+            this.TotalConfirmedDeaths.Size = new System.Drawing.Size(321, 17);
             this.TotalConfirmedDeaths.TabIndex = 1;
             this.TotalConfirmedDeaths.Text = "Total Reports for Covid-19 confirmed deaths (US)\r\n";
             // 
@@ -121,12 +121,15 @@
             this.TotalConfirmedCases.AutoSize = true;
             this.TotalConfirmedCases.Location = new System.Drawing.Point(55, 68);
             this.TotalConfirmedCases.Name = "TotalConfirmedCases";
-            this.TotalConfirmedCases.Size = new System.Drawing.Size(298, 32);
+            this.TotalConfirmedCases.Size = new System.Drawing.Size(319, 34);
             this.TotalConfirmedCases.TabIndex = 0;
             this.TotalConfirmedCases.Text = "Total Reports for Covid-19 confirmed cases (US):\r\n\r\n";
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.OverviewTab);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(17, 58);
@@ -157,7 +160,7 @@
             this.TotalStateCovidResultsLabel2.AutoSize = true;
             this.TotalStateCovidResultsLabel2.Location = new System.Drawing.Point(476, 206);
             this.TotalStateCovidResultsLabel2.Name = "TotalStateCovidResultsLabel2";
-            this.TotalStateCovidResultsLabel2.Size = new System.Drawing.Size(0, 16);
+            this.TotalStateCovidResultsLabel2.Size = new System.Drawing.Size(0, 17);
             this.TotalStateCovidResultsLabel2.TabIndex = 8;
             // 
             // TotalStateCovidResultsLabel1
@@ -165,7 +168,7 @@
             this.TotalStateCovidResultsLabel1.AutoSize = true;
             this.TotalStateCovidResultsLabel1.Location = new System.Drawing.Point(476, 94);
             this.TotalStateCovidResultsLabel1.Name = "TotalStateCovidResultsLabel1";
-            this.TotalStateCovidResultsLabel1.Size = new System.Drawing.Size(0, 16);
+            this.TotalStateCovidResultsLabel1.Size = new System.Drawing.Size(0, 17);
             this.TotalStateCovidResultsLabel1.TabIndex = 7;
             // 
             // TotalStateCovidLabel2
@@ -173,7 +176,7 @@
             this.TotalStateCovidLabel2.AutoSize = true;
             this.TotalStateCovidLabel2.Location = new System.Drawing.Point(216, 206);
             this.TotalStateCovidLabel2.Name = "TotalStateCovidLabel2";
-            this.TotalStateCovidLabel2.Size = new System.Drawing.Size(203, 16);
+            this.TotalStateCovidLabel2.Size = new System.Drawing.Size(217, 17);
             this.TotalStateCovidLabel2.TabIndex = 6;
             this.TotalStateCovidLabel2.Text = "Total Covid-19 confirmed deaths:";
             this.TotalStateCovidLabel2.Click += new System.EventHandler(this.label5_Click);
@@ -183,7 +186,7 @@
             this.TotalStateCovidLabel1.AutoSize = true;
             this.TotalStateCovidLabel1.Location = new System.Drawing.Point(216, 94);
             this.TotalStateCovidLabel1.Name = "TotalStateCovidLabel1";
-            this.TotalStateCovidLabel1.Size = new System.Drawing.Size(199, 32);
+            this.TotalStateCovidLabel1.Size = new System.Drawing.Size(211, 34);
             this.TotalStateCovidLabel1.TabIndex = 5;
             this.TotalStateCovidLabel1.Text = "Total Covid-19 confirmed cases:\r\n\r\n";
             // 
@@ -252,6 +255,7 @@
             // 
             // RawDataButton
             // 
+            this.RawDataButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RawDataButton.AutoSize = true;
             this.RawDataButton.Location = new System.Drawing.Point(943, 503);
             this.RawDataButton.Name = "RawDataButton";
@@ -271,9 +275,11 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.FormHeading);
             this.Controls.Add(this.button2);
+            this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "CovidUSOverview";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TravelSite";
             this.OverviewTab.ResumeLayout(false);
             this.OverviewTab.PerformLayout();
             this.tabControl1.ResumeLayout(false);

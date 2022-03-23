@@ -30,7 +30,7 @@ namespace NewOrderDesign
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBIStateDashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBIViewMore));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.submitbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();

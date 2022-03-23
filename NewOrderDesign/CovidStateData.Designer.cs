@@ -359,7 +359,7 @@ namespace NewOrderDesign
             this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "CovidStateData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrimeSight";
+            this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();

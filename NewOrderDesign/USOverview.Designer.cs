@@ -358,7 +358,7 @@ namespace NewOrderDesign
             this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "USOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrimeSight";
+            this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.USOverview_Load);
             this.tabControl1.ResumeLayout(false);
             this.OverviewTab.ResumeLayout(false);

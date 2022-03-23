@@ -45,7 +45,7 @@
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btlogin.Location = new System.Drawing.Point(430, 326);
-            this.btlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btlogin.MinimumSize = new System.Drawing.Size(75, 28);
             this.btlogin.Name = "btlogin";
             this.btlogin.Size = new System.Drawing.Size(75, 28);
@@ -61,7 +61,7 @@
             this.btguest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btguest.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btguest.Location = new System.Drawing.Point(534, 326);
-            this.btguest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btguest.Margin = new System.Windows.Forms.Padding(4);
             this.btguest.MinimumSize = new System.Drawing.Size(75, 28);
             this.btguest.Name = "btguest";
             this.btguest.Size = new System.Drawing.Size(75, 28);
@@ -75,7 +75,7 @@
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtuser.Location = new System.Drawing.Point(430, 180);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtuser.MinimumSize = new System.Drawing.Size(282, 22);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(282, 22);
@@ -88,7 +88,7 @@
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Location = new System.Drawing.Point(430, 257);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtpass.MinimumSize = new System.Drawing.Size(282, 22);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
@@ -125,7 +125,7 @@
             this.btregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btregis.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btregis.Location = new System.Drawing.Point(638, 326);
-            this.btregis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btregis.Margin = new System.Windows.Forms.Padding(4);
             this.btregis.MinimumSize = new System.Drawing.Size(75, 28);
             this.btregis.Name = "btregis";
             this.btregis.Size = new System.Drawing.Size(75, 28);
@@ -151,11 +151,11 @@
             this.Controls.Add(this.btlogin);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrimeSight";
+            this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

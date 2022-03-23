@@ -45,7 +45,7 @@ namespace NewOrderDesign
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtuser.Location = new System.Drawing.Point(374, 149);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtuser.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(286, 22);
@@ -58,7 +58,7 @@ namespace NewOrderDesign
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Location = new System.Drawing.Point(374, 203);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtpass.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
@@ -72,7 +72,7 @@ namespace NewOrderDesign
             this.btsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btsubmit.Location = new System.Drawing.Point(374, 333);
-            this.btsubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btsubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btsubmit.MinimumSize = new System.Drawing.Size(100, 28);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(100, 28);
@@ -123,7 +123,7 @@ namespace NewOrderDesign
             this.txtcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcon.Location = new System.Drawing.Point(374, 261);
-            this.txtcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcon.Margin = new System.Windows.Forms.Padding(4);
             this.txtcon.MinimumSize = new System.Drawing.Size(286, 22);
             this.txtcon.Name = "txtcon";
             this.txtcon.PasswordChar = '*';
@@ -138,7 +138,7 @@ namespace NewOrderDesign
             this.btback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btback.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btback.Location = new System.Drawing.Point(561, 333);
-            this.btback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btback.Margin = new System.Windows.Forms.Padding(4);
             this.btback.MinimumSize = new System.Drawing.Size(100, 28);
             this.btback.Name = "btback";
             this.btback.Size = new System.Drawing.Size(100, 28);
@@ -165,10 +165,10 @@ namespace NewOrderDesign
             this.Controls.Add(this.txtuser);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrimeSight";
+            this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

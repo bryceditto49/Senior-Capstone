@@ -110,6 +110,7 @@ namespace NewOrderDesign
             {
                 btsubmit.PerformClick();
             }
+        }
         protected override void OnResize(System.EventArgs e)
         {
             base.OnResize(e);

@@ -131,7 +131,7 @@ namespace NewOrderDesign
             this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "DataSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrimeSight";
+            this.Text = "TravelSite";
             this.ResumeLayout(false);
             this.PerformLayout();
 
