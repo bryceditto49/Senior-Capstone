@@ -33,7 +33,7 @@ namespace NewOrderDesign
 
         private void btsubmit_Click(object sender, EventArgs e)
         {
-            if (txtcon.Text != string.Empty  && txtpass.Text != string.Empty  && txtuser.Text != string.Empty )
+            if (txtcon.Text != string.Empty && txtpass.Text != string.Empty && txtuser.Text != string.Empty )
             {
                 if (txtpass.Text == txtcon.Text)
                 {
@@ -159,5 +159,24 @@ namespace NewOrderDesign
             control.Top += (control.Top * height) / oldsize.Height;
             control.Height += (control.Height * height) / oldsize.Height;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '*')
+            {
+                button1.BringToFront();
+                txtpass.PasswordChar = '\0';
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '\0')
+            {
+                button2.BringToFront();
+                txtpass.PasswordChar = '*';
+            }
+        }
+
     }
 }
