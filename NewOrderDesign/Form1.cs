@@ -38,7 +38,7 @@ namespace NewOrderDesign
                 if (txtpass.Text == txtcon.Text)
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                    {
+                    {   
                         Random random = new Random();
                         int salt = random.Next();
                         string saltString= salt.ToString();
@@ -46,17 +46,32 @@ namespace NewOrderDesign
                         Console.WriteLine(updatedpass);
                         string hashpass = getHash(updatedpass);
                         sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@password", hashpass);
-                        sqlCmd.Parameters.AddWithValue("@salt", saltString);
-                        sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Registration is complete");
-                        Clear();
-                        this.Hide(); 
-                        Form6 form6 = new Form6();
-                        form6.Show();
+                        bool exists = false;
+                        using (SqlCommand sqlCmd = new SqlCommand("select count(*) from LoginTable1 where username = @username", sqlCon))
+                        {
+                            sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
+                            exists = (int)sqlCmd.ExecuteScalar() > 0;
+                        }
+                        if (exists)
+                        {
+                            MessageBox.Show("Username Already Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            using (SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon))
+                            {
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
+                                sqlCmd.Parameters.AddWithValue("@password", hashpass);
+                                sqlCmd.Parameters.AddWithValue("@salt", saltString);
+                                sqlCmd.ExecuteNonQuery();
+                                MessageBox.Show("Registration is complete");
+                                Clear();
+                                this.Hide(); 
+                                Form6 form6 = new Form6();
+                                form6.Show();
+                            }
+                        }
                     }
                 }
                 else
