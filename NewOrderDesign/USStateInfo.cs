@@ -32,7 +32,7 @@ namespace NewOrderDesign
         {
             statePersons = PersonsComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -73,7 +73,7 @@ namespace NewOrderDesign
         {
             stateProperty = PersonsComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -100,7 +100,7 @@ namespace NewOrderDesign
         {
             stateSociety = SocietyComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -125,6 +125,12 @@ namespace NewOrderDesign
 
         private void USStateInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
 
         }
     }

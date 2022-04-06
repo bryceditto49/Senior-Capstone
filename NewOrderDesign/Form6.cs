@@ -17,7 +17,7 @@ namespace NewOrderDesign
     public partial class Form6 : Form
     {
         
-        string conn = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=daylonswallows123");
+        string conn = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=daylonswallows1234");
         public Form6()
         {
             InitializeComponent();
