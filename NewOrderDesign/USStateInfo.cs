@@ -120,7 +120,7 @@ namespace NewOrderDesign
             string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
-
+                /*
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
                     conn.Open();
@@ -132,6 +132,31 @@ namespace NewOrderDesign
                     USStateInfo.overviewtotalproperty = (Int32)cmdtotalproperty.ExecuteScalar();
                     TotalCrimesAgainstPropertyStateTotal.Text = USStateInfo.overviewtotalproperty.ToString();
                 }
+                */
+                //Fetch the Statistical data from database.
+                string query = $"SELECT State, Total_Offenses";
+                query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+                DataTable dt = GetData(query);
+
+                //Get the names of states.
+                string[] x = (from p in dt.AsEnumerable()
+                              orderby p.Field<string>("State") ascending
+                              select p.Field<string>("State")).ToArray();
+
+                //Get the Total of Amount of Crime for each state.
+                int[] y = (from p in dt.AsEnumerable()
+                           orderby p.Field<string>("State") ascending
+                           select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                chart2.Series[0].ChartType = SeriesChartType.Pie;
+                chart2.Series[0].Points.DataBindXY(x, y);
+                chart2.Legends[0].Enabled = true;
+                chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                dataGridView2.Hide();
+
             }
             catch (Exception ex)
             {
@@ -147,7 +172,7 @@ namespace NewOrderDesign
             string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
-
+                /*
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
                     conn.Open();
@@ -159,6 +184,30 @@ namespace NewOrderDesign
                     USStateInfo.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
                     TotalCrimesAgainstSocietyStateTotal.Text = USStateInfo.overviewtotalsociety.ToString();
                 }
+                */
+                //Fetch the Statistical data from database.
+                string query = $"SELECT State, Total_Offenses";
+                query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+                DataTable dt = GetData(query);
+
+                //Get the names of states.
+                string[] x = (from p in dt.AsEnumerable()
+                              orderby p.Field<string>("State") ascending
+                              select p.Field<string>("State")).ToArray();
+
+                //Get the Total of Amount of Crime for each state.
+                int[] y = (from p in dt.AsEnumerable()
+                           orderby p.Field<string>("State") ascending
+                           select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                chart3.Series[0].ChartType = SeriesChartType.Pie;
+                chart3.Series[0].Points.DataBindXY(x, y);
+                chart3.Legends[0].Enabled = true;
+                chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                dataGridView3.Hide();
             }
             catch (Exception ex)
             {
