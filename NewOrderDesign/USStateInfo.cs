@@ -38,46 +38,37 @@ namespace NewOrderDesign
         {
             statePersons = PersonsComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
-                /*
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
                     conn.Open();
 
-                    string query1 = $"SELECT Total_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
+                    //Fetch the Statistical data from database.
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}' OR State = 'Total'";
+                    DataTable dt = GetData(query);
 
-                    SqlCommand cmdtotalpersons = conn.CreateCommand();
-                    cmdtotalpersons.CommandText = query1;
-                    USStateInfo.overviewtotalpersons = (Int32)cmdtotalpersons.ExecuteScalar();
-                    TotalCrimesAgainstPersonsStateTotal.Text = USStateInfo.overviewtotalpersons.ToString();
+                    //Get the names of states.
+                    string[] x = (from p in dt.AsEnumerable()
+                                  orderby p.Field<string>("State") ascending
+                                  select p.Field<string>("State")).ToArray();
+
+                    //Get the Total of Amount of Crime for each state.
+                    int[] y = (from p in dt.AsEnumerable()
+                               orderby p.Field<string>("State") ascending
+                               select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                    chart1.Series[0].ChartType = SeriesChartType.Pie;
+                    chart1.Series[0].Points.DataBindXY(x, y);
+                    chart1.Legends[0].Enabled = true;
+                    chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView1.Hide();
                 }
-                */
-
-                //Fetch the Statistical data from database.
-                string query = $"SELECT State, Total_Offenses";
-                query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
-                DataTable dt = GetData(query);
-
-                //Get the names of states.
-                string[] x = (from p in dt.AsEnumerable()
-                              orderby p.Field<string>("State") ascending
-                              select p.Field<string>("State")).ToArray();
-
-                //Get the Total of Amount of Crime for each state.
-                int[] y = (from p in dt.AsEnumerable()
-                           orderby p.Field<string>("State") ascending
-                           select p.Field<int>("Total_Offenses")).ToArray();
-
-       
-
-                chart1.Series[0].ChartType = SeriesChartType.Pie;
-                chart1.Series[0].Points.DataBindXY(x, y);
-                chart1.Legends[0].Enabled = true;
-                chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
-
-                dataGridView1.Hide();
             }
             catch (Exception ex)
             {
@@ -88,7 +79,7 @@ namespace NewOrderDesign
 
         private static DataTable GetData(string query)
         {
-            string constr = @"Data Source=74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string constr = @"Data Source = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter(query, con))
@@ -115,48 +106,40 @@ namespace NewOrderDesign
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            stateProperty = PersonsComboBox.Text;
+            stateProperty = PropertyComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
-                /*
+
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
                     conn.Open();
+                    //Fetch the Statistical data from database.
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}' or State = 'Total'";
+                    DataTable dt = GetData(query);
 
-                    string query1 = $"SELECT Total_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+                    //Get the names of states.
+                    string[] x = (from p in dt.AsEnumerable()
+                                  orderby p.Field<string>("State") ascending
+                                  select p.Field<string>("State")).ToArray();
 
-                    SqlCommand cmdtotalproperty = conn.CreateCommand();
-                    cmdtotalproperty.CommandText = query1;
-                    USStateInfo.overviewtotalproperty = (Int32)cmdtotalproperty.ExecuteScalar();
-                    TotalCrimesAgainstPropertyStateTotal.Text = USStateInfo.overviewtotalproperty.ToString();
+                    //Get the Total of Amount of Crime for each state.
+                    int[] y = (from p in dt.AsEnumerable()
+                               orderby p.Field<string>("State") ascending
+                               select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                    chart2.Series[0].ChartType = SeriesChartType.Pie;
+                    chart2.Series[0].Points.DataBindXY(x, y);
+                    chart2.Legends[0].Enabled = true;
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView2.Hide();
+
                 }
-                */
-                //Fetch the Statistical data from database.
-                string query = $"SELECT State, Total_Offenses";
-                query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
-                DataTable dt = GetData(query);
-
-                //Get the names of states.
-                string[] x = (from p in dt.AsEnumerable()
-                              orderby p.Field<string>("State") ascending
-                              select p.Field<string>("State")).ToArray();
-
-                //Get the Total of Amount of Crime for each state.
-                int[] y = (from p in dt.AsEnumerable()
-                           orderby p.Field<string>("State") ascending
-                           select p.Field<int>("Total_Offenses")).ToArray();
-
-
-
-                chart2.Series[0].ChartType = SeriesChartType.Pie;
-                chart2.Series[0].Points.DataBindXY(x, y);
-                chart2.Legends[0].Enabled = true;
-                chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
-
-                dataGridView2.Hide();
-
             }
             catch (Exception ex)
             {
@@ -169,45 +152,39 @@ namespace NewOrderDesign
         {
             stateSociety = SocietyComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
-                /*
+
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
+
                     conn.Open();
+                    //Fetch the Statistical data from database.
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}' or State = 'Total'";
+                    DataTable dt = GetData(query);
 
-                    string query1 = $"SELECT Total_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+                    //Get the names of states.
+                    string[] x = (from p in dt.AsEnumerable()
+                                  orderby p.Field<string>("State") ascending
+                                  select p.Field<string>("State")).ToArray();
 
-                    SqlCommand cmdtotalsociety = conn.CreateCommand();
-                    cmdtotalsociety.CommandText = query1;
-                    USStateInfo.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
-                    TotalCrimesAgainstSocietyStateTotal.Text = USStateInfo.overviewtotalsociety.ToString();
+                    //Get the Total of Amount of Crime for each state.
+                    int[] y = (from p in dt.AsEnumerable()
+                               orderby p.Field<string>("State") ascending
+                               select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                    chart3.Series[0].ChartType = SeriesChartType.Pie;
+                    chart3.Series[0].Points.DataBindXY(x, y);
+                    chart3.Legends[0].Enabled = true;
+                    chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView3.Hide();
+
                 }
-                */
-                //Fetch the Statistical data from database.
-                string query = $"SELECT State, Total_Offenses";
-                query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
-                DataTable dt = GetData(query);
-
-                //Get the names of states.
-                string[] x = (from p in dt.AsEnumerable()
-                              orderby p.Field<string>("State") ascending
-                              select p.Field<string>("State")).ToArray();
-
-                //Get the Total of Amount of Crime for each state.
-                int[] y = (from p in dt.AsEnumerable()
-                           orderby p.Field<string>("State") ascending
-                           select p.Field<int>("Total_Offenses")).ToArray();
-
-
-
-                chart3.Series[0].ChartType = SeriesChartType.Pie;
-                chart3.Series[0].Points.DataBindXY(x, y);
-                chart3.Legends[0].Enabled = true;
-                chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
-
-                dataGridView3.Hide();
             }
             catch (Exception ex)
             {
@@ -218,12 +195,6 @@ namespace NewOrderDesign
 
         private void USStateInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIPropertyDataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
-            // TODO: This line of code loads data into the 'fBIDataSet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
-            // TODO: This line of code loads data into the 'fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet1.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
 
         }
     }
