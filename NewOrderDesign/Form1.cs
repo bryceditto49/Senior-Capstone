@@ -14,7 +14,7 @@ namespace NewOrderDesign
 {
     public partial class Form1 : Form
     {
-        string connectionString = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=daylonswallows123");
+        string connectionString = (@"Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=Credentials;User ID=apeuser;Password=daylonswallows1234");
         public Form1()
         {
             InitializeComponent();

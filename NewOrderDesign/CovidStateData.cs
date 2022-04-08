@@ -28,7 +28,7 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows1234;";
 
             try
             {
@@ -105,7 +105,7 @@ namespace NewOrderDesign
         private void button3_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows1234;";
 
             try
             {
@@ -152,7 +152,7 @@ namespace NewOrderDesign
         private void button4_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows1234;";
 
             try
             {
@@ -199,7 +199,7 @@ namespace NewOrderDesign
         private void button5_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows1234;";
 
             try
             {
@@ -269,7 +269,7 @@ namespace NewOrderDesign
         private void button6_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows123;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser; Password = daylonswallows1234;";
 
             try
             {

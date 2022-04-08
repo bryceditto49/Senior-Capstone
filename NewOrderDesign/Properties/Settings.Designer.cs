@@ -12,7 +12,7 @@ namespace NewOrderDesign.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -60,7 +60,7 @@ namespace NewOrderDesign.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Persist Security Info=True;User ID=ape" +
-            "user;Password=daylonswallows123")]
+            "user;Password=daylonswallows1234")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));
@@ -71,7 +71,7 @@ namespace NewOrderDesign.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security I" +
-            "nfo=True;User ID=apeuser;Password=daylonswallows123")]
+            "nfo=True;User ID=apeuser;Password=daylonswallows1234")]
         public string FBIConnectionString1 {
             get {
                 return ((string)(this["FBIConnectionString1"]));
@@ -82,7 +82,7 @@ namespace NewOrderDesign.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Secu" +
-            "rity Info=True;User ID=apeuser;Password=daylonswallows123")]
+            "rity Info=True;User ID=apeuser;Password=daylonswallows1234")]
         public string CovidDataConnectionString1 {
             get {
                 return ((string)(this["CovidDataConnectionString1"]));
