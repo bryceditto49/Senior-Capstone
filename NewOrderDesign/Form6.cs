@@ -50,7 +50,20 @@ namespace NewOrderDesign
         }
         private void btlogin_Click(object sender, EventArgs e)
         {
-            
+                if (chkre.Checked == true)
+                {
+                    Properties.Settings.Default.Username = txtuser.Text;
+                    Properties.Settings.Default.Password = txtpass.Text;
+                    Properties.Settings.Default.Save();
+                }
+
+                if (chkre.Checked == false)
+                {
+                    Properties.Settings.Default.Username = "";
+                    Properties.Settings.Default.Password = "";
+                    Properties.Settings.Default.Save();
+                }
+
                 if (txtuser.Text == "" && txtpass.Text == "")
                 {
                     MessageBox.Show("Please fill in the Blanks");
@@ -117,7 +130,12 @@ namespace NewOrderDesign
         private Size oldsize;
         private void Form6_Load(object sender, EventArgs e)
         {
-            oldsize = base.Size;   
+            oldsize = base.Size; 
+            if (Properties.Settings.Default.Username != string.Empty)
+            {
+                txtuser.Text = Properties.Settings.Default.Username;
+                txtpass.Text = Properties.Settings.Default.Password;  
+            }
         }
 
         protected override void OnResize(System.EventArgs e)
@@ -145,6 +163,29 @@ namespace NewOrderDesign
             if (e.KeyCode == Keys.Enter)
             {
                 btlogin.PerformClick();
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '*')
+            {
+                button1.BringToFront();
+                txtpass.PasswordChar = '\0';
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '\0')
+            {
+                button2.BringToFront();
+                txtpass.PasswordChar = '*';
             }
         }
     }

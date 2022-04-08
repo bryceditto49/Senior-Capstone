@@ -33,12 +33,12 @@ namespace NewOrderDesign
 
         private void btsubmit_Click(object sender, EventArgs e)
         {
-            if (txtcon.Text != string.Empty  && txtpass.Text != string.Empty  && txtuser.Text != string.Empty )
+            if (txtcon.Text != string.Empty && txtpass.Text != string.Empty && txtuser.Text != string.Empty )
             {
                 if (txtpass.Text == txtcon.Text)
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                    {
+                    {   
                         Random random = new Random();
                         int salt = random.Next();
                         string saltString= salt.ToString();
@@ -46,17 +46,32 @@ namespace NewOrderDesign
                         Console.WriteLine(updatedpass);
                         string hashpass = getHash(updatedpass);
                         sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@password", hashpass);
-                        sqlCmd.Parameters.AddWithValue("@salt", saltString);
-                        sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Registration is complete");
-                        Clear();
-                        this.Hide(); 
-                        Form6 form6 = new Form6();
-                        form6.Show();
+                        bool exists = false;
+                        using (SqlCommand sqlCmd = new SqlCommand("select count(*) from LoginTable1 where username = @username", sqlCon))
+                        {
+                            sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
+                            exists = (int)sqlCmd.ExecuteScalar() > 0;
+                        }
+                        if (exists)
+                        {
+                            MessageBox.Show("Username Already Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            using (SqlCommand sqlCmd = new SqlCommand("UserAdds", sqlCon))
+                            {
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCmd.Parameters.AddWithValue("@username", txtuser.Text.Trim());
+                                sqlCmd.Parameters.AddWithValue("@password", hashpass);
+                                sqlCmd.Parameters.AddWithValue("@salt", saltString);
+                                sqlCmd.ExecuteNonQuery();
+                                MessageBox.Show("Registration is complete");
+                                Clear();
+                                this.Hide(); 
+                                Form6 form6 = new Form6();
+                                form6.Show();
+                            }
+                        }
                     }
                 }
                 else
@@ -159,5 +174,24 @@ namespace NewOrderDesign
             control.Top += (control.Top * height) / oldsize.Height;
             control.Height += (control.Height * height) / oldsize.Height;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '*')
+            {
+                button1.BringToFront();
+                txtpass.PasswordChar = '\0';
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtpass.PasswordChar == '\0')
+            {
+                button2.BringToFront();
+                txtpass.PasswordChar = '*';
+            }
+        }
+
     }
 }
