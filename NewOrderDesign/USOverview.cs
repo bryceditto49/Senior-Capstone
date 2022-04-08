@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
+using LiveCharts;
 
 namespace NewOrderDesign
 {
@@ -50,9 +52,16 @@ namespace NewOrderDesign
             SocietyComboBox.SelectedItem = "Animal Cruelty";
         }
 
+        Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -90,7 +99,7 @@ namespace NewOrderDesign
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -119,7 +128,7 @@ namespace NewOrderDesign
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -128,69 +137,137 @@ namespace NewOrderDesign
                     if (PersonsComboBox.Text.Equals("Assault"))
                     {
                         conn.Open();
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Assault_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        string query1 = $"SELECT Assault_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        int[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<int>("Assault_Offenses") ascending
+                                      select p.Field<int>("Assault_Offenses")).ToArray();
 
-                        SqlCommand cmdtotalassault = conn.CreateCommand();
-                        cmdtotalassault.CommandText = query1;
-                        USOverview.overviewtotalassault = (Int32)cmdtotalassault.ExecuteScalar();
-                        TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalassault.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Legends[0].Enabled = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView3.Hide();
 
                         conn.Close();
                     }
                     else if (PersonsComboBox.Text.Equals("Homicide"))
                     {
                         conn.Open();
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Homicide_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        string query2 = $"SELECT Homicide_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Homicide_Offenses") ascending
+                                   select p.Field<Int16>("Homicide_Offenses")).ToArray();
 
-                        SqlCommand cmdtotalhomicide = conn.CreateCommand();
-                        cmdtotalhomicide.CommandText = query2;
-                        Console.WriteLine("Here");
-                        USOverview.overviewtotalhomicide = (Int16)cmdtotalhomicide.ExecuteScalar();
-                        TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalhomicide.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Legends[0].Enabled = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView3.Hide();
 
                         conn.Close();
                     }
                     else if (PersonsComboBox.Text.Equals("Human Trafficking"))
                     {
                         conn.Open();
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Human_Trafficking, Total_Offenses";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        string query3 = $"SELECT Human_Trafficking FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Human_Trafficking") ascending
+                                   select p.Field<Int16>("Human_Trafficking")).ToArray();
 
-                        SqlCommand cmdtotalhumantrafficking = conn.CreateCommand();
-                        cmdtotalhumantrafficking.CommandText = query3;
-                        Console.WriteLine("Here");
-                        USOverview.overviewtotalhumantrafficking = (Int16)cmdtotalhumantrafficking.ExecuteScalar();
-                        TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalhumantrafficking.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Legends[0].Enabled = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView3.Hide();
 
                         conn.Close();
                     }
-                    else if (PersonsComboBox.Text.Equals("Kidnapping / Abduction"))
+                    else if (PersonsComboBox.Text.Equals("Kidnapping/Abduction"))
                     {
                         conn.Open();
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Kidnapping_Abduction, Total_Offenses";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        string query3 = $"SELECT Kidnapping_Abduction FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Kidnapping_Abduction") ascending
+                                   select p.Field<Int16>("Kidnapping_Abduction")).ToArray();
 
-                        SqlCommand cmdtotalkidnapping = conn.CreateCommand();
-                        cmdtotalkidnapping.CommandText = query3;
-                        USOverview.overviewtotalkidnapping = (Int16)cmdtotalkidnapping.ExecuteScalar();
-                        TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalkidnapping.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Legends[0].Enabled = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView3.Hide();
 
                         conn.Close();
                     }
                     else if (PersonsComboBox.Text.Equals("Sex Offenses"))
                     {
                         conn.Open();
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Sex_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        string query3 = $"SELECT Sex_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Sex_Offenses") ascending
+                                   select p.Field<int>("Sex_Offenses")).ToArray();
 
-                        SqlCommand cmdtotalsex = conn.CreateCommand();
-                        cmdtotalsex.CommandText = query3;
-                        USOverview.overviewtotalsex = (Int32)cmdtotalsex.ExecuteScalar();
-                        TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalsex.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
 
-                        conn.Close();
+
+
+                        overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Legends[0].Enabled = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView3.Hide();
+
+
                     }
                 }
             }
@@ -217,7 +294,7 @@ namespace NewOrderDesign
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -227,12 +304,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Arson FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Arson, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalarson = conn.CreateCommand();
-                        cmdtotalarson.CommandText = query1;
-                        USOverview.overviewtotalarson = (Int16)cmdtotalarson.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalarson.ToString();
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Arson") ascending
+                                   select p.Field<Int16>("Arson")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -240,12 +332,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Bribery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Bribery, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalbribery = conn.CreateCommand();
-                        cmdtotalbribery.CommandText = query1;
-                        USOverview.overviewtotalbribery = (Int16)cmdtotalbribery.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalbribery.ToString();
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Bribery") ascending
+                                   select p.Field<Int16>("Bribery")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -253,12 +360,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Burglary_Breaking_Entering FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Burglary_Breaking_Entering, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalburglary = conn.CreateCommand();
-                        cmdtotalburglary.CommandText = query1;
-                        USOverview.overviewtotalburglary = (Int32)cmdtotalburglary.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalburglary.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Burglary_Breaking_Entering") ascending
+                                   select p.Field<int>("Burglary_Breaking_Entering")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -266,12 +388,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Counterfeiting_Forgery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Counterfeiting_Forgery, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalcounterfeiting = conn.CreateCommand();
-                        cmdtotalcounterfeiting.CommandText = query1;
-                        USOverview.overviewtotalcounterfeiting = (Int32)cmdtotalcounterfeiting.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalcounterfeiting.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Counterfeiting_Forgery") ascending
+                                   select p.Field<int>("Counterfeiting_Forgery")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -279,12 +416,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Destruction_Damage_Vandalism FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Destruction_Damage_Vandalism, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotaldestruction = conn.CreateCommand();
-                        cmdtotaldestruction.CommandText = query1;
-                        USOverview.overviewtotaldestruction = (Int32)cmdtotaldestruction.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotaldestruction.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Destruction_Damage_Vandalism") ascending
+                                   select p.Field<int>("Destruction_Damage_Vandalism")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -292,12 +444,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Embezzlement FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Embezzlement, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalembezzlement = conn.CreateCommand();
-                        cmdtotalembezzlement.CommandText = query1;
-                        USOverview.overviewtotalembezzlement = (Int16)cmdtotalembezzlement.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalembezzlement.ToString();
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Embezzlement") ascending
+                                   select p.Field<Int16>("Embezzlement")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -305,12 +472,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Extortion_Blackmail FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Extortion_Blackmail, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalextortion = conn.CreateCommand();
-                        cmdtotalextortion.CommandText = query1;
-                        USOverview.overviewtotalextortion = (Int16)cmdtotalextortion.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalextortion.ToString();
+                        Int16[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Extortion_Blackmail") ascending
+                                   select p.Field<Int16>("Extortion_Blackmail")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -318,12 +500,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Fraud_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Fraud_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalfraud = conn.CreateCommand();
-                        cmdtotalfraud.CommandText = query1;
-                        USOverview.overviewtotalfraud = (Int32)cmdtotalfraud.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalfraud.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Fraud_Offenses") ascending
+                                   select p.Field<int>("Fraud_Offenses")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -331,12 +528,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Larceny_Theft_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Larceny_Theft_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotallarceny = conn.CreateCommand();
-                        cmdtotallarceny.CommandText = query1;
-                        USOverview.overviewtotallarceny = (Int32)cmdtotallarceny.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotallarceny.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Larceny_Theft_Offenses") ascending
+                                   select p.Field<int>("Larceny_Theft_Offenses")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -344,12 +556,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Motor_Vehicle_Theft FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Motor_Vehicle_Theft, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalmotor = conn.CreateCommand();
-                        cmdtotalmotor.CommandText = query1;
-                        USOverview.overviewtotalmotor = (Int32)cmdtotalmotor.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalmotor.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Motor_Vehicle_Theft") ascending
+                                   select p.Field<int>("Motor_Vehicle_Theft")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -357,12 +584,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Robbery FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Robbery, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalrobbery = conn.CreateCommand();
-                        cmdtotalrobbery.CommandText = query1;
-                        USOverview.overviewtotalrobbery = (Int32)cmdtotalrobbery.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalrobbery.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Robbery") ascending
+                                   select p.Field<int>("Robbery")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -370,12 +612,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Stolen_Property_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Stolen_Property_Offenses, Total_Offenses";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalstolen = conn.CreateCommand();
-                        cmdtotalstolen.CommandText = query1;
-                        USOverview.overviewtotalstolen = (Int32)cmdtotalstolen.ExecuteScalar();
-                        TotalCrimesAgainstPropertyTabLabel1.Text = USOverview.overviewtotalstolen.ToString();
+                        int[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Stolen_Property_Offenses") ascending
+                                   select p.Field<int>("Stolen_Property_Offenses")).ToArray();
+
+                        int[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<int>("Total_Offenses") ascending
+                                   select p.Field<int>("Total_Offenses")).ToArray();
+
+
+
+                        overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Legends[0].Enabled = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        overviewdataGridView2.Hide();
 
                         conn.Close();
                     }
@@ -390,7 +647,7 @@ namespace NewOrderDesign
 
         private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
             try
             {
 
@@ -482,6 +739,22 @@ namespace NewOrderDesign
                 MessageBox.Show("Exception: " + ex.Message);
             }
         }
+
+        private static DataTable GetData(string query)
+        {
+            string constr = @"Data Source = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(query, con))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+
 
         private void OverviewTab_Click(object sender, EventArgs e)
         {
