@@ -38,7 +38,7 @@ namespace NewOrderDesign
         {
             statePersons = PersonsComboBox.Text;
 
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -79,7 +79,7 @@ namespace NewOrderDesign
 
         private static DataTable GetData(string query)
         {
-            string constr = @"Data Source = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string constr = @"Data Source = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter(query, con))
@@ -108,7 +108,7 @@ namespace NewOrderDesign
         {
             stateProperty = PropertyComboBox.Text;
 
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 
@@ -152,7 +152,7 @@ namespace NewOrderDesign
         {
             stateSociety = SocietyComboBox.Text;
 
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 

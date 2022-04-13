@@ -61,7 +61,7 @@ namespace NewOrderDesign
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
             // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
             this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -99,7 +99,7 @@ namespace NewOrderDesign
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
@@ -128,7 +128,7 @@ namespace NewOrderDesign
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 
@@ -294,7 +294,7 @@ namespace NewOrderDesign
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 
@@ -647,7 +647,7 @@ namespace NewOrderDesign
 
         private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connString = @"Server = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 
@@ -742,7 +742,7 @@ namespace NewOrderDesign
 
         private static DataTable GetData(string query)
         {
-            string constr = @"Data Source = DESKTOP-RU1AMPT\SQLEXPRESS; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string constr = @"Data Source = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter(query, con))

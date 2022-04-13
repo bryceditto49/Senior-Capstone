@@ -154,7 +154,7 @@ namespace NewOrderDesign
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser; Password = daylonswallows1234;";
+            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))
