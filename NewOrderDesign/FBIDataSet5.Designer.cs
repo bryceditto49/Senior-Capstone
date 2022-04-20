@@ -26,10 +26,14 @@ namespace NewOrderDesign {
         
         private Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020;
         
+        private Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020;
+        
+        private Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public FBIDataSet5() {
             this.BeginInit();
             this.InitClass();
@@ -40,7 +44,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected FBIDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
@@ -56,6 +60,12 @@ namespace NewOrderDesign {
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
                 if ((ds.Tables["Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020"] != null)) {
                     base.Tables.Add(new Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020"]));
+                }
+                if ((ds.Tables["Crimes_Against_Property_Offenses_Offense_Category_by_State_2020"] != null)) {
+                    base.Tables.Add(new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Property_Offenses_Offense_Category_by_State_2020"]));
+                }
+                if ((ds.Tables["Crimes_Against_Society_Offenses_Offense_Category_by_State_2020"] != null)) {
+                    base.Tables.Add(new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Society_Offenses_Offense_Category_by_State_2020"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -76,7 +86,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 {
@@ -86,7 +96,27 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 {
+            get {
+                return this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 {
+            get {
+                return this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -99,7 +129,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
             get {
@@ -108,7 +138,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataRelationCollection Relations {
             get {
@@ -117,7 +147,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -125,7 +155,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
             FBIDataSet5 cln = ((FBIDataSet5)(base.Clone()));
             cln.InitVars();
@@ -134,19 +164,19 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
             if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 this.Reset();
@@ -154,6 +184,12 @@ namespace NewOrderDesign {
                 ds.ReadXml(reader);
                 if ((ds.Tables["Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020"] != null)) {
                     base.Tables.Add(new Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020"]));
+                }
+                if ((ds.Tables["Crimes_Against_Property_Offenses_Offense_Category_by_State_2020"] != null)) {
+                    base.Tables.Add(new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Property_Offenses_Offense_Category_by_State_2020"]));
+                }
+                if ((ds.Tables["Crimes_Against_Society_Offenses_Offense_Category_by_State_2020"] != null)) {
+                    base.Tables.Add(new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable(ds.Tables["Crimes_Against_Society_Offenses_Offense_Category_by_State_2020"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -171,7 +207,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
@@ -180,13 +216,13 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
             this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable)(base.Tables["Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020"]));
             if ((initTable == true)) {
@@ -194,10 +230,22 @@ namespace NewOrderDesign {
                     this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.InitVars();
                 }
             }
+            this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable)(base.Tables["Crimes_Against_Property_Offenses_Offense_Category_by_State_2020"]));
+            if ((initTable == true)) {
+                if ((this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020 != null)) {
+                    this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.InitVars();
+                }
+            }
+            this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable)(base.Tables["Crimes_Against_Society_Offenses_Offense_Category_by_State_2020"]));
+            if ((initTable == true)) {
+                if ((this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020 != null)) {
+                    this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
             this.DataSetName = "FBIDataSet5";
             this.Prefix = "";
@@ -206,16 +254,32 @@ namespace NewOrderDesign {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020 = new Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable();
             base.Tables.Add(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
+            this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020 = new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable();
+            base.Tables.Add(this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020 = new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable();
+            base.Tables.Add(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCrimes_Against_Property_Offenses_Offense_Category_by_State_2020() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCrimes_Against_Society_Offenses_Offense_Category_by_State_2020() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -223,7 +287,7 @@ namespace NewOrderDesign {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
             FBIDataSet5 ds = new FBIDataSet5();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
@@ -269,8 +333,14 @@ namespace NewOrderDesign {
             return type;
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEventHandler(object sender, Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEventHandler(object sender, Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEventHandler(object sender, Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -298,7 +368,7 @@ namespace NewOrderDesign {
             private global::System.Data.DataColumn columnSex_Offenses;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable() {
                 this.TableName = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
                 this.BeginInit();
@@ -307,7 +377,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -324,14 +394,14 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn StateColumn {
                 get {
                     return this.columnState;
@@ -339,7 +409,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Number_of_Participating_AgenciesColumn {
                 get {
                     return this.columnNumber_of_Participating_Agencies;
@@ -347,7 +417,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Population_CoveredColumn {
                 get {
                     return this.columnPopulation_Covered;
@@ -355,7 +425,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Total_OffensesColumn {
                 get {
                     return this.columnTotal_Offenses;
@@ -363,7 +433,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Assault_OffensesColumn {
                 get {
                     return this.columnAssault_Offenses;
@@ -371,7 +441,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Homicide_OffensesColumn {
                 get {
                     return this.columnHomicide_Offenses;
@@ -379,7 +449,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Human_TraffickingColumn {
                 get {
                     return this.columnHuman_Trafficking;
@@ -387,7 +457,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Kidnapping_AbductionColumn {
                 get {
                     return this.columnKidnapping_Abduction;
@@ -395,7 +465,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Sex_OffensesColumn {
                 get {
                     return this.columnSex_Offenses;
@@ -403,7 +473,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -412,33 +482,33 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row this[int index] {
                 get {
                     return ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public event Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public event Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public event Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public event Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void AddCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row AddCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row(string State, short Number_of_Participating_Agencies, int Population_Covered, int Total_Offenses, int Assault_Offenses, short Homicide_Offenses, short Human_Trafficking, short Kidnapping_Abduction, int Sex_Offenses) {
                 Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row rowCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row = ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -457,7 +527,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable cln = ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable)(base.Clone()));
                 cln.InitVars();
@@ -465,13 +535,13 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnState = base.Columns["State"];
                 this.columnNumber_of_Participating_Agencies = base.Columns["Number_of_Participating_Agencies"];
@@ -485,7 +555,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
                 this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState);
@@ -510,25 +580,25 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row NewCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row() {
                 return ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChanged != null)) {
@@ -537,7 +607,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChanging != null)) {
@@ -546,7 +616,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowDeleted != null)) {
@@ -555,7 +625,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowDeleting != null)) {
@@ -564,13 +634,13 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void RemoveCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -634,6 +704,869 @@ namespace NewOrderDesign {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable : global::System.Data.TypedTableBase<Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row> {
+            
+            private global::System.Data.DataColumn columnState;
+            
+            private global::System.Data.DataColumn columnNumber_of_Participating_Agencies;
+            
+            private global::System.Data.DataColumn columnPopulation_Covered;
+            
+            private global::System.Data.DataColumn columnTotal_Offenses;
+            
+            private global::System.Data.DataColumn columnArson;
+            
+            private global::System.Data.DataColumn columnBribery;
+            
+            private global::System.Data.DataColumn columnBurglary_Breaking_Entering;
+            
+            private global::System.Data.DataColumn columnCounterfeiting_Forgery;
+            
+            private global::System.Data.DataColumn columnDestruction_Damage_Vandalism;
+            
+            private global::System.Data.DataColumn columnEmbezzlement;
+            
+            private global::System.Data.DataColumn columnExtortion_Blackmail;
+            
+            private global::System.Data.DataColumn columnFraud_Offenses;
+            
+            private global::System.Data.DataColumn columnLarceny_Theft_Offenses;
+            
+            private global::System.Data.DataColumn columnMotor_Vehicle_Theft;
+            
+            private global::System.Data.DataColumn columnRobbery;
+            
+            private global::System.Data.DataColumn columnStolen_Property_Offenses;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable() {
+                this.TableName = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StateColumn {
+                get {
+                    return this.columnState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Number_of_Participating_AgenciesColumn {
+                get {
+                    return this.columnNumber_of_Participating_Agencies;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Population_CoveredColumn {
+                get {
+                    return this.columnPopulation_Covered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_OffensesColumn {
+                get {
+                    return this.columnTotal_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ArsonColumn {
+                get {
+                    return this.columnArson;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn BriberyColumn {
+                get {
+                    return this.columnBribery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Burglary_Breaking_EnteringColumn {
+                get {
+                    return this.columnBurglary_Breaking_Entering;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Counterfeiting_ForgeryColumn {
+                get {
+                    return this.columnCounterfeiting_Forgery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Destruction_Damage_VandalismColumn {
+                get {
+                    return this.columnDestruction_Damage_Vandalism;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmbezzlementColumn {
+                get {
+                    return this.columnEmbezzlement;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Extortion_BlackmailColumn {
+                get {
+                    return this.columnExtortion_Blackmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fraud_OffensesColumn {
+                get {
+                    return this.columnFraud_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Larceny_Theft_OffensesColumn {
+                get {
+                    return this.columnLarceny_Theft_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Motor_Vehicle_TheftColumn {
+                get {
+                    return this.columnMotor_Vehicle_Theft;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RobberyColumn {
+                get {
+                    return this.columnRobbery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Stolen_Property_OffensesColumn {
+                get {
+                    return this.columnStolen_Property_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row this[int index] {
+                get {
+                    return ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row AddCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row(
+                        string State, 
+                        short Number_of_Participating_Agencies, 
+                        int Population_Covered, 
+                        int Total_Offenses, 
+                        short Arson, 
+                        short Bribery, 
+                        int Burglary_Breaking_Entering, 
+                        int Counterfeiting_Forgery, 
+                        int Destruction_Damage_Vandalism, 
+                        short Embezzlement, 
+                        short Extortion_Blackmail, 
+                        int Fraud_Offenses, 
+                        int Larceny_Theft_Offenses, 
+                        int Motor_Vehicle_Theft, 
+                        int Robbery, 
+                        int Stolen_Property_Offenses) {
+                Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row rowCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row = ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        State,
+                        Number_of_Participating_Agencies,
+                        Population_Covered,
+                        Total_Offenses,
+                        Arson,
+                        Bribery,
+                        Burglary_Breaking_Entering,
+                        Counterfeiting_Forgery,
+                        Destruction_Damage_Vandalism,
+                        Embezzlement,
+                        Extortion_Blackmail,
+                        Fraud_Offenses,
+                        Larceny_Theft_Offenses,
+                        Motor_Vehicle_Theft,
+                        Robbery,
+                        Stolen_Property_Offenses};
+                rowCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row);
+                return rowCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable cln = ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnState = base.Columns["State"];
+                this.columnNumber_of_Participating_Agencies = base.Columns["Number_of_Participating_Agencies"];
+                this.columnPopulation_Covered = base.Columns["Population_Covered"];
+                this.columnTotal_Offenses = base.Columns["Total_Offenses"];
+                this.columnArson = base.Columns["Arson"];
+                this.columnBribery = base.Columns["Bribery"];
+                this.columnBurglary_Breaking_Entering = base.Columns["Burglary_Breaking_Entering"];
+                this.columnCounterfeiting_Forgery = base.Columns["Counterfeiting_Forgery"];
+                this.columnDestruction_Damage_Vandalism = base.Columns["Destruction_Damage_Vandalism"];
+                this.columnEmbezzlement = base.Columns["Embezzlement"];
+                this.columnExtortion_Blackmail = base.Columns["Extortion_Blackmail"];
+                this.columnFraud_Offenses = base.Columns["Fraud_Offenses"];
+                this.columnLarceny_Theft_Offenses = base.Columns["Larceny_Theft_Offenses"];
+                this.columnMotor_Vehicle_Theft = base.Columns["Motor_Vehicle_Theft"];
+                this.columnRobbery = base.Columns["Robbery"];
+                this.columnStolen_Property_Offenses = base.Columns["Stolen_Property_Offenses"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState);
+                this.columnNumber_of_Participating_Agencies = new global::System.Data.DataColumn("Number_of_Participating_Agencies", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumber_of_Participating_Agencies);
+                this.columnPopulation_Covered = new global::System.Data.DataColumn("Population_Covered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPopulation_Covered);
+                this.columnTotal_Offenses = new global::System.Data.DataColumn("Total_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Offenses);
+                this.columnArson = new global::System.Data.DataColumn("Arson", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArson);
+                this.columnBribery = new global::System.Data.DataColumn("Bribery", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBribery);
+                this.columnBurglary_Breaking_Entering = new global::System.Data.DataColumn("Burglary_Breaking_Entering", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBurglary_Breaking_Entering);
+                this.columnCounterfeiting_Forgery = new global::System.Data.DataColumn("Counterfeiting_Forgery", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCounterfeiting_Forgery);
+                this.columnDestruction_Damage_Vandalism = new global::System.Data.DataColumn("Destruction_Damage_Vandalism", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDestruction_Damage_Vandalism);
+                this.columnEmbezzlement = new global::System.Data.DataColumn("Embezzlement", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmbezzlement);
+                this.columnExtortion_Blackmail = new global::System.Data.DataColumn("Extortion_Blackmail", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExtortion_Blackmail);
+                this.columnFraud_Offenses = new global::System.Data.DataColumn("Fraud_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFraud_Offenses);
+                this.columnLarceny_Theft_Offenses = new global::System.Data.DataColumn("Larceny_Theft_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLarceny_Theft_Offenses);
+                this.columnMotor_Vehicle_Theft = new global::System.Data.DataColumn("Motor_Vehicle_Theft", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMotor_Vehicle_Theft);
+                this.columnRobbery = new global::System.Data.DataColumn("Robbery", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRobbery);
+                this.columnStolen_Property_Offenses = new global::System.Data.DataColumn("Stolen_Property_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStolen_Property_Offenses);
+                this.columnState.AllowDBNull = false;
+                this.columnState.MaxLength = 50;
+                this.columnNumber_of_Participating_Agencies.AllowDBNull = false;
+                this.columnTotal_Offenses.AllowDBNull = false;
+                this.columnArson.AllowDBNull = false;
+                this.columnBribery.AllowDBNull = false;
+                this.columnBurglary_Breaking_Entering.AllowDBNull = false;
+                this.columnCounterfeiting_Forgery.AllowDBNull = false;
+                this.columnDestruction_Damage_Vandalism.AllowDBNull = false;
+                this.columnEmbezzlement.AllowDBNull = false;
+                this.columnExtortion_Blackmail.AllowDBNull = false;
+                this.columnFraud_Offenses.AllowDBNull = false;
+                this.columnLarceny_Theft_Offenses.AllowDBNull = false;
+                this.columnMotor_Vehicle_Theft.AllowDBNull = false;
+                this.columnRobbery.AllowDBNull = false;
+                this.columnStolen_Property_Offenses.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row NewCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row() {
+                return ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanged != null)) {
+                    this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanged(this, new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanging != null)) {
+                    this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChanging(this, new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleted != null)) {
+                    this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleted(this, new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleting != null)) {
+                    this.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowDeleting(this, new Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCrimes_Against_Property_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FBIDataSet5 ds = new FBIDataSet5();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable : global::System.Data.TypedTableBase<Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row> {
+            
+            private global::System.Data.DataColumn columnState;
+            
+            private global::System.Data.DataColumn columnNumber_of_Participating_Agencies;
+            
+            private global::System.Data.DataColumn columnPopulation_Covered;
+            
+            private global::System.Data.DataColumn columnTotal_Offenses;
+            
+            private global::System.Data.DataColumn columnAnimal_Cruelty;
+            
+            private global::System.Data.DataColumn columnDrug_Narcotic_Offenses;
+            
+            private global::System.Data.DataColumn columnGambling_Offenses;
+            
+            private global::System.Data.DataColumn columnPornography_Obscene_Material;
+            
+            private global::System.Data.DataColumn columnProstitution_Offenses;
+            
+            private global::System.Data.DataColumn columnWeapon_Law_Violations;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable() {
+                this.TableName = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StateColumn {
+                get {
+                    return this.columnState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Number_of_Participating_AgenciesColumn {
+                get {
+                    return this.columnNumber_of_Participating_Agencies;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Population_CoveredColumn {
+                get {
+                    return this.columnPopulation_Covered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_OffensesColumn {
+                get {
+                    return this.columnTotal_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Animal_CrueltyColumn {
+                get {
+                    return this.columnAnimal_Cruelty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Drug_Narcotic_OffensesColumn {
+                get {
+                    return this.columnDrug_Narcotic_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Gambling_OffensesColumn {
+                get {
+                    return this.columnGambling_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Pornography_Obscene_MaterialColumn {
+                get {
+                    return this.columnPornography_Obscene_Material;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Prostitution_OffensesColumn {
+                get {
+                    return this.columnProstitution_Offenses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Weapon_Law_ViolationsColumn {
+                get {
+                    return this.columnWeapon_Law_Violations;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row this[int index] {
+                get {
+                    return ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEventHandler Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row AddCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row(string State, short Number_of_Participating_Agencies, int Population_Covered, int Total_Offenses, short Animal_Cruelty, int Drug_Narcotic_Offenses, short Gambling_Offenses, short Pornography_Obscene_Material, short Prostitution_Offenses, int Weapon_Law_Violations) {
+                Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row rowCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row = ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        State,
+                        Number_of_Participating_Agencies,
+                        Population_Covered,
+                        Total_Offenses,
+                        Animal_Cruelty,
+                        Drug_Narcotic_Offenses,
+                        Gambling_Offenses,
+                        Pornography_Obscene_Material,
+                        Prostitution_Offenses,
+                        Weapon_Law_Violations};
+                rowCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row);
+                return rowCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable cln = ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnState = base.Columns["State"];
+                this.columnNumber_of_Participating_Agencies = base.Columns["Number_of_Participating_Agencies"];
+                this.columnPopulation_Covered = base.Columns["Population_Covered"];
+                this.columnTotal_Offenses = base.Columns["Total_Offenses"];
+                this.columnAnimal_Cruelty = base.Columns["Animal_Cruelty"];
+                this.columnDrug_Narcotic_Offenses = base.Columns["Drug_Narcotic_Offenses"];
+                this.columnGambling_Offenses = base.Columns["Gambling_Offenses"];
+                this.columnPornography_Obscene_Material = base.Columns["Pornography_Obscene_Material"];
+                this.columnProstitution_Offenses = base.Columns["Prostitution_Offenses"];
+                this.columnWeapon_Law_Violations = base.Columns["Weapon_Law_Violations"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState);
+                this.columnNumber_of_Participating_Agencies = new global::System.Data.DataColumn("Number_of_Participating_Agencies", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumber_of_Participating_Agencies);
+                this.columnPopulation_Covered = new global::System.Data.DataColumn("Population_Covered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPopulation_Covered);
+                this.columnTotal_Offenses = new global::System.Data.DataColumn("Total_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Offenses);
+                this.columnAnimal_Cruelty = new global::System.Data.DataColumn("Animal_Cruelty", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimal_Cruelty);
+                this.columnDrug_Narcotic_Offenses = new global::System.Data.DataColumn("Drug_Narcotic_Offenses", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDrug_Narcotic_Offenses);
+                this.columnGambling_Offenses = new global::System.Data.DataColumn("Gambling_Offenses", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGambling_Offenses);
+                this.columnPornography_Obscene_Material = new global::System.Data.DataColumn("Pornography_Obscene_Material", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPornography_Obscene_Material);
+                this.columnProstitution_Offenses = new global::System.Data.DataColumn("Prostitution_Offenses", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProstitution_Offenses);
+                this.columnWeapon_Law_Violations = new global::System.Data.DataColumn("Weapon_Law_Violations", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeapon_Law_Violations);
+                this.columnState.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row NewCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row() {
+                return ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanged != null)) {
+                    this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanged(this, new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanging != null)) {
+                    this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChanging(this, new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleted != null)) {
+                    this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleted(this, new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleting != null)) {
+                    this.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowDeleting(this, new Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent(((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCrimes_Against_Society_Offenses_Offense_Category_by_State_2020Row(Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FBIDataSet5 ds = new FBIDataSet5();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row : global::System.Data.DataRow {
@@ -641,14 +1574,14 @@ namespace NewOrderDesign {
             private Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string State {
                 get {
                     return ((string)(this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.StateColumn]));
@@ -659,7 +1592,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Number_of_Participating_Agencies {
                 get {
                     try {
@@ -676,7 +1609,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Population_Covered {
                 get {
                     try {
@@ -693,7 +1626,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Total_Offenses {
                 get {
                     try {
@@ -710,7 +1643,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Assault_Offenses {
                 get {
                     try {
@@ -727,7 +1660,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Homicide_Offenses {
                 get {
                     try {
@@ -744,7 +1677,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Human_Trafficking {
                 get {
                     try {
@@ -761,7 +1694,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Kidnapping_Abduction {
                 get {
                     try {
@@ -778,7 +1711,7 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Sex_Offenses {
                 get {
                     try {
@@ -795,106 +1728,620 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNumber_of_Participating_AgenciesNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNumber_of_Participating_AgenciesNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPopulation_CoveredNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPopulation_CoveredNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTotal_OffensesNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotal_OffensesNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsAssault_OffensesNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Assault_OffensesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetAssault_OffensesNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Assault_OffensesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsHomicide_OffensesNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Homicide_OffensesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetHomicide_OffensesNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Homicide_OffensesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsHuman_TraffickingNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Human_TraffickingColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetHuman_TraffickingNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Human_TraffickingColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsKidnapping_AbductionNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Kidnapping_AbductionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetKidnapping_AbductionNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Kidnapping_AbductionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSex_OffensesNull() {
                 return this.IsNull(this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Sex_OffensesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSex_OffensesNull() {
                 this[this.tableCrimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Sex_OffensesColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row : global::System.Data.DataRow {
+            
+            private Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string State {
+                get {
+                    return ((string)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.StateColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.StateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Number_of_Participating_Agencies {
+                get {
+                    return ((short)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Population_Covered {
+                get {
+                    try {
+                        return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Population_Covered\' in table \'Crimes_Against_Property_Offen" +
+                                "ses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Total_Offenses {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Arson {
+                get {
+                    return ((short)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.ArsonColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.ArsonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Bribery {
+                get {
+                    return ((short)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.BriberyColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.BriberyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Burglary_Breaking_Entering {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Burglary_Breaking_EnteringColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Burglary_Breaking_EnteringColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Counterfeiting_Forgery {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Counterfeiting_ForgeryColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Counterfeiting_ForgeryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Destruction_Damage_Vandalism {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Destruction_Damage_VandalismColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Destruction_Damage_VandalismColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Embezzlement {
+                get {
+                    return ((short)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.EmbezzlementColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.EmbezzlementColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Extortion_Blackmail {
+                get {
+                    return ((short)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Extortion_BlackmailColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Extortion_BlackmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Fraud_Offenses {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Fraud_OffensesColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Fraud_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Larceny_Theft_Offenses {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Larceny_Theft_OffensesColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Larceny_Theft_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Motor_Vehicle_Theft {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Motor_Vehicle_TheftColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Motor_Vehicle_TheftColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Robbery {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.RobberyColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.RobberyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Stolen_Property_Offenses {
+                get {
+                    return ((int)(this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Stolen_Property_OffensesColumn]));
+                }
+                set {
+                    this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Stolen_Property_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPopulation_CoveredNull() {
+                return this.IsNull(this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPopulation_CoveredNull() {
+                this[this.tableCrimes_Against_Property_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row : global::System.Data.DataRow {
+            
+            private Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020 = ((Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string State {
+                get {
+                    try {
+                        return ((string)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.StateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'Crimes_Against_Society_Offenses_Offense_Ca" +
+                                "tegory_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.StateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Number_of_Participating_Agencies {
+                get {
+                    try {
+                        return ((short)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Number_of_Participating_Agencies\' in table \'Crimes_Against_" +
+                                "Society_Offenses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Population_Covered {
+                get {
+                    try {
+                        return ((int)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Population_Covered\' in table \'Crimes_Against_Society_Offens" +
+                                "es_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Total_Offenses {
+                get {
+                    try {
+                        return ((int)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Offenses\' in table \'Crimes_Against_Society_Offenses_O" +
+                                "ffense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Animal_Cruelty {
+                get {
+                    try {
+                        return ((short)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Animal_CrueltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Animal_Cruelty\' in table \'Crimes_Against_Society_Offenses_O" +
+                                "ffense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Animal_CrueltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Drug_Narcotic_Offenses {
+                get {
+                    try {
+                        return ((int)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Drug_Narcotic_OffensesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Drug_Narcotic_Offenses\' in table \'Crimes_Against_Society_Of" +
+                                "fenses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Drug_Narcotic_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Gambling_Offenses {
+                get {
+                    try {
+                        return ((short)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Gambling_OffensesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gambling_Offenses\' in table \'Crimes_Against_Society_Offense" +
+                                "s_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Gambling_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Pornography_Obscene_Material {
+                get {
+                    try {
+                        return ((short)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Pornography_Obscene_MaterialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pornography_Obscene_Material\' in table \'Crimes_Against_Soci" +
+                                "ety_Offenses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Pornography_Obscene_MaterialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Prostitution_Offenses {
+                get {
+                    try {
+                        return ((short)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Prostitution_OffensesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Prostitution_Offenses\' in table \'Crimes_Against_Society_Off" +
+                                "enses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Prostitution_OffensesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Weapon_Law_Violations {
+                get {
+                    try {
+                        return ((int)(this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Weapon_Law_ViolationsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weapon_Law_Violations\' in table \'Crimes_Against_Society_Off" +
+                                "enses_Offense_Category_by_State_2020\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Weapon_Law_ViolationsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStateNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.StateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStateNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.StateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNumber_of_Participating_AgenciesNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNumber_of_Participating_AgenciesNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Number_of_Participating_AgenciesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPopulation_CoveredNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPopulation_CoveredNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Population_CoveredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotal_OffensesNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotal_OffensesNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Total_OffensesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAnimal_CrueltyNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Animal_CrueltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAnimal_CrueltyNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Animal_CrueltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDrug_Narcotic_OffensesNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Drug_Narcotic_OffensesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDrug_Narcotic_OffensesNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Drug_Narcotic_OffensesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsGambling_OffensesNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Gambling_OffensesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetGambling_OffensesNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Gambling_OffensesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPornography_Obscene_MaterialNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Pornography_Obscene_MaterialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPornography_Obscene_MaterialNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Pornography_Obscene_MaterialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProstitution_OffensesNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Prostitution_OffensesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProstitution_OffensesNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Prostitution_OffensesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsWeapon_Law_ViolationsNull() {
+                return this.IsNull(this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Weapon_Law_ViolationsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetWeapon_Law_ViolationsNull() {
+                this[this.tableCrimes_Against_Society_Offenses_Offense_Category_by_State_2020.Weapon_Law_ViolationsColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEvent : global::System.EventArgs {
             
             private Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row eventRow;
@@ -902,14 +2349,14 @@ namespace NewOrderDesign {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020RowChangeEvent(Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020Row Row {
                 get {
                     return this.eventRow;
@@ -917,7 +2364,75 @@ namespace NewOrderDesign {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent : global::System.EventArgs {
+            
+            private Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020RowChangeEvent(Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent : global::System.EventArgs {
+            
+            private Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020RowChangeEvent(Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -951,13 +2466,13 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
@@ -968,7 +2483,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
@@ -996,7 +2511,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
@@ -1022,7 +2537,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
@@ -1033,7 +2548,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -1044,7 +2559,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
@@ -1076,14 +2591,14 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NewOrderDesign.Properties.Settings.Default.NewFBIConnection;
+            this._connection.ConnectionString = global::NewOrderDesign.Properties.Settings.Default.FBIConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
@@ -1096,7 +2611,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(FBIDataSet5.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
@@ -1109,7 +2624,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual FBIDataSet5.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable GetData() {
@@ -1120,21 +2635,21 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FBIDataSet5.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FBIDataSet5 dataSet) {
             return this.Adapter.Update(dataSet, "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -1142,14 +2657,14 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string State, global::System.Nullable<short> Number_of_Participating_Agencies, global::System.Nullable<int> Population_Covered, global::System.Nullable<int> Total_Offenses, global::System.Nullable<int> Assault_Offenses, global::System.Nullable<short> Homicide_Offenses, global::System.Nullable<short> Human_Trafficking, global::System.Nullable<short> Kidnapping_Abduction, global::System.Nullable<int> Sex_Offenses) {
@@ -1225,6 +2740,600 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            tableMapping.ColumnMappings.Add("State", "State");
+            tableMapping.ColumnMappings.Add("Number_of_Participating_Agencies", "Number_of_Participating_Agencies");
+            tableMapping.ColumnMappings.Add("Population_Covered", "Population_Covered");
+            tableMapping.ColumnMappings.Add("Total_Offenses", "Total_Offenses");
+            tableMapping.ColumnMappings.Add("Arson", "Arson");
+            tableMapping.ColumnMappings.Add("Bribery", "Bribery");
+            tableMapping.ColumnMappings.Add("Burglary_Breaking_Entering", "Burglary_Breaking_Entering");
+            tableMapping.ColumnMappings.Add("Counterfeiting_Forgery", "Counterfeiting_Forgery");
+            tableMapping.ColumnMappings.Add("Destruction_Damage_Vandalism", "Destruction_Damage_Vandalism");
+            tableMapping.ColumnMappings.Add("Embezzlement", "Embezzlement");
+            tableMapping.ColumnMappings.Add("Extortion_Blackmail", "Extortion_Blackmail");
+            tableMapping.ColumnMappings.Add("Fraud_Offenses", "Fraud_Offenses");
+            tableMapping.ColumnMappings.Add("Larceny_Theft_Offenses", "Larceny_Theft_Offenses");
+            tableMapping.ColumnMappings.Add("Motor_Vehicle_Theft", "Motor_Vehicle_Theft");
+            tableMapping.ColumnMappings.Add("Robbery", "Robbery");
+            tableMapping.ColumnMappings.Add("Stolen_Property_Offenses", "Stolen_Property_Offenses");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Crimes_Against_Property_Offenses_Offense_Category_by_State_2020] ([State], [Number_of_Participating_Agencies], [Population_Covered], [Total_Offenses], [Arson], [Bribery], [Burglary_Breaking_Entering], [Counterfeiting_Forgery], [Destruction_Damage_Vandalism], [Embezzlement], [Extortion_Blackmail], [Fraud_Offenses], [Larceny_Theft_Offenses], [Motor_Vehicle_Theft], [Robbery], [Stolen_Property_Offenses]) VALUES (@State, @Number_of_Participating_Agencies, @Population_Covered, @Total_Offenses, @Arson, @Bribery, @Burglary_Breaking_Entering, @Counterfeiting_Forgery, @Destruction_Damage_Vandalism, @Embezzlement, @Extortion_Blackmail, @Fraud_Offenses, @Larceny_Theft_Offenses, @Motor_Vehicle_Theft, @Robbery, @Stolen_Property_Offenses)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@State", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "State", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Number_of_Participating_Agencies", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_of_Participating_Agencies", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Population_Covered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Population_Covered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Arson", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Arson", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bribery", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bribery", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Burglary_Breaking_Entering", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Burglary_Breaking_Entering", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Counterfeiting_Forgery", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Counterfeiting_Forgery", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Destruction_Damage_Vandalism", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Destruction_Damage_Vandalism", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Embezzlement", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Embezzlement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Extortion_Blackmail", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Extortion_Blackmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fraud_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fraud_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Larceny_Theft_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Larceny_Theft_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motor_Vehicle_Theft", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motor_Vehicle_Theft", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Robbery", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Robbery", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Stolen_Property_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Stolen_Property_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::NewOrderDesign.Properties.Settings.Default.FBIConnectionString2;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT State, Number_of_Participating_Agencies, Population_Covered, Total_Offenses, Arson, Bribery, Burglary_Breaking_Entering, Counterfeiting_Forgery, Destruction_Damage_Vandalism, Embezzlement, Extortion_Blackmail, Fraud_Offenses, Larceny_Theft_Offenses, Motor_Vehicle_Theft, Robbery, Stolen_Property_Offenses FROM dbo.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable dataTable = new FBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FBIDataSet5 dataSet) {
+            return this.Adapter.Update(dataSet, "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string State, 
+                    short Number_of_Participating_Agencies, 
+                    global::System.Nullable<int> Population_Covered, 
+                    int Total_Offenses, 
+                    short Arson, 
+                    short Bribery, 
+                    int Burglary_Breaking_Entering, 
+                    int Counterfeiting_Forgery, 
+                    int Destruction_Damage_Vandalism, 
+                    short Embezzlement, 
+                    short Extortion_Blackmail, 
+                    int Fraud_Offenses, 
+                    int Larceny_Theft_Offenses, 
+                    int Motor_Vehicle_Theft, 
+                    int Robbery, 
+                    int Stolen_Property_Offenses) {
+            if ((State == null)) {
+                throw new global::System.ArgumentNullException("State");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(State));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((short)(Number_of_Participating_Agencies));
+            if ((Population_Covered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Population_Covered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Total_Offenses));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Arson));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((short)(Bribery));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Burglary_Breaking_Entering));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Counterfeiting_Forgery));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Destruction_Damage_Vandalism));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((short)(Embezzlement));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((short)(Extortion_Blackmail));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Fraud_Offenses));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Larceny_Theft_Offenses));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((int)(Motor_Vehicle_Theft));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Robbery));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Stolen_Property_Offenses));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            tableMapping.ColumnMappings.Add("State", "State");
+            tableMapping.ColumnMappings.Add("Number_of_Participating_Agencies", "Number_of_Participating_Agencies");
+            tableMapping.ColumnMappings.Add("Population_Covered", "Population_Covered");
+            tableMapping.ColumnMappings.Add("Total_Offenses", "Total_Offenses");
+            tableMapping.ColumnMappings.Add("Animal_Cruelty", "Animal_Cruelty");
+            tableMapping.ColumnMappings.Add("Drug_Narcotic_Offenses", "Drug_Narcotic_Offenses");
+            tableMapping.ColumnMappings.Add("Gambling_Offenses", "Gambling_Offenses");
+            tableMapping.ColumnMappings.Add("Pornography_Obscene_Material", "Pornography_Obscene_Material");
+            tableMapping.ColumnMappings.Add("Prostitution_Offenses", "Prostitution_Offenses");
+            tableMapping.ColumnMappings.Add("Weapon_Law_Violations", "Weapon_Law_Violations");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Crimes_Against_Society_Offenses_Offense_Category_by_State_2020] ([State], [Number_of_Participating_Agencies], [Population_Covered], [Total_Offenses], [Animal_Cruelty], [Drug_Narcotic_Offenses], [Gambling_Offenses], [Pornography_Obscene_Material], [Prostitution_Offenses], [Weapon_Law_Violations]) VALUES (@State, @Number_of_Participating_Agencies, @Population_Covered, @Total_Offenses, @Animal_Cruelty, @Drug_Narcotic_Offenses, @Gambling_Offenses, @Pornography_Obscene_Material, @Prostitution_Offenses, @Weapon_Law_Violations)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@State", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "State", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Number_of_Participating_Agencies", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_of_Participating_Agencies", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Population_Covered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Population_Covered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Animal_Cruelty", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Animal_Cruelty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Drug_Narcotic_Offenses", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Drug_Narcotic_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gambling_Offenses", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gambling_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pornography_Obscene_Material", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pornography_Obscene_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prostitution_Offenses", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prostitution_Offenses", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Weapon_Law_Violations", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Weapon_Law_Violations", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::NewOrderDesign.Properties.Settings.Default.FBIConnectionString2;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT State, Number_of_Participating_Agencies, Population_Covered, Total_Offenses, Animal_Cruelty, Drug_Narcotic_Offenses, Gambling_Offenses, Pornography_Obscene_Material, Prostitution_Offenses, Weapon_Law_Violations FROM dbo.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable dataTable = new FBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FBIDataSet5 dataSet) {
+            return this.Adapter.Update(dataSet, "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string State, global::System.Nullable<short> Number_of_Participating_Agencies, global::System.Nullable<int> Population_Covered, global::System.Nullable<int> Total_Offenses, global::System.Nullable<short> Animal_Cruelty, global::System.Nullable<int> Drug_Narcotic_Offenses, global::System.Nullable<short> Gambling_Offenses, global::System.Nullable<short> Pornography_Obscene_Material, global::System.Nullable<short> Prostitution_Offenses, global::System.Nullable<int> Weapon_Law_Violations) {
+            if ((State == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(State));
+            }
+            if ((Number_of_Participating_Agencies.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((short)(Number_of_Participating_Agencies.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Population_Covered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Population_Covered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Total_Offenses.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Total_Offenses.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Animal_Cruelty.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Animal_Cruelty.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Drug_Narcotic_Offenses.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Drug_Narcotic_Offenses.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Gambling_Offenses.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((short)(Gambling_Offenses.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Pornography_Obscene_Material.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((short)(Pornography_Obscene_Material.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Prostitution_Offenses.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((short)(Prostitution_Offenses.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Weapon_Law_Violations.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Weapon_Law_Violations.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1238,12 +3347,16 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         
         private Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter _crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter;
         
+        private Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter _crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter;
+        
+        private Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter _crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public UpdateOrderOption UpdateOrder {
             get {
                 return this._updateOrder;
@@ -1254,7 +3367,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
@@ -1268,7 +3381,35 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter {
+            get {
+                return this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter;
+            }
+            set {
+                this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter {
+            get {
+                return this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter;
+            }
+            set {
+                this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -1279,7 +3420,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public global::System.Data.IDbConnection Connection {
             get {
@@ -1290,6 +3431,14 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
                             && (this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Connection != null))) {
                     return this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Connection;
                 }
+                if (((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null) 
+                            && (this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection != null))) {
+                    return this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection;
+                }
+                if (((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null) 
+                            && (this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection != null))) {
+                    return this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -1298,12 +3447,18 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
                 if ((this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1314,7 +3469,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(FBIDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
@@ -1326,6 +3481,24 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -1333,7 +3506,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(FBIDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
@@ -1344,6 +3517,22 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -1351,9 +3540,25 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(FBIDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -1369,7 +3574,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             if (((updatedRows == null) 
                         || (updatedRows.Length < 1))) {
@@ -1393,7 +3598,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public virtual int UpdateAll(FBIDataSet5 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
@@ -1403,6 +3608,16 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
             }
             if (((this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1445,6 +3660,24 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
                     if (this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter);
+                    }
+                }
+                if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    revertConnections.Add(this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter, this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection);
+                    this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter);
+                    }
+                }
+                if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    revertConnections.Add(this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter, this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection);
+                    this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1509,6 +3742,14 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
                     this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter]));
                     this._crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Transaction = null;
                 }
+                if ((this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter]));
+                    this._crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Transaction = null;
+                }
+                if ((this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter != null)) {
+                    this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter]));
+                    this._crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Transaction = null;
+                }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
                     adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
@@ -1522,13 +3763,13 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
             global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
             if ((this._connection != null)) {
                 return true;
@@ -1546,7 +3787,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         /// <summary>
         ///Update Order Option
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public enum UpdateOrderOption {
             
             InsertUpdateDelete = 0,
@@ -1557,7 +3798,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
         /// <summary>
         ///Used to sort self-referenced table's rows
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
             
             private global::System.Data.DataRelation _relation;
@@ -1565,7 +3806,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
             private int _childFirst;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
                 this._relation = relation;
                 if (childFirst) {
@@ -1577,7 +3818,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private global::System.Data.DataRow GetRoot(global::System.Data.DataRow row, out int distance) {
                 global::System.Diagnostics.Debug.Assert((row != null));
                 global::System.Data.DataRow root = row;
@@ -1616,7 +3857,7 @@ namespace NewOrderDesign.FBIDataSet5TableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
                 if (object.ReferenceEquals(row1, row2)) {
                     return 0;
