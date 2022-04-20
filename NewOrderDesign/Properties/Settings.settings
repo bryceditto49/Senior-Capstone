@@ -35,26 +35,26 @@
     <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=74.192.196.118\SQLEXPRESS,2022;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=173.217.234.232\SQLEXPRESS,2022;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=74.192.196.118\SQLEXPRESS,2022;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
+      <Value Profile="(Default)">Data Source=173.217.234.232\SQLEXPRESS,2022;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
     </Setting>
     <Setting Name="FBIConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=173.217.234.232\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
+      <Value Profile="(Default)">Data Source=173.217.234.232\SQLEXPRESS,2022;Initial Catalog=FBI;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
     </Setting>
     <Setting Name="CovidDataConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=173.217.234.232\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=74.192.196.118\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
+      <Value Profile="(Default)">Data Source=173.217.234.232\SQLEXPRESS,2022;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
     </Setting>
     <Setting Name="FBIConnectionString2" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -63,6 +63,14 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=FBI;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
+    </Setting>
+    <Setting Name="CovidDataConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=CovidData;Persist Security Info=True;User ID=apeuser2;Password=daylonswallows1234</Value>
     </Setting>
   </Settings>
 </SettingsFile>
