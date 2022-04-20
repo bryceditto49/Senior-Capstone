@@ -42,7 +42,7 @@ namespace NewOrderDesign
 
             stateCovid = PersonsComboBox.Text;
 
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
 
@@ -87,7 +87,7 @@ namespace NewOrderDesign
 
         private void CovidUSOverview_Load(object sender, EventArgs e)
         {
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connString))

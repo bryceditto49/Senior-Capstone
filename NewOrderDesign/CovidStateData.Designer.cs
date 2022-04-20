@@ -62,6 +62,9 @@ namespace NewOrderDesign
             this.Export_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.covidDataDataSet5 = new NewOrderDesign.CovidDataDataSet5();
+            this.statesBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.statesTableAdapter5 = new NewOrderDesign.CovidDataDataSet5TableAdapters.statesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
@@ -73,6 +76,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -127,7 +132,7 @@ namespace NewOrderDesign
             this.statenameDataGridViewTextBoxColumn,
             this.confirmedcasesDataGridViewTextBoxColumn,
             this.deathsDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.statesBindingSource4;
+            this.dataGridView1.DataSource = this.statesBindingSource5;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 113);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -332,6 +337,20 @@ namespace NewOrderDesign
             this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
     "d";
             // 
+            // covidDataDataSet5
+            // 
+            this.covidDataDataSet5.DataSetName = "CovidDataDataSet5";
+            this.covidDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statesBindingSource5
+            // 
+            this.statesBindingSource5.DataMember = "states";
+            this.statesBindingSource5.DataSource = this.covidDataDataSet5;
+            // 
+            // statesTableAdapter5
+            // 
+            this.statesTableAdapter5.ClearBeforeFill = true;
+            // 
             // CovidStateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -370,6 +389,8 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +429,8 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button Export_button;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
+        private CovidDataDataSet5 covidDataDataSet5;
+        private System.Windows.Forms.BindingSource statesBindingSource5;
+        private CovidDataDataSet5TableAdapters.statesTableAdapter statesTableAdapter5;
     }
 }

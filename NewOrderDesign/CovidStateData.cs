@@ -28,7 +28,7 @@ namespace NewOrderDesign
         private void button1_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
@@ -85,8 +85,8 @@ namespace NewOrderDesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'covidDataDataSet4.states' table. You can move, or remove it, as needed.
-            this.statesTableAdapter4.Fill(this.covidDataDataSet4.states);
+            // TODO: This line of code loads data into the 'covidDataDataSet5.states' table. You can move, or remove it, as needed.
+            this.statesTableAdapter5.Fill(this.covidDataDataSet5.states);
 
         }
 
@@ -105,7 +105,7 @@ namespace NewOrderDesign
         private void button3_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
@@ -152,7 +152,7 @@ namespace NewOrderDesign
         private void button4_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
@@ -199,7 +199,7 @@ namespace NewOrderDesign
         private void button5_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
@@ -269,7 +269,7 @@ namespace NewOrderDesign
         private void button6_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
