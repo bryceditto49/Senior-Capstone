@@ -85,6 +85,54 @@ namespace NewOrderDesign
                     cmdtotalsociety.CommandText = query3;
                     USOverview.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
 
+                    //third graph crime by state
+                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses], [Intimidation]";
+                    queryStatewise += $"FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE NOT Participating_state_Federal = 'Total'";
+                    DataTable dt3 = GetData(queryStatewise);
+
+                    Int16[] x3 = (from p in dt3.AsEnumerable()
+                                  orderby p.Field<Int16>("Intimidation") ascending
+                                  select p.Field<Int16>("Intimidation")).ToArray();
+
+                    Int16[] y3 = (from p in dt3.AsEnumerable()
+                                  orderby p.Field<Int16>("Total_offenses") ascending
+                                  select p.Field<Int16>("Total_offenses")).ToArray();
+                    chart3.Series[0].ChartType = SeriesChartType.Pie;
+                    chart3.Series[0].Points.DataBindXY(x3, y3);
+                    chart3.Legends[0].Enabled = false;
+                    chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    //crime by type-simplified
+                    //Fetch the Statistical data from database.
+                    string[] x2 = new string[] { "", "", "" };
+                    Int32[] y2 = new Int32[] { 5371269, 1273179, 2235280 };
+                    chart2.Series[0].ChartType = SeriesChartType.Pie;
+                    chart2.Series[0].Points.DataBindXY(x2, y2);
+                    chart2.Legends[0].Enabled = false;
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    //Crime by type
+                    //Fetch the Statistical data from database.
+                    string query = $"SELECT [Total_offenses],[Murder_and_nonnegligent_manslaughter],[Rape1],[Aggravated_assault],[Simple_assault],[Intimidation],[Other2],[Robbery],[Burglary],[Larceny_theft],[Motor_vehicle_theft],[Arson],[Destruction_damage_vandalism]";
+                    query += $" FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE Participating_state_Federal = 'Total'";
+                    DataTable dt1 = GetData(query);
+
+                    Int16[] x1 = (from p in dt1.AsEnumerable()
+                                  orderby p.Field<Int16>("Total_offenses") ascending
+                                  select p.Field<Int16>("Total_offenses")).ToArray();
+
+                    Int16[] y1 = (from p in dt1.AsEnumerable()
+                                  orderby p.Field<Int16>("Aggravated_assault") ascending
+                                  select p.Field<Int16>("Aggravated_assault")).ToArray();
+
+
+                    chart1.Series[0].ChartType = SeriesChartType.Pie;
+                    //overviewchart1.Series[0].Points.DataBindXY(murder,rape,aggravated_assault,simple_assault,intimidation,robbery,burglary,larceny,gta,arson,vandalism,other);
+                    chart1.Series[0].Points.DataBindXY(x1, y1);
+                    chart1.Legends[0].Enabled = true;
+                    chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    overviewdataGridView3.Hide();
                     conn.Close();
                 }
             }
@@ -102,17 +150,58 @@ namespace NewOrderDesign
             {
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
+                    //crime by state
                     conn.Open();
+                    /*
+                    //Fetch the Statistical data from database.
+                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses], [Intimidation]";
+                    queryStatewise += $"FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE NOT Participating_state_Federal = 'Total'";
+                    DataTable dt3 = GetData(queryStatewise);
 
-                    string query1 = $"SELECT Assault_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
-                    string query2 = $"";
-                    string query3 = $"";
+                    Int16[] x3 = (from p in dt3.AsEnumerable()
+                                 orderby p.Field<Int16>("Intimidation") ascending
+                                 select p.Field<Int16>("Intimidation")).ToArray();
 
-                    SqlCommand cmdtotalassault = conn.CreateCommand();
-                    cmdtotalassault.CommandText = query1;
-                    USOverview.overviewtotalassault = (Int32)cmdtotalassault.ExecuteScalar();
-                    TotalCrimesAgainstPersonsTabLabel1.Text = USOverview.overviewtotalassault.ToString();
+                    Int16[] y3 = (from p in dt3.AsEnumerable()
+                                 orderby p.Field<Int16>("Total_offenses") ascending
+                                 select p.Field<Int16>("Total_offenses")).ToArray();
+                    chart3.Series[0].ChartType = SeriesChartType.Pie;
+                    chart3.Series[0].Points.DataBindXY(x3, y3);
+                    chart3.Legends[0].Enabled = false;
+                    chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
 
+                    //crime by type-simplified
+                    //Fetch the Statistical data from database.
+                    string[] x2 = new string[] {"","",""};
+                    Int32[] y2 = new Int32[] {5371269, 1273179, 2235280};
+                    chart2.Series[0].ChartType = SeriesChartType.Pie;
+                    chart2.Series[0].Points.DataBindXY(x2, y2);
+                    chart2.Legends[0].Enabled = false;
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    //Crime by type
+                    //Fetch the Statistical data from database.
+                    string query = $"SELECT [Total_offenses],[Murder_and_nonnegligent_manslaughter],[Rape1],[Aggravated_assault],[Simple_assault],[Intimidation],[Other2],[Robbery],[Burglary],[Larceny_theft],[Motor_vehicle_theft],[Arson],[Destruction_damage_vandalism]";
+                    query += $" FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE Participating_state_Federal = 'Total'";
+                    DataTable dt1 = GetData(query);
+                    
+                    Int16[] x1 = (from p in dt1.AsEnumerable()
+                               orderby p.Field<Int16>("Total_offenses") ascending
+                               select p.Field<Int16>("Total_offenses")).ToArray();
+
+                    Int16[] y1 = (from p in dt1.AsEnumerable()
+                               orderby p.Field<Int16>("Aggravated_assault") ascending
+                               select p.Field<Int16>("Aggravated_assault")).ToArray();
+             
+
+                    chart1.Series[0].ChartType = SeriesChartType.Pie;
+                    //overviewchart1.Series[0].Points.DataBindXY(murder,rape,aggravated_assault,simple_assault,intimidation,robbery,burglary,larceny,gta,arson,vandalism,other);
+                    chart1.Series[0].Points.DataBindXY(x1, y1);
+                    chart1.Legends[0].Enabled = true;
+                    chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    overviewdataGridView3.Hide();
+                    */
                     conn.Close();
                 }
             }
@@ -805,7 +894,7 @@ namespace NewOrderDesign
 
         }
 
-        private void CrimesAgainstPersonsTab_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
