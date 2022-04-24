@@ -69,9 +69,9 @@ namespace NewOrderDesign
                 {
                     conn.Open();
 
-                    string query1 = $"SELECT Total_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
-                    string query2 = $"SELECT Total_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
-                    string query3 = $"SELECT Total_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                    string query1 = $"SELECT Total_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                    string query2 = $"SELECT Total_Offenses FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                    string query3 = $"SELECT Total_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
 
                     SqlCommand cmdtotalpersons = conn.CreateCommand();
                     cmdtotalpersons.CommandText = query1;
@@ -107,7 +107,7 @@ namespace NewOrderDesign
                 {
                     conn.Open();
 
-                    string query1 = $"SELECT Assault_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                    string query1 = $"SELECT Assault_Offenses FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                     string query2 = $"";
                     string query3 = $"";
 
@@ -139,22 +139,22 @@ namespace NewOrderDesign
                     {
                         conn.Open();
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Assault_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Assault_Offenses, State";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<int>("Assault_Offenses") ascending
-                                      select p.Field<int>("Assault_Offenses")).ToArray();
-
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                                      orderby p.Field<int>("Assault_Offenses") ascending
+                                      select p.Field<int>("Assault_Offenses")).ToArray();                  
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                   orderby p.Field<string>("State") ascending
+                                   select p.Field<string>("State")).ToArray();
 
 
 
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
-                        overviewchart1.Series[0].Points.DataBindXY(x, y);
+                        overviewchart1.Series[0].Points.DataBindXY(x,y);
                         overviewchart1.Legends[0].Enabled = true;
                         overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
 
@@ -166,17 +166,17 @@ namespace NewOrderDesign
                     {
                         conn.Open();
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Homicide_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Homicide_Offenses, State";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Homicide_Offenses") ascending
                                    select p.Field<Int16>("Homicide_Offenses")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -193,17 +193,17 @@ namespace NewOrderDesign
                     {
                         conn.Open();
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Human_Trafficking, Total_Offenses";
-                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Human_Trafficking, State";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Human_Trafficking") ascending
                                    select p.Field<Int16>("Human_Trafficking")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -220,17 +220,17 @@ namespace NewOrderDesign
                     {
                         conn.Open();
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Kidnapping_Abduction, Total_Offenses";
-                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Kidnapping_Abduction, State";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Kidnapping_Abduction") ascending
                                    select p.Field<Int16>("Kidnapping_Abduction")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -247,17 +247,17 @@ namespace NewOrderDesign
                     {
                         conn.Open();
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Sex_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Sex_Offenses, State";
+                        query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Sex_Offenses") ascending
                                    select p.Field<int>("Sex_Offenses")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -306,17 +306,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Arson, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Arson, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Arson") ascending
                                    select p.Field<Int16>("Arson")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -334,17 +334,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Bribery, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Bribery, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Bribery") ascending
                                    select p.Field<Int16>("Bribery")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -362,17 +362,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Burglary_Breaking_Entering, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Burglary_Breaking_Entering, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Burglary_Breaking_Entering") ascending
                                    select p.Field<int>("Burglary_Breaking_Entering")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -390,17 +390,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Counterfeiting_Forgery, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Counterfeiting_Forgery, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Counterfeiting_Forgery") ascending
                                    select p.Field<int>("Counterfeiting_Forgery")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -418,17 +418,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Destruction_Damage_Vandalism, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Destruction_Damage_Vandalism, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Destruction_Damage_Vandalism") ascending
                                    select p.Field<int>("Destruction_Damage_Vandalism")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -446,17 +446,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Embezzlement, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Embezzlement, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Embezzlement") ascending
                                    select p.Field<Int16>("Embezzlement")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -474,17 +474,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Extortion_Blackmail, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Extortion_Blackmail, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        Int16[] x = (from p in dt.AsEnumerable()
+                        Int16[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<Int16>("Extortion_Blackmail") ascending
                                    select p.Field<Int16>("Extortion_Blackmail")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -502,17 +502,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Fraud_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Fraud_Offenses, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Fraud_Offenses") ascending
                                    select p.Field<int>("Fraud_Offenses")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -530,17 +530,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Larceny_Theft_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Larceny_Theft_Offenses, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Larceny_Theft_Offenses") ascending
                                    select p.Field<int>("Larceny_Theft_Offenses")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -558,17 +558,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Motor_Vehicle_Theft, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Motor_Vehicle_Theft, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Motor_Vehicle_Theft") ascending
                                    select p.Field<int>("Motor_Vehicle_Theft")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -586,17 +586,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Robbery, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Robbery, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Robbery") ascending
                                    select p.Field<int>("Robbery")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -614,17 +614,17 @@ namespace NewOrderDesign
                         conn.Open();
 
                         //Fetch the Statistical data from database.
-                        string query = $"SELECT Stolen_Property_Offenses, Total_Offenses";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        string query = $"SELECT Stolen_Property_Offenses, State";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
                         DataTable dt = GetData(query);
 
-                        int[] x = (from p in dt.AsEnumerable()
+                        int[] y = (from p in dt.AsEnumerable()
                                    orderby p.Field<int>("Stolen_Property_Offenses") ascending
                                    select p.Field<int>("Stolen_Property_Offenses")).ToArray();
 
-                        int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Total_Offenses") ascending
-                                   select p.Field<int>("Total_Offenses")).ToArray();
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
 
 
 
@@ -658,12 +658,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Animal_Cruelty FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Animal_Cruelty, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalanimal = conn.CreateCommand();
-                        cmdtotalanimal.CommandText = query1;
-                        USOverview.overviewtotalanimal = (Int16)cmdtotalanimal.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalanimal.ToString();
+                        Int16[] y = (from p in dt.AsEnumerable()
+                                   orderby p.Field<Int16>("Animal_Cruelty") ascending
+                                   select p.Field<Int16>("Animal_Cruelty")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
@@ -671,12 +686,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Drug_Narcotic_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Drug_Narcotic_Offenses, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotaldrug = conn.CreateCommand();
-                        cmdtotaldrug.CommandText = query1;
-                        USOverview.overviewtotaldrug = (Int32)cmdtotaldrug.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotaldrug.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                     orderby p.Field<int>("Drug_Narcotic_Offenses") ascending
+                                     select p.Field<int>("Drug_Narcotic_Offenses")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
@@ -684,12 +714,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Gambling_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Gambling_Offenses, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalgambling = conn.CreateCommand();
-                        cmdtotalgambling.CommandText = query1;
-                        USOverview.overviewtotalgambling = (Int16)cmdtotalgambling.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalgambling.ToString();
+                        Int16[] y = (from p in dt.AsEnumerable()
+                                     orderby p.Field<Int16>("Gambling_Offenses") ascending
+                                     select p.Field<Int16>("Gambling_Offenses")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
@@ -697,12 +742,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Pornography_Obscene_Material FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Pornography_Obscene_Material, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalpornography = conn.CreateCommand();
-                        cmdtotalpornography.CommandText = query1;
-                        USOverview.overviewtotalpornography = (Int16)cmdtotalpornography.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalpornography.ToString();
+                        Int16[] y = (from p in dt.AsEnumerable()
+                                     orderby p.Field<Int16>("Pornography_Obscene_Material") ascending
+                                     select p.Field<Int16>("Pornography_Obscene_Material")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
@@ -710,12 +770,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Prostitution_Offenses FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Prostitution_Offenses, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalprostitution = conn.CreateCommand();
-                        cmdtotalprostitution.CommandText = query1;
-                        USOverview.overviewtotalprostitution = (Int16)cmdtotalprostitution.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalprostitution.ToString();
+                        Int16[] y = (from p in dt.AsEnumerable()
+                                     orderby p.Field<Int16>("Prostitution_Offenses") ascending
+                                     select p.Field<Int16>("Prostitution_Offenses")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
@@ -723,12 +798,27 @@ namespace NewOrderDesign
                     {
                         conn.Open();
 
-                        string query1 = $"SELECT Weapon_Law_Violations FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = 'Total'";
+                        //Fetch the Statistical data from database.
+                        string query = $"SELECT Weapon_Law_Violations, State";
+                        query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        DataTable dt = GetData(query);
 
-                        SqlCommand cmdtotalweapon = conn.CreateCommand();
-                        cmdtotalweapon.CommandText = query1;
-                        USOverview.overviewtotalweapon = (Int32)cmdtotalweapon.ExecuteScalar();
-                        TotalCrimesAgainstSocietyTabLabel1.Text = USOverview.overviewtotalweapon.ToString();
+                        int[] y = (from p in dt.AsEnumerable()
+                                     orderby p.Field<int>("Weapon_Law_Violations") ascending
+                                     select p.Field<int>("Weapon_Law_Violations")).ToArray();
+
+                        string[] x = (from p in dt.AsEnumerable()
+                                      orderby p.Field<string>("State") ascending
+                                      select p.Field<string>("State")).ToArray();
+
+
+
+                        overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
+                        overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Legends[0].Enabled = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                        dataGridView1.Hide();
 
                         conn.Close();
                     }
