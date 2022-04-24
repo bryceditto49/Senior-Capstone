@@ -144,11 +144,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                      orderby p.Field<int>("Assault_Offenses") ascending
                                       select p.Field<int>("Assault_Offenses")).ToArray();                  
 
                         string[] x = (from p in dt.AsEnumerable()
-                                   orderby p.Field<string>("State") ascending
                                    select p.Field<string>("State")).ToArray();
 
 
@@ -157,6 +155,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].Points.DataBindXY(x,y);
                         overviewchart1.Legends[0].Enabled = true;
                         overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.Series[0]["PieLabelStyle"] = "Disabled";
 
                         overviewdataGridView3.Hide();
 
@@ -171,11 +170,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Homicide_Offenses") ascending
                                    select p.Field<Int16>("Homicide_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -198,11 +195,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Human_Trafficking") ascending
                                    select p.Field<Int16>("Human_Trafficking")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -225,11 +220,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Kidnapping_Abduction") ascending
                                    select p.Field<Int16>("Kidnapping_Abduction")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -252,11 +245,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Sex_Offenses") ascending
                                    select p.Field<int>("Sex_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -311,11 +302,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Arson") ascending
                                    select p.Field<Int16>("Arson")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -324,6 +313,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
                         overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.Series[0]["PieLabelStyle"] = "Disabled";
 
                         overviewdataGridView2.Hide();
 
@@ -339,11 +329,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Bribery") ascending
                                    select p.Field<Int16>("Bribery")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -367,11 +355,8 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Burglary_Breaking_Entering") ascending
                                    select p.Field<int>("Burglary_Breaking_Entering")).ToArray();
-
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -395,11 +380,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Counterfeiting_Forgery") ascending
                                    select p.Field<int>("Counterfeiting_Forgery")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -423,11 +406,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Destruction_Damage_Vandalism") ascending
                                    select p.Field<int>("Destruction_Damage_Vandalism")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -451,11 +432,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Embezzlement") ascending
                                    select p.Field<Int16>("Embezzlement")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -479,11 +458,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Extortion_Blackmail") ascending
                                    select p.Field<Int16>("Extortion_Blackmail")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -507,11 +484,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Fraud_Offenses") ascending
                                    select p.Field<int>("Fraud_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -535,11 +510,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Larceny_Theft_Offenses") ascending
                                    select p.Field<int>("Larceny_Theft_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -563,11 +536,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Motor_Vehicle_Theft") ascending
                                    select p.Field<int>("Motor_Vehicle_Theft")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -591,11 +562,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Robbery") ascending
                                    select p.Field<int>("Robbery")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -619,11 +588,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<int>("Stolen_Property_Offenses") ascending
                                    select p.Field<int>("Stolen_Property_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -664,11 +631,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                   orderby p.Field<Int16>("Animal_Cruelty") ascending
                                    select p.Field<Int16>("Animal_Cruelty")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -677,6 +642,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
                         overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.Series[0]["PieLabelStyle"] = "Disabled";
 
                         dataGridView1.Hide();
 
@@ -692,11 +658,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                     orderby p.Field<int>("Drug_Narcotic_Offenses") ascending
                                      select p.Field<int>("Drug_Narcotic_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -720,11 +684,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                     orderby p.Field<Int16>("Gambling_Offenses") ascending
                                      select p.Field<Int16>("Gambling_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -748,11 +710,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                     orderby p.Field<Int16>("Pornography_Obscene_Material") ascending
                                      select p.Field<Int16>("Pornography_Obscene_Material")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -776,11 +736,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
-                                     orderby p.Field<Int16>("Prostitution_Offenses") ascending
                                      select p.Field<Int16>("Prostitution_Offenses")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
@@ -804,11 +762,9 @@ namespace NewOrderDesign
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
-                                     orderby p.Field<int>("Weapon_Law_Violations") ascending
                                      select p.Field<int>("Weapon_Law_Violations")).ToArray();
 
                         string[] x = (from p in dt.AsEnumerable()
-                                      orderby p.Field<string>("State") ascending
                                       select p.Field<string>("State")).ToArray();
 
 
