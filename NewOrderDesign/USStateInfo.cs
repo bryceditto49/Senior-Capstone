@@ -46,6 +46,24 @@ namespace NewOrderDesign
                     conn.Open();
 
                     //Fetch the Statistical data from database.
+
+                    //this below code is to grab population from SQL
+                    string queryPopulation = $"SELECT Population_Covered FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
+                    SqlCommand cmdtotalPop = conn.CreateCommand();
+                    cmdtotalPop.CommandText = queryPopulation;
+                    totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
+                    label3.Text = totalPopulation.ToString();
+                    //this below code is to grab percentage of crime per citizen
+                    string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
+                    SqlCommand cmdPerCapita = conn.CreateCommand();
+                    cmdPerCapita.CommandText = queryPerCapita;
+                    double percent;
+                    percent = (double)cmdPerCapita.ExecuteScalar();
+                    perCapita = (percent / 100) * 1000;
+                    label4.Text = perCapita.ToString();
+
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}' OR State = 'Total'";
                     string query = $"SELECT State, Assault_Offenses, Homicide_Offenses, Human_Trafficking, Kidnapping_Abduction, Sex_Offenses";
                     query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
                     DataTable dt = GetData(query);
@@ -133,8 +151,29 @@ namespace NewOrderDesign
                 {
                     conn.Open();
                     //Fetch the Statistical data from database.
+
+                    //this below code is to grab population from SQL
+                    string queryPopulation = $"SELECT Population_Covered FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+                    SqlCommand cmdtotalPop = conn.CreateCommand();
+                    cmdtotalPop.CommandText = queryPopulation;
+                    totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
+                    label7.Text = totalPopulation.ToString();
+                    //this below code is to grab percentage of crime per citizen
+                    string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+                    SqlCommand cmdPerCapita = conn.CreateCommand();
+                    cmdPerCapita.CommandText = queryPerCapita;
+                    double percent;
+                    percent = (double)cmdPerCapita.ExecuteScalar();
+                    perCapita = (percent / 100) * 1000;
+                    label8.Text = perCapita.ToString();
+
+
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}' or State = 'Total'";
+
                     string query = $"SELECT Arson, Bribery, Burglary_Breaking_Entering, Counterfeiting_Forgery, Destruction_Damage_Vandalism, Embezzlement, Extortion_Blackmail, Fraud_Offenses, Larceny_Theft_Offenses, Motor_Vehicle_Theft, Robbery, Stolen_Property_Offenses";
                     query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+
                     DataTable dt = GetData(query);
 
                     //Get the names of states.
@@ -230,8 +269,28 @@ namespace NewOrderDesign
 
                     conn.Open();
                     //Fetch the Statistical data from database.
+                    //this below code is to grab population from SQL
+                    string queryPopulation = $"SELECT Population_Covered FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
+                    SqlCommand cmdtotalPop = conn.CreateCommand();
+                    cmdtotalPop.CommandText = queryPopulation;
+                    totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
+                    label11.Text = totalPopulation.ToString();
+                    //this below code is to grab percentage of crime per citizen
+                    string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
+                    SqlCommand cmdPerCapita = conn.CreateCommand();
+                    cmdPerCapita.CommandText = queryPerCapita;
+                    double percent;
+                    percent = (double)cmdPerCapita.ExecuteScalar();
+                    perCapita = (percent / 100) * 1000;
+                    label12.Text = perCapita.ToString();   
+
+
+                    string query = $"SELECT State, Total_Offenses";
+                    query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}' or State = 'Total'";
+
                     string query = $"SELECT Animal_Cruelty, Drug_Narcotic_Offenses, Gambling_Offenses, Pornography_Obscene_Material, Prostitution_Offenses, Weapon_Law_Violations";
                     query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
+
                     DataTable dt = GetData(query);
 
                     //Get the names of states.
@@ -284,12 +343,24 @@ namespace NewOrderDesign
             }
         }
 
+        int totalPopulation = 0;
+        double perCapita = 0;
+
         private void USStateInfo_Load(object sender, EventArgs e)
         {
 
         }
 
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+
         private void chart1_Click(object sender, EventArgs e)
+
         {
 
         }

@@ -242,6 +242,11 @@ namespace NewOrderDesign
                         overviewchart1.Legends[0].Enabled = true;
                         overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
                         overviewchart1.Series[0]["PieLabelStyle"] = "Disabled";
+                        chart4.Series[0].ChartType = SeriesChartType.Bar;
+                        chart4.Series[0].Points.DataBindXY(x, y);
+                        chart4.Legends[0].Enabled = true;
+                        chart4.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        chart4.Series[0]["PieLabelStyle"] = "Disabled";
 
                         overviewdataGridView3.Hide();
 
