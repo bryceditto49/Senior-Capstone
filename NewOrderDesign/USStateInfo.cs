@@ -45,25 +45,11 @@ namespace NewOrderDesign
                 {
                     conn.Open();
 
-                    //Fetch the Statistical data from database.
-                    string query = $"SELECT State, Total_Offenses";
-                    query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}' OR State = 'Total'";
-                    DataTable dt = GetData(query);
-
-                    //Get the names of states.
-                    string[] x = (from p in dt.AsEnumerable()
-                                  orderby p.Field<string>("State") ascending
-                                  select p.Field<string>("State")).ToArray();
-
-                    //Get the Total of Amount of Crime for each state.
-                    int[] y = (from p in dt.AsEnumerable()
-                               orderby p.Field<string>("State") ascending
-                               select p.Field<int>("Total_Offenses")).ToArray();
 
 
 
-                    chart1.Series[0].ChartType = SeriesChartType.Pie;
-                    chart1.Series[0].Points.DataBindXY(x, y);
+                    chart1.Series[0].ChartType = SeriesChartType.Bar;
+                    chart1.Series[0].Points.DataBindY(x,y);
                     chart1.Legends[0].Enabled = true;
                     chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
 

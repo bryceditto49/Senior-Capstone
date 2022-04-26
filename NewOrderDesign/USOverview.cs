@@ -55,12 +55,12 @@ namespace NewOrderDesign
         Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
-            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
-            // TODO: This line of code loads data into the 'fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
-            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.fBIDataSet4.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'newFBISocietySet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.Fill(this.newFBISocietySet2.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'newFBIPropertySet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.newFBIPropertySet.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'newFBIPersonsDataSet.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2.Fill(this.newFBIPersonsDataSet.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -75,17 +75,14 @@ namespace NewOrderDesign
                     SqlCommand cmdtotalpersons = conn.CreateCommand();
                     cmdtotalpersons.CommandText = query1;
                     USOverview.overviewtotalpersons = (Int32)cmdtotalpersons.ExecuteScalar();
-                    TotalCrimesAgainstPersonsLabel.Text = USOverview.overviewtotalpersons.ToString();
 
                     SqlCommand cmdtotalproperty = conn.CreateCommand();
                     cmdtotalproperty.CommandText = query2;
                     USOverview.overviewtotalproperty = (Int32)cmdtotalproperty.ExecuteScalar();
-                    TotalCrimesAgainstPropertyLabel.Text = USOverview.overviewtotalproperty.ToString();
 
                     SqlCommand cmdtotalsociety = conn.CreateCommand();
                     cmdtotalsociety.CommandText = query3;
                     USOverview.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
-                    TotalCrimesAgainstSocietyLabel.Text = USOverview.overviewtotalsociety.ToString();
 
                     conn.Close();
                 }
@@ -757,6 +754,11 @@ namespace NewOrderDesign
 
 
         private void OverviewTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrimesAgainstPersonsTab_Click(object sender, EventArgs e)
         {
 
         }

@@ -141,6 +141,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FBIDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FBIDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FBIPropertyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +203,26 @@
     </Compile>
     <Compile Include="FBIUSView.Designer.cs">
       <DependentUpon>FBIUSView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFBIPersonsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFBIPersonsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFBIPropertySet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFBIPropertySet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFBISocietySet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFBISocietySet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFBISocietySet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFBISocietySet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -391,6 +416,17 @@
     <None Include="FBIDataSet4.xss">
       <DependentUpon>FBIDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="FBIDataSet5.xsc">
+      <DependentUpon>FBIDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet5.xss">
+      <DependentUpon>FBIDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="FBIPropertyDataSet.xsc">
       <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>
     </None>
@@ -412,6 +448,50 @@
     </None>
     <None Include="FBIPropertyDataSet2.xss">
       <DependentUpon>FBIPropertyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBIPersonsDataSet.xsc">
+      <DependentUpon>NewFBIPersonsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBIPersonsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFBIPersonsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFBIPersonsDataSet.xss">
+      <DependentUpon>NewFBIPersonsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBIPropertySet.xsc">
+      <DependentUpon>NewFBIPropertySet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBIPropertySet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFBIPropertySet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFBIPropertySet.xss">
+      <DependentUpon>NewFBIPropertySet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBISocietySet.xsc">
+      <DependentUpon>NewFBISocietySet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBISocietySet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFBISocietySet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFBISocietySet.xss">
+      <DependentUpon>NewFBISocietySet.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBISocietySet2.xsc">
+      <DependentUpon>NewFBISocietySet2.xsd</DependentUpon>
+    </None>
+    <None Include="NewFBISocietySet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFBISocietySet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFBISocietySet2.xss">
+      <DependentUpon>NewFBISocietySet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

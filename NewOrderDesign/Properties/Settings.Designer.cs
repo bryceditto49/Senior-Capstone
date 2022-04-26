@@ -26,39 +26,6 @@ namespace NewOrderDesign.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GMQRRJB\\SQLEXPRESS;Initial Catalog=CovidDataNYT;Integrated Se" +
-            "curity=True")]
-        public string CovidDataNYTConnectionString {
-            get {
-                return ((string)(this["CovidDataNYTConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.217.234.232\\SQLEXPRESS,20222;Initial Catalog=CovidData;Integrated" +
-            " Security=True")]
-        public string CovidDataConnectionString {
-            get {
-                return ((string)(this["CovidDataConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.217.234.232\\SQLEXPRESS,20222;Initial Catalog=FBI;Integrated Secur" +
-            "ity=True")]
-        public string FBIConnectionString {
-            get {
-                return ((string)(this["FBIConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=74.192.196.118\\SQLEXPRESS,2022;Persist Security Info=True;User ID=ape" +
             "user2;Password=daylonswallows1234")]
         public string ConnectionString {
@@ -110,6 +77,50 @@ namespace NewOrderDesign.Properties {
             }
             set {
                 this["Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GMQRRJB\\SQLEXPRESS;Initial Catalog=CovidDataNYT;Integrated Se" +
+            "curity=True")]
+        public string CovidDataNYTConnectionString {
+            get {
+                return ((string)(this["CovidDataNYTConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.217.234.232\\SQLEXPRESS,20222;Initial Catalog=CovidData;Integrated" +
+            " Security=True")]
+        public string CovidDataConnectionString {
+            get {
+                return ((string)(this["CovidDataConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.217.234.232\\SQLEXPRESS,20222;Initial Catalog=FBI;Integrated Secur" +
+            "ity=True")]
+        public string FBIConnectionString {
+            get {
+                return ((string)(this["FBIConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=173.217.234.232\\SQLEXPRESS,20222;Initial Catalog=FBI;User ID=apeuser2" +
+            "")]
+        public string NewFBIConnection {
+            get {
+                return ((string)(this["NewFBIConnection"]));
             }
         }
     }

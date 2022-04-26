@@ -22,7 +22,7 @@ namespace NewOrderDesign
         private void submitbutton_Click(object sender, EventArgs e)
         {
             //set the connection string
-            string connString = @"Server = 74.192.196.118\SQLEXPRESS,2022; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
+            string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
 
             try
             {
