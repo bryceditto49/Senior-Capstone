@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using LiveCharts;
-using LiveCharts.Wpf;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace NewOrderDesign
@@ -27,8 +25,6 @@ namespace NewOrderDesign
             PropertyComboBox.SelectedItem = "Alabama";
             SocietyComboBox.SelectedItem = "Alabama";
         }
-
-        Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
 
 
         string statePersons;
@@ -64,9 +60,10 @@ namespace NewOrderDesign
 
                     string query = $"SELECT State, Total_Offenses";
                     query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}' OR State = 'Total'";
-                    string query = $"SELECT State, Assault_Offenses, Homicide_Offenses, Human_Trafficking, Kidnapping_Abduction, Sex_Offenses";
-                    query += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
-                    DataTable dt = GetData(query);
+                    string query2 = $"SELECT State, Assault_Offenses, Homicide_Offenses, Human_Trafficking, Kidnapping_Abduction, Sex_Offenses";
+                    query2 += $" FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
+                    DataTable dt = GetData(query2);
+                    DataTable dt2 = GetData(query);
 
                     //Get the names of the crime.
                     string[] x = new string[] { "Assault" };
@@ -91,6 +88,11 @@ namespace NewOrderDesign
                     int[] y4 = (from p in dt.AsEnumerable()
                                select p.Field<int>("Sex_Offenses")).ToArray();
 
+                    string[] totalchart = (from p in dt2.AsEnumerable()
+                                           select p.Field<string>("State")).ToArray();
+                    int[] totalchartnumbers = (from p in dt2.AsEnumerable()
+                                               select p.Field<int>("Total_Offenses")).ToArray();
+
 
                     chart1.Series[0].ChartType = SeriesChartType.Pie;
                     chart1.Series[0].Points.DataBindXY(x, y);
@@ -102,6 +104,12 @@ namespace NewOrderDesign
                     chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
                     chart1.Series[0]["PieLabelStyle"] = "Disabled";
 
+                    chart4.Series[0].ChartType = SeriesChartType.Pie;
+                    chart4.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
+                    chart4.Legends[0].Enabled = true;
+                    chart4.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView4.Hide();
                     dataGridView1.Hide();
                 }
             }
@@ -171,10 +179,11 @@ namespace NewOrderDesign
                     string query = $"SELECT State, Total_Offenses";
                     query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}' or State = 'Total'";
 
-                    string query = $"SELECT Arson, Bribery, Burglary_Breaking_Entering, Counterfeiting_Forgery, Destruction_Damage_Vandalism, Embezzlement, Extortion_Blackmail, Fraud_Offenses, Larceny_Theft_Offenses, Motor_Vehicle_Theft, Robbery, Stolen_Property_Offenses";
-                    query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
+                    string query2 = $"SELECT Arson, Bribery, Burglary_Breaking_Entering, Counterfeiting_Forgery, Destruction_Damage_Vandalism, Embezzlement, Extortion_Blackmail, Fraud_Offenses, Larceny_Theft_Offenses, Motor_Vehicle_Theft, Robbery, Stolen_Property_Offenses";
+                    query2 += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
 
-                    DataTable dt = GetData(query);
+                    DataTable dt = GetData(query2);
+                    DataTable dt2 = GetData(query);
 
                     //Get the names of states.
                     string[] x = new string[] { "Arson" };
@@ -227,6 +236,11 @@ namespace NewOrderDesign
                     int[] y11 = (from p in dt.AsEnumerable()
                                 select p.Field<int>("Stolen_Property_Offenses")).ToArray();
 
+                    string[] totalchart = (from p in dt2.AsEnumerable()
+                                           select p.Field<string>("State")).ToArray();
+                    int[] totalchartnumbers = (from p in dt2.AsEnumerable()
+                                               select p.Field<int>("Total_Offenses")).ToArray();
+
 
                     chart2.Series[0].ChartType = SeriesChartType.Pie;
                     chart2.Series[0].Points.DataBindXY(x, y);
@@ -245,6 +259,12 @@ namespace NewOrderDesign
                     chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
                     chart2.Series[0]["PieLabelStyle"] = "Disabled";
 
+                    chart5.Series[0].ChartType = SeriesChartType.Pie;
+                    chart5.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
+                    chart5.Legends[0].Enabled = true;
+                    chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView5.Hide();
                     dataGridView2.Hide();
 
                 }
@@ -288,10 +308,11 @@ namespace NewOrderDesign
                     string query = $"SELECT State, Total_Offenses";
                     query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}' or State = 'Total'";
 
-                    string query = $"SELECT Animal_Cruelty, Drug_Narcotic_Offenses, Gambling_Offenses, Pornography_Obscene_Material, Prostitution_Offenses, Weapon_Law_Violations";
-                    query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
+                    string query2 = $"SELECT Animal_Cruelty, Drug_Narcotic_Offenses, Gambling_Offenses, Pornography_Obscene_Material, Prostitution_Offenses, Weapon_Law_Violations";
+                    query2 += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
 
-                    DataTable dt = GetData(query);
+                    DataTable dt = GetData(query2);
+                    DataTable dt2 = GetData(query);
 
                     //Get the names of states.
                     string[] x = new string[] { "Animal Cruelty" };
@@ -320,6 +341,11 @@ namespace NewOrderDesign
                     int[] y5 = (from p in dt.AsEnumerable()
                                 select p.Field<int>("Weapon_Law_Violations")).ToArray();
 
+                    string[] totalchart = (from p in dt2.AsEnumerable()
+                                           select p.Field<string>("State")).ToArray();
+                    int[] totalchartnumbers = (from p in dt2.AsEnumerable()
+                                               select p.Field<int>("Total_Offenses")).ToArray();
+
 
                     chart3.Series[0].ChartType = SeriesChartType.Pie;
                     chart3.Series[0].Points.DataBindXY(x, y);
@@ -332,6 +358,12 @@ namespace NewOrderDesign
                     chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
                     chart3.Series[0]["PieLabelStyle"] = "Disabled";
 
+                    chart6.Series[0].ChartType = SeriesChartType.Pie;
+                    chart6.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
+                    chart6.Legends[0].Enabled = true;
+                    chart6.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+                    dataGridView6.Hide();
                     dataGridView3.Hide();
 
                 }
@@ -348,6 +380,12 @@ namespace NewOrderDesign
 
         private void USStateInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter2.Fill(this.fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020);
+            // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020);
 
         }
 
@@ -358,9 +396,16 @@ namespace NewOrderDesign
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
 
+        }
         private void chart1_Click(object sender, EventArgs e)
 
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
         {
 
         }
