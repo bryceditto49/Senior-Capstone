@@ -151,6 +151,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FBIDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FBIDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBIDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FBIPropertyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -422,6 +437,39 @@
     </None>
     <None Include="FBIDataSet5.xss">
       <DependentUpon>FBIDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet6.xsc">
+      <DependentUpon>FBIDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet6.xss">
+      <DependentUpon>FBIDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet7.xsc">
+      <DependentUpon>FBIDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet7.xss">
+      <DependentUpon>FBIDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet8.xsc">
+      <DependentUpon>FBIDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FBIDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FBIDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FBIDataSet8.xss">
+      <DependentUpon>FBIDataSet8.xsd</DependentUpon>
     </None>
     <None Include="FBIPropertyDataSet.xsc">
       <DependentUpon>FBIPropertyDataSet.xsd</DependentUpon>
