@@ -80,6 +80,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarGraphDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarGraphDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CovidDataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,6 +276,17 @@
     <EmbeddedResource Include="USStateInfo.resx">
       <DependentUpon>USStateInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BarGraphDataSet.xsc">
+      <DependentUpon>BarGraphDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BarGraphDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BarGraphDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BarGraphDataSet.xss">
+      <DependentUpon>BarGraphDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CovidDataDataSet.xsc">
       <DependentUpon>CovidDataDataSet.xsd</DependentUpon>
     </None>
