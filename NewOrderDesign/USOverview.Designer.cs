@@ -39,12 +39,12 @@ namespace NewOrderDesign
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -61,6 +61,7 @@ namespace NewOrderDesign
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CrimesAgainstPersonsTab = new System.Windows.Forms.TabPage();
+            this.overviewchart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.overviewdataGridView3 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +75,6 @@ namespace NewOrderDesign
             this.sexOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fBIDataSet5 = new NewOrderDesign.FBIDataSet5();
-            this.overviewchart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.TotalCrimesAgainstPersonsTabLabel1 = new System.Windows.Forms.Label();
             this.PersonsComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstPropertyTab = new System.Windows.Forms.TabPage();
@@ -122,17 +122,20 @@ namespace NewOrderDesign
             this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter();
             this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter();
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.OverviewTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.CrimesAgainstPersonsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewchart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewdataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewchart1)).BeginInit();
             this.CrimesAgainstPropertyTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overviewdataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
@@ -271,6 +274,7 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstPersonsTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPersonsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CrimesAgainstPersonsTab.Controls.Add(this.label4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewchart1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.chart4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewdataGridView3);
@@ -284,6 +288,23 @@ namespace NewOrderDesign
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
+            // 
+            // overviewchart1
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.overviewchart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.overviewchart1.Legends.Add(legend4);
+            this.overviewchart1.Location = new System.Drawing.Point(20, 38);
+            this.overviewchart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.overviewchart1.Name = "overviewchart1";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.overviewchart1.Series.Add(series4);
+            this.overviewchart1.Size = new System.Drawing.Size(982, 340);
+            this.overviewchart1.TabIndex = 7;
+            this.overviewchart1.Text = "chart3";
             // 
             // chart4
             // 
@@ -407,23 +428,6 @@ namespace NewOrderDesign
             this.fBIDataSet5.DataSetName = "FBIDataSet5";
             this.fBIDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // overviewchart1
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.overviewchart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.overviewchart1.Legends.Add(legend4);
-            this.overviewchart1.Location = new System.Drawing.Point(20, 50);
-            this.overviewchart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.overviewchart1.Name = "overviewchart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.overviewchart1.Series.Add(series4);
-            this.overviewchart1.Size = new System.Drawing.Size(982, 340);
-            this.overviewchart1.TabIndex = 7;
-            this.overviewchart1.Text = "chart3";
-            // 
             // TotalCrimesAgainstPersonsTabLabel1
             // 
             this.TotalCrimesAgainstPersonsTabLabel1.AutoSize = true;
@@ -453,8 +457,9 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstPropertyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPropertyTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstPropertyTab.Controls.Add(this.overviewdataGridView2);
+            this.CrimesAgainstPropertyTab.Controls.Add(this.label5);
             this.CrimesAgainstPropertyTab.Controls.Add(this.overviewchart2);
+            this.CrimesAgainstPropertyTab.Controls.Add(this.overviewdataGridView2);
             this.CrimesAgainstPropertyTab.Controls.Add(this.TotalCrimesAgainstPropertyTabLabel1);
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
             this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 25);
@@ -634,14 +639,14 @@ namespace NewOrderDesign
             this.overviewchart2.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.overviewchart2.Legends.Add(legend6);
-            this.overviewchart2.Location = new System.Drawing.Point(129, 53);
+            this.overviewchart2.Location = new System.Drawing.Point(21, 34);
             this.overviewchart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.overviewchart2.Name = "overviewchart2";
             series6.ChartArea = "ChartArea1";
             series6.Legend = "Legend1";
             series6.Name = "Series1";
             this.overviewchart2.Series.Add(series6);
-            this.overviewchart2.Size = new System.Drawing.Size(764, 300);
+            this.overviewchart2.Size = new System.Drawing.Size(982, 342);
             this.overviewchart2.TabIndex = 7;
             this.overviewchart2.Text = "chart1";
             // 
@@ -681,8 +686,9 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstSocietyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstSocietyTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstSocietyTab.Controls.Add(this.dataGridView1);
+            this.CrimesAgainstSocietyTab.Controls.Add(this.label6);
             this.CrimesAgainstSocietyTab.Controls.Add(this.overviewchart3);
+            this.CrimesAgainstSocietyTab.Controls.Add(this.dataGridView1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.TotalCrimesAgainstSocietyTabLabel1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
             this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 25);
@@ -753,14 +759,14 @@ namespace NewOrderDesign
             this.overviewchart3.ChartAreas.Add(chartArea7);
             legend7.Name = "Legend1";
             this.overviewchart3.Legends.Add(legend7);
-            this.overviewchart3.Location = new System.Drawing.Point(129, 53);
+            this.overviewchart3.Location = new System.Drawing.Point(18, 35);
             this.overviewchart3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.overviewchart3.Name = "overviewchart3";
             series7.ChartArea = "ChartArea1";
             series7.Legend = "Legend1";
             series7.Name = "Series1";
             this.overviewchart3.Series.Add(series7);
-            this.overviewchart3.Size = new System.Drawing.Size(764, 300);
+            this.overviewchart3.Size = new System.Drawing.Size(985, 346);
             this.overviewchart3.TabIndex = 7;
             this.overviewchart3.Text = "chart2";
             // 
@@ -872,6 +878,33 @@ namespace NewOrderDesign
             // 
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(361, 384);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(363, 384);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(356, 387);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
+            // 
             // USOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -897,11 +930,11 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.CrimesAgainstPersonsTab.ResumeLayout(false);
             this.CrimesAgainstPersonsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewchart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewdataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewchart1)).EndInit();
             this.CrimesAgainstPropertyTab.ResumeLayout(false);
             this.CrimesAgainstPropertyTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overviewdataGridView2)).EndInit();
@@ -993,5 +1026,8 @@ namespace NewOrderDesign
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

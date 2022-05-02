@@ -115,7 +115,7 @@ namespace NewOrderDesign
 
                     chart4.Series[0].ChartType = SeriesChartType.Pie;
                     chart4.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
-                    chart4.Legends[0].Enabled = true;
+                    chart4.Legends[0].Enabled = false;
                     chart4.ChartAreas[0].Area3DStyle.Enable3D = true;
 
                     chart7.Series[0].ChartType = SeriesChartType.Column;

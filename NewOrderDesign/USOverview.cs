@@ -222,6 +222,7 @@ namespace NewOrderDesign
 
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label4.Text = $"{PersonsComboBox.Text} Cases by State";
 
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
@@ -385,6 +386,8 @@ namespace NewOrderDesign
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label5.Text = $"{PropertyComboBox.Text} Cases by State";
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -714,6 +717,8 @@ namespace NewOrderDesign
 
         private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label6.Text = $"{SocietyComboBox.Text} Cases by State";
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
