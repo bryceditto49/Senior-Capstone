@@ -86,25 +86,25 @@ namespace NewOrderDesign
                     USOverview.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
 
                     //third graph crime by state
-                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses], [Intimidation]";
+                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses]";
                     queryStatewise += $"FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE NOT Participating_state_Federal = 'Total'";
                     DataTable dt3 = GetData(queryStatewise);
 
-                    Int16[] x3 = (from p in dt3.AsEnumerable()
-                                  orderby p.Field<Int16>("Intimidation") ascending
-                                  select p.Field<Int16>("Intimidation")).ToArray();
+                    string[] x3 = (from p in dt3.AsEnumerable()
+                                  select p.Field<string>("Participating_state_Federal")).ToArray();
 
                     Int16[] y3 = (from p in dt3.AsEnumerable()
-                                  orderby p.Field<Int16>("Total_offenses") ascending
                                   select p.Field<Int16>("Total_offenses")).ToArray();
+
                     chart3.Series[0].ChartType = SeriesChartType.Pie;
                     chart3.Series[0].Points.DataBindXY(x3, y3);
                     chart3.Legends[0].Enabled = false;
                     chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart3.Series[0]["PieLabelStyle"] = "Disabled";
 
                     //crime by type-simplified
                     //Fetch the Statistical data from database.
-                    string[] x2 = new string[] { "", "", "" };
+                    string[] x2 = new string[] { "Crimes Against Property", "Crimes Against Society", "Crimes Against Persons" };
                     Int32[] y2 = new Int32[] { 5371269, 1273179, 2235280 };
                     chart2.Series[0].ChartType = SeriesChartType.Pie;
                     chart2.Series[0].Points.DataBindXY(x2, y2);
@@ -138,6 +138,7 @@ namespace NewOrderDesign
                     chart1.Series[0].Points.DataBindXY(x1, y1);
                     chart1.Legends[0].Enabled = false;
                     chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart1.Series[0]["PieLabelStyle"] = "Disabled";
 
                     overviewdataGridView3.Hide();
                     conn.Close();
