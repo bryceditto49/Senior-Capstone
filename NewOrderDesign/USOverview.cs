@@ -42,12 +42,15 @@ namespace NewOrderDesign
         public static Int16 overviewtotalpornography;
         public static Int16 overviewtotalprostitution;
         public static Int32 overviewtotalweapon;
-        private Size oldsize;
 
 
         public USOverview()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             PersonsComboBox.SelectedItem = "Assault";
             PropertyComboBox.SelectedItem = "Arson";
             SocietyComboBox.SelectedItem = "Animal Cruelty";
@@ -56,8 +59,6 @@ namespace NewOrderDesign
         Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
-
-            oldsize = base.Size;
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
@@ -375,6 +376,7 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USStateInfo form4 = new USStateInfo();
             form4.Show();
         }
@@ -382,6 +384,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
@@ -902,27 +905,6 @@ namespace NewOrderDesign
                 }
             }
         }
-        protected override void OnResize(System.EventArgs e)
-        {
-            base.OnResize(e);
-
-            foreach (Control cnt in this.Controls)
-                ResizeAll(cnt, base.Size);
-
-            oldsize = base.Size;
-        }
-        private void ResizeAll(Control control, Size newSize)
-        {
-            int width = newSize.Width - oldsize.Width;
-            control.Left += (control.Left * width) / oldsize.Width;
-            control.Width += (control.Width * width) / oldsize.Width;
-
-            int height = newSize.Height - oldsize.Height;
-            control.Top += (control.Top * height) / oldsize.Height;
-            control.Height += (control.Height * height) / oldsize.Height;
-        }
-
-
 
         private void OverviewTab_Click(object sender, EventArgs e)
         {
