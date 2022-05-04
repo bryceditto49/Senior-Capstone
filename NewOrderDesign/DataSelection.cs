@@ -12,10 +12,16 @@ namespace NewOrderDesign
 {
     public partial class DataSelection : Form
     {
+        
         string user = Form6.username;
         public DataSelection()
         {
+
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             if (Form6.button2_Clicked == true)
             {
                 label1.Text = "Guest";
@@ -46,12 +52,14 @@ namespace NewOrderDesign
         {
             this.Hide();
             CovidUSOverview form2 = new CovidUSOverview();
+            Form6.fullscreencheck(this);
             form2.Show();
         }
 
         private void fbibutton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USOverview form5 = new USOverview();
             form5.Show();
         }
@@ -60,6 +68,7 @@ namespace NewOrderDesign
         {
             this.Hide();
             Form6 form6 = new Form6();
+            Form6.fullscreencheck(this);
             form6.Show();
         }
 

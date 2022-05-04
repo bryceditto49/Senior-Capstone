@@ -47,6 +47,10 @@ namespace NewOrderDesign
         public USOverview()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             PersonsComboBox.SelectedItem = "Assault";
             PropertyComboBox.SelectedItem = "Arson";
             SocietyComboBox.SelectedItem = "Animal Cruelty";
@@ -55,6 +59,10 @@ namespace NewOrderDesign
         Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
@@ -371,14 +379,18 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USStateInfo form4 = new USStateInfo();
+            
             form4.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             DataSelection form2 = new DataSelection();
+            
             form2.Show();
         }
 

@@ -18,6 +18,10 @@ namespace NewOrderDesign
         public CovidStateData()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
 
         }
         public static string state;
@@ -98,6 +102,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             CovidUSOverview form2 = new CovidUSOverview();
             form2.Show();
         }
