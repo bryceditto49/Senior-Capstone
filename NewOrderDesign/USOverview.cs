@@ -382,7 +382,6 @@ namespace NewOrderDesign
             this.Hide();
             Form6.fullscreencheck(this);
             USStateInfo form4 = new USStateInfo();
-            
             form4.Show();
         }
 
