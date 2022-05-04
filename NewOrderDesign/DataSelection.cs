@@ -67,5 +67,31 @@ namespace NewOrderDesign
         {
 
         }
+
+        protected override void OnResize(System.EventArgs e)
+        {
+            base.OnResize(e);
+
+            foreach (Control cnt in this.Controls)
+                ResizeAll(cnt, base.Size);
+
+            oldsize = base.Size;
+        }
+        private void ResizeAll(Control control, Size newSize)
+        {
+            int width = newSize.Width - oldsize.Width;
+            control.Left += (control.Left * width) / oldsize.Width;
+            control.Width += (control.Width * width) / oldsize.Width;
+
+            int height = newSize.Height - oldsize.Height;
+            control.Top += (control.Top * height) / oldsize.Height;
+            control.Height += (control.Height * height) / oldsize.Height;
+        }
+
+        private Size oldsize;
+        private void DataSelection_Load(object sender, EventArgs e)
+        {
+            oldsize = base.Size;
+        }
     }
 }
