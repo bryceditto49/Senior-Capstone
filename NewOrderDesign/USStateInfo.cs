@@ -337,7 +337,7 @@ namespace NewOrderDesign
 
 
                     string query = $"SELECT State, Total_Offenses";
-                    query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}' or State = 'Total'";
+                    query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}' or State = 'Total' ORDER BY (CASE WHEN State = 'Total' THEN 1 ELSE 2 END)";
 
                     string query2 = $"SELECT Animal_Cruelty, Drug_Narcotic_Offenses, Gambling_Offenses, Pornography_Obscene_Material, Prostitution_Offenses, Weapon_Law_Violations, Percentages";
                     query2 += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
