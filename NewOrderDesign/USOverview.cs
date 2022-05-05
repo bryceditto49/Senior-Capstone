@@ -304,7 +304,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x, y);
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView3.Hide();
 

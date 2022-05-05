@@ -63,7 +63,6 @@ namespace NewOrderDesign
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CrimesAgainstPersonsTab = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.overviewchart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.overviewdataGridView3 = new System.Windows.Forms.DataGridView();
@@ -81,7 +80,6 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsTabLabel1 = new System.Windows.Forms.Label();
             this.PersonsComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstPropertyTab = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
             this.overviewchart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.overviewdataGridView2 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,7 +102,6 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyTabLabel1 = new System.Windows.Forms.Label();
             this.PropertyComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstSocietyTab = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.overviewchart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -274,15 +271,6 @@ namespace NewOrderDesign
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(361, 384);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
             // 
             // overviewchart1
             // 
