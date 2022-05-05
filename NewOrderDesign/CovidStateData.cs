@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
 using ClosedXML.Excel;
-using System.IO;
-using iTextSharp.text.pdf;
 using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace NewOrderDesign
 {
@@ -21,6 +21,10 @@ namespace NewOrderDesign
         public CovidStateData()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             dataGridView1.Columns[2].DefaultCellStyle.Format = "N0";
             dataGridView1.Columns[3].DefaultCellStyle.Format = "N0";
         }

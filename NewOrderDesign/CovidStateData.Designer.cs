@@ -87,7 +87,7 @@ namespace NewOrderDesign
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(97, 39);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 31);
+            this.textBox1.Size = new System.Drawing.Size(322, 37);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Please Enter a U.S. State";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -112,7 +112,7 @@ namespace NewOrderDesign
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(380, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 14);
+            this.label1.Size = new System.Drawing.Size(282, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -132,7 +132,7 @@ namespace NewOrderDesign
             this.dataGridView1.DataSource = this.statesBindingSource5;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(10, 99);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -255,7 +255,7 @@ namespace NewOrderDesign
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(9, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 10;
@@ -279,7 +279,7 @@ namespace NewOrderDesign
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(526, 39);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 25);
             this.button3.TabIndex = 11;
@@ -293,7 +293,7 @@ namespace NewOrderDesign
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(618, 39);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(84, 25);
             this.button4.TabIndex = 12;
@@ -307,7 +307,7 @@ namespace NewOrderDesign
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(717, 39);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(85, 25);
             this.button5.TabIndex = 13;
@@ -319,7 +319,7 @@ namespace NewOrderDesign
             // 
             this.Export_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Export_button.Location = new System.Drawing.Point(832, 376);
-            this.Export_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Export_button.Margin = new System.Windows.Forms.Padding(2);
             this.Export_button.Name = "Export_button";
             this.Export_button.Size = new System.Drawing.Size(87, 33);
             this.Export_button.TabIndex = 14;
@@ -331,7 +331,7 @@ namespace NewOrderDesign
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button6.Location = new System.Drawing.Point(10, 377);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(142, 32);
             this.button6.TabIndex = 15;
@@ -344,10 +344,10 @@ namespace NewOrderDesign
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(97, 11);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(449, 13);
+            this.textBox2.Size = new System.Drawing.Size(449, 16);
             this.textBox2.TabIndex = 17;
             this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
     "d";
@@ -358,7 +358,7 @@ namespace NewOrderDesign
             // 
             // CovidStateData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;

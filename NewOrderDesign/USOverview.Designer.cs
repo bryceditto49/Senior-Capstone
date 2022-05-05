@@ -160,10 +160,10 @@ namespace NewOrderDesign
             this.tabControl1.Controls.Add(this.CrimesAgainstSocietyTab);
             this.tabControl1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(15, 51);
-            this.tabControl1.MinimumSize = new System.Drawing.Size(904, 383);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(1037, 453);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(904, 383);
+            this.tabControl1.Size = new System.Drawing.Size(1037, 453);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -177,7 +177,7 @@ namespace NewOrderDesign
             this.OverviewTab.Location = new System.Drawing.Point(4, 26);
             this.OverviewTab.Name = "OverviewTab";
             this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
-            this.OverviewTab.Size = new System.Drawing.Size(896, 353);
+            this.OverviewTab.Size = new System.Drawing.Size(1029, 423);
             this.OverviewTab.TabIndex = 0;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
@@ -191,13 +191,13 @@ namespace NewOrderDesign
             this.chart3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(450, 171);
+            this.chart3.Location = new System.Drawing.Point(583, 171);
             this.chart3.Name = "chart3";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(434, 180);
+            this.chart3.Size = new System.Drawing.Size(434, 250);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             // 
@@ -211,14 +211,14 @@ namespace NewOrderDesign
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(533, 8);
+            this.chart2.Location = new System.Drawing.Point(666, 8);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(351, 344);
+            this.chart2.Size = new System.Drawing.Size(351, 414);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             title1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,7 +247,7 @@ namespace NewOrderDesign
             series3.SmartLabelStyle.IsOverlappedHidden = false;
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(518, 341);
+            this.chart1.Size = new System.Drawing.Size(651, 411);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,7 +267,7 @@ namespace NewOrderDesign
             this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstPersonsTab.Name = "CrimesAgainstPersonsTab";
             this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(896, 353);
+            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(1029, 423);
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@ namespace NewOrderDesign
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.overviewchart1.Series.Add(series4);
-            this.overviewchart1.Size = new System.Drawing.Size(859, 297);
+            this.overviewchart1.Size = new System.Drawing.Size(992, 367);
             this.overviewchart1.TabIndex = 7;
             this.overviewchart1.Text = "chart3";
             title3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -823,7 +823,7 @@ namespace NewOrderDesign
             this.FormHeading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FormHeading.AutoSize = true;
             this.FormHeading.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormHeading.Location = new System.Drawing.Point(576, 8);
+            this.FormHeading.Location = new System.Drawing.Point(659, 9);
             this.FormHeading.Name = "FormHeading";
             this.FormHeading.Size = new System.Drawing.Size(310, 58);
             this.FormHeading.TabIndex = 1;
@@ -833,7 +833,7 @@ namespace NewOrderDesign
             // 
             this.continueFBIUSView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.continueFBIUSView.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.continueFBIUSView.Location = new System.Drawing.Point(800, 436);
+            this.continueFBIUSView.Location = new System.Drawing.Point(933, 506);
             this.continueFBIUSView.Name = "continueFBIUSView";
             this.continueFBIUSView.Size = new System.Drawing.Size(118, 37);
             this.continueFBIUSView.TabIndex = 2;
@@ -886,14 +886,15 @@ namespace NewOrderDesign
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(936, 492);
+            this.ClientSize = new System.Drawing.Size(1069, 562);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.continueFBIUSView);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.FormHeading);
             this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(952, 528);
+            this.MaximumSize = new System.Drawing.Size(1087, 609);
+            this.MinimumSize = new System.Drawing.Size(1087, 609);
             this.Name = "USOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";

@@ -137,9 +137,10 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(75, 26);
+            this.textBox1.Location = new System.Drawing.Point(100, 32);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 31);
+            this.textBox1.Size = new System.Drawing.Size(337, 37);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Please Enter a U.S. State";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -150,9 +151,10 @@ namespace NewOrderDesign
             this.submitbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.submitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbutton.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitbutton.Location = new System.Drawing.Point(355, 26);
+            this.submitbutton.Location = new System.Drawing.Point(473, 32);
+            this.submitbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.submitbutton.Name = "submitbutton";
-            this.submitbutton.Size = new System.Drawing.Size(52, 31);
+            this.submitbutton.Size = new System.Drawing.Size(69, 38);
             this.submitbutton.TabIndex = 1;
             this.submitbutton.Text = "Go";
             this.submitbutton.UseVisualStyleBackColor = false;
@@ -178,11 +180,12 @@ namespace NewOrderDesign
             this.sexOffensesDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 100);
-            this.dataGridView1.MinimumSize = new System.Drawing.Size(776, 272);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 123);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(912, 264);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 272);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 264);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -307,10 +310,10 @@ namespace NewOrderDesign
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(9, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 30);
+            this.button2.Size = new System.Drawing.Size(81, 37);
             this.button2.TabIndex = 12;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -326,10 +329,10 @@ namespace NewOrderDesign
             "Crimes Against Persons",
             "Crimes Against Property",
             "Crimes Against Society"});
-            this.comboBox1.Location = new System.Drawing.Point(75, 62);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(100, 76);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 22);
+            this.comboBox1.Size = new System.Drawing.Size(245, 25);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -374,10 +377,11 @@ namespace NewOrderDesign
             this.robberyDataGridViewTextBoxColumn,
             this.stolenPropertyOffensesDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 100);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 123);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(776, 272);
+            this.dataGridView2.Size = new System.Drawing.Size(912, 264);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -525,10 +529,11 @@ namespace NewOrderDesign
             this.prostitutionOffensesDataGridViewTextBoxColumn,
             this.weaponLawViolationsDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 100);
+            this.dataGridView3.Location = new System.Drawing.Point(16, 123);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(776, 272);
+            this.dataGridView3.Size = new System.Drawing.Size(912, 264);
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -641,11 +646,11 @@ namespace NewOrderDesign
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(75, 5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(100, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(473, 13);
+            this.textBox2.Size = new System.Drawing.Size(631, 16);
             this.textBox2.TabIndex = 16;
             this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
     "d";
@@ -705,10 +710,12 @@ namespace NewOrderDesign
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(708, 413);
+            this.button1.Location = new System.Drawing.Point(811, 438);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 32);
+            this.button1.Size = new System.Drawing.Size(109, 39);
             this.button1.TabIndex = 17;
             this.button1.Text = "Export";
             this.button1.UseVisualStyleBackColor = true;
@@ -716,11 +723,11 @@ namespace NewOrderDesign
             // 
             // FBIViewMore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(802, 457);
+            this.ClientSize = new System.Drawing.Size(936, 492);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox1);
@@ -731,8 +738,10 @@ namespace NewOrderDesign
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(818, 496);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(954, 539);
             this.Name = "FBIViewMore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";

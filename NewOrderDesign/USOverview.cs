@@ -6,8 +6,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using System.Web;
 
 namespace NewOrderDesign
