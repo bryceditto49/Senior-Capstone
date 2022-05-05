@@ -14,6 +14,7 @@ namespace NewOrderDesign
 {
     public partial class Form1 : Form
     {
+        public static int fullscreentoggle;
         string connectionString = (@"Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=Credentials;User ID=apeuser2;Password=daylonswallows1234");
         public Form1()
         {
@@ -24,6 +25,10 @@ namespace NewOrderDesign
         private void Form1_Load(object sender, EventArgs e)
         {
             oldsize = base.Size;
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,7 +72,8 @@ namespace NewOrderDesign
                                 sqlCmd.ExecuteNonQuery();
                                 MessageBox.Show("Registration is complete");
                                 Clear();
-                                this.Hide(); 
+                                this.Hide();
+                                Form6.fullscreencheck(this);
                                 Form6 form6 = new Form6();
                                 form6.Show();
                             }
@@ -144,6 +150,7 @@ namespace NewOrderDesign
         private void btback_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             Form6 form6 = new Form6();
             form6.Show();
         }
@@ -190,6 +197,23 @@ namespace NewOrderDesign
             {
                 button2.BringToFront();
                 txtpass.PasswordChar = '*';
+            }
+        }
+
+        public static void fullscreencheck(Form form)
+        {
+            int n = 1;
+            while (n == 1)
+            {
+                if (form.WindowState == FormWindowState.Maximized)
+                {
+                    fullscreentoggle = 1;
+                }
+                else
+                {
+                    fullscreentoggle = 0;
+                }
+                n = n + 1;
             }
         }
 

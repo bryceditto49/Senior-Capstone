@@ -34,6 +34,17 @@ namespace NewOrderDesign
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.submitbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.populationCoveredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assaultOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homicideOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.humanTraffickingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kidnappingAbductionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet5 = new NewOrderDesign.FBIDataSet5();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fBIDataSet1 = new NewOrderDesign.FBIDataSet1();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,34 +76,6 @@ namespace NewOrderDesign
             this.robberyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stolenPropertyOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fBIDataSet2 = new NewOrderDesign.FBIDataSet2();
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter = new NewOrderDesign.FBIDataSet2TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.fBIDataSet5 = new NewOrderDesign.FBIDataSet5();
-            this.fBIDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fBIDataSet5BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter();
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter();
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.fBIDataSet5BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.populationCoveredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assaultOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homicideOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.humanTraffickingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kidnappingAbductionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
-            this.fBIDataSet5BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberofParticipatingAgenciesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.populationCoveredDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,7 +86,27 @@ namespace NewOrderDesign
             this.pornographyObsceneMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prostitutionOffensesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weaponLawViolationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet5BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet2 = new NewOrderDesign.FBIDataSet2();
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter = new NewOrderDesign.FBIDataSet2TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fBIDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet5BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fBIDataSet5BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource)).BeginInit();
@@ -114,9 +117,10 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2)).BeginInit();
@@ -124,10 +128,7 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -135,9 +136,9 @@ namespace NewOrderDesign
             this.textBox1.AcceptsReturn = true;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(100, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(337, 37);
             this.textBox1.TabIndex = 0;
@@ -149,9 +150,9 @@ namespace NewOrderDesign
             // 
             this.submitbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.submitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitbutton.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbutton.Location = new System.Drawing.Point(473, 32);
-            this.submitbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.submitbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.submitbutton.Name = "submitbutton";
             this.submitbutton.Size = new System.Drawing.Size(69, 38);
             this.submitbutton.TabIndex = 1;
@@ -165,6 +166,7 @@ namespace NewOrderDesign
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stateDataGridViewTextBoxColumn,
@@ -177,14 +179,97 @@ namespace NewOrderDesign
             this.kidnappingAbductionDataGridViewTextBoxColumn,
             this.sexOffensesDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(16, 123);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MinimumSize = new System.Drawing.Size(1035, 335);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(912, 264);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1035, 335);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 264);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numberofParticipatingAgenciesDataGridViewTextBoxColumn
+            // 
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.DataPropertyName = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.HeaderText = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // populationCoveredDataGridViewTextBoxColumn
+            // 
+            this.populationCoveredDataGridViewTextBoxColumn.DataPropertyName = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn.HeaderText = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.populationCoveredDataGridViewTextBoxColumn.Name = "populationCoveredDataGridViewTextBoxColumn";
+            this.populationCoveredDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // totalOffensesDataGridViewTextBoxColumn
+            // 
+            this.totalOffensesDataGridViewTextBoxColumn.DataPropertyName = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn.HeaderText = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalOffensesDataGridViewTextBoxColumn.Name = "totalOffensesDataGridViewTextBoxColumn";
+            this.totalOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // assaultOffensesDataGridViewTextBoxColumn
+            // 
+            this.assaultOffensesDataGridViewTextBoxColumn.DataPropertyName = "Assault_Offenses";
+            this.assaultOffensesDataGridViewTextBoxColumn.HeaderText = "Assault_Offenses";
+            this.assaultOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.assaultOffensesDataGridViewTextBoxColumn.Name = "assaultOffensesDataGridViewTextBoxColumn";
+            this.assaultOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // homicideOffensesDataGridViewTextBoxColumn
+            // 
+            this.homicideOffensesDataGridViewTextBoxColumn.DataPropertyName = "Homicide_Offenses";
+            this.homicideOffensesDataGridViewTextBoxColumn.HeaderText = "Homicide_Offenses";
+            this.homicideOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homicideOffensesDataGridViewTextBoxColumn.Name = "homicideOffensesDataGridViewTextBoxColumn";
+            this.homicideOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // humanTraffickingDataGridViewTextBoxColumn
+            // 
+            this.humanTraffickingDataGridViewTextBoxColumn.DataPropertyName = "Human_Trafficking";
+            this.humanTraffickingDataGridViewTextBoxColumn.HeaderText = "Human_Trafficking";
+            this.humanTraffickingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.humanTraffickingDataGridViewTextBoxColumn.Name = "humanTraffickingDataGridViewTextBoxColumn";
+            this.humanTraffickingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // kidnappingAbductionDataGridViewTextBoxColumn
+            // 
+            this.kidnappingAbductionDataGridViewTextBoxColumn.DataPropertyName = "Kidnapping_Abduction";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.HeaderText = "Kidnapping_Abduction";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kidnappingAbductionDataGridViewTextBoxColumn.Name = "kidnappingAbductionDataGridViewTextBoxColumn";
+            this.kidnappingAbductionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sexOffensesDataGridViewTextBoxColumn
+            // 
+            this.sexOffensesDataGridViewTextBoxColumn.DataPropertyName = "Sex_Offenses";
+            this.sexOffensesDataGridViewTextBoxColumn.HeaderText = "Sex_Offenses";
+            this.sexOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sexOffensesDataGridViewTextBoxColumn.Name = "sexOffensesDataGridViewTextBoxColumn";
+            this.sexOffensesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4
+            // 
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4.DataSource = this.fBIDataSet5;
+            // 
+            // fBIDataSet5
+            // 
+            this.fBIDataSet5.DataSetName = "FBIDataSet5";
+            this.fBIDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1
             // 
@@ -221,28 +306,33 @@ namespace NewOrderDesign
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 47);
+            this.button2.Size = new System.Drawing.Size(81, 37);
             this.button2.TabIndex = 12;
+            this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Crimes Against Persons",
             "Crimes Against Property",
             "Crimes Against Society"});
             this.comboBox1.Location = new System.Drawing.Point(100, 76);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 24);
+            this.comboBox1.Size = new System.Drawing.Size(245, 25);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -288,10 +378,10 @@ namespace NewOrderDesign
             this.stolenPropertyOffensesDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(16, 123);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1035, 335);
+            this.dataGridView2.Size = new System.Drawing.Size(912, 264);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -440,183 +530,12 @@ namespace NewOrderDesign
             this.weaponLawViolationsDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2;
             this.dataGridView3.Location = new System.Drawing.Point(16, 123);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(1035, 335);
+            this.dataGridView3.Size = new System.Drawing.Size(912, 264);
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource
-            // 
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataSource = this.fBIDataSet2;
-            // 
-            // fBIDataSet2
-            // 
-            this.fBIDataSet2.DataSetName = "FBIDataSet2";
-            this.fBIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter
-            // 
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(100, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(513, 15);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
-    "d";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
-            // fBIDataSet5
-            // 
-            this.fBIDataSet5.DataSetName = "FBIDataSet5";
-            this.fBIDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fBIDataSet5BindingSource
-            // 
-            this.fBIDataSet5BindingSource.DataSource = this.fBIDataSet5;
-            this.fBIDataSet5BindingSource.Position = 0;
-            // 
-            // fBIDataSet5BindingSource1
-            // 
-            this.fBIDataSet5BindingSource1.DataSource = this.fBIDataSet5;
-            this.fBIDataSet5BindingSource1.Position = 0;
-            // 
-            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2
-            // 
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5BindingSource;
-            // 
-            // crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2
-            // 
-            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2.ClearBeforeFill = true;
-            // 
-            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1
-            // 
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1.DataSource = this.fBIDataSet5BindingSource1;
-            // 
-            // crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1
-            // 
-            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
-            // 
-            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3
-            // 
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3.DataSource = this.fBIDataSet5;
-            // 
-            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2
-            // 
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5;
-            // 
-            // fBIDataSet5BindingSource2
-            // 
-            this.fBIDataSet5BindingSource2.DataSource = this.fBIDataSet5;
-            this.fBIDataSet5BindingSource2.Position = 0;
-            // 
-            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4
-            // 
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4.DataSource = this.fBIDataSet5;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numberofParticipatingAgenciesDataGridViewTextBoxColumn
-            // 
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.DataPropertyName = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.HeaderText = "Number_of_Participating_Agencies";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn";
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // populationCoveredDataGridViewTextBoxColumn
-            // 
-            this.populationCoveredDataGridViewTextBoxColumn.DataPropertyName = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn.HeaderText = "Population_Covered";
-            this.populationCoveredDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.populationCoveredDataGridViewTextBoxColumn.Name = "populationCoveredDataGridViewTextBoxColumn";
-            this.populationCoveredDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // totalOffensesDataGridViewTextBoxColumn
-            // 
-            this.totalOffensesDataGridViewTextBoxColumn.DataPropertyName = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn.HeaderText = "Total_Offenses";
-            this.totalOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.totalOffensesDataGridViewTextBoxColumn.Name = "totalOffensesDataGridViewTextBoxColumn";
-            this.totalOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // assaultOffensesDataGridViewTextBoxColumn
-            // 
-            this.assaultOffensesDataGridViewTextBoxColumn.DataPropertyName = "Assault_Offenses";
-            this.assaultOffensesDataGridViewTextBoxColumn.HeaderText = "Assault_Offenses";
-            this.assaultOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.assaultOffensesDataGridViewTextBoxColumn.Name = "assaultOffensesDataGridViewTextBoxColumn";
-            this.assaultOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // homicideOffensesDataGridViewTextBoxColumn
-            // 
-            this.homicideOffensesDataGridViewTextBoxColumn.DataPropertyName = "Homicide_Offenses";
-            this.homicideOffensesDataGridViewTextBoxColumn.HeaderText = "Homicide_Offenses";
-            this.homicideOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homicideOffensesDataGridViewTextBoxColumn.Name = "homicideOffensesDataGridViewTextBoxColumn";
-            this.homicideOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // humanTraffickingDataGridViewTextBoxColumn
-            // 
-            this.humanTraffickingDataGridViewTextBoxColumn.DataPropertyName = "Human_Trafficking";
-            this.humanTraffickingDataGridViewTextBoxColumn.HeaderText = "Human_Trafficking";
-            this.humanTraffickingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.humanTraffickingDataGridViewTextBoxColumn.Name = "humanTraffickingDataGridViewTextBoxColumn";
-            this.humanTraffickingDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kidnappingAbductionDataGridViewTextBoxColumn
-            // 
-            this.kidnappingAbductionDataGridViewTextBoxColumn.DataPropertyName = "Kidnapping_Abduction";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.HeaderText = "Kidnapping_Abduction";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kidnappingAbductionDataGridViewTextBoxColumn.Name = "kidnappingAbductionDataGridViewTextBoxColumn";
-            this.kidnappingAbductionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sexOffensesDataGridViewTextBoxColumn
-            // 
-            this.sexOffensesDataGridViewTextBoxColumn.DataPropertyName = "Sex_Offenses";
-            this.sexOffensesDataGridViewTextBoxColumn.HeaderText = "Sex_Offenses";
-            this.sexOffensesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sexOffensesDataGridViewTextBoxColumn.Name = "sexOffensesDataGridViewTextBoxColumn";
-            this.sexOffensesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1
-            // 
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.DataSource = this.fBIDataSet5;
-            // 
-            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1
-            // 
-            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
-            // 
-            // fBIDataSet5BindingSource3
-            // 
-            this.fBIDataSet5BindingSource3.DataSource = this.fBIDataSet5;
-            this.fBIDataSet5BindingSource3.Position = 0;
-            // 
-            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2
-            // 
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
-            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5BindingSource3;
             // 
             // stateDataGridViewTextBoxColumn2
             // 
@@ -698,13 +617,118 @@ namespace NewOrderDesign
             this.weaponLawViolationsDataGridViewTextBoxColumn.Name = "weaponLawViolationsDataGridViewTextBoxColumn";
             this.weaponLawViolationsDataGridViewTextBoxColumn.Width = 125;
             // 
+            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2
+            // 
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5BindingSource3;
+            // 
+            // fBIDataSet5BindingSource3
+            // 
+            this.fBIDataSet5BindingSource3.DataSource = this.fBIDataSet5;
+            this.fBIDataSet5BindingSource3.Position = 0;
+            // 
+            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource
+            // 
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.DataSource = this.fBIDataSet2;
+            // 
+            // fBIDataSet2
+            // 
+            this.fBIDataSet2.DataSetName = "FBIDataSet2";
+            this.fBIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter
+            // 
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(100, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(631, 16);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
+    "d";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            // 
+            // fBIDataSet5BindingSource
+            // 
+            this.fBIDataSet5BindingSource.DataSource = this.fBIDataSet5;
+            this.fBIDataSet5BindingSource.Position = 0;
+            // 
+            // fBIDataSet5BindingSource1
+            // 
+            this.fBIDataSet5BindingSource1.DataSource = this.fBIDataSet5;
+            this.fBIDataSet5BindingSource1.Position = 0;
+            // 
+            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2
+            // 
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5BindingSource;
+            // 
+            // crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2
+            // 
+            this.crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2.ClearBeforeFill = true;
+            // 
+            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1
+            // 
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1.DataSource = this.fBIDataSet5BindingSource1;
+            // 
+            // crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1
+            // 
+            this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
+            // 
+            // crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3
+            // 
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3.DataMember = "Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3.DataSource = this.fBIDataSet5;
+            // 
+            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2
+            // 
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.DataSource = this.fBIDataSet5;
+            // 
+            // fBIDataSet5BindingSource2
+            // 
+            this.fBIDataSet5BindingSource2.DataSource = this.fBIDataSet5;
+            this.fBIDataSet5BindingSource2.Position = 0;
+            // 
+            // crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1
+            // 
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.DataMember = "Crimes_Against_Society_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.DataSource = this.fBIDataSet5;
+            // 
+            // crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1
+            // 
+            this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(811, 438);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 39);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Export";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FBIViewMore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(936, 492);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
@@ -714,14 +738,17 @@ namespace NewOrderDesign
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1085, 601);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(954, 539);
             this.Name = "FBIViewMore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource)).EndInit();
@@ -732,9 +759,10 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2)).EndInit();
@@ -742,10 +770,7 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5BindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -825,5 +850,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.DataGridViewTextBoxColumn weaponLawViolationsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2;
         private System.Windows.Forms.BindingSource fBIDataSet5BindingSource3;
+        private System.Windows.Forms.Button button1;
     }
 }

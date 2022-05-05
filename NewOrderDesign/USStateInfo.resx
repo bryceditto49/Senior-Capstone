@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 486</value>
+  </metadata>
+  <metadata name="barGraphDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1078, 447</value>
+  </metadata>
   <metadata name="crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 361</value>
   </metadata>
-  <metadata name="fBIDataSet6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="fBIDataSet5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>637, 318</value>
   </metadata>
   <metadata name="crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -132,11 +138,11 @@
   <metadata name="fBIDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>388, 404</value>
+  <metadata name="crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 603</value>
   </metadata>
-  <metadata name="fBIDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>252, 404</value>
+  <metadata name="crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 404</value>
   </metadata>
   <metadata name="crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 275</value>
@@ -144,11 +150,11 @@
   <metadata name="fBIPropertyDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>619, 232</value>
   </metadata>
-  <metadata name="crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 490</value>
+  <metadata name="crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 564</value>
   </metadata>
-  <metadata name="fBIDataSet8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>637, 447</value>
+  <metadata name="crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 447</value>
   </metadata>
   <metadata name="crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 189</value>
@@ -177,14 +183,20 @@
   <metadata name="crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>587, 361</value>
   </metadata>
-  <metadata name="fBIDataSet6BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 404</value>
-  </metadata>
   <metadata name="crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 447</value>
+    <value>592, 404</value>
   </metadata>
   <metadata name="crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>583, 490</value>
+    <value>583, 447</value>
+  </metadata>
+  <metadata name="crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>479, 486</value>
+  </metadata>
+  <metadata name="crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>476, 564</value>
+  </metadata>
+  <metadata name="crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>484, 603</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

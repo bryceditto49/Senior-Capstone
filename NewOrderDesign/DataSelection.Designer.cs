@@ -39,18 +39,21 @@ namespace NewOrderDesign
             // 
             // covidbutton
             // 
-            this.covidbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.covidbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.covidbutton.AutoSize = true;
             this.covidbutton.BackColor = System.Drawing.Color.White;
             this.covidbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.covidbutton.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.covidbutton.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.covidbutton.Image = global::NewOrderDesign.Properties.Resources.medicalcross;
-            this.covidbutton.Location = new System.Drawing.Point(59, 147);
-            this.covidbutton.Margin = new System.Windows.Forms.Padding(10);
-            this.covidbutton.MaximumSize = new System.Drawing.Size(500, 500);
-            this.covidbutton.MinimumSize = new System.Drawing.Size(391, 297);
+            this.covidbutton.Location = new System.Drawing.Point(44, 119);
+            this.covidbutton.Margin = new System.Windows.Forms.Padding(8);
+            this.covidbutton.MaximumSize = new System.Drawing.Size(375, 406);
+            this.covidbutton.MinimumSize = new System.Drawing.Size(293, 241);
             this.covidbutton.Name = "covidbutton";
-            this.covidbutton.Padding = new System.Windows.Forms.Padding(10);
-            this.covidbutton.Size = new System.Drawing.Size(391, 297);
+            this.covidbutton.Padding = new System.Windows.Forms.Padding(8);
+            this.covidbutton.Size = new System.Drawing.Size(293, 241);
             this.covidbutton.TabIndex = 0;
             this.covidbutton.Text = "COVID-19";
             this.covidbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -59,21 +62,23 @@ namespace NewOrderDesign
             // 
             // fbibutton
             // 
-            this.fbibutton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fbibutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fbibutton.AutoSize = true;
             this.fbibutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.fbibutton.BackgroundImage = global::NewOrderDesign.Properties.Resources.handcufficon;
             this.fbibutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.fbibutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.fbibutton.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fbibutton.Location = new System.Drawing.Point(559, 147);
-            this.fbibutton.Margin = new System.Windows.Forms.Padding(4);
-            this.fbibutton.MaximumSize = new System.Drawing.Size(500, 500);
-            this.fbibutton.MinimumSize = new System.Drawing.Size(390, 297);
+            this.fbibutton.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fbibutton.Location = new System.Drawing.Point(419, 119);
+            this.fbibutton.MaximumSize = new System.Drawing.Size(375, 406);
+            this.fbibutton.MinimumSize = new System.Drawing.Size(292, 241);
             this.fbibutton.Name = "fbibutton";
-            this.fbibutton.Padding = new System.Windows.Forms.Padding(10);
-            this.fbibutton.Size = new System.Drawing.Size(390, 297);
+            this.fbibutton.Padding = new System.Windows.Forms.Padding(8);
+            this.fbibutton.Size = new System.Drawing.Size(292, 241);
             this.fbibutton.TabIndex = 1;
-            this.fbibutton.Text = "Violent Crime Data";
+            this.fbibutton.Text = "Crime Data";
             this.fbibutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.fbibutton.UseVisualStyleBackColor = false;
             this.fbibutton.Click += new System.EventHandler(this.fbibutton_Click);
@@ -82,21 +87,22 @@ namespace NewOrderDesign
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(256, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(75, 10);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 112);
+            this.textBox1.Size = new System.Drawing.Size(208, 30);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Welcome";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 27);
+            this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(9, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 34);
+            this.button1.Size = new System.Drawing.Size(61, 30);
             this.button1.TabIndex = 9;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = true;
@@ -105,21 +111,24 @@ namespace NewOrderDesign
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(354, 76);
+            this.label1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 33);
+            this.label1.Size = new System.Drawing.Size(171, 27);
             this.label1.TabIndex = 10;
             this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // DataSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(802, 457);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -127,11 +136,11 @@ namespace NewOrderDesign
             this.Controls.Add(this.covidbutton);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1085, 601);
+            this.MinimumSize = new System.Drawing.Size(818, 496);
             this.Name = "DataSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";
+            this.Load += new System.EventHandler(this.DataSelection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -46,10 +46,11 @@ namespace NewOrderDesign
             // 
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtuser.Location = new System.Drawing.Point(280, 121);
+            this.txtuser.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(322, 121);
             this.txtuser.MinimumSize = new System.Drawing.Size(215, 22);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(215, 20);
+            this.txtuser.Size = new System.Drawing.Size(215, 22);
             this.txtuser.TabIndex = 0;
             this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
@@ -58,11 +59,12 @@ namespace NewOrderDesign
             // 
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpass.Location = new System.Drawing.Point(280, 165);
+            this.txtpass.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.Location = new System.Drawing.Point(322, 163);
             this.txtpass.MinimumSize = new System.Drawing.Size(215, 22);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(215, 20);
+            this.txtpass.Size = new System.Drawing.Size(215, 22);
             this.txtpass.TabIndex = 1;
             this.txtpass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -70,8 +72,9 @@ namespace NewOrderDesign
             // 
             this.btsubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btsubmit.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsubmit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btsubmit.Location = new System.Drawing.Point(280, 271);
+            this.btsubmit.Location = new System.Drawing.Point(322, 271);
             this.btsubmit.MinimumSize = new System.Drawing.Size(75, 23);
             this.btsubmit.Name = "btsubmit";
             this.btsubmit.Size = new System.Drawing.Size(75, 23);
@@ -83,11 +86,12 @@ namespace NewOrderDesign
             // lbuser
             // 
             this.lbuser.AutoSize = true;
-            this.lbuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbuser.Location = new System.Drawing.Point(165, 121);
+            this.lbuser.BackColor = System.Drawing.Color.Transparent;
+            this.lbuser.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbuser.Location = new System.Drawing.Point(192, 121);
             this.lbuser.MinimumSize = new System.Drawing.Size(83, 14);
             this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(83, 14);
+            this.lbuser.Size = new System.Drawing.Size(113, 14);
             this.lbuser.TabIndex = 4;
             this.lbuser.Text = "Enter Username";
             this.lbuser.Click += new System.EventHandler(this.label1_Click);
@@ -95,22 +99,24 @@ namespace NewOrderDesign
             // lbpass
             // 
             this.lbpass.AutoSize = true;
-            this.lbpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbpass.Location = new System.Drawing.Point(165, 167);
+            this.lbpass.BackColor = System.Drawing.Color.Transparent;
+            this.lbpass.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpass.Location = new System.Drawing.Point(192, 168);
             this.lbpass.MinimumSize = new System.Drawing.Size(80, 14);
             this.lbpass.Name = "lbpass";
-            this.lbpass.Size = new System.Drawing.Size(81, 14);
+            this.lbpass.Size = new System.Drawing.Size(107, 14);
             this.lbpass.TabIndex = 8;
             this.lbpass.Text = "Enter Password";
             // 
             // lbfirst
             // 
             this.lbfirst.AutoSize = true;
-            this.lbfirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.lbfirst.Location = new System.Drawing.Point(165, 214);
+            this.lbfirst.BackColor = System.Drawing.Color.Transparent;
+            this.lbfirst.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfirst.Location = new System.Drawing.Point(192, 212);
             this.lbfirst.MinimumSize = new System.Drawing.Size(91, 14);
             this.lbfirst.Name = "lbfirst";
-            this.lbfirst.Size = new System.Drawing.Size(91, 14);
+            this.lbfirst.Size = new System.Drawing.Size(124, 14);
             this.lbfirst.TabIndex = 9;
             this.lbfirst.Text = "Confirm Password";
             // 
@@ -118,11 +124,12 @@ namespace NewOrderDesign
             // 
             this.txtcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcon.Location = new System.Drawing.Point(280, 212);
+            this.txtcon.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcon.Location = new System.Drawing.Point(322, 210);
             this.txtcon.MinimumSize = new System.Drawing.Size(215, 22);
             this.txtcon.Name = "txtcon";
             this.txtcon.PasswordChar = '*';
-            this.txtcon.Size = new System.Drawing.Size(215, 20);
+            this.txtcon.Size = new System.Drawing.Size(215, 22);
             this.txtcon.TabIndex = 4;
             this.txtcon.TextChanged += new System.EventHandler(this.txtcon_TextChanged);
             this.txtcon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcon_KeyDown);
@@ -131,8 +138,9 @@ namespace NewOrderDesign
             // 
             this.btback.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.btback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btback.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btback.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btback.Location = new System.Drawing.Point(421, 271);
+            this.btback.Location = new System.Drawing.Point(462, 271);
             this.btback.MinimumSize = new System.Drawing.Size(75, 23);
             this.btback.Name = "btback";
             this.btback.Size = new System.Drawing.Size(75, 23);
@@ -146,8 +154,9 @@ namespace NewOrderDesign
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(469, 165);
+            this.button1.Location = new System.Drawing.Point(511, 165);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 20);
             this.button1.TabIndex = 11;
@@ -159,8 +168,9 @@ namespace NewOrderDesign
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(469, 165);
+            this.button2.Location = new System.Drawing.Point(511, 165);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(26, 20);
             this.button2.TabIndex = 12;

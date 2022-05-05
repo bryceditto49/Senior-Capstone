@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
-using LiveCharts;
+using System.IO;
+using System.Web;
 
 namespace NewOrderDesign
 {
@@ -44,17 +41,25 @@ namespace NewOrderDesign
         public static Int32 overviewtotalweapon;
 
 
-        public USOverview()
+    public USOverview()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             PersonsComboBox.SelectedItem = "Assault";
             PropertyComboBox.SelectedItem = "Arson";
             SocietyComboBox.SelectedItem = "Animal Cruelty";
         }
 
-        Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
@@ -86,51 +91,61 @@ namespace NewOrderDesign
                     USOverview.overviewtotalsociety = (Int32)cmdtotalsociety.ExecuteScalar();
 
                     //third graph crime by state
-                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses], [Intimidation]";
+                    string queryStatewise = $"SELECT [Participating_state_Federal], [Total_offenses]";
                     queryStatewise += $"FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE NOT Participating_state_Federal = 'Total'";
                     DataTable dt3 = GetData(queryStatewise);
 
-                    Int16[] x3 = (from p in dt3.AsEnumerable()
-                                  orderby p.Field<Int16>("Intimidation") ascending
-                                  select p.Field<Int16>("Intimidation")).ToArray();
+                    string[] x3 = (from p in dt3.AsEnumerable()
+                                  select p.Field<string>("Participating_state_Federal")).ToArray();
 
                     Int16[] y3 = (from p in dt3.AsEnumerable()
-                                  orderby p.Field<Int16>("Total_offenses") ascending
                                   select p.Field<Int16>("Total_offenses")).ToArray();
+
                     chart3.Series[0].ChartType = SeriesChartType.Pie;
                     chart3.Series[0].Points.DataBindXY(x3, y3);
                     chart3.Legends[0].Enabled = false;
-                    chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart3.ChartAreas[0].Area3DStyle.Enable3D = false;
+                    chart3.Series[0]["PieLabelStyle"] = "Disabled";
 
                     //crime by type-simplified
                     //Fetch the Statistical data from database.
-                    string[] x2 = new string[] { "", "", "" };
+                    string[] x2 = new string[] { "Property", "Society", "Persons" };
                     Int32[] y2 = new Int32[] { 5371269, 1273179, 2235280 };
-                    chart2.Series[0].ChartType = SeriesChartType.Pie;
+                    chart2.Series[0].ChartType = SeriesChartType.Column;
                     chart2.Series[0].Points.DataBindXY(x2, y2);
                     chart2.Legends[0].Enabled = false;
-                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                     //Crime by type
                     //Fetch the Statistical data from database.
                     string query = $"SELECT [Total_offenses],[Murder_and_nonnegligent_manslaughter],[Rape1],[Aggravated_assault],[Simple_assault],[Intimidation],[Other2],[Robbery],[Burglary],[Larceny_theft],[Motor_vehicle_theft],[Arson],[Destruction_damage_vandalism]";
                     query += $" FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE Participating_state_Federal = 'Total'";
                     DataTable dt1 = GetData(query);
+                    Int32 murder = Convert.ToInt32(dt1.Rows[0]["Murder_and_nonnegligent_manslaughter"].ToString());
+                    
+                    Int32 rape = Convert.ToInt32(dt1.Rows[0]["Rape1"].ToString());
+                    Int32 aggravatedassault = Convert.ToInt32(dt1.Rows[0]["Aggravated_assault"].ToString());
+                    Int32 simpleassault = Convert.ToInt32(dt1.Rows[0]["Simple_assault"].ToString());
+                    Int32 intimidation = Convert.ToInt32(dt1.Rows[0]["Intimidation"].ToString());
+                    Int32 other = Convert.ToInt32(dt1.Rows[0]["Other2"].ToString());
+                    Int32 robbery = Convert.ToInt32(dt1.Rows[0]["Robbery"].ToString());
+                    Int32 burglary = Convert.ToInt32(dt1.Rows[0]["Burglary"].ToString());
+                    Int32 gta = Convert.ToInt32(dt1.Rows[0]["Motor_vehicle_theft"].ToString());
+                    Int32 arson = Convert.ToInt32(dt1.Rows[0]["Arson"].ToString());
+                    Int32 larceny = Convert.ToInt32(dt1.Rows[0]["Larceny_theft"].ToString());
+                    Int32 vandalism = Convert.ToInt32(dt1.Rows[0]["Destruction_damage_vandalism"].ToString());
+                    string[] x1 = new string[] {"Homicide", "Sex Offenses", "Assault", "Kidnapping", "Robbery", "Burglary/B and E", "Motor Theft", "Arson", "Larceny/Theft", "Vandalism"};
+                    Int32[] y1 = new Int32[] {murder, rape, aggravatedassault, simpleassault, robbery, burglary, gta, arson, larceny, vandalism};
 
-                    Int16[] x1 = (from p in dt1.AsEnumerable()
-                                  orderby p.Field<Int16>("Total_offenses") ascending
-                                  select p.Field<Int16>("Total_offenses")).ToArray();
 
-                    Int16[] y1 = (from p in dt1.AsEnumerable()
-                                  orderby p.Field<Int16>("Aggravated_assault") ascending
-                                  select p.Field<Int16>("Aggravated_assault")).ToArray();
-
-
-                    chart1.Series[0].ChartType = SeriesChartType.Pie;
+                    chart1.Series[0].ChartType = SeriesChartType.Bar;
                     //overviewchart1.Series[0].Points.DataBindXY(murder,rape,aggravated_assault,simple_assault,intimidation,robbery,burglary,larceny,gta,arson,vandalism,other);
                     chart1.Series[0].Points.DataBindXY(x1, y1);
-                    chart1.Legends[0].Enabled = true;
-                    chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart1.ChartAreas[0].AxisX.Interval = 1;
+                    chart1.Legends[0].Enabled = false;
+                    chart1.ChartAreas[0].Area3DStyle.Enable3D = false;
+
+                    chart3.Hide();
 
                     overviewdataGridView3.Hide();
                     conn.Close();
@@ -145,6 +160,7 @@ namespace NewOrderDesign
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
+            
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -214,7 +230,7 @@ namespace NewOrderDesign
 
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+   
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -239,9 +255,16 @@ namespace NewOrderDesign
 
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x,y);
+                        overviewchart1.Palette = ChartColorPalette.None;
+                        overviewchart1.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.RoyalBlue , Color.LightSalmon, Color.LightSeaGreen , Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum , Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle};
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart1.Series[0]["PieLabelStyle"] = "Disabled";
+                        chart4.Series[0].ChartType = SeriesChartType.Bar;
+                        chart4.Series[0].Points.DataBindXY(x, y);
+                        chart4.Legends[0].Enabled = true;
+                        chart4.ChartAreas[0].Area3DStyle.Enable3D = false;
+                        chart4.Series[0]["PieLabelStyle"] = "Disabled";
 
                         overviewdataGridView3.Hide();
 
@@ -266,7 +289,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x, y);
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView3.Hide();
 
@@ -291,7 +314,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x, y);
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView3.Hide();
 
@@ -316,7 +339,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x, y);
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView3.Hide();
 
@@ -341,7 +364,7 @@ namespace NewOrderDesign
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x, y);
                         overviewchart1.Legends[0].Enabled = true;
-                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView3.Hide();
 
@@ -359,6 +382,7 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USStateInfo form4 = new USStateInfo();
             form4.Show();
         }
@@ -366,12 +390,14 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -384,7 +410,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Arson, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
@@ -397,8 +423,10 @@ namespace NewOrderDesign
 
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Palette = ChartColorPalette.None;
+                        overviewchart2.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.RoyalBlue, Color.LightSalmon, Color.LightSeaGreen, Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum, Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle };
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart2.Series[0]["PieLabelStyle"] = "Disabled";
 
                         overviewdataGridView2.Hide();
@@ -411,7 +439,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Bribery, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
@@ -425,7 +453,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -437,7 +465,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Burglary_Breaking_Entering, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -450,7 +478,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -462,7 +490,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Counterfeiting_Forgery, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -476,7 +504,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -488,7 +516,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Destruction_Damage_Vandalism, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -502,7 +530,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -514,7 +542,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Embezzlement, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
@@ -528,7 +556,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -540,7 +568,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Extortion_Blackmail, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         Int16[] y = (from p in dt.AsEnumerable()
@@ -554,7 +582,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -566,7 +594,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Fraud_Offenses, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -580,7 +608,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -592,7 +620,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Larceny_Theft_Offenses, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -606,7 +634,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -618,7 +646,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Motor_Vehicle_Theft, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -632,7 +660,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -644,7 +672,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Robbery, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -658,7 +686,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -670,7 +698,7 @@ namespace NewOrderDesign
 
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Stolen_Property_Offenses, State";
-                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
+                        query += $" FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total' ORDER BY (CASE WHEN State = 'Alabama' THEN 1 ELSE 2 END)";
                         DataTable dt = GetData(query);
 
                         int[] y = (from p in dt.AsEnumerable()
@@ -684,7 +712,7 @@ namespace NewOrderDesign
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
                         overviewchart2.Legends[0].Enabled = true;
-                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         overviewdataGridView2.Hide();
 
@@ -701,6 +729,7 @@ namespace NewOrderDesign
 
         private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -726,8 +755,10 @@ namespace NewOrderDesign
 
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Palette = ChartColorPalette.None;
+                        overviewchart3.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.RoyalBlue, Color.LightSalmon, Color.LightSeaGreen, Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum, Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle };
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart3.Series[0]["PieLabelStyle"] = "Disabled";
 
                         dataGridView1.Hide();
@@ -754,7 +785,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         dataGridView1.Hide();
 
@@ -780,7 +811,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         dataGridView1.Hide();
 
@@ -806,7 +837,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         dataGridView1.Hide();
 
@@ -832,7 +863,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         dataGridView1.Hide();
 
@@ -841,7 +872,7 @@ namespace NewOrderDesign
                     if (SocietyComboBox.Text.Equals("Weapon Law Violations"))
                     {
                         conn.Open();
-
+                        
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Weapon_Law_Violations, State";
                         query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
@@ -858,7 +889,7 @@ namespace NewOrderDesign
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
                         overviewchart3.Legends[0].Enabled = true;
-                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                        overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                         dataGridView1.Hide();
 
@@ -895,6 +926,11 @@ namespace NewOrderDesign
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void export_Click(object sender, EventArgs e)
         {
 
         }
