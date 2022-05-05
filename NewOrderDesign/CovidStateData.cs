@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
 using ClosedXML.Excel;
+using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace NewOrderDesign
 {
@@ -18,10 +21,8 @@ namespace NewOrderDesign
         public CovidStateData()
         {
             InitializeComponent();
-            if (Form6.fullscreentoggle == 1)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
+            dataGridView1.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "N0";
         }
         public static string state;
         public void textBox1_TextChanged(object sender, EventArgs e)
@@ -249,22 +250,63 @@ namespace NewOrderDesign
 
         private void Export_button_Click(object sender, EventArgs e)
         {
-            using(SaveFileDialog sfd=new SaveFileDialog() { Filter = "Excel|*.xlsx"})
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PDF (*.pdf)|*.pdf";
+            sfd.FileName = "COVID Data Export.pdf";
+            bool fileError = false;
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                if (sfd.ShowDialog() == DialogResult.OK)
+                if (File.Exists(sfd.FileName))
                 {
                     try
                     {
-                        using(XLWorkbook workbook = new XLWorkbook())
+                        File.Delete(sfd.FileName);
+                    }
+                    catch (IOException ex)
+                    {
+                        fileError = true;
+                        MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                    }
+                }
+                if (!fileError)
+                {
+                    try
+                    {
+                        PdfPTable pdfTable = new PdfPTable(dataGridView1.Columns.Count);
+                        pdfTable.DefaultCell.Padding = 3;
+                        pdfTable.WidthPercentage = 100;
+                        pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                        foreach (DataGridViewColumn column in dataGridView1.Columns)
                         {
-                            workbook.Worksheets.Add(this.covidDataDataSet1.states.CopyToDataTable(), "states");
-                            workbook.SaveAs(sfd.FileName);
+                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                            pdfTable.AddCell(cell);
                         }
-                        MessageBox.Show("You have successfully exported your data table", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        foreach (DataGridViewRow row in dataGridView1.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                    pdfTable.AddCell(cell.Value?.ToString());
+                            }
+                        }
+
+                        using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                        {
+                            Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                            PdfWriter.GetInstance(pdfDoc, stream);
+                            pdfDoc.Open();
+                            pdfDoc.Add(new Paragraph("TravelSite"));
+                            pdfDoc.Add(pdfTable);
+                            pdfDoc.Close();
+                            stream.Close();
+                        }
+
+                        MessageBox.Show("Data Exported Successfully!", "Info");
                     }
                     catch (Exception ex)
                     {
-                       MessageBox.Show(ex.Message,"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error :" + ex.Message);
                     }
                 }
             }

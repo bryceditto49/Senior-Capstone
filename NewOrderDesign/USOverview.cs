@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Web;
 
 namespace NewOrderDesign
 {
@@ -61,6 +61,7 @@ namespace NewOrderDesign
             {
                 this.WindowState = FormWindowState.Maximized;
             }
+
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.Fill(this.fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020);
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
@@ -161,6 +162,7 @@ namespace NewOrderDesign
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
+            
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -230,6 +232,7 @@ namespace NewOrderDesign
 
         private void PersonsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+   
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -396,6 +399,7 @@ namespace NewOrderDesign
 
         private void PropertyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -727,6 +731,7 @@ namespace NewOrderDesign
 
         private void SocietyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = FBI; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {
@@ -869,7 +874,7 @@ namespace NewOrderDesign
                     if (SocietyComboBox.Text.Equals("Weapon Law Violations"))
                     {
                         conn.Open();
-
+                        
                         //Fetch the Statistical data from database.
                         string query = $"SELECT Weapon_Law_Violations, State";
                         query += $" FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE NOT State = 'Total'";
@@ -923,6 +928,11 @@ namespace NewOrderDesign
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void export_Click(object sender, EventArgs e)
         {
 
         }

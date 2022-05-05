@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace NewOrderDesign
 {
@@ -21,6 +24,40 @@ namespace NewOrderDesign
                 this.WindowState = FormWindowState.Maximized;
             }
             comboBox1.SelectedItem = "Crimes Against Persons";
+            dataGridView1.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[9].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[10].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[11].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[12].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[13].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[14].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[15].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[9].DefaultCellStyle.Format = "N0";
+
+
         }
 
         private void submitbutton_Click(object sender, EventArgs e)
@@ -63,18 +100,21 @@ namespace NewOrderDesign
                     //set DataGridView control to read-only
                     if (table.Equals("Persons"))
                     {
+                        exporttoggle = 1;
                         dataGridView1.Show();
                         dataGridView2.Hide();
                         dataGridView3.Hide();
                     }
                     else if (table.Equals("Property"))
                     {
+                        exporttoggle = 2;
                         dataGridView1.Hide();
                         dataGridView2.Show();
                         dataGridView3.Hide();
                     }
                     else if (table.Equals("Society"))
                     {
+                        exporttoggle = 3;
                         dataGridView1.Hide();
                         dataGridView2.Hide();
                         dataGridView3.Show();
@@ -178,6 +218,199 @@ namespace NewOrderDesign
             if (e.KeyCode == Keys.Enter)
             {
                 submitbutton.PerformClick();
+            }
+        }
+        int exporttoggle = 1;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (exporttoggle == 1)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "FBI Data Export(Persons).pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(dataGridView1.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in dataGridView1.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(cell.Value?.ToString());
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(new Paragraph("TravelSite"));
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Data Exported Successfully!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            if (exporttoggle == 2)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "FBI Data Export(Property).pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(dataGridView1.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in dataGridView1.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(cell.Value?.ToString());
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(new Paragraph("TravelSite"));
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Data Exported Successfully!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            if (exporttoggle == 3)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "FBI Data Export(Society).pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(dataGridView1.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in dataGridView1.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(cell.Value?.ToString());
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(new Paragraph("TravelSite"));
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Data Exported Successfully!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
             }
         }
     }
