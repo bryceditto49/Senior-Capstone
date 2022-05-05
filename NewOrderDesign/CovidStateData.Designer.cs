@@ -61,7 +61,6 @@ namespace NewOrderDesign
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.Export_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.statesTableAdapter5 = new NewOrderDesign.CovidDataDataSet5TableAdapters.statesTableAdapter();
@@ -366,7 +365,6 @@ namespace NewOrderDesign
             this.ClientSize = new System.Drawing.Size(936, 492);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.Export_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -431,7 +429,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button Export_button;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
         private CovidDataDataSet5 covidDataDataSet5;
