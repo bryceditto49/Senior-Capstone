@@ -862,7 +862,7 @@ namespace NewOrderDesign
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

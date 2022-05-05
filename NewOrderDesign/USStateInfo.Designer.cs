@@ -2080,7 +2080,8 @@ namespace NewOrderDesign
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2090,7 +2091,7 @@ namespace NewOrderDesign
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(35, 38);
             this.button2.TabIndex = 16;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter
