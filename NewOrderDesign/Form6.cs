@@ -188,5 +188,10 @@ namespace NewOrderDesign
                 txtpass.PasswordChar = '*';
             }
         }
+
+        private void lbuser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

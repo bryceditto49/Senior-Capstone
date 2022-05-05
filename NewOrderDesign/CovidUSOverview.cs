@@ -116,6 +116,11 @@ namespace NewOrderDesign
                 MessageBox.Show("Exception: " + ex.Message);
             }
         }
+
+        private void FormHeading_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

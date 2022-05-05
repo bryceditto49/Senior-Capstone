@@ -46,7 +46,8 @@
             this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btlogin.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlogin.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btlogin.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btlogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btlogin.Location = new System.Drawing.Point(322, 265);
             this.btlogin.MinimumSize = new System.Drawing.Size(56, 23);
             this.btlogin.Name = "btlogin";
@@ -61,7 +62,8 @@
             this.btguest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btguest.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.btguest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btguest.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btguest.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btguest.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btguest.Location = new System.Drawing.Point(400, 265);
             this.btguest.MinimumSize = new System.Drawing.Size(56, 23);
             this.btguest.Name = "btguest";
@@ -75,6 +77,7 @@
             // 
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtuser.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(322, 146);
             this.txtuser.MinimumSize = new System.Drawing.Size(212, 22);
             this.txtuser.Name = "txtuser";
@@ -87,6 +90,7 @@
             // 
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpass.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(322, 209);
             this.txtpass.MinimumSize = new System.Drawing.Size(212, 22);
             this.txtpass.Name = "txtpass";
@@ -98,20 +102,23 @@
             // lbuser
             // 
             this.lbuser.AutoSize = true;
+            this.lbuser.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbuser.Location = new System.Drawing.Point(242, 154);
             this.lbuser.MinimumSize = new System.Drawing.Size(55, 14);
             this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(55, 14);
+            this.lbuser.Size = new System.Drawing.Size(73, 14);
             this.lbuser.TabIndex = 4;
             this.lbuser.Text = "Username";
+            this.lbuser.Click += new System.EventHandler(this.lbuser_Click);
             // 
             // lbpass
             // 
             this.lbpass.AutoSize = true;
+            this.lbpass.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpass.Location = new System.Drawing.Point(244, 215);
             this.lbpass.MinimumSize = new System.Drawing.Size(52, 14);
             this.lbpass.Name = "lbpass";
-            this.lbpass.Size = new System.Drawing.Size(53, 14);
+            this.lbpass.Size = new System.Drawing.Size(67, 14);
             this.lbpass.TabIndex = 5;
             this.lbpass.Text = "Password";
             // 
@@ -120,7 +127,8 @@
             this.btregis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btregis.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.btregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btregis.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btregis.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btregis.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btregis.Location = new System.Drawing.Point(478, 265);
             this.btregis.MinimumSize = new System.Drawing.Size(56, 23);
             this.btregis.Name = "btregis";
@@ -135,9 +143,10 @@
             this.chkre.AutoSize = true;
             this.chkre.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.chkre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkre.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkre.Location = new System.Drawing.Point(322, 313);
             this.chkre.Name = "chkre";
-            this.chkre.Size = new System.Drawing.Size(92, 17);
+            this.chkre.Size = new System.Drawing.Size(115, 18);
             this.chkre.TabIndex = 7;
             this.chkre.Text = "RememberMe";
             this.chkre.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -149,6 +158,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(508, 209);
             this.button1.Name = "button1";
@@ -162,6 +172,7 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(508, 209);
             this.button2.Name = "button2";
