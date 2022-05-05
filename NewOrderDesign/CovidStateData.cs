@@ -21,7 +21,8 @@ namespace NewOrderDesign
         public CovidStateData()
         {
             InitializeComponent();
-
+            dataGridView1.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "N0";
         }
         public static string state;
         public void textBox1_TextChanged(object sender, EventArgs e)

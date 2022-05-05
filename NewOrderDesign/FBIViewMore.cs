@@ -20,6 +20,40 @@ namespace NewOrderDesign
         {
             InitializeComponent();
             comboBox1.SelectedItem = "Crimes Against Persons";
+            dataGridView1.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[9].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[10].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[11].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[12].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[13].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[14].DefaultCellStyle.Format = "N0";
+            dataGridView2.Columns[15].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[1].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[2].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[3].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[4].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[5].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[7].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[8].DefaultCellStyle.Format = "N0";
+            dataGridView3.Columns[9].DefaultCellStyle.Format = "N0";
+
+
         }
 
         private void submitbutton_Click(object sender, EventArgs e)

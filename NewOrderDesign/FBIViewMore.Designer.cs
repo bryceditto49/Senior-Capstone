@@ -164,6 +164,7 @@ namespace NewOrderDesign
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stateDataGridViewTextBoxColumn,
@@ -176,6 +177,7 @@ namespace NewOrderDesign
             this.kidnappingAbductionDataGridViewTextBoxColumn,
             this.sexOffensesDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(12, 100);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(776, 272);
             this.dataGridView1.Name = "dataGridView1";
