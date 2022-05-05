@@ -1089,26 +1089,26 @@ namespace NewOrderDesign
             // 
             // stateDataGridViewTextBoxColumn4
             // 
-            this.dataGridView8.AutoGenerateColumns = false;
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stateDataGridViewTextBoxColumn8,
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8,
-            this.populationCoveredDataGridViewTextBoxColumn8,
-            this.totalOffensesDataGridViewTextBoxColumn8,
-            this.arsonDataGridViewTextBoxColumn2,
-            this.briberyDataGridViewTextBoxColumn2,
-            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2,
-            this.counterfeitingForgeryDataGridViewTextBoxColumn2,
-            this.destructionDamageVandalismDataGridViewTextBoxColumn2,
-            this.embezzlementDataGridViewTextBoxColumn2,
-            this.extortionBlackmailDataGridViewTextBoxColumn2,
-            this.fraudOffensesDataGridViewTextBoxColumn2,
-            this.larcenyTheftOffensesDataGridViewTextBoxColumn2,
-            this.motorVehicleTheftDataGridViewTextBoxColumn2,
-            this.robberyDataGridViewTextBoxColumn2,
-            this.stolenPropertyOffensesDataGridViewTextBoxColumn2,
-            this.percentagesDataGridViewTextBoxColumn2});
+            //this.dataGridView8.AutoGenerateColumns = false;
+            //this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            //this.stateDataGridViewTextBoxColumn8,
+            //this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8,
+            //this.populationCoveredDataGridViewTextBoxColumn8,
+            //this.totalOffensesDataGridViewTextBoxColumn8,
+            //this.arsonDataGridViewTextBoxColumn2,
+            //this.briberyDataGridViewTextBoxColumn2,
+            //this.burglaryBreakingEnteringDataGridViewTextBoxColumn2,
+            //this.counterfeitingForgeryDataGridViewTextBoxColumn2,
+            //this.destructionDamageVandalismDataGridViewTextBoxColumn2,
+            //this.embezzlementDataGridViewTextBoxColumn2,
+            //this.extortionBlackmailDataGridViewTextBoxColumn2,
+            //this.fraudOffensesDataGridViewTextBoxColumn2,
+            //this.larcenyTheftOffensesDataGridViewTextBoxColumn2,
+            //this.motorVehicleTheftDataGridViewTextBoxColumn2,
+            //this.robberyDataGridViewTextBoxColumn2,
+            //this.stolenPropertyOffensesDataGridViewTextBoxColumn2,
+            //this.percentagesDataGridViewTextBoxColumn2}); 
             this.dataGridView8.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3;
             this.dataGridView8.Location = new System.Drawing.Point(763, 114);
             this.dataGridView8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1260,51 +1260,51 @@ namespace NewOrderDesign
             // 
             // chart8
             // 
-            this.chart8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            chartArea4.Name = "ChartArea1";
-            this.chart8.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart8.Legends.Add(legend4);
-            this.chart8.Location = new System.Drawing.Point(304, 217);
-            this.chart8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chart8.Name = "chart8";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart8.Series.Add(series4);
-            this.chart8.Size = new System.Drawing.Size(400, 186);
-            this.chart8.TabIndex = 12;
-            this.chart8.Text = "chart8";
+            //this.chart8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            //chartArea4.Name = "ChartArea1";
+            //this.chart8.ChartAreas.Add(chartArea4);
+            //legend4.Name = "Legend1";
+            //this.chart8.Legends.Add(legend4);
+            //this.chart8.Location = new System.Drawing.Point(304, 217);
+            //this.chart8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.chart8.Name = "chart8";
+            //series4.ChartArea = "ChartArea1";
+            //series4.Legend = "Legend1";
+            //series4.Name = "Series1";
+            //this.chart8.Series.Add(series4);
+            //this.chart8.Size = new System.Drawing.Size(400, 186);
+            //this.chart8.TabIndex = 12;
+            //this.chart8.Text = "chart8";
             // 
             // dataGridView5
             // 
-            this.dataGridView5.AutoGenerateColumns = false;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stateDataGridViewTextBoxColumn4,
-            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn4,
-            this.populationCoveredDataGridViewTextBoxColumn4,
-            this.totalOffensesDataGridViewTextBoxColumn4,
-            this.arsonDataGridViewTextBoxColumn1,
-            this.briberyDataGridViewTextBoxColumn1,
-            this.burglaryBreakingEnteringDataGridViewTextBoxColumn1,
-            this.counterfeitingForgeryDataGridViewTextBoxColumn1,
-            this.destructionDamageVandalismDataGridViewTextBoxColumn1,
-            this.embezzlementDataGridViewTextBoxColumn1,
-            this.extortionBlackmailDataGridViewTextBoxColumn1,
-            this.fraudOffensesDataGridViewTextBoxColumn1,
-            this.larcenyTheftOffensesDataGridViewTextBoxColumn1,
-            this.motorVehicleTheftDataGridViewTextBoxColumn1,
-            this.robberyDataGridViewTextBoxColumn1,
-            this.stolenPropertyOffensesDataGridViewTextBoxColumn1});
-            this.dataGridView5.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2;
-            this.dataGridView5.Location = new System.Drawing.Point(763, 203);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView5.TabIndex = 11;
+            //this.dataGridView5.AutoGenerateColumns = false;
+            //this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            //this.stateDataGridViewTextBoxColumn4,
+            //this.numberofParticipatingAgenciesDataGridViewTextBoxColumn4,
+            //this.populationCoveredDataGridViewTextBoxColumn4,
+            //this.totalOffensesDataGridViewTextBoxColumn4,
+            //this.arsonDataGridViewTextBoxColumn1,
+            //this.briberyDataGridViewTextBoxColumn1,
+            //this.burglaryBreakingEnteringDataGridViewTextBoxColumn1,
+            //this.counterfeitingForgeryDataGridViewTextBoxColumn1,
+            //this.destructionDamageVandalismDataGridViewTextBoxColumn1,
+            //this.embezzlementDataGridViewTextBoxColumn1,
+            //this.extortionBlackmailDataGridViewTextBoxColumn1,
+            //this.fraudOffensesDataGridViewTextBoxColumn1,
+            //this.larcenyTheftOffensesDataGridViewTextBoxColumn1,
+            //this.motorVehicleTheftDataGridViewTextBoxColumn1,
+            //this.robberyDataGridViewTextBoxColumn1,
+            //this.stolenPropertyOffensesDataGridViewTextBoxColumn1});
+            //this.dataGridView5.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2;
+            //this.dataGridView5.Location = new System.Drawing.Point(763, 203);
+            //this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.dataGridView5.Name = "dataGridView5";
+            //this.dataGridView5.RowHeadersWidth = 51;
+            //this.dataGridView5.RowTemplate.Height = 24;
+            //this.dataGridView5.Size = new System.Drawing.Size(240, 150);
+            //this.dataGridView5.TabIndex = 11;
             // 
             // stateDataGridViewTextBoxColumn4
             // 
