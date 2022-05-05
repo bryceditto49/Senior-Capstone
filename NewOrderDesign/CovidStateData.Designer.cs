@@ -101,7 +101,7 @@ namespace NewOrderDesign
             this.submitbutton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.submitbutton.Location = new System.Drawing.Point(441, 39);
             this.submitbutton.Name = "submitbutton";
-            this.submitbutton.Size = new System.Drawing.Size(68, 33);
+            this.submitbutton.Size = new System.Drawing.Size(68, 31);
             this.submitbutton.TabIndex = 1;
             this.submitbutton.Text = "Go";
             this.submitbutton.UseVisualStyleBackColor = false;
