@@ -174,10 +174,10 @@ namespace NewOrderDesign
             this.OverviewTab.Controls.Add(this.chart3);
             this.OverviewTab.Controls.Add(this.chart2);
             this.OverviewTab.Controls.Add(this.chart1);
-            this.OverviewTab.Location = new System.Drawing.Point(4, 23);
+            this.OverviewTab.Location = new System.Drawing.Point(4, 26);
             this.OverviewTab.Name = "OverviewTab";
             this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
-            this.OverviewTab.Size = new System.Drawing.Size(896, 356);
+            this.OverviewTab.Size = new System.Drawing.Size(896, 353);
             this.OverviewTab.TabIndex = 0;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
@@ -245,7 +245,7 @@ namespace NewOrderDesign
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             series3.SmartLabelStyle.IsOverlappedHidden = false;
-            series3.YValuesPerPoint = 2;
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(518, 341);
             this.chart1.TabIndex = 0;
@@ -264,10 +264,10 @@ namespace NewOrderDesign
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewdataGridView3);
             this.CrimesAgainstPersonsTab.Controls.Add(this.TotalCrimesAgainstPersonsTabLabel1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.PersonsComboBox);
-            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 23);
+            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstPersonsTab.Name = "CrimesAgainstPersonsTab";
             this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(896, 356);
+            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(896, 353);
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsTabLabel1.Location = new System.Drawing.Point(162, 81);
             this.TotalCrimesAgainstPersonsTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstPersonsTabLabel1.Name = "TotalCrimesAgainstPersonsTabLabel1";
-            this.TotalCrimesAgainstPersonsTabLabel1.Size = new System.Drawing.Size(0, 14);
+            this.TotalCrimesAgainstPersonsTabLabel1.Size = new System.Drawing.Size(0, 17);
             this.TotalCrimesAgainstPersonsTabLabel1.TabIndex = 2;
             // 
             // PersonsComboBox
@@ -441,7 +441,7 @@ namespace NewOrderDesign
             "Sex Offenses"});
             this.PersonsComboBox.Location = new System.Drawing.Point(8, 8);
             this.PersonsComboBox.Name = "PersonsComboBox";
-            this.PersonsComboBox.Size = new System.Drawing.Size(140, 22);
+            this.PersonsComboBox.Size = new System.Drawing.Size(140, 25);
             this.PersonsComboBox.TabIndex = 0;
             this.PersonsComboBox.SelectedIndexChanged += new System.EventHandler(this.PersonsComboBox_SelectedIndexChanged);
             // 
@@ -453,9 +453,9 @@ namespace NewOrderDesign
             this.CrimesAgainstPropertyTab.Controls.Add(this.overviewdataGridView2);
             this.CrimesAgainstPropertyTab.Controls.Add(this.TotalCrimesAgainstPropertyTabLabel1);
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
-            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 23);
+            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstPropertyTab.Name = "CrimesAgainstPropertyTab";
-            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(896, 356);
+            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(896, 353);
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
@@ -653,7 +653,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyTabLabel1.Location = new System.Drawing.Point(149, 82);
             this.TotalCrimesAgainstPropertyTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstPropertyTabLabel1.Name = "TotalCrimesAgainstPropertyTabLabel1";
-            this.TotalCrimesAgainstPropertyTabLabel1.Size = new System.Drawing.Size(0, 14);
+            this.TotalCrimesAgainstPropertyTabLabel1.Size = new System.Drawing.Size(0, 17);
             this.TotalCrimesAgainstPropertyTabLabel1.TabIndex = 3;
             // 
             // PropertyComboBox
@@ -675,7 +675,7 @@ namespace NewOrderDesign
             "Stolen Property"});
             this.PropertyComboBox.Location = new System.Drawing.Point(8, 8);
             this.PropertyComboBox.Name = "PropertyComboBox";
-            this.PropertyComboBox.Size = new System.Drawing.Size(140, 22);
+            this.PropertyComboBox.Size = new System.Drawing.Size(140, 25);
             this.PropertyComboBox.TabIndex = 0;
             this.PropertyComboBox.SelectedIndexChanged += new System.EventHandler(this.PropertyComboBox_SelectedIndexChanged);
             // 
@@ -687,9 +687,9 @@ namespace NewOrderDesign
             this.CrimesAgainstSocietyTab.Controls.Add(this.dataGridView1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.TotalCrimesAgainstSocietyTabLabel1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
-            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 23);
+            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstSocietyTab.Name = "CrimesAgainstSocietyTab";
-            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(896, 356);
+            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(896, 353);
             this.CrimesAgainstSocietyTab.TabIndex = 3;
             this.CrimesAgainstSocietyTab.Text = "Crimes Against Society";
             this.CrimesAgainstSocietyTab.UseVisualStyleBackColor = true;
@@ -778,7 +778,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstSocietyTabLabel1.Location = new System.Drawing.Point(149, 80);
             this.TotalCrimesAgainstSocietyTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstSocietyTabLabel1.Name = "TotalCrimesAgainstSocietyTabLabel1";
-            this.TotalCrimesAgainstSocietyTabLabel1.Size = new System.Drawing.Size(0, 14);
+            this.TotalCrimesAgainstSocietyTabLabel1.Size = new System.Drawing.Size(0, 17);
             this.TotalCrimesAgainstSocietyTabLabel1.TabIndex = 4;
             // 
             // SocietyComboBox
@@ -794,7 +794,7 @@ namespace NewOrderDesign
             "Weapon Law Violations"});
             this.SocietyComboBox.Location = new System.Drawing.Point(8, 8);
             this.SocietyComboBox.Name = "SocietyComboBox";
-            this.SocietyComboBox.Size = new System.Drawing.Size(140, 22);
+            this.SocietyComboBox.Size = new System.Drawing.Size(140, 25);
             this.SocietyComboBox.TabIndex = 0;
             this.SocietyComboBox.SelectedIndexChanged += new System.EventHandler(this.SocietyComboBox_SelectedIndexChanged);
             // 
@@ -825,7 +825,7 @@ namespace NewOrderDesign
             this.FormHeading.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormHeading.Location = new System.Drawing.Point(576, 8);
             this.FormHeading.Name = "FormHeading";
-            this.FormHeading.Size = new System.Drawing.Size(248, 46);
+            this.FormHeading.Size = new System.Drawing.Size(310, 58);
             this.FormHeading.TabIndex = 1;
             this.FormHeading.Text = "US Overview";
             // 
@@ -883,7 +883,7 @@ namespace NewOrderDesign
             // 
             // USOverview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(936, 492);

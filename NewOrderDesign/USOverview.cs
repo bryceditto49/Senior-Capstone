@@ -114,26 +114,27 @@ namespace NewOrderDesign
                     string query = $"SELECT [Total_offenses],[Murder_and_nonnegligent_manslaughter],[Rape1],[Aggravated_assault],[Simple_assault],[Intimidation],[Other2],[Robbery],[Burglary],[Larceny_theft],[Motor_vehicle_theft],[Arson],[Destruction_damage_vandalism]";
                     query += $" FROM [FBI].[dbo].[Table_11_Offenses_Offense_Type_by_Participating_State_and_Federal_2020] WHERE Participating_state_Federal = 'Total'";
                     DataTable dt1 = GetData(query);
-                    Int16 murder = Convert.ToInt16(dt1.Rows[0]["Murder_and_nonnegligent_manslaughter"].ToString());
+                    Int32 murder = Convert.ToInt32(dt1.Rows[0]["Murder_and_nonnegligent_manslaughter"].ToString());
                     
-                    Int16 rape = Convert.ToInt16(dt1.Rows[0]["Rape1"].ToString());
-                    Int16 aggravatedassault = Convert.ToInt16(dt1.Rows[0]["Aggravated_assault"].ToString());
-                    Int16 simpleassault = Convert.ToInt16(dt1.Rows[0]["Simple_assault"].ToString());
-                    Int16 intimidation = Convert.ToInt16(dt1.Rows[0]["Intimidation"].ToString());
-                    Int16 other = Convert.ToInt16(dt1.Rows[0]["Other2"].ToString());
-                    Int16 robbery = Convert.ToInt16(dt1.Rows[0]["Robbery"].ToString());
-                    Int16 burglary = Convert.ToInt16(dt1.Rows[0]["Burglary"].ToString());
-                    Int16 gta = Convert.ToInt16(dt1.Rows[0]["Motor_vehicle_theft"].ToString());
-                    Int16 arson = Convert.ToInt16(dt1.Rows[0]["Arson"].ToString());
-                    Int16 larceny = Convert.ToInt16(dt1.Rows[0]["Larceny_theft"].ToString());
-                    Int16 vandalism = Convert.ToInt16(dt1.Rows[0]["Destruction_damage_vandalism"].ToString());
-                    string[] x1 = new string[] {"Murder", "Rape", "Aggravated Assault", "Simple Assault", "Intimidation", "Other", "Robbery", "Burglary", "Motor Theft", "Arson", "Larceny", "Vandalism"};
-                    Int16[] y1 = new Int16[] {murder, rape, aggravatedassault, simpleassault, intimidation, other, robbery, burglary, gta, arson, larceny, vandalism};
+                    Int32 rape = Convert.ToInt32(dt1.Rows[0]["Rape1"].ToString());
+                    Int32 aggravatedassault = Convert.ToInt32(dt1.Rows[0]["Aggravated_assault"].ToString());
+                    Int32 simpleassault = Convert.ToInt32(dt1.Rows[0]["Simple_assault"].ToString());
+                    Int32 intimidation = Convert.ToInt32(dt1.Rows[0]["Intimidation"].ToString());
+                    Int32 other = Convert.ToInt32(dt1.Rows[0]["Other2"].ToString());
+                    Int32 robbery = Convert.ToInt32(dt1.Rows[0]["Robbery"].ToString());
+                    Int32 burglary = Convert.ToInt32(dt1.Rows[0]["Burglary"].ToString());
+                    Int32 gta = Convert.ToInt32(dt1.Rows[0]["Motor_vehicle_theft"].ToString());
+                    Int32 arson = Convert.ToInt32(dt1.Rows[0]["Arson"].ToString());
+                    Int32 larceny = Convert.ToInt32(dt1.Rows[0]["Larceny_theft"].ToString());
+                    Int32 vandalism = Convert.ToInt32(dt1.Rows[0]["Destruction_damage_vandalism"].ToString());
+                    string[] x1 = new string[] {"Homicide", "Sex Offenses", "Assault", "Kidnapping", "Robbery", "Burglary/B and E", "Motor Theft", "Arson", "Larceny/Theft", "Vandalism"};
+                    Int32[] y1 = new Int32[] {murder, rape, aggravatedassault, simpleassault, robbery, burglary, gta, arson, larceny, vandalism};
 
 
                     chart1.Series[0].ChartType = SeriesChartType.Bar;
                     //overviewchart1.Series[0].Points.DataBindXY(murder,rape,aggravated_assault,simple_assault,intimidation,robbery,burglary,larceny,gta,arson,vandalism,other);
                     chart1.Series[0].Points.DataBindXY(x1, y1);
+                    chart1.ChartAreas[0].AxisX.Interval = 1;
                     chart1.Legends[0].Enabled = false;
                     chart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
