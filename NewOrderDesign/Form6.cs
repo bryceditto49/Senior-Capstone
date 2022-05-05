@@ -130,6 +130,7 @@ namespace NewOrderDesign
         private void btregis_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             Form1 form1 = new Form1();
             form1.Show();
         }

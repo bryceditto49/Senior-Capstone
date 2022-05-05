@@ -52,7 +52,6 @@ namespace NewOrderDesign
                     SqlCommand cmdtotalPop = conn.CreateCommand();
                     cmdtotalPop.CommandText = queryPopulation;
                     totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
-                    label3.Text = totalPopulation.ToString();
                     //this below code is to grab percentage of crime per citizen
                     string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Persons_Offenses_Offense_Category_by_State_2020 WHERE State = '{statePersons}'";
                     SqlCommand cmdPerCapita = conn.CreateCommand();
@@ -187,7 +186,6 @@ namespace NewOrderDesign
                     SqlCommand cmdtotalPop = conn.CreateCommand();
                     cmdtotalPop.CommandText = queryPopulation;
                     totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
-                    label7.Text = totalPopulation.ToString();
                     //this below code is to grab percentage of crime per citizen
                     string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Property_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateProperty}'";
                     SqlCommand cmdPerCapita = conn.CreateCommand();
@@ -331,7 +329,6 @@ namespace NewOrderDesign
                     SqlCommand cmdtotalPop = conn.CreateCommand();
                     cmdtotalPop.CommandText = queryPopulation;
                     totalPopulation = (Int32)cmdtotalPop.ExecuteScalar();
-                    label11.Text = totalPopulation.ToString();
                     //this below code is to grab percentage of crime per citizen
                     string queryPerCapita = $"SELECT Percentages FROM Crimes_Against_Society_Offenses_Offense_Category_by_State_2020 WHERE State = '{stateSociety}'";
                     SqlCommand cmdPerCapita = conn.CreateCommand();
