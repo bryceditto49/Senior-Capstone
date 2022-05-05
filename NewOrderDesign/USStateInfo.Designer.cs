@@ -33,34 +33,45 @@ namespace NewOrderDesign
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USStateInfo));
             this.continueFBIStateView = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CrimesAgainstPersonsTab = new System.Windows.Forms.TabPage();
+            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberofParticipatingAgenciesDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +85,6 @@ namespace NewOrderDesign
             this.percentagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.barGraphDataSet = new NewOrderDesign.BarGraphDataSet();
-            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberofParticipatingAgenciesDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +102,6 @@ namespace NewOrderDesign
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberofParticipatingAgenciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -232,15 +241,15 @@ namespace NewOrderDesign
             this.crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter3 = new NewOrderDesign.BarGraphDataSetTableAdapters.Crimes_Against_Property_Offenses_Offense_Category_by_State_2020TableAdapter();
             this.tabControl1.SuspendLayout();
             this.CrimesAgainstPersonsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barGraphDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet1BindingSource)).BeginInit();
@@ -274,12 +283,12 @@ namespace NewOrderDesign
             // continueFBIStateView
             // 
             this.continueFBIStateView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.continueFBIStateView.Location = new System.Drawing.Point(915, 503);
-            this.continueFBIStateView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.continueFBIStateView.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.continueFBIStateView.Location = new System.Drawing.Point(686, 409);
             this.continueFBIStateView.Name = "continueFBIStateView";
             this.continueFBIStateView.Size = new System.Drawing.Size(135, 42);
             this.continueFBIStateView.TabIndex = 15;
-            this.continueFBIStateView.Text = "View Raw Data";
+            this.continueFBIStateView.Text = "View Data";
             this.continueFBIStateView.UseVisualStyleBackColor = true;
             this.continueFBIStateView.Click += new System.EventHandler(this.continueFBIStateView_Click);
             // 
@@ -291,9 +300,9 @@ namespace NewOrderDesign
             this.tabControl1.Controls.Add(this.CrimesAgainstPersonsTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstPropertyTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstSocietyTab);
-            this.tabControl1.Location = new System.Drawing.Point(17, 62);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabControl1.MinimumSize = new System.Drawing.Size(1033, 438);
+            this.tabControl1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(13, 50);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(775, 356);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1033, 438);
@@ -303,26 +312,75 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstPersonsTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPersonsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstPersonsTab.Controls.Add(this.dataGridView7);
             this.CrimesAgainstPersonsTab.Controls.Add(this.chart7);
+            this.CrimesAgainstPersonsTab.Controls.Add(this.chart1);
+            this.CrimesAgainstPersonsTab.Controls.Add(this.dataGridView7);
             this.CrimesAgainstPersonsTab.Controls.Add(this.dataGridView4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.chart4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.label4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.label3);
             this.CrimesAgainstPersonsTab.Controls.Add(this.label2);
             this.CrimesAgainstPersonsTab.Controls.Add(this.label1);
-            this.CrimesAgainstPersonsTab.Controls.Add(this.chart1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.dataGridView1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.TotalCrimesAgainstPersonsStateTotal);
             this.CrimesAgainstPersonsTab.Controls.Add(this.PersonsComboBox);
-            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 25);
-            this.CrimesAgainstPersonsTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstPersonsTab.Name = "CrimesAgainstPersonsTab";
-            this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(1025, 409);
+            this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
+            // 
+            // chart7
+            // 
+            this.chart7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart7.Legends.Add(legend1);
+            this.chart7.Location = new System.Drawing.Point(386, 159);
+            this.chart7.Name = "chart7";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart7.Series.Add(series1);
+            this.chart7.Size = new System.Drawing.Size(372, 167);
+            this.chart7.TabIndex = 15;
+            this.chart7.Text = "chart7";
+            title1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Percentage of Crime in Comparison to Population Covered";
+            this.chart7.Titles.Add(title1);
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.AutoFitMinFontSize = 20;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(7, 32);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Blue;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(372, 292);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "State Broken Down By Type of Crime";
+            this.chart1.Titles.Add(title2);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // dataGridView7
             // 
@@ -340,11 +398,10 @@ namespace NewOrderDesign
             this.sexOffensesDataGridViewTextBoxColumn2,
             this.percentagesDataGridViewTextBoxColumn});
             this.dataGridView7.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2;
-            this.dataGridView7.Location = new System.Drawing.Point(747, 116);
-            this.dataGridView7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView7.Location = new System.Drawing.Point(560, 94);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.RowHeadersWidth = 51;
-            this.dataGridView7.Size = new System.Drawing.Size(240, 185);
+            this.dataGridView7.Size = new System.Drawing.Size(180, 150);
             this.dataGridView7.TabIndex = 16;
             // 
             // stateDataGridViewTextBoxColumn6
@@ -436,24 +493,6 @@ namespace NewOrderDesign
             // 
             this.barGraphDataSet.DataSetName = "BarGraphDataSet";
             this.barGraphDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chart7
-            // 
-            this.chart7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            chartArea1.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart7.Legends.Add(legend1);
-            this.chart7.Location = new System.Drawing.Point(288, 210);
-            this.chart7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chart7.Name = "chart7";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart7.Series.Add(series1);
-            this.chart7.Size = new System.Drawing.Size(421, 196);
-            this.chart7.TabIndex = 15;
-            this.chart7.Text = "chart7";
             // 
             // dataGridView4
             // 
@@ -562,28 +601,36 @@ namespace NewOrderDesign
             // 
             // chart4
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart4.Legends.Add(legend2);
-            this.chart4.Location = new System.Drawing.Point(191, 9);
-            this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart4.Legends.Add(legend3);
+            this.chart4.Location = new System.Drawing.Point(386, 7);
+            this.chart4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart4.Name = "chart4";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart4.Series.Add(series2);
-            this.chart4.Size = new System.Drawing.Size(276, 201);
+            series3.ChartArea = "ChartArea1";
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
+            this.chart4.Series.Add(series3);
+            this.chart4.Size = new System.Drawing.Size(372, 148);
             this.chart4.TabIndex = 13;
             this.chart4.Text = "chart4";
+            title3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "State in Comparison to Total Number of Persons Crime";
+            this.chart4.Titles.Add(title3);
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(972, 49);
+            this.label4.Location = new System.Drawing.Point(723, 40);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 12;
             this.label4.Text = "label4";
             // 
@@ -593,7 +640,7 @@ namespace NewOrderDesign
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(929, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(43, 14);
             this.label3.TabIndex = 11;
             this.label3.Text = "label3";
             // 
@@ -603,7 +650,7 @@ namespace NewOrderDesign
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(849, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 17);
+            this.label2.Size = new System.Drawing.Size(115, 14);
             this.label2.TabIndex = 10;
             this.label2.Text = "Per 1000 Citizens: ";
             // 
@@ -613,30 +660,9 @@ namespace NewOrderDesign
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(849, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.Size = new System.Drawing.Size(73, 14);
             this.label1.TabIndex = 9;
             this.label1.Text = "Population:";
-            // 
-            // chart1
-            // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(529, 9);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.Blue;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(315, 202);
-            this.chart1.TabIndex = 8;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // dataGridView1
             // 
@@ -753,12 +779,14 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsStateTotal.AutoSize = true;
             this.TotalCrimesAgainstPersonsStateTotal.Location = new System.Drawing.Point(185, 92);
             this.TotalCrimesAgainstPersonsStateTotal.Name = "TotalCrimesAgainstPersonsStateTotal";
-            this.TotalCrimesAgainstPersonsStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPersonsStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPersonsStateTotal.TabIndex = 2;
             // 
             // PersonsComboBox
             // 
+            this.PersonsComboBox.BackColor = System.Drawing.SystemColors.Control;
             this.PersonsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PersonsComboBox.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonsComboBox.FormattingEnabled = true;
             this.PersonsComboBox.Items.AddRange(new object[] {
             "Alabama",
@@ -810,7 +838,7 @@ namespace NewOrderDesign
             this.PersonsComboBox.Location = new System.Drawing.Point(9, 9);
             this.PersonsComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PersonsComboBox.Name = "PersonsComboBox";
-            this.PersonsComboBox.Size = new System.Drawing.Size(160, 24);
+            this.PersonsComboBox.Size = new System.Drawing.Size(121, 22);
             this.PersonsComboBox.TabIndex = 0;
             this.PersonsComboBox.SelectedIndexChanged += new System.EventHandler(this.PersonsComboBox_SelectedIndexChanged);
             // 
@@ -830,15 +858,236 @@ namespace NewOrderDesign
             this.CrimesAgainstPropertyTab.Controls.Add(this.dataGridView2);
             this.CrimesAgainstPropertyTab.Controls.Add(this.TotalCrimesAgainstPropertyStateTotal);
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
-            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 25);
-            this.CrimesAgainstPropertyTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstPropertyTab.Name = "CrimesAgainstPropertyTab";
-            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(1025, 409);
+            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
             // 
             // dataGridView8
+            // 
+            this.dataGridView8.AutoGenerateColumns = false;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stateDataGridViewTextBoxColumn8,
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8,
+            this.populationCoveredDataGridViewTextBoxColumn8,
+            this.totalOffensesDataGridViewTextBoxColumn8,
+            this.arsonDataGridViewTextBoxColumn2,
+            this.briberyDataGridViewTextBoxColumn2,
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2,
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2,
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2,
+            this.embezzlementDataGridViewTextBoxColumn2,
+            this.extortionBlackmailDataGridViewTextBoxColumn2,
+            this.fraudOffensesDataGridViewTextBoxColumn2,
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2,
+            this.motorVehicleTheftDataGridViewTextBoxColumn2,
+            this.robberyDataGridViewTextBoxColumn2,
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2,
+            this.percentagesDataGridViewTextBoxColumn2});
+            this.dataGridView8.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3;
+            this.dataGridView8.Location = new System.Drawing.Point(572, 93);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.RowHeadersWidth = 51;
+            this.dataGridView8.Size = new System.Drawing.Size(180, 150);
+            this.dataGridView8.TabIndex = 13;
+            // 
+            // stateDataGridViewTextBoxColumn8
+            // 
+            this.stateDataGridViewTextBoxColumn8.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn8.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn8.Name = "stateDataGridViewTextBoxColumn8";
+            this.stateDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // numberofParticipatingAgenciesDataGridViewTextBoxColumn8
+            // 
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.DataPropertyName = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.HeaderText = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn8";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // populationCoveredDataGridViewTextBoxColumn8
+            // 
+            this.populationCoveredDataGridViewTextBoxColumn8.DataPropertyName = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn8.HeaderText = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.populationCoveredDataGridViewTextBoxColumn8.Name = "populationCoveredDataGridViewTextBoxColumn8";
+            this.populationCoveredDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // totalOffensesDataGridViewTextBoxColumn8
+            // 
+            this.totalOffensesDataGridViewTextBoxColumn8.DataPropertyName = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn8.HeaderText = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.totalOffensesDataGridViewTextBoxColumn8.Name = "totalOffensesDataGridViewTextBoxColumn8";
+            this.totalOffensesDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // arsonDataGridViewTextBoxColumn2
+            // 
+            this.arsonDataGridViewTextBoxColumn2.DataPropertyName = "Arson";
+            this.arsonDataGridViewTextBoxColumn2.HeaderText = "Arson";
+            this.arsonDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.arsonDataGridViewTextBoxColumn2.Name = "arsonDataGridViewTextBoxColumn2";
+            this.arsonDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // briberyDataGridViewTextBoxColumn2
+            // 
+            this.briberyDataGridViewTextBoxColumn2.DataPropertyName = "Bribery";
+            this.briberyDataGridViewTextBoxColumn2.HeaderText = "Bribery";
+            this.briberyDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.briberyDataGridViewTextBoxColumn2.Name = "briberyDataGridViewTextBoxColumn2";
+            this.briberyDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // burglaryBreakingEnteringDataGridViewTextBoxColumn2
+            // 
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.DataPropertyName = "Burglary_Breaking_Entering";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.HeaderText = "Burglary_Breaking_Entering";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.Name = "burglaryBreakingEnteringDataGridViewTextBoxColumn2";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // counterfeitingForgeryDataGridViewTextBoxColumn2
+            // 
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.DataPropertyName = "Counterfeiting_Forgery";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.HeaderText = "Counterfeiting_Forgery";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.Name = "counterfeitingForgeryDataGridViewTextBoxColumn2";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // destructionDamageVandalismDataGridViewTextBoxColumn2
+            // 
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.DataPropertyName = "Destruction_Damage_Vandalism";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.HeaderText = "Destruction_Damage_Vandalism";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.Name = "destructionDamageVandalismDataGridViewTextBoxColumn2";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // embezzlementDataGridViewTextBoxColumn2
+            // 
+            this.embezzlementDataGridViewTextBoxColumn2.DataPropertyName = "Embezzlement";
+            this.embezzlementDataGridViewTextBoxColumn2.HeaderText = "Embezzlement";
+            this.embezzlementDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.embezzlementDataGridViewTextBoxColumn2.Name = "embezzlementDataGridViewTextBoxColumn2";
+            this.embezzlementDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // extortionBlackmailDataGridViewTextBoxColumn2
+            // 
+            this.extortionBlackmailDataGridViewTextBoxColumn2.DataPropertyName = "Extortion_Blackmail";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.HeaderText = "Extortion_Blackmail";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.extortionBlackmailDataGridViewTextBoxColumn2.Name = "extortionBlackmailDataGridViewTextBoxColumn2";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // fraudOffensesDataGridViewTextBoxColumn2
+            // 
+            this.fraudOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Fraud_Offenses";
+            this.fraudOffensesDataGridViewTextBoxColumn2.HeaderText = "Fraud_Offenses";
+            this.fraudOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.fraudOffensesDataGridViewTextBoxColumn2.Name = "fraudOffensesDataGridViewTextBoxColumn2";
+            this.fraudOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // larcenyTheftOffensesDataGridViewTextBoxColumn2
+            // 
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Larceny_Theft_Offenses";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.HeaderText = "Larceny_Theft_Offenses";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.Name = "larcenyTheftOffensesDataGridViewTextBoxColumn2";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // motorVehicleTheftDataGridViewTextBoxColumn2
+            // 
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.DataPropertyName = "Motor_Vehicle_Theft";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.HeaderText = "Motor_Vehicle_Theft";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.Name = "motorVehicleTheftDataGridViewTextBoxColumn2";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // robberyDataGridViewTextBoxColumn2
+            // 
+            this.robberyDataGridViewTextBoxColumn2.DataPropertyName = "Robbery";
+            this.robberyDataGridViewTextBoxColumn2.HeaderText = "Robbery";
+            this.robberyDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.robberyDataGridViewTextBoxColumn2.Name = "robberyDataGridViewTextBoxColumn2";
+            this.robberyDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // stolenPropertyOffensesDataGridViewTextBoxColumn2
+            // 
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Stolen_Property_Offenses";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.HeaderText = "Stolen_Property_Offenses";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.Name = "stolenPropertyOffensesDataGridViewTextBoxColumn2";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // percentagesDataGridViewTextBoxColumn2
+            // 
+            this.percentagesDataGridViewTextBoxColumn2.DataPropertyName = "Percentages";
+            this.percentagesDataGridViewTextBoxColumn2.HeaderText = "Percentages";
+            this.percentagesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.percentagesDataGridViewTextBoxColumn2.Name = "percentagesDataGridViewTextBoxColumn2";
+            this.percentagesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3
+            // 
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3.DataSource = this.barGraphDataSet;
+            // 
+            // chart8
+            // 
+            this.chart8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.chart8.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart8.Legends.Add(legend4);
+            this.chart8.Location = new System.Drawing.Point(386, 159);
+            this.chart8.Name = "chart8";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart8.Series.Add(series4);
+            this.chart8.Size = new System.Drawing.Size(372, 167);
+            this.chart8.TabIndex = 12;
+            this.chart8.Text = "chart8";
+            title4.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Percentage of Crime in Comparison to Population Covered";
+            this.chart8.Titles.Add(title4);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stateDataGridViewTextBoxColumn4,
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn4,
+            this.populationCoveredDataGridViewTextBoxColumn4,
+            this.totalOffensesDataGridViewTextBoxColumn4,
+            this.arsonDataGridViewTextBoxColumn1,
+            this.briberyDataGridViewTextBoxColumn1,
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn1,
+            this.counterfeitingForgeryDataGridViewTextBoxColumn1,
+            this.destructionDamageVandalismDataGridViewTextBoxColumn1,
+            this.embezzlementDataGridViewTextBoxColumn1,
+            this.extortionBlackmailDataGridViewTextBoxColumn1,
+            this.fraudOffensesDataGridViewTextBoxColumn1,
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn1,
+            this.motorVehicleTheftDataGridViewTextBoxColumn1,
+            this.robberyDataGridViewTextBoxColumn1,
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn1});
+            this.dataGridView5.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2;
+            this.dataGridView5.Location = new System.Drawing.Point(572, 165);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView5.TabIndex = 11;
+            // 
+            // stateDataGridViewTextBoxColumn4
             // 
             this.dataGridView8.AutoGenerateColumns = false;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1192,20 +1441,27 @@ namespace NewOrderDesign
             // 
             // chart5
             // 
+            this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             chartArea5.Name = "ChartArea1";
             this.chart5.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.chart5.Legends.Add(legend5);
-            this.chart5.Location = new System.Drawing.Point(176, 21);
-            this.chart5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart5.Location = new System.Drawing.Point(386, 7);
+            this.chart5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart5.Name = "chart5";
             series5.ChartArea = "ChartArea1";
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series5.Legend = "Legend1";
             series5.Name = "Series1";
             this.chart5.Series.Add(series5);
-            this.chart5.Size = new System.Drawing.Size(300, 193);
+            this.chart5.Size = new System.Drawing.Size(372, 148);
             this.chart5.TabIndex = 10;
             this.chart5.Text = "chart5";
+            title5.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "State in Comparison to Total Number of Property Crime";
+            this.chart5.Titles.Add(title5);
+            this.chart5.Click += new System.EventHandler(this.chart5_Click);
             // 
             // label8
             // 
@@ -1213,7 +1469,7 @@ namespace NewOrderDesign
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(956, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.Size = new System.Drawing.Size(43, 14);
             this.label8.TabIndex = 9;
             this.label8.Text = "label8";
             // 
@@ -1223,7 +1479,7 @@ namespace NewOrderDesign
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(927, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.Size = new System.Drawing.Size(43, 14);
             this.label7.TabIndex = 8;
             this.label7.Text = "label7";
             // 
@@ -1233,7 +1489,7 @@ namespace NewOrderDesign
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(839, 59);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 17);
+            this.label6.Size = new System.Drawing.Size(112, 14);
             this.label6.TabIndex = 7;
             this.label6.Text = "Per 1000 Citizens:";
             // 
@@ -1243,27 +1499,33 @@ namespace NewOrderDesign
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(836, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 17);
+            this.label5.Size = new System.Drawing.Size(73, 14);
             this.label5.TabIndex = 6;
             this.label5.Text = "Population:";
             // 
             // chart2
             // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea6.Name = "ChartArea2";
             this.chart2.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.chart2.Legends.Add(legend6);
-            this.chart2.Location = new System.Drawing.Point(520, 21);
-            this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart2.Location = new System.Drawing.Point(7, 32);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart2.Name = "chart2";
             series6.ChartArea = "ChartArea2";
             series6.Legend = "Legend1";
             series6.Name = "Series1";
             this.chart2.Series.Add(series6);
-            this.chart2.Size = new System.Drawing.Size(277, 193);
+            this.chart2.Size = new System.Drawing.Size(372, 292);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
+            title6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "State Broken Down By Type of Crime";
+            this.chart2.Titles.Add(title6);
             this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // dataGridView2
@@ -1439,7 +1701,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyStateTotal.AutoSize = true;
             this.TotalCrimesAgainstPropertyStateTotal.Location = new System.Drawing.Point(171, 94);
             this.TotalCrimesAgainstPropertyStateTotal.Name = "TotalCrimesAgainstPropertyStateTotal";
-            this.TotalCrimesAgainstPropertyStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstPropertyStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPropertyStateTotal.TabIndex = 3;
             // 
             // PropertyComboBox
@@ -1539,10 +1801,9 @@ namespace NewOrderDesign
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.PropertyComboBox.Location = new System.Drawing.Point(4, 4);
-            this.PropertyComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PropertyComboBox.Location = new System.Drawing.Point(7, 7);
             this.PropertyComboBox.Name = "PropertyComboBox";
-            this.PropertyComboBox.Size = new System.Drawing.Size(160, 24);
+            this.PropertyComboBox.Size = new System.Drawing.Size(121, 22);
             this.PropertyComboBox.TabIndex = 0;
             this.PropertyComboBox.SelectedIndexChanged += new System.EventHandler(this.PropertyComboBox_SelectedIndexChanged);
             // 
@@ -1562,10 +1823,9 @@ namespace NewOrderDesign
             this.CrimesAgainstSocietyTab.Controls.Add(this.dataGridView3);
             this.CrimesAgainstSocietyTab.Controls.Add(this.TotalCrimesAgainstSocietyStateTotal);
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
-            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 25);
-            this.CrimesAgainstSocietyTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstSocietyTab.Name = "CrimesAgainstSocietyTab";
-            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(1025, 409);
+            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstSocietyTab.TabIndex = 3;
             this.CrimesAgainstSocietyTab.Text = "Crimes Against Society";
             this.CrimesAgainstSocietyTab.UseVisualStyleBackColor = true;
@@ -1582,11 +1842,10 @@ namespace NewOrderDesign
             this.totalOffensesDataGridViewTextBoxColumn7,
             this.percentagesDataGridViewTextBoxColumn1});
             this.dataGridView9.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2;
-            this.dataGridView9.Location = new System.Drawing.Point(749, 117);
-            this.dataGridView9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView9.Location = new System.Drawing.Point(562, 95);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.RowHeadersWidth = 51;
-            this.dataGridView9.Size = new System.Drawing.Size(240, 185);
+            this.dataGridView9.Size = new System.Drawing.Size(180, 150);
             this.dataGridView9.TabIndex = 14;
             // 
             // stateDataGridViewTextBoxColumn7
@@ -1636,21 +1895,25 @@ namespace NewOrderDesign
             // 
             // chart9
             // 
-            this.chart9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.chart9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea7.Name = "ChartArea1";
             this.chart9.ChartAreas.Add(chartArea7);
             legend7.Name = "Legend1";
             this.chart9.Legends.Add(legend7);
-            this.chart9.Location = new System.Drawing.Point(307, 193);
-            this.chart9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart9.Location = new System.Drawing.Point(386, 159);
             this.chart9.Name = "chart9";
             series7.ChartArea = "ChartArea1";
             series7.Legend = "Legend1";
             series7.Name = "Series1";
             this.chart9.Series.Add(series7);
-            this.chart9.Size = new System.Drawing.Size(400, 213);
+            this.chart9.Size = new System.Drawing.Size(372, 167);
             this.chart9.TabIndex = 13;
             this.chart9.Text = "chart8";
+            title7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title7.Name = "Title1";
+            title7.Text = "Percentage of Crime in Comparison to Population Covered";
+            this.chart9.Titles.Add(title7);
             // 
             // dataGridView6
             // 
@@ -1763,28 +2026,35 @@ namespace NewOrderDesign
             // 
             // chart6
             // 
+            this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             chartArea8.Name = "ChartArea1";
             this.chart6.ChartAreas.Add(chartArea8);
             legend8.Name = "Legend1";
             this.chart6.Legends.Add(legend8);
-            this.chart6.Location = new System.Drawing.Point(221, 5);
-            this.chart6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart6.Location = new System.Drawing.Point(386, 7);
+            this.chart6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart6.Name = "chart6";
             series8.ChartArea = "ChartArea1";
+            series8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series8.Legend = "Legend1";
             series8.Name = "Series1";
             this.chart6.Series.Add(series8);
-            this.chart6.Size = new System.Drawing.Size(300, 193);
+            this.chart6.Size = new System.Drawing.Size(372, 148);
             this.chart6.TabIndex = 11;
             this.chart6.Text = "chart6";
+            title8.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title8.Name = "Title1";
+            title8.Text = "State in Comparison to Total Number of Society Crime";
+            this.chart6.Titles.Add(title8);
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(975, 63);
+            this.label12.Location = new System.Drawing.Point(734, 51);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.Size = new System.Drawing.Size(50, 14);
             this.label12.TabIndex = 10;
             this.label12.Text = "label12";
             // 
@@ -1794,7 +2064,7 @@ namespace NewOrderDesign
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(951, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
+            this.label11.Size = new System.Drawing.Size(49, 14);
             this.label11.TabIndex = 9;
             this.label11.Text = "label11";
             // 
@@ -1804,7 +2074,7 @@ namespace NewOrderDesign
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(866, 63);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 17);
+            this.label10.Size = new System.Drawing.Size(112, 14);
             this.label10.TabIndex = 8;
             this.label10.Text = "Per 1000 Citizens:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -1815,28 +2085,34 @@ namespace NewOrderDesign
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(867, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 17);
+            this.label9.Size = new System.Drawing.Size(73, 14);
             this.label9.TabIndex = 7;
             this.label9.Text = "Population:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // chart3
             // 
-            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea9.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea9);
             legend9.Name = "Legend1";
             this.chart3.Legends.Add(legend9);
-            this.chart3.Location = new System.Drawing.Point(568, 5);
-            this.chart3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart3.Location = new System.Drawing.Point(7, 32);
+            this.chart3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart3.Name = "chart3";
             series9.ChartArea = "ChartArea1";
             series9.Legend = "Legend1";
             series9.Name = "Series1";
             this.chart3.Series.Add(series9);
-            this.chart3.Size = new System.Drawing.Size(293, 193);
+            this.chart3.Size = new System.Drawing.Size(372, 292);
             this.chart3.TabIndex = 6;
             this.chart3.Text = "chart3";
+            title9.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title9.Name = "Title1";
+            title9.Text = "State Broken Down By Type of Crime";
+            this.chart3.Titles.Add(title9);
             // 
             // dataGridView3
             // 
@@ -1957,7 +2233,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstSocietyStateTotal.AutoSize = true;
             this.TotalCrimesAgainstSocietyStateTotal.Location = new System.Drawing.Point(171, 91);
             this.TotalCrimesAgainstSocietyStateTotal.Name = "TotalCrimesAgainstSocietyStateTotal";
-            this.TotalCrimesAgainstSocietyStateTotal.Size = new System.Drawing.Size(0, 17);
+            this.TotalCrimesAgainstSocietyStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstSocietyStateTotal.TabIndex = 4;
             // 
             // SocietyComboBox
@@ -2057,10 +2333,9 @@ namespace NewOrderDesign
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.SocietyComboBox.Location = new System.Drawing.Point(5, 5);
-            this.SocietyComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SocietyComboBox.Location = new System.Drawing.Point(7, 7);
             this.SocietyComboBox.Name = "SocietyComboBox";
-            this.SocietyComboBox.Size = new System.Drawing.Size(160, 24);
+            this.SocietyComboBox.Size = new System.Drawing.Size(121, 22);
             this.SocietyComboBox.TabIndex = 0;
             this.SocietyComboBox.SelectedIndexChanged += new System.EventHandler(this.SocietyComboBox_SelectedIndexChanged);
             // 
@@ -2069,25 +2344,25 @@ namespace NewOrderDesign
             this.FormHeading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FormHeading.AutoSize = true;
             this.FormHeading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.FormHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormHeading.Location = new System.Drawing.Point(659, 14);
-            this.FormHeading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FormHeading.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormHeading.Location = new System.Drawing.Point(494, 7);
             this.FormHeading.Name = "FormHeading";
-            this.FormHeading.Size = new System.Drawing.Size(239, 58);
+            this.FormHeading.Size = new System.Drawing.Size(194, 46);
             this.FormHeading.TabIndex = 14;
             this.FormHeading.Text = "State Info";
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(21, 9);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(9, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 47);
+            this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 16;
+            this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -2152,8 +2427,8 @@ namespace NewOrderDesign
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.FormHeading);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1085, 598);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(818, 493);
             this.Name = "USStateInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";
@@ -2161,15 +2436,15 @@ namespace NewOrderDesign
             this.tabControl1.ResumeLayout(false);
             this.CrimesAgainstPersonsTab.ResumeLayout(false);
             this.CrimesAgainstPersonsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barGraphDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet1BindingSource)).EndInit();
