@@ -218,7 +218,7 @@ namespace NewOrderDesign
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(351, 414);
+            this.chart2.Size = new System.Drawing.Size(351, 411);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             title1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
