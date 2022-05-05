@@ -39,6 +39,8 @@ namespace NewOrderDesign
             this.statenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deathsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statesBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet5 = new NewOrderDesign.CovidDataDataSet5();
             this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.covidDataDataSet4 = new NewOrderDesign.CovidDataDataSet4();
             this.statesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -62,10 +64,10 @@ namespace NewOrderDesign
             this.Export_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.covidDataDataSet5 = new NewOrderDesign.CovidDataDataSet5();
-            this.statesBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter5 = new NewOrderDesign.CovidDataDataSet5TableAdapters.statesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
@@ -76,8 +78,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -85,10 +85,9 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(94, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(97, 39);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 37);
+            this.textBox1.Size = new System.Drawing.Size(322, 31);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Please Enter a U.S. State";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -100,10 +99,9 @@ namespace NewOrderDesign
             this.submitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbutton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.submitbutton.Location = new System.Drawing.Point(497, 44);
-            this.submitbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.submitbutton.Location = new System.Drawing.Point(441, 39);
             this.submitbutton.Name = "submitbutton";
-            this.submitbutton.Size = new System.Drawing.Size(77, 38);
+            this.submitbutton.Size = new System.Drawing.Size(68, 31);
             this.submitbutton.TabIndex = 1;
             this.submitbutton.Text = "Go";
             this.submitbutton.UseVisualStyleBackColor = false;
@@ -112,10 +110,9 @@ namespace NewOrderDesign
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(435, 303);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(380, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 16);
+            this.label1.Size = new System.Drawing.Size(264, 14);
             this.label1.TabIndex = 2;
             this.label1.Text = "data will be represented here in table format";
             // 
@@ -134,12 +131,12 @@ namespace NewOrderDesign
             this.deathsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.statesBindingSource5;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 99);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1043, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 264);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -174,6 +171,16 @@ namespace NewOrderDesign
             this.deathsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.deathsDataGridViewTextBoxColumn.Name = "deathsDataGridViewTextBoxColumn";
             this.deathsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statesBindingSource5
+            // 
+            this.statesBindingSource5.DataMember = "states";
+            this.statesBindingSource5.DataSource = this.covidDataDataSet5;
+            // 
+            // covidDataDataSet5
+            // 
+            this.covidDataDataSet5.DataSetName = "CovidDataDataSet5";
+            this.covidDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // statesBindingSource4
             // 
@@ -243,14 +250,16 @@ namespace NewOrderDesign
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(9, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 47);
+            this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 10;
+            this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -269,9 +278,10 @@ namespace NewOrderDesign
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(603, 59);
+            this.button3.Location = new System.Drawing.Point(526, 39);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 28);
+            this.button3.Size = new System.Drawing.Size(77, 25);
             this.button3.TabIndex = 11;
             this.button3.Text = "1 Week\r\n";
             this.button3.UseVisualStyleBackColor = false;
@@ -282,9 +292,10 @@ namespace NewOrderDesign
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(716, 59);
+            this.button4.Location = new System.Drawing.Point(618, 39);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 28);
+            this.button4.Size = new System.Drawing.Size(84, 25);
             this.button4.TabIndex = 12;
             this.button4.Text = "2 Weeks";
             this.button4.UseVisualStyleBackColor = false;
@@ -295,9 +306,10 @@ namespace NewOrderDesign
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(842, 59);
+            this.button5.Location = new System.Drawing.Point(717, 39);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(97, 28);
+            this.button5.Size = new System.Drawing.Size(85, 25);
             this.button5.TabIndex = 13;
             this.button5.Text = "3 Weeks";
             this.button5.UseVisualStyleBackColor = false;
@@ -306,9 +318,10 @@ namespace NewOrderDesign
             // Export_button
             // 
             this.Export_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Export_button.Location = new System.Drawing.Point(951, 430);
+            this.Export_button.Location = new System.Drawing.Point(832, 376);
+            this.Export_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Export_button.Name = "Export_button";
-            this.Export_button.Size = new System.Drawing.Size(100, 38);
+            this.Export_button.Size = new System.Drawing.Size(87, 33);
             this.Export_button.TabIndex = 14;
             this.Export_button.Text = "Export\r\n";
             this.Export_button.UseVisualStyleBackColor = true;
@@ -317,9 +330,10 @@ namespace NewOrderDesign
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.Location = new System.Drawing.Point(12, 431);
+            this.button6.Location = new System.Drawing.Point(10, 377);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 37);
+            this.button6.Size = new System.Drawing.Size(142, 32);
             this.button6.TabIndex = 15;
             this.button6.Text = "State with most cases\r\n";
             this.button6.UseVisualStyleBackColor = true;
@@ -329,23 +343,14 @@ namespace NewOrderDesign
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(94, 12);
+            this.textBox2.Location = new System.Drawing.Point(97, 11);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(513, 15);
+            this.textBox2.Size = new System.Drawing.Size(449, 13);
             this.textBox2.TabIndex = 17;
             this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
     "d";
-            // 
-            // covidDataDataSet5
-            // 
-            this.covidDataDataSet5.DataSetName = "CovidDataDataSet5";
-            this.covidDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // statesBindingSource5
-            // 
-            this.statesBindingSource5.DataMember = "states";
-            this.statesBindingSource5.DataSource = this.covidDataDataSet5;
             // 
             // statesTableAdapter5
             // 
@@ -353,12 +358,12 @@ namespace NewOrderDesign
             // 
             // CovidStateData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(936, 492);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.Export_button);
@@ -371,14 +376,16 @@ namespace NewOrderDesign
             this.Controls.Add(this.submitbutton);
             this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1085, 601);
+            this.MinimumSize = new System.Drawing.Size(952, 531);
             this.Name = "CovidStateData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).EndInit();
@@ -389,8 +396,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
