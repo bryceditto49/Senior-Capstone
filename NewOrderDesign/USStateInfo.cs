@@ -110,13 +110,13 @@ namespace NewOrderDesign
                     chart1.Series[0].Points.AddXY(x3[0], y3[0]);
                     chart1.Series[0].Points.AddXY(x4[0], y4[0]);
                     chart1.Legends[0].Enabled = true;
-                    chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart1.ChartAreas[0].Area3DStyle.Enable3D = false;
                     chart1.Series[0]["PieLabelStyle"] = "Disabled";
 
                     chart4.Series[0].ChartType = SeriesChartType.Pie;
                     chart4.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
                     chart4.Legends[0].Enabled = false;
-                    chart4.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart4.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                     chart7.Series[0].ChartType = SeriesChartType.Column;
                     chart7.Series[0].Points.DataBindXY(bargraphstaticname, bargraphstaticnum);
@@ -280,13 +280,13 @@ namespace NewOrderDesign
                     chart2.Series[0].Points.AddXY(x10[0], y10[0]);
                     chart2.Series[0].Points.AddXY(x11[0], y11[0]);
                     chart2.Legends[0].Enabled = true;
-                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = false;
                     chart2.Series[0]["PieLabelStyle"] = "Disabled";
 
                     chart5.Series[0].ChartType = SeriesChartType.Pie;
                     chart5.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
-                    chart5.Legends[0].Enabled = true;
-                    chart5.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart5.Legends[0].Enabled = false;
+                    chart5.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                     chart8.Series[0].ChartType = SeriesChartType.Column;
                     chart8.Series[0].Points.DataBindXY(bargraphstaticname, bargraphstaticnum);
@@ -395,13 +395,13 @@ namespace NewOrderDesign
                     chart3.Series[0].Points.AddXY(x4[0], y4[0]);
                     chart3.Series[0].Points.AddXY(x5[0], y5[0]);
                     chart3.Legends[0].Enabled = true;
-                    chart3.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart3.ChartAreas[0].Area3DStyle.Enable3D = false;
                     chart3.Series[0]["PieLabelStyle"] = "Disabled";
 
                     chart6.Series[0].ChartType = SeriesChartType.Pie;
                     chart6.Series[0].Points.DataBindXY(totalchart, totalchartnumbers);
-                    chart6.Legends[0].Enabled = true;
-                    chart6.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chart6.Legends[0].Enabled = false;
+                    chart6.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                     chart9.Series[0].ChartType = SeriesChartType.Column;
                     chart9.Series[0].Points.DataBindXY(bargraphstaticname, bargraphstaticnum);
@@ -466,6 +466,11 @@ namespace NewOrderDesign
         }
 
         private void CrimesAgainstSocietyTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart5_Click(object sender, EventArgs e)
         {
 
         }

@@ -36,32 +36,33 @@ namespace NewOrderDesign
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USOverview));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OverviewTab = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CrimesAgainstPersonsTab = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.overviewchart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.overviewdataGridView3 = new System.Windows.Forms.DataGridView();
@@ -79,7 +80,6 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsTabLabel1 = new System.Windows.Forms.Label();
             this.PersonsComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstPropertyTab = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
             this.overviewchart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.overviewdataGridView2 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +102,6 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyTabLabel1 = new System.Windows.Forms.Label();
             this.PropertyComboBox = new System.Windows.Forms.ComboBox();
             this.CrimesAgainstSocietyTab = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.overviewchart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -159,6 +158,7 @@ namespace NewOrderDesign
             this.tabControl1.Controls.Add(this.CrimesAgainstPersonsTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstPropertyTab);
             this.tabControl1.Controls.Add(this.CrimesAgainstSocietyTab);
+            this.tabControl1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(13, 47);
             this.tabControl1.MinimumSize = new System.Drawing.Size(775, 356);
             this.tabControl1.Name = "tabControl1";
@@ -171,137 +171,106 @@ namespace NewOrderDesign
             // 
             this.OverviewTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.OverviewTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OverviewTab.Controls.Add(this.label3);
-            this.OverviewTab.Controls.Add(this.label2);
-            this.OverviewTab.Controls.Add(this.label1);
             this.OverviewTab.Controls.Add(this.chart3);
             this.OverviewTab.Controls.Add(this.chart2);
             this.OverviewTab.Controls.Add(this.chart1);
-            this.OverviewTab.Location = new System.Drawing.Point(4, 22);
+            this.OverviewTab.Location = new System.Drawing.Point(4, 23);
             this.OverviewTab.Name = "OverviewTab";
-            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.OverviewTab.Size = new System.Drawing.Size(767, 330);
+            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
+            this.OverviewTab.Size = new System.Drawing.Size(767, 329);
             this.OverviewTab.TabIndex = 0;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
             this.OverviewTab.Click += new System.EventHandler(this.OverviewTab_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(594, 301);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Crime in the US by State";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 301);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Crime in the US by Type - Simplified";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Crime in the US by Type";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // chart3
             // 
-            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(532, 6);
+            this.chart3.Location = new System.Drawing.Point(386, 159);
             this.chart3.Name = "chart3";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(231, 279);
+            this.chart3.Size = new System.Drawing.Size(372, 167);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             // 
             // chart2
             // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(270, 6);
+            this.chart2.Location = new System.Drawing.Point(457, 7);
             this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(256, 279);
+            this.chart2.Size = new System.Drawing.Size(301, 319);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
+            title1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "3 Major Categories of Crime";
+            this.chart2.Titles.Add(title1);
             // 
             // chart1
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisX.MaximumAutoSize = 100F;
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea3.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(6, 6);
+            this.chart1.Location = new System.Drawing.Point(7, 7);
             this.chart1.Name = "chart1";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
+            series3.SmartLabelStyle.IsOverlappedHidden = false;
+            series3.YValuesPerPoint = 2;
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(258, 278);
+            this.chart1.Size = new System.Drawing.Size(444, 317);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Overview of US broken down by certain offenses";
+            this.chart1.Titles.Add(title2);
             // 
             // CrimesAgainstPersonsTab
             // 
             this.CrimesAgainstPersonsTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPersonsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstPersonsTab.Controls.Add(this.label4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewchart1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.chart4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewdataGridView3);
             this.CrimesAgainstPersonsTab.Controls.Add(this.TotalCrimesAgainstPersonsTabLabel1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.PersonsComboBox);
-            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 22);
+            this.CrimesAgainstPersonsTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstPersonsTab.Name = "CrimesAgainstPersonsTab";
-            this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(767, 330);
+            this.CrimesAgainstPersonsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CrimesAgainstPersonsTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstPersonsTab.TabIndex = 1;
             this.CrimesAgainstPersonsTab.Text = "Crimes Against Persons";
             this.CrimesAgainstPersonsTab.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.MinimumSize = new System.Drawing.Size(40, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 24);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // overviewchart1
             // 
@@ -313,7 +282,7 @@ namespace NewOrderDesign
             legend4.Name = "Legend1";
             this.overviewchart1.Legends.Add(legend4);
             this.overviewchart1.Location = new System.Drawing.Point(15, 31);
-            this.overviewchart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.overviewchart1.Margin = new System.Windows.Forms.Padding(2);
             this.overviewchart1.MinimumSize = new System.Drawing.Size(736, 276);
             this.overviewchart1.Name = "overviewchart1";
             series4.ChartArea = "ChartArea1";
@@ -323,6 +292,10 @@ namespace NewOrderDesign
             this.overviewchart1.Size = new System.Drawing.Size(736, 276);
             this.overviewchart1.TabIndex = 7;
             this.overviewchart1.Text = "chart3";
+            title3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "Total Crimes Against Persons broken down by State";
+            this.overviewchart1.Titles.Add(title3);
             // 
             // chart4
             // 
@@ -331,7 +304,7 @@ namespace NewOrderDesign
             legend5.Name = "Legend1";
             this.chart4.Legends.Add(legend5);
             this.chart4.Location = new System.Drawing.Point(273, 41);
-            this.chart4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
@@ -452,11 +425,12 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPersonsTabLabel1.Location = new System.Drawing.Point(139, 75);
             this.TotalCrimesAgainstPersonsTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstPersonsTabLabel1.Name = "TotalCrimesAgainstPersonsTabLabel1";
-            this.TotalCrimesAgainstPersonsTabLabel1.Size = new System.Drawing.Size(0, 13);
+            this.TotalCrimesAgainstPersonsTabLabel1.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPersonsTabLabel1.TabIndex = 2;
             // 
             // PersonsComboBox
             // 
+            this.PersonsComboBox.BackColor = System.Drawing.SystemColors.Control;
             this.PersonsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PersonsComboBox.FormattingEnabled = true;
             this.PersonsComboBox.Items.AddRange(new object[] {
@@ -467,7 +441,7 @@ namespace NewOrderDesign
             "Sex Offenses"});
             this.PersonsComboBox.Location = new System.Drawing.Point(7, 7);
             this.PersonsComboBox.Name = "PersonsComboBox";
-            this.PersonsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PersonsComboBox.Size = new System.Drawing.Size(121, 22);
             this.PersonsComboBox.TabIndex = 0;
             this.PersonsComboBox.SelectedIndexChanged += new System.EventHandler(this.PersonsComboBox_SelectedIndexChanged);
             // 
@@ -475,29 +449,16 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstPropertyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPropertyTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstPropertyTab.Controls.Add(this.label5);
             this.CrimesAgainstPropertyTab.Controls.Add(this.overviewchart2);
             this.CrimesAgainstPropertyTab.Controls.Add(this.overviewdataGridView2);
             this.CrimesAgainstPropertyTab.Controls.Add(this.TotalCrimesAgainstPropertyTabLabel1);
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
-            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 22);
+            this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstPropertyTab.Name = "CrimesAgainstPropertyTab";
-            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(767, 330);
+            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 31);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
             // 
             // overviewchart2
             // 
@@ -509,7 +470,7 @@ namespace NewOrderDesign
             legend6.Name = "Legend1";
             this.overviewchart2.Legends.Add(legend6);
             this.overviewchart2.Location = new System.Drawing.Point(15, 31);
-            this.overviewchart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.overviewchart2.Margin = new System.Windows.Forms.Padding(2);
             this.overviewchart2.MinimumSize = new System.Drawing.Size(736, 276);
             this.overviewchart2.Name = "overviewchart2";
             series6.ChartArea = "ChartArea1";
@@ -519,6 +480,10 @@ namespace NewOrderDesign
             this.overviewchart2.Size = new System.Drawing.Size(736, 276);
             this.overviewchart2.TabIndex = 7;
             this.overviewchart2.Text = "chart1";
+            title4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Total Crimes Against Property broken down by State";
+            this.overviewchart2.Titles.Add(title4);
             // 
             // overviewdataGridView2
             // 
@@ -688,7 +653,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstPropertyTabLabel1.Location = new System.Drawing.Point(128, 76);
             this.TotalCrimesAgainstPropertyTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstPropertyTabLabel1.Name = "TotalCrimesAgainstPropertyTabLabel1";
-            this.TotalCrimesAgainstPropertyTabLabel1.Size = new System.Drawing.Size(0, 13);
+            this.TotalCrimesAgainstPropertyTabLabel1.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPropertyTabLabel1.TabIndex = 3;
             // 
             // PropertyComboBox
@@ -708,9 +673,9 @@ namespace NewOrderDesign
             "Motor Vehicle Theft",
             "Robbery",
             "Stolen Property"});
-            this.PropertyComboBox.Location = new System.Drawing.Point(3, 3);
+            this.PropertyComboBox.Location = new System.Drawing.Point(7, 7);
             this.PropertyComboBox.Name = "PropertyComboBox";
-            this.PropertyComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PropertyComboBox.Size = new System.Drawing.Size(121, 22);
             this.PropertyComboBox.TabIndex = 0;
             this.PropertyComboBox.SelectedIndexChanged += new System.EventHandler(this.PropertyComboBox_SelectedIndexChanged);
             // 
@@ -718,29 +683,16 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstSocietyTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstSocietyTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CrimesAgainstSocietyTab.Controls.Add(this.label6);
             this.CrimesAgainstSocietyTab.Controls.Add(this.overviewchart3);
             this.CrimesAgainstSocietyTab.Controls.Add(this.dataGridView1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.TotalCrimesAgainstSocietyTabLabel1);
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
-            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 22);
+            this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 23);
             this.CrimesAgainstSocietyTab.Name = "CrimesAgainstSocietyTab";
-            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(767, 330);
+            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(767, 329);
             this.CrimesAgainstSocietyTab.TabIndex = 3;
             this.CrimesAgainstSocietyTab.Text = "Crimes Against Society";
             this.CrimesAgainstSocietyTab.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 31);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 24);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
             // 
             // overviewchart3
             // 
@@ -752,7 +704,7 @@ namespace NewOrderDesign
             legend7.Name = "Legend1";
             this.overviewchart3.Legends.Add(legend7);
             this.overviewchart3.Location = new System.Drawing.Point(15, 31);
-            this.overviewchart3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.overviewchart3.Margin = new System.Windows.Forms.Padding(2);
             this.overviewchart3.MinimumSize = new System.Drawing.Size(736, 276);
             this.overviewchart3.Name = "overviewchart3";
             series7.ChartArea = "ChartArea1";
@@ -762,6 +714,10 @@ namespace NewOrderDesign
             this.overviewchart3.Size = new System.Drawing.Size(736, 276);
             this.overviewchart3.TabIndex = 7;
             this.overviewchart3.Text = "chart2";
+            title5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "Total Crimes Against Society broken down by State";
+            this.overviewchart3.Titles.Add(title5);
             // 
             // dataGridView1
             // 
@@ -822,7 +778,7 @@ namespace NewOrderDesign
             this.TotalCrimesAgainstSocietyTabLabel1.Location = new System.Drawing.Point(128, 74);
             this.TotalCrimesAgainstSocietyTabLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalCrimesAgainstSocietyTabLabel1.Name = "TotalCrimesAgainstSocietyTabLabel1";
-            this.TotalCrimesAgainstSocietyTabLabel1.Size = new System.Drawing.Size(0, 13);
+            this.TotalCrimesAgainstSocietyTabLabel1.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstSocietyTabLabel1.TabIndex = 4;
             // 
             // SocietyComboBox
@@ -836,9 +792,9 @@ namespace NewOrderDesign
             "Pornography / Obscene Material",
             "Prostitution",
             "Weapon Law Violations"});
-            this.SocietyComboBox.Location = new System.Drawing.Point(4, 4);
+            this.SocietyComboBox.Location = new System.Drawing.Point(7, 7);
             this.SocietyComboBox.Name = "SocietyComboBox";
-            this.SocietyComboBox.Size = new System.Drawing.Size(121, 21);
+            this.SocietyComboBox.Size = new System.Drawing.Size(121, 22);
             this.SocietyComboBox.TabIndex = 0;
             this.SocietyComboBox.SelectedIndexChanged += new System.EventHandler(this.SocietyComboBox_SelectedIndexChanged);
             // 
@@ -866,16 +822,17 @@ namespace NewOrderDesign
             // 
             this.FormHeading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FormHeading.AutoSize = true;
-            this.FormHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormHeading.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormHeading.Location = new System.Drawing.Point(494, 7);
             this.FormHeading.Name = "FormHeading";
-            this.FormHeading.Size = new System.Drawing.Size(251, 46);
+            this.FormHeading.Size = new System.Drawing.Size(248, 46);
             this.FormHeading.TabIndex = 1;
             this.FormHeading.Text = "US Overview";
             // 
             // continueFBIUSView
             // 
             this.continueFBIUSView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.continueFBIUSView.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.continueFBIUSView.Location = new System.Drawing.Point(686, 405);
             this.continueFBIUSView.Name = "continueFBIUSView";
             this.continueFBIUSView.Size = new System.Drawing.Size(101, 34);
@@ -886,16 +843,18 @@ namespace NewOrderDesign
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::NewOrderDesign.Properties.Resources.BackButton;
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(16, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(9, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 38);
+            this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 12;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // crimes_Against_Persons_Offenses_Offense_Category_by_State_2020TableAdapter
@@ -940,7 +899,6 @@ namespace NewOrderDesign
             this.Load += new System.EventHandler(this.USOverview_Load);
             this.tabControl1.ResumeLayout(false);
             this.OverviewTab.ResumeLayout(false);
-            this.OverviewTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -1038,12 +996,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }
