@@ -64,6 +64,7 @@ namespace NewOrderDesign
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.statesTableAdapter5 = new NewOrderDesign.CovidDataDataSet5TableAdapters.statesTableAdapter();
+            this.Export_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
@@ -314,25 +315,13 @@ namespace NewOrderDesign
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // Export_button
-            // 
-            this.Export_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Export_button.Location = new System.Drawing.Point(832, 376);
-            this.Export_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Export_button.Name = "Export_button";
-            this.Export_button.Size = new System.Drawing.Size(87, 33);
-            this.Export_button.TabIndex = 14;
-            this.Export_button.Text = "Export\r\n";
-            this.Export_button.UseVisualStyleBackColor = true;
-            this.Export_button.Click += new System.EventHandler(this.Export_button_Click);
-            // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.Location = new System.Drawing.Point(10, 377);
+            this.button6.Location = new System.Drawing.Point(9, 438);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 32);
+            this.button6.Size = new System.Drawing.Size(115, 39);
             this.button6.TabIndex = 15;
             this.button6.Text = "State with most cases\r\n";
             this.button6.UseVisualStyleBackColor = true;
@@ -355,6 +344,19 @@ namespace NewOrderDesign
             // 
             this.statesTableAdapter5.ClearBeforeFill = true;
             // 
+            // Export_button
+            // 
+            this.Export_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Export_button.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Export_button.Location = new System.Drawing.Point(811, 438);
+            this.Export_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Export_button.Name = "Export_button";
+            this.Export_button.Size = new System.Drawing.Size(109, 39);
+            this.Export_button.TabIndex = 18;
+            this.Export_button.Text = "Export";
+            this.Export_button.UseVisualStyleBackColor = true;
+            this.Export_button.Click += new System.EventHandler(this.Export_button_Click_1);
+            // 
             // CovidStateData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -363,6 +365,7 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 492);
+            this.Controls.Add(this.Export_button);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
@@ -434,5 +437,6 @@ namespace NewOrderDesign
         private CovidDataDataSet5 covidDataDataSet5;
         private System.Windows.Forms.BindingSource statesBindingSource5;
         private CovidDataDataSet5TableAdapters.statesTableAdapter statesTableAdapter5;
+        private System.Windows.Forms.Button Export_button;
     }
 }

@@ -29,28 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CovidUSOverview));
             this.button2 = new System.Windows.Forms.Button();
             this.FormHeading = new System.Windows.Forms.Label();
             this.OverviewTab = new System.Windows.Forms.TabPage();
+            this.Covid19_State_Death_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Covid19_State_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.CovidUSTotalLabel2 = new System.Windows.Forms.Label();
-            this.CovidUSTotalLabel = new System.Windows.Forms.Label();
-            this.TotalConfirmedDeaths = new System.Windows.Forms.Label();
-            this.TotalConfirmedCases = new System.Windows.Forms.Label();
             this.Covid19Table = new System.Windows.Forms.DataGridView();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statenameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmedcasesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deathsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet7 = new NewOrderDesign.CovidDataDataSet7();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,34 +62,27 @@
             this.covidDataDataSet6 = new NewOrderDesign.CovidDataDataSet6();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Covid19_State_Selection_Death_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Covid19_State_Selection_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.TotalStateCovidResultsLabel2 = new System.Windows.Forms.Label();
             this.TotalStateCovidResultsLabel1 = new System.Windows.Forms.Label();
             this.TotalStateCovidLabel1 = new System.Windows.Forms.Label();
             this.PersonsComboBox = new System.Windows.Forms.ComboBox();
             this.RawDataButton = new System.Windows.Forms.Button();
             this.statesTableAdapter = new NewOrderDesign.CovidDataDataSet6TableAdapters.statesTableAdapter();
-            this.covidDataDataSet7 = new NewOrderDesign.CovidDataDataSet7();
-            this.statesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter1 = new NewOrderDesign.CovidDataDataSet7TableAdapters.statesTableAdapter();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statenameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmedcasesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deathsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Covid19_State_Selection_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Covid19_State_Death_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Covid19_State_Selection_Death_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.OverviewTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Death_Chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19Table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet6)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Death_Chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Death_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Chart)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -95,7 +91,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(9, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 13;
@@ -110,7 +106,7 @@
             this.FormHeading.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormHeading.Location = new System.Drawing.Point(250, 1);
             this.FormHeading.Name = "FormHeading";
-            this.FormHeading.Size = new System.Drawing.Size(416, 46);
+            this.FormHeading.Size = new System.Drawing.Size(518, 58);
             this.FormHeading.TabIndex = 14;
             this.FormHeading.Text = "Covid-19 US Overview\r\n";
             // 
@@ -120,23 +116,47 @@
             this.OverviewTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OverviewTab.Controls.Add(this.Covid19_State_Death_Chart);
             this.OverviewTab.Controls.Add(this.Covid19_State_Chart);
-            this.OverviewTab.Controls.Add(this.CovidUSTotalLabel2);
-            this.OverviewTab.Controls.Add(this.CovidUSTotalLabel);
-            this.OverviewTab.Controls.Add(this.TotalConfirmedDeaths);
-            this.OverviewTab.Controls.Add(this.TotalConfirmedCases);
             this.OverviewTab.Controls.Add(this.Covid19Table);
-            this.OverviewTab.Location = new System.Drawing.Point(4, 25);
+            this.OverviewTab.Location = new System.Drawing.Point(4, 26);
             this.OverviewTab.Margin = new System.Windows.Forms.Padding(4);
             this.OverviewTab.Name = "OverviewTab";
-            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.OverviewTab.Size = new System.Drawing.Size(896, 356);
+            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
+            this.OverviewTab.Size = new System.Drawing.Size(896, 353);
             this.OverviewTab.TabIndex = 0;
             this.OverviewTab.Text = "Overview";
             this.OverviewTab.UseVisualStyleBackColor = true;
             this.OverviewTab.Click += new System.EventHandler(this.OverviewTab_Click);
             // 
+            // Covid19_State_Death_Chart
+            // 
+            this.Covid19_State_Death_Chart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.Covid19_State_Death_Chart.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.Covid19_State_Death_Chart.Legends.Add(legend1);
+            this.Covid19_State_Death_Chart.Location = new System.Drawing.Point(7, 173);
+            this.Covid19_State_Death_Chart.Name = "Covid19_State_Death_Chart";
+            series1.BorderColor = System.Drawing.Color.Red;
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Red;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Deaths over Time";
+            series1.Name = "Series1";
+            this.Covid19_State_Death_Chart.Series.Add(series1);
+            this.Covid19_State_Death_Chart.Size = new System.Drawing.Size(883, 177);
+            this.Covid19_State_Death_Chart.TabIndex = 9;
+            this.Covid19_State_Death_Chart.Text = "chart1";
+            // 
             // Covid19_State_Chart
             // 
+            this.Covid19_State_Chart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.Covid19_State_Chart.ChartAreas.Add(chartArea2);
             legend2.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,47 +172,9 @@
             series2.LegendText = "Cases over Time";
             series2.Name = "Series1";
             this.Covid19_State_Chart.Series.Add(series2);
-            this.Covid19_State_Chart.Size = new System.Drawing.Size(1015, 189);
+            this.Covid19_State_Chart.Size = new System.Drawing.Size(883, 160);
             this.Covid19_State_Chart.TabIndex = 7;
             this.Covid19_State_Chart.Text = "chart1";
-            // 
-            // CovidUSTotalLabel2
-            // 
-            this.CovidUSTotalLabel2.AutoSize = true;
-            this.CovidUSTotalLabel2.Location = new System.Drawing.Point(338, 157);
-            this.CovidUSTotalLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CovidUSTotalLabel2.Name = "CovidUSTotalLabel2";
-            this.CovidUSTotalLabel2.Size = new System.Drawing.Size(0, 14);
-            this.CovidUSTotalLabel2.TabIndex = 5;
-            // 
-            // CovidUSTotalLabel
-            // 
-            this.CovidUSTotalLabel.AutoSize = true;
-            this.CovidUSTotalLabel.Location = new System.Drawing.Point(338, 59);
-            this.CovidUSTotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CovidUSTotalLabel.Name = "CovidUSTotalLabel";
-            this.CovidUSTotalLabel.Size = new System.Drawing.Size(0, 14);
-            this.CovidUSTotalLabel.TabIndex = 4;
-            // 
-            // TotalConfirmedDeaths
-            // 
-            this.TotalConfirmedDeaths.AutoSize = true;
-            this.TotalConfirmedDeaths.Location = new System.Drawing.Point(48, 157);
-            this.TotalConfirmedDeaths.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TotalConfirmedDeaths.Name = "TotalConfirmedDeaths";
-            this.TotalConfirmedDeaths.Size = new System.Drawing.Size(289, 14);
-            this.TotalConfirmedDeaths.TabIndex = 1;
-            this.TotalConfirmedDeaths.Text = "Total Reports for Covid-19 confirmed deaths (US)\r\n";
-            // 
-            // TotalConfirmedCases
-            // 
-            this.TotalConfirmedCases.AutoSize = true;
-            this.TotalConfirmedCases.Location = new System.Drawing.Point(48, 59);
-            this.TotalConfirmedCases.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TotalConfirmedCases.Name = "TotalConfirmedCases";
-            this.TotalConfirmedCases.Size = new System.Drawing.Size(284, 28);
-            this.TotalConfirmedCases.TabIndex = 0;
-            this.TotalConfirmedCases.Text = "Total Reports for Covid-19 confirmed cases (US):\r\n\r\n";
             // 
             // Covid19Table
             // 
@@ -204,12 +186,54 @@
             this.confirmedcasesDataGridViewTextBoxColumn1,
             this.deathsDataGridViewTextBoxColumn1});
             this.Covid19Table.DataSource = this.statesBindingSource1;
-            this.Covid19Table.Location = new System.Drawing.Point(778, 26);
+            this.Covid19Table.Location = new System.Drawing.Point(613, 7);
             this.Covid19Table.Name = "Covid19Table";
             this.Covid19Table.RowHeadersWidth = 51;
             this.Covid19Table.Size = new System.Drawing.Size(240, 150);
             this.Covid19Table.TabIndex = 8;
             this.Covid19Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GetData_CellContentClick);
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // statenameDataGridViewTextBoxColumn1
+            // 
+            this.statenameDataGridViewTextBoxColumn1.DataPropertyName = "state_name";
+            this.statenameDataGridViewTextBoxColumn1.HeaderText = "state_name";
+            this.statenameDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.statenameDataGridViewTextBoxColumn1.Name = "statenameDataGridViewTextBoxColumn1";
+            this.statenameDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // confirmedcasesDataGridViewTextBoxColumn1
+            // 
+            this.confirmedcasesDataGridViewTextBoxColumn1.DataPropertyName = "confirmed_cases";
+            this.confirmedcasesDataGridViewTextBoxColumn1.HeaderText = "confirmed_cases";
+            this.confirmedcasesDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.confirmedcasesDataGridViewTextBoxColumn1.Name = "confirmedcasesDataGridViewTextBoxColumn1";
+            this.confirmedcasesDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // deathsDataGridViewTextBoxColumn1
+            // 
+            this.deathsDataGridViewTextBoxColumn1.DataPropertyName = "deaths";
+            this.deathsDataGridViewTextBoxColumn1.HeaderText = "deaths";
+            this.deathsDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.deathsDataGridViewTextBoxColumn1.Name = "deathsDataGridViewTextBoxColumn1";
+            this.deathsDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // statesBindingSource1
+            // 
+            this.statesBindingSource1.DataMember = "states";
+            this.statesBindingSource1.DataSource = this.covidDataDataSet7;
+            // 
+            // covidDataDataSet7
+            // 
+            this.covidDataDataSet7.DataSetName = "CovidDataDataSet7";
+            this.covidDataDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -276,13 +300,64 @@
             this.tabPage1.Controls.Add(this.TotalStateCovidResultsLabel1);
             this.tabPage1.Controls.Add(this.TotalStateCovidLabel1);
             this.tabPage1.Controls.Add(this.PersonsComboBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(896, 357);
+            this.tabPage1.Size = new System.Drawing.Size(896, 353);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "StateSelector";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Covid19_State_Selection_Death_Chart
+            // 
+            this.Covid19_State_Selection_Death_Chart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Covid19_State_Selection_Death_Chart.BorderlineColor = System.Drawing.Color.Red;
+            chartArea3.BorderColor = System.Drawing.Color.Red;
+            chartArea3.Name = "ChartArea1";
+            this.Covid19_State_Selection_Death_Chart.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            this.Covid19_State_Selection_Death_Chart.Legends.Add(legend3);
+            this.Covid19_State_Selection_Death_Chart.Location = new System.Drawing.Point(3, 203);
+            this.Covid19_State_Selection_Death_Chart.Name = "Covid19_State_Selection_Death_Chart";
+            series3.BorderColor = System.Drawing.Color.Red;
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.LegendText = "Deaths over Time";
+            series3.Name = "Series1";
+            this.Covid19_State_Selection_Death_Chart.Series.Add(series3);
+            this.Covid19_State_Selection_Death_Chart.Size = new System.Drawing.Size(890, 147);
+            this.Covid19_State_Selection_Death_Chart.TabIndex = 10;
+            this.Covid19_State_Selection_Death_Chart.Text = "chart1";
+            // 
+            // Covid19_State_Selection_Chart
+            // 
+            this.Covid19_State_Selection_Chart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.Covid19_State_Selection_Chart.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Georgia", 8F, System.Drawing.FontStyle.Bold);
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.Covid19_State_Selection_Chart.Legends.Add(legend4);
+            this.Covid19_State_Selection_Chart.Location = new System.Drawing.Point(3, 33);
+            this.Covid19_State_Selection_Chart.Name = "Covid19_State_Selection_Chart";
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.LegendText = "Cases over Time";
+            series4.Name = "Series1";
+            this.Covid19_State_Selection_Chart.Series.Add(series4);
+            this.Covid19_State_Selection_Chart.Size = new System.Drawing.Size(890, 164);
+            this.Covid19_State_Selection_Chart.TabIndex = 9;
+            this.Covid19_State_Selection_Chart.Text = "chart1";
             // 
             // TotalStateCovidResultsLabel2
             // 
@@ -290,7 +365,7 @@
             this.TotalStateCovidResultsLabel2.Location = new System.Drawing.Point(416, 180);
             this.TotalStateCovidResultsLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalStateCovidResultsLabel2.Name = "TotalStateCovidResultsLabel2";
-            this.TotalStateCovidResultsLabel2.Size = new System.Drawing.Size(0, 14);
+            this.TotalStateCovidResultsLabel2.Size = new System.Drawing.Size(0, 17);
             this.TotalStateCovidResultsLabel2.TabIndex = 8;
             // 
             // TotalStateCovidResultsLabel1
@@ -299,19 +374,8 @@
             this.TotalStateCovidResultsLabel1.Location = new System.Drawing.Point(416, 82);
             this.TotalStateCovidResultsLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalStateCovidResultsLabel1.Name = "TotalStateCovidResultsLabel1";
-            this.TotalStateCovidResultsLabel1.Size = new System.Drawing.Size(0, 14);
+            this.TotalStateCovidResultsLabel1.Size = new System.Drawing.Size(0, 17);
             this.TotalStateCovidResultsLabel1.TabIndex = 7;
-            // 
-            // TotalStateCovidLabel2
-            // 
-            this.TotalStateCovidLabel2.AutoSize = true;
-            this.TotalStateCovidLabel2.Location = new System.Drawing.Point(189, 180);
-            this.TotalStateCovidLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TotalStateCovidLabel2.Name = "TotalStateCovidLabel2";
-            this.TotalStateCovidLabel2.Size = new System.Drawing.Size(199, 14);
-            this.TotalStateCovidLabel2.TabIndex = 6;
-            this.TotalStateCovidLabel2.Text = "Total Covid-19 confirmed deaths:";
-            this.TotalStateCovidLabel2.Click += new System.EventHandler(this.label5_Click);
             // 
             // TotalStateCovidLabel1
             // 
@@ -319,7 +383,7 @@
             this.TotalStateCovidLabel1.Location = new System.Drawing.Point(189, 82);
             this.TotalStateCovidLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalStateCovidLabel1.Name = "TotalStateCovidLabel1";
-            this.TotalStateCovidLabel1.Size = new System.Drawing.Size(190, 28);
+            this.TotalStateCovidLabel1.Size = new System.Drawing.Size(210, 34);
             this.TotalStateCovidLabel1.TabIndex = 5;
             this.TotalStateCovidLabel1.Text = "Total Covid-19 confirmed cases:\r\n\r\n";
             // 
@@ -381,7 +445,7 @@
             "Wyoming"});
             this.PersonsComboBox.Location = new System.Drawing.Point(3, 3);
             this.PersonsComboBox.Name = "PersonsComboBox";
-            this.PersonsComboBox.Size = new System.Drawing.Size(140, 22);
+            this.PersonsComboBox.Size = new System.Drawing.Size(140, 25);
             this.PersonsComboBox.TabIndex = 1;
             this.PersonsComboBox.SelectedIndexChanged += new System.EventHandler(this.PersonsComboBox_SelectedIndexChanged);
             // 
@@ -390,7 +454,7 @@
             this.RawDataButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.RawDataButton.AutoSize = true;
             this.RawDataButton.Location = new System.Drawing.Point(810, 446);
-            this.RawDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RawDataButton.Margin = new System.Windows.Forms.Padding(2);
             this.RawDataButton.Name = "RawDataButton";
             this.RawDataButton.Size = new System.Drawing.Size(106, 29);
             this.RawDataButton.TabIndex = 9;
@@ -402,123 +466,13 @@
             // 
             this.statesTableAdapter.ClearBeforeFill = true;
             // 
-            // covidDataDataSet7
-            // 
-            this.covidDataDataSet7.DataSetName = "CovidDataDataSet7";
-            this.covidDataDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // statesBindingSource1
-            // 
-            this.statesBindingSource1.DataMember = "states";
-            this.statesBindingSource1.DataSource = this.covidDataDataSet7;
-            // 
             // statesTableAdapter1
             // 
             this.statesTableAdapter1.ClearBeforeFill = true;
             // 
-            // dateDataGridViewTextBoxColumn1
-            // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // statenameDataGridViewTextBoxColumn1
-            // 
-            this.statenameDataGridViewTextBoxColumn1.DataPropertyName = "state_name";
-            this.statenameDataGridViewTextBoxColumn1.HeaderText = "state_name";
-            this.statenameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.statenameDataGridViewTextBoxColumn1.Name = "statenameDataGridViewTextBoxColumn1";
-            this.statenameDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // confirmedcasesDataGridViewTextBoxColumn1
-            // 
-            this.confirmedcasesDataGridViewTextBoxColumn1.DataPropertyName = "confirmed_cases";
-            this.confirmedcasesDataGridViewTextBoxColumn1.HeaderText = "confirmed_cases";
-            this.confirmedcasesDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.confirmedcasesDataGridViewTextBoxColumn1.Name = "confirmedcasesDataGridViewTextBoxColumn1";
-            this.confirmedcasesDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // deathsDataGridViewTextBoxColumn1
-            // 
-            this.deathsDataGridViewTextBoxColumn1.DataPropertyName = "deaths";
-            this.deathsDataGridViewTextBoxColumn1.HeaderText = "deaths";
-            this.deathsDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.deathsDataGridViewTextBoxColumn1.Name = "deathsDataGridViewTextBoxColumn1";
-            this.deathsDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // Covid19_State_Selection_Chart
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.Covid19_State_Selection_Chart.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Georgia", 8F, System.Drawing.FontStyle.Bold);
-            legend4.Name = "Legend1";
-            this.Covid19_State_Selection_Chart.Legends.Add(legend4);
-            this.Covid19_State_Selection_Chart.Location = new System.Drawing.Point(171, 4);
-            this.Covid19_State_Selection_Chart.Name = "Covid19_State_Selection_Chart";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.LegendText = "Cases over Time";
-            series4.Name = "Series1";
-            this.Covid19_State_Selection_Chart.Series.Add(series4);
-            this.Covid19_State_Selection_Chart.Size = new System.Drawing.Size(851, 199);
-            this.Covid19_State_Selection_Chart.TabIndex = 9;
-            this.Covid19_State_Selection_Chart.Text = "chart1";
-            // 
-            // Covid19_State_Death_Chart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.Covid19_State_Death_Chart.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.Covid19_State_Death_Chart.Legends.Add(legend1);
-            this.Covid19_State_Death_Chart.Location = new System.Drawing.Point(7, 202);
-            this.Covid19_State_Death_Chart.Name = "Covid19_State_Death_Chart";
-            series1.BorderColor = System.Drawing.Color.Red;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Deaths over Time";
-            series1.Name = "Series1";
-            this.Covid19_State_Death_Chart.Series.Add(series1);
-            this.Covid19_State_Death_Chart.Size = new System.Drawing.Size(1011, 200);
-            this.Covid19_State_Death_Chart.TabIndex = 9;
-            this.Covid19_State_Death_Chart.Text = "chart1";
-            // 
-            // Covid19_State_Selection_Death_Chart
-            // 
-            this.Covid19_State_Selection_Death_Chart.BorderlineColor = System.Drawing.Color.Red;
-            chartArea3.BorderColor = System.Drawing.Color.Red;
-            chartArea3.Name = "ChartArea1";
-            this.Covid19_State_Selection_Death_Chart.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            this.Covid19_State_Selection_Death_Chart.Legends.Add(legend3);
-            this.Covid19_State_Selection_Death_Chart.Location = new System.Drawing.Point(171, 209);
-            this.Covid19_State_Selection_Death_Chart.Name = "Covid19_State_Selection_Death_Chart";
-            series3.BorderColor = System.Drawing.Color.Red;
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Deaths over Time";
-            series3.Name = "Series1";
-            this.Covid19_State_Selection_Death_Chart.Series.Add(series3);
-            this.Covid19_State_Selection_Death_Chart.Size = new System.Drawing.Size(851, 197);
-            this.Covid19_State_Selection_Death_Chart.TabIndex = 10;
-            this.Covid19_State_Selection_Death_Chart.Text = "chart1";
-            // 
             // CovidUSOverview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(936, 492);
@@ -528,7 +482,7 @@
             this.Controls.Add(this.button2);
             this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(952, 531);
             this.Name = "CovidUSOverview";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -536,19 +490,18 @@
             this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.CovidUSOverview_Load);
             this.OverviewTab.ResumeLayout(false);
-            this.OverviewTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Death_Chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19Table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet6)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Death_Chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Death_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Covid19_State_Selection_Chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,8 +512,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label FormHeading;
         private System.Windows.Forms.TabPage OverviewTab;
-        private System.Windows.Forms.Label TotalConfirmedDeaths;
-        private System.Windows.Forms.Label TotalConfirmedCases;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox PersonsComboBox;
@@ -568,8 +519,6 @@
         private System.Windows.Forms.Label TotalStateCovidResultsLabel1;
         private System.Windows.Forms.Label TotalStateCovidLabel1;
         private System.Windows.Forms.Button RawDataButton;
-        private System.Windows.Forms.Label CovidUSTotalLabel2;
-        private System.Windows.Forms.Label CovidUSTotalLabel;
         private System.Windows.Forms.DataGridView Covid19Table;
         private CovidDataDataSet6 covidDataDataSet6;
         private System.Windows.Forms.BindingSource statesBindingSource;

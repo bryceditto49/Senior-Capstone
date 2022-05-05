@@ -112,7 +112,7 @@ namespace NewOrderDesign
                     //Covid19_State_Chart.Legends[1].Enabled = true;
                     //Covid19_State_Chart.ChartAreas[1].Area3DStyle.Enable3D = false;
                     //Covid19_State_Chart.ChartAreas[1].AxisX.Interval = 1;
-
+                    Covid19Table.Hide();
                     conn.Close();
                 }
             }
