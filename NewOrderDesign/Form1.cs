@@ -24,6 +24,10 @@ namespace NewOrderDesign
         private void Form1_Load(object sender, EventArgs e)
         {
             oldsize = base.Size;
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,7 +71,8 @@ namespace NewOrderDesign
                                 sqlCmd.ExecuteNonQuery();
                                 MessageBox.Show("Registration is complete");
                                 Clear();
-                                this.Hide(); 
+                                this.Hide();
+                                Form6.fullscreencheck(this);
                                 Form6 form6 = new Form6();
                                 form6.Show();
                             }

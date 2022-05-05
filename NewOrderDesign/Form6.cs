@@ -16,7 +16,7 @@ namespace NewOrderDesign
 {
     public partial class Form6 : Form
     {
-        
+        public static int fullscreentoggle;
         string conn = (@"Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=Credentials;User ID=apeuser2;Password=daylonswallows1234");
         public Form6()
         {
@@ -28,6 +28,7 @@ namespace NewOrderDesign
         {
             button2_Clicked = true;
             this.Hide();
+            fullscreencheck(this);
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
@@ -93,6 +94,7 @@ namespace NewOrderDesign
                     DataSet ds = new DataSet();
                     adpt.Fill(ds);
                     con.Close();
+                    fullscreencheck(this);
 
                     int count = ds.Tables[0].Rows.Count;
                     if (count == 1)
@@ -109,6 +111,22 @@ namespace NewOrderDesign
                 }
         }
 
+        public static void fullscreencheck(Form form)
+        {
+            int n = 1;
+            while (n == 1)
+            {
+                if (form.WindowState == FormWindowState.Maximized)
+                {
+                    fullscreentoggle = 1;
+                }
+                else
+                {
+                    fullscreentoggle = 0;
+                }
+                n = n + 1;
+            }
+        }
         private void btregis_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -130,6 +148,10 @@ namespace NewOrderDesign
         private Size oldsize;
         private void Form6_Load(object sender, EventArgs e)
         {
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             oldsize = base.Size; 
             if (Properties.Settings.Default.Username != string.Empty)
             {
