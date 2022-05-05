@@ -103,6 +103,7 @@ namespace NewOrderDesign
             this.fBIDataSet5BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1 = new NewOrderDesign.FBIDataSet5TableAdapters.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fBIDataSet5)).BeginInit();
@@ -305,7 +306,7 @@ namespace NewOrderDesign
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(9, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 12;
@@ -324,7 +325,7 @@ namespace NewOrderDesign
             "Crimes Against Property",
             "Crimes Against Society"});
             this.comboBox1.Location = new System.Drawing.Point(75, 62);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(185, 22);
             this.comboBox1.TabIndex = 13;
@@ -639,7 +640,7 @@ namespace NewOrderDesign
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(75, 5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(473, 13);
@@ -700,6 +701,17 @@ namespace NewOrderDesign
             // 
             this.crimes_Against_Society_Offenses_Offense_Category_by_State_2020TableAdapter1.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(708, 413);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 32);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Export";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FBIViewMore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -707,6 +719,7 @@ namespace NewOrderDesign
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(802, 457);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
@@ -826,5 +839,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.DataGridViewTextBoxColumn weaponLawViolationsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource2;
         private System.Windows.Forms.BindingSource fBIDataSet5BindingSource3;
+        private System.Windows.Forms.Button button1;
     }
 }
