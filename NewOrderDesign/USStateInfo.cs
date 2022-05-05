@@ -21,6 +21,10 @@ namespace NewOrderDesign
         public USStateInfo()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             PersonsComboBox.SelectedItem = "Alabama";
             PropertyComboBox.SelectedItem = "Alabama";
             SocietyComboBox.SelectedItem = "Alabama";
@@ -152,14 +156,18 @@ namespace NewOrderDesign
         private void continueFBIStateView_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             FBIViewMore form4 = new FBIViewMore();
+            
             form4.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USOverview form2 = new USOverview();
+            
             form2.Show();
         }
 

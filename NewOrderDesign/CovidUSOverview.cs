@@ -28,6 +28,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
@@ -81,12 +82,17 @@ namespace NewOrderDesign
         private void RawDataButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             CovidStateData CovidStateData = new CovidStateData();
             CovidStateData.Show();
         }
 
         private void CovidUSOverview_Load(object sender, EventArgs e)
         {
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             string connString = @"Server = 173.217.234.232\SQLEXPRESS,20222; Database = CovidData; User Id = apeuser2; Password = daylonswallows1234;";
             try
             {

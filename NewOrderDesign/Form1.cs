@@ -14,6 +14,7 @@ namespace NewOrderDesign
 {
     public partial class Form1 : Form
     {
+
         string connectionString = (@"Data Source=173.217.234.232\SQLEXPRESS,20222;Initial Catalog=Credentials;User ID=apeuser2;Password=daylonswallows1234");
         public Form1()
         {
@@ -24,6 +25,10 @@ namespace NewOrderDesign
         private void Form1_Load(object sender, EventArgs e)
         {
             oldsize = base.Size;
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +74,7 @@ namespace NewOrderDesign
                                 Clear();
                                 this.Hide(); 
                                 Form6 form6 = new Form6();
+                                Form6.fullscreencheck(this);
                                 form6.Show();
                             }
                         }

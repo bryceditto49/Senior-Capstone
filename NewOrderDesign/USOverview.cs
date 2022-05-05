@@ -46,6 +46,10 @@ namespace NewOrderDesign
     public USOverview()
         {
             InitializeComponent();
+            if (Form6.fullscreentoggle == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             PersonsComboBox.SelectedItem = "Assault";
             PropertyComboBox.SelectedItem = "Arson";
             SocietyComboBox.SelectedItem = "Animal Cruelty";
@@ -373,6 +377,7 @@ namespace NewOrderDesign
         private void continueFBIUSView_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             USStateInfo form4 = new USStateInfo();
             form4.Show();
         }
@@ -380,6 +385,7 @@ namespace NewOrderDesign
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form6.fullscreencheck(this);
             DataSelection form2 = new DataSelection();
             form2.Show();
         }
@@ -905,14 +911,17 @@ namespace NewOrderDesign
             }
         }
 
-
-
         private void OverviewTab_Click(object sender, EventArgs e)
         {
 
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

@@ -286,7 +286,7 @@ namespace NewOrderDesign
             this.continueFBIStateView.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.continueFBIStateView.Location = new System.Drawing.Point(686, 409);
             this.continueFBIStateView.Name = "continueFBIStateView";
-            this.continueFBIStateView.Size = new System.Drawing.Size(101, 34);
+            this.continueFBIStateView.Size = new System.Drawing.Size(135, 42);
             this.continueFBIStateView.TabIndex = 15;
             this.continueFBIStateView.Text = "View Data";
             this.continueFBIStateView.UseVisualStyleBackColor = true;
@@ -305,7 +305,7 @@ namespace NewOrderDesign
             this.tabControl1.MinimumSize = new System.Drawing.Size(775, 356);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(775, 356);
+            this.tabControl1.Size = new System.Drawing.Size(1033, 438);
             this.tabControl1.TabIndex = 13;
             // 
             // CrimesAgainstPersonsTab
@@ -509,12 +509,12 @@ namespace NewOrderDesign
             this.kidnappingAbductionDataGridViewTextBoxColumn1,
             this.sexOffensesDataGridViewTextBoxColumn1});
             this.dataGridView4.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource1;
-            this.dataGridView4.Location = new System.Drawing.Point(560, 159);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Location = new System.Drawing.Point(747, 196);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView4.Size = new System.Drawing.Size(240, 150);
             this.dataGridView4.TabIndex = 14;
             // 
             // stateDataGridViewTextBoxColumn3
@@ -625,6 +625,7 @@ namespace NewOrderDesign
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(723, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -637,8 +638,7 @@ namespace NewOrderDesign
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(697, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(929, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 14);
             this.label3.TabIndex = 11;
@@ -648,8 +648,7 @@ namespace NewOrderDesign
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(637, 40);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(849, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 14);
             this.label2.TabIndex = 10;
@@ -659,8 +658,7 @@ namespace NewOrderDesign
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(637, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(849, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 14);
             this.label1.TabIndex = 9;
@@ -681,12 +679,12 @@ namespace NewOrderDesign
             this.kidnappingAbductionDataGridViewTextBoxColumn,
             this.sexOffensesDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.crimesAgainstPersonsOffensesOffenseCategorybyState2020BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(560, 210);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(747, 258);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 6;
             // 
             // stateDataGridViewTextBoxColumn
@@ -779,8 +777,7 @@ namespace NewOrderDesign
             // TotalCrimesAgainstPersonsStateTotal
             // 
             this.TotalCrimesAgainstPersonsStateTotal.AutoSize = true;
-            this.TotalCrimesAgainstPersonsStateTotal.Location = new System.Drawing.Point(139, 75);
-            this.TotalCrimesAgainstPersonsStateTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCrimesAgainstPersonsStateTotal.Location = new System.Drawing.Point(185, 92);
             this.TotalCrimesAgainstPersonsStateTotal.Name = "TotalCrimesAgainstPersonsStateTotal";
             this.TotalCrimesAgainstPersonsStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPersonsStateTotal.TabIndex = 2;
@@ -838,7 +835,8 @@ namespace NewOrderDesign
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.PersonsComboBox.Location = new System.Drawing.Point(7, 7);
+            this.PersonsComboBox.Location = new System.Drawing.Point(9, 9);
+            this.PersonsComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PersonsComboBox.Name = "PersonsComboBox";
             this.PersonsComboBox.Size = new System.Drawing.Size(121, 22);
             this.PersonsComboBox.TabIndex = 0;
@@ -1091,6 +1089,225 @@ namespace NewOrderDesign
             // 
             // stateDataGridViewTextBoxColumn4
             // 
+            this.dataGridView8.AutoGenerateColumns = false;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stateDataGridViewTextBoxColumn8,
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8,
+            this.populationCoveredDataGridViewTextBoxColumn8,
+            this.totalOffensesDataGridViewTextBoxColumn8,
+            this.arsonDataGridViewTextBoxColumn2,
+            this.briberyDataGridViewTextBoxColumn2,
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2,
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2,
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2,
+            this.embezzlementDataGridViewTextBoxColumn2,
+            this.extortionBlackmailDataGridViewTextBoxColumn2,
+            this.fraudOffensesDataGridViewTextBoxColumn2,
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2,
+            this.motorVehicleTheftDataGridViewTextBoxColumn2,
+            this.robberyDataGridViewTextBoxColumn2,
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2,
+            this.percentagesDataGridViewTextBoxColumn2});
+            this.dataGridView8.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3;
+            this.dataGridView8.Location = new System.Drawing.Point(763, 114);
+            this.dataGridView8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.RowHeadersWidth = 51;
+            this.dataGridView8.Size = new System.Drawing.Size(240, 185);
+            this.dataGridView8.TabIndex = 13;
+            // 
+            // stateDataGridViewTextBoxColumn8
+            // 
+            this.stateDataGridViewTextBoxColumn8.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn8.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn8.Name = "stateDataGridViewTextBoxColumn8";
+            this.stateDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // numberofParticipatingAgenciesDataGridViewTextBoxColumn8
+            // 
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.DataPropertyName = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.HeaderText = "Number_of_Participating_Agencies";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.Name = "numberofParticipatingAgenciesDataGridViewTextBoxColumn8";
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // populationCoveredDataGridViewTextBoxColumn8
+            // 
+            this.populationCoveredDataGridViewTextBoxColumn8.DataPropertyName = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn8.HeaderText = "Population_Covered";
+            this.populationCoveredDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.populationCoveredDataGridViewTextBoxColumn8.Name = "populationCoveredDataGridViewTextBoxColumn8";
+            this.populationCoveredDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // totalOffensesDataGridViewTextBoxColumn8
+            // 
+            this.totalOffensesDataGridViewTextBoxColumn8.DataPropertyName = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn8.HeaderText = "Total_Offenses";
+            this.totalOffensesDataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.totalOffensesDataGridViewTextBoxColumn8.Name = "totalOffensesDataGridViewTextBoxColumn8";
+            this.totalOffensesDataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // arsonDataGridViewTextBoxColumn2
+            // 
+            this.arsonDataGridViewTextBoxColumn2.DataPropertyName = "Arson";
+            this.arsonDataGridViewTextBoxColumn2.HeaderText = "Arson";
+            this.arsonDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.arsonDataGridViewTextBoxColumn2.Name = "arsonDataGridViewTextBoxColumn2";
+            this.arsonDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // briberyDataGridViewTextBoxColumn2
+            // 
+            this.briberyDataGridViewTextBoxColumn2.DataPropertyName = "Bribery";
+            this.briberyDataGridViewTextBoxColumn2.HeaderText = "Bribery";
+            this.briberyDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.briberyDataGridViewTextBoxColumn2.Name = "briberyDataGridViewTextBoxColumn2";
+            this.briberyDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // burglaryBreakingEnteringDataGridViewTextBoxColumn2
+            // 
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.DataPropertyName = "Burglary_Breaking_Entering";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.HeaderText = "Burglary_Breaking_Entering";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.Name = "burglaryBreakingEnteringDataGridViewTextBoxColumn2";
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // counterfeitingForgeryDataGridViewTextBoxColumn2
+            // 
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.DataPropertyName = "Counterfeiting_Forgery";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.HeaderText = "Counterfeiting_Forgery";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.Name = "counterfeitingForgeryDataGridViewTextBoxColumn2";
+            this.counterfeitingForgeryDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // destructionDamageVandalismDataGridViewTextBoxColumn2
+            // 
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.DataPropertyName = "Destruction_Damage_Vandalism";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.HeaderText = "Destruction_Damage_Vandalism";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.Name = "destructionDamageVandalismDataGridViewTextBoxColumn2";
+            this.destructionDamageVandalismDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // embezzlementDataGridViewTextBoxColumn2
+            // 
+            this.embezzlementDataGridViewTextBoxColumn2.DataPropertyName = "Embezzlement";
+            this.embezzlementDataGridViewTextBoxColumn2.HeaderText = "Embezzlement";
+            this.embezzlementDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.embezzlementDataGridViewTextBoxColumn2.Name = "embezzlementDataGridViewTextBoxColumn2";
+            this.embezzlementDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // extortionBlackmailDataGridViewTextBoxColumn2
+            // 
+            this.extortionBlackmailDataGridViewTextBoxColumn2.DataPropertyName = "Extortion_Blackmail";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.HeaderText = "Extortion_Blackmail";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.extortionBlackmailDataGridViewTextBoxColumn2.Name = "extortionBlackmailDataGridViewTextBoxColumn2";
+            this.extortionBlackmailDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // fraudOffensesDataGridViewTextBoxColumn2
+            // 
+            this.fraudOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Fraud_Offenses";
+            this.fraudOffensesDataGridViewTextBoxColumn2.HeaderText = "Fraud_Offenses";
+            this.fraudOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.fraudOffensesDataGridViewTextBoxColumn2.Name = "fraudOffensesDataGridViewTextBoxColumn2";
+            this.fraudOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // larcenyTheftOffensesDataGridViewTextBoxColumn2
+            // 
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Larceny_Theft_Offenses";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.HeaderText = "Larceny_Theft_Offenses";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.Name = "larcenyTheftOffensesDataGridViewTextBoxColumn2";
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // motorVehicleTheftDataGridViewTextBoxColumn2
+            // 
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.DataPropertyName = "Motor_Vehicle_Theft";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.HeaderText = "Motor_Vehicle_Theft";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.Name = "motorVehicleTheftDataGridViewTextBoxColumn2";
+            this.motorVehicleTheftDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // robberyDataGridViewTextBoxColumn2
+            // 
+            this.robberyDataGridViewTextBoxColumn2.DataPropertyName = "Robbery";
+            this.robberyDataGridViewTextBoxColumn2.HeaderText = "Robbery";
+            this.robberyDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.robberyDataGridViewTextBoxColumn2.Name = "robberyDataGridViewTextBoxColumn2";
+            this.robberyDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // stolenPropertyOffensesDataGridViewTextBoxColumn2
+            // 
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.DataPropertyName = "Stolen_Property_Offenses";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.HeaderText = "Stolen_Property_Offenses";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.Name = "stolenPropertyOffensesDataGridViewTextBoxColumn2";
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // percentagesDataGridViewTextBoxColumn2
+            // 
+            this.percentagesDataGridViewTextBoxColumn2.DataPropertyName = "Percentages";
+            this.percentagesDataGridViewTextBoxColumn2.HeaderText = "Percentages";
+            this.percentagesDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.percentagesDataGridViewTextBoxColumn2.Name = "percentagesDataGridViewTextBoxColumn2";
+            this.percentagesDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3
+            // 
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3.DataMember = "Crimes_Against_Property_Offenses_Offense_Category_by_State_2020";
+            this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource3.DataSource = this.barGraphDataSet;
+            // 
+            // chart8
+            // 
+            this.chart8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            chartArea4.Name = "ChartArea1";
+            this.chart8.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart8.Legends.Add(legend4);
+            this.chart8.Location = new System.Drawing.Point(304, 217);
+            this.chart8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart8.Name = "chart8";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart8.Series.Add(series4);
+            this.chart8.Size = new System.Drawing.Size(400, 186);
+            this.chart8.TabIndex = 12;
+            this.chart8.Text = "chart8";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stateDataGridViewTextBoxColumn4,
+            this.numberofParticipatingAgenciesDataGridViewTextBoxColumn4,
+            this.populationCoveredDataGridViewTextBoxColumn4,
+            this.totalOffensesDataGridViewTextBoxColumn4,
+            this.arsonDataGridViewTextBoxColumn1,
+            this.briberyDataGridViewTextBoxColumn1,
+            this.burglaryBreakingEnteringDataGridViewTextBoxColumn1,
+            this.counterfeitingForgeryDataGridViewTextBoxColumn1,
+            this.destructionDamageVandalismDataGridViewTextBoxColumn1,
+            this.embezzlementDataGridViewTextBoxColumn1,
+            this.extortionBlackmailDataGridViewTextBoxColumn1,
+            this.fraudOffensesDataGridViewTextBoxColumn1,
+            this.larcenyTheftOffensesDataGridViewTextBoxColumn1,
+            this.motorVehicleTheftDataGridViewTextBoxColumn1,
+            this.robberyDataGridViewTextBoxColumn1,
+            this.stolenPropertyOffensesDataGridViewTextBoxColumn1});
+            this.dataGridView5.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource2;
+            this.dataGridView5.Location = new System.Drawing.Point(763, 203);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView5.TabIndex = 11;
+            // 
+            // stateDataGridViewTextBoxColumn4
+            // 
             this.stateDataGridViewTextBoxColumn4.DataPropertyName = "State";
             this.stateDataGridViewTextBoxColumn4.HeaderText = "State";
             this.stateDataGridViewTextBoxColumn4.MinimumWidth = 6;
@@ -1250,8 +1467,7 @@ namespace NewOrderDesign
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(717, 48);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(956, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 14);
             this.label8.TabIndex = 9;
@@ -1261,8 +1477,7 @@ namespace NewOrderDesign
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(695, 17);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(927, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 14);
             this.label7.TabIndex = 8;
@@ -1272,8 +1487,7 @@ namespace NewOrderDesign
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(629, 48);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(839, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 14);
             this.label6.TabIndex = 7;
@@ -1283,8 +1497,7 @@ namespace NewOrderDesign
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(627, 17);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(836, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 14);
             this.label5.TabIndex = 6;
@@ -1337,12 +1550,12 @@ namespace NewOrderDesign
             this.robberyDataGridViewTextBoxColumn,
             this.stolenPropertyOffensesDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.crimesAgainstPropertyOffensesOffenseCategorybyState2020BindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(572, 196);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(763, 241);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 4;
             // 
             // stateDataGridViewTextBoxColumn1
@@ -1486,8 +1699,7 @@ namespace NewOrderDesign
             // TotalCrimesAgainstPropertyStateTotal
             // 
             this.TotalCrimesAgainstPropertyStateTotal.AutoSize = true;
-            this.TotalCrimesAgainstPropertyStateTotal.Location = new System.Drawing.Point(128, 76);
-            this.TotalCrimesAgainstPropertyStateTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCrimesAgainstPropertyStateTotal.Location = new System.Drawing.Point(171, 94);
             this.TotalCrimesAgainstPropertyStateTotal.Name = "TotalCrimesAgainstPropertyStateTotal";
             this.TotalCrimesAgainstPropertyStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstPropertyStateTotal.TabIndex = 3;
@@ -1719,12 +1931,12 @@ namespace NewOrderDesign
             this.prostitutionOffensesDataGridViewTextBoxColumn1,
             this.weaponLawViolationsDataGridViewTextBoxColumn1});
             this.dataGridView6.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource1;
-            this.dataGridView6.Location = new System.Drawing.Point(562, 165);
-            this.dataGridView6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView6.Location = new System.Drawing.Point(749, 203);
+            this.dataGridView6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView6.Size = new System.Drawing.Size(240, 150);
             this.dataGridView6.TabIndex = 12;
             // 
             // stateDataGridViewTextBoxColumn5
@@ -1850,8 +2062,7 @@ namespace NewOrderDesign
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(713, 12);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(951, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 14);
             this.label11.TabIndex = 9;
@@ -1861,8 +2072,7 @@ namespace NewOrderDesign
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(650, 51);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(866, 63);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 14);
             this.label10.TabIndex = 8;
@@ -1873,8 +2083,7 @@ namespace NewOrderDesign
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(650, 12);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(867, 15);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 14);
             this.label9.TabIndex = 7;
@@ -1921,12 +2130,12 @@ namespace NewOrderDesign
             this.prostitutionOffensesDataGridViewTextBoxColumn,
             this.weaponLawViolationsDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.crimesAgainstSocietyOffensesOffenseCategorybyState2020BindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(562, 206);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Location = new System.Drawing.Point(749, 254);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(180, 122);
+            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
             this.dataGridView3.TabIndex = 5;
             // 
             // stateDataGridViewTextBoxColumn2
@@ -2022,8 +2231,7 @@ namespace NewOrderDesign
             // TotalCrimesAgainstSocietyStateTotal
             // 
             this.TotalCrimesAgainstSocietyStateTotal.AutoSize = true;
-            this.TotalCrimesAgainstSocietyStateTotal.Location = new System.Drawing.Point(128, 74);
-            this.TotalCrimesAgainstSocietyStateTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCrimesAgainstSocietyStateTotal.Location = new System.Drawing.Point(171, 91);
             this.TotalCrimesAgainstSocietyStateTotal.Name = "TotalCrimesAgainstSocietyStateTotal";
             this.TotalCrimesAgainstSocietyStateTotal.Size = new System.Drawing.Size(0, 14);
             this.TotalCrimesAgainstSocietyStateTotal.TabIndex = 4;
@@ -2210,10 +2418,10 @@ namespace NewOrderDesign
             // 
             // USStateInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
-            this.ClientSize = new System.Drawing.Size(802, 457);
+            this.ClientSize = new System.Drawing.Size(1069, 562);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.continueFBIStateView);
             this.Controls.Add(this.tabControl1);

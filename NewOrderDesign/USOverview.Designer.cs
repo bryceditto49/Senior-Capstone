@@ -259,6 +259,7 @@ namespace NewOrderDesign
             // 
             this.CrimesAgainstPersonsTab.BackgroundImage = global::NewOrderDesign.Properties.Resources.background1;
             this.CrimesAgainstPersonsTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CrimesAgainstPersonsTab.Controls.Add(this.label4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewchart1);
             this.CrimesAgainstPersonsTab.Controls.Add(this.chart4);
             this.CrimesAgainstPersonsTab.Controls.Add(this.overviewdataGridView3);
@@ -998,5 +999,8 @@ namespace NewOrderDesign
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
