@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Forms.DataVisualization.Charting;
-using LiveCharts;
 
 namespace NewOrderDesign
 {
@@ -44,7 +43,7 @@ namespace NewOrderDesign
         public static Int32 overviewtotalweapon;
 
 
-        public USOverview()
+    public USOverview()
         {
             InitializeComponent();
             PersonsComboBox.SelectedItem = "Assault";
@@ -52,7 +51,6 @@ namespace NewOrderDesign
             SocietyComboBox.SelectedItem = "Animal Cruelty";
         }
 
-        Func<ChartPoint, string> label = chartpoint => String.Format("{0} ({1:P)", chartpoint.Y, chartpoint.Participation);
         private void USOverview_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fBIDataSet5.Crimes_Against_Society_Offenses_Offense_Category_by_State_2020' table. You can move, or remove it, as needed.
@@ -247,6 +245,8 @@ namespace NewOrderDesign
 
                         overviewchart1.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart1.Series[0].Points.DataBindXY(x,y);
+                        overviewchart1.Palette = ChartColorPalette.None;
+                        overviewchart1.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.LightPink , Color.LightSalmon, Color.LightSeaGreen , Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum , Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle};
                         overviewchart1.Legends[0].Enabled = true;
                         overviewchart1.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart1.Series[0]["PieLabelStyle"] = "Disabled";
@@ -410,6 +410,8 @@ namespace NewOrderDesign
 
                         overviewchart2.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart2.Series[0].Points.DataBindXY(x, y);
+                        overviewchart2.Palette = ChartColorPalette.None;
+                        overviewchart2.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.LightPink, Color.LightSalmon, Color.LightSeaGreen, Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum, Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle };
                         overviewchart2.Legends[0].Enabled = true;
                         overviewchart2.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart2.Series[0]["PieLabelStyle"] = "Disabled";
@@ -739,6 +741,8 @@ namespace NewOrderDesign
 
                         overviewchart3.Series[0].ChartType = SeriesChartType.Pie;
                         overviewchart3.Series[0].Points.DataBindXY(x, y);
+                        overviewchart3.Palette = ChartColorPalette.None;
+                        overviewchart3.PaletteCustomColors = new Color[] { Color.Aqua, Color.Black, Color.Blue, Color.BlueViolet, Color.Brown, Color.BurlyWood, Color.CadetBlue, Color.Chartreuse, Color.Chocolate, Color.Coral, Color.IndianRed, Color.Indigo, Color.Khaki, Color.LightBlue, Color.LightCoral, Color.LightGray, Color.LightGreen, Color.LightPink, Color.LightSalmon, Color.LightSeaGreen, Color.OliveDrab, Color.Tomato, Color.Yellow, Color.Turquoise, Color.DarkSalmon, Color.Crimson, Color.DarkBlue, Color.DarkCyan, Color.DarkGoldenrod, Color.DarkGray, Color.Orchid, Color.PaleGoldenrod, Color.PaleGreen, Color.PaleTurquoise, Color.PaleVioletRed, Color.PapayaWhip, Color.PeachPuff, Color.Peru, Color.Pink, Color.Plum, Color.Sienna, Color.Silver, Color.SkyBlue, Color.SlateBlue, Color.SlateGray, Color.SandyBrown, Color.SpringGreen, Color.SteelBlue, Color.Tan, Color.Teal, Color.Thistle };
                         overviewchart3.Legends[0].Enabled = true;
                         overviewchart3.ChartAreas[0].Area3DStyle.Enable3D = false;
                         overviewchart3.Series[0]["PieLabelStyle"] = "Disabled";
