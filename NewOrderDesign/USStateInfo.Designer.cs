@@ -864,7 +864,7 @@ namespace NewOrderDesign
             this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstPropertyTab.Margin = new System.Windows.Forms.Padding(4);
             this.CrimesAgainstPropertyTab.Name = "CrimesAgainstPropertyTab";
-            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(1025, 408);
+            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(1029, 423);
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
@@ -1614,7 +1614,7 @@ namespace NewOrderDesign
             this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstSocietyTab.Margin = new System.Windows.Forms.Padding(4);
             this.CrimesAgainstSocietyTab.Name = "CrimesAgainstSocietyTab";
-            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(1025, 408);
+            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(1029, 423);
             this.CrimesAgainstSocietyTab.TabIndex = 3;
             this.CrimesAgainstSocietyTab.Text = "Crimes Against Society";
             this.CrimesAgainstSocietyTab.UseVisualStyleBackColor = true;
@@ -2220,7 +2220,6 @@ namespace NewOrderDesign
             this.Controls.Add(this.FormHeading);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1087, 609);
             this.MinimumSize = new System.Drawing.Size(1087, 609);
             this.Name = "USStateInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

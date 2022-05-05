@@ -455,7 +455,7 @@ namespace NewOrderDesign
             this.CrimesAgainstPropertyTab.Controls.Add(this.PropertyComboBox);
             this.CrimesAgainstPropertyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstPropertyTab.Name = "CrimesAgainstPropertyTab";
-            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(896, 353);
+            this.CrimesAgainstPropertyTab.Size = new System.Drawing.Size(1029, 423);
             this.CrimesAgainstPropertyTab.TabIndex = 2;
             this.CrimesAgainstPropertyTab.Text = "Crimes Against Property";
             this.CrimesAgainstPropertyTab.UseVisualStyleBackColor = true;
@@ -689,7 +689,7 @@ namespace NewOrderDesign
             this.CrimesAgainstSocietyTab.Controls.Add(this.SocietyComboBox);
             this.CrimesAgainstSocietyTab.Location = new System.Drawing.Point(4, 26);
             this.CrimesAgainstSocietyTab.Name = "CrimesAgainstSocietyTab";
-            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(896, 353);
+            this.CrimesAgainstSocietyTab.Size = new System.Drawing.Size(1029, 423);
             this.CrimesAgainstSocietyTab.TabIndex = 3;
             this.CrimesAgainstSocietyTab.Text = "Crimes Against Society";
             this.CrimesAgainstSocietyTab.UseVisualStyleBackColor = true;
@@ -893,7 +893,6 @@ namespace NewOrderDesign
             this.Controls.Add(this.FormHeading);
             this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1087, 609);
             this.MinimumSize = new System.Drawing.Size(1087, 609);
             this.Name = "USOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
