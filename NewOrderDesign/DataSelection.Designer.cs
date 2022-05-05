@@ -88,10 +88,10 @@ namespace NewOrderDesign
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(192, 22);
+            this.textBox1.Location = new System.Drawing.Point(75, 10);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 91);
+            this.textBox1.Size = new System.Drawing.Size(208, 30);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Welcome";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -111,15 +111,16 @@ namespace NewOrderDesign
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 62);
+            this.label1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 27);
+            this.label1.Size = new System.Drawing.Size(171, 27);
             this.label1.TabIndex = 10;
             this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // DataSelection
             // 
