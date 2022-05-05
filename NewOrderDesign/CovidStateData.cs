@@ -243,29 +243,6 @@ namespace NewOrderDesign
             }
         }
 
-        private void Export_button_Click(object sender, EventArgs e)
-        {
-            using(SaveFileDialog sfd=new SaveFileDialog() { Filter = "Excel|*.xlsx"})
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        using(XLWorkbook workbook = new XLWorkbook())
-                        {
-                            workbook.Worksheets.Add(this.covidDataDataSet1.states.CopyToDataTable(), "states");
-                            workbook.SaveAs(sfd.FileName);
-                        }
-                        MessageBox.Show("You have successfully exported your data table", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                       MessageBox.Show(ex.Message,"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             //set the connection string

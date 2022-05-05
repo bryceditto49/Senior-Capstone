@@ -115,6 +115,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CovidDataDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CovidDataDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CovidDataDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CovidDataDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CovidDataNYTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -352,6 +362,28 @@
     </None>
     <None Include="CovidDataDataSet5.xss">
       <DependentUpon>CovidDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet6.xsc">
+      <DependentUpon>CovidDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet6.xss">
+      <DependentUpon>CovidDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet7.xsc">
+      <DependentUpon>CovidDataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CovidDataDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CovidDataDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CovidDataDataSet7.xss">
+      <DependentUpon>CovidDataDataSet7.xsd</DependentUpon>
     </None>
     <None Include="CovidDataNYTDataSet.xsc">
       <DependentUpon>CovidDataNYTDataSet.xsd</DependentUpon>

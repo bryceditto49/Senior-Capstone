@@ -39,6 +39,8 @@ namespace NewOrderDesign
             this.statenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedcasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deathsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statesBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.covidDataDataSet5 = new NewOrderDesign.CovidDataDataSet5();
             this.statesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.covidDataDataSet4 = new NewOrderDesign.CovidDataDataSet4();
             this.statesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -59,13 +61,12 @@ namespace NewOrderDesign
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.Export_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.covidDataDataSet5 = new NewOrderDesign.CovidDataDataSet5();
-            this.statesBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.statesTableAdapter5 = new NewOrderDesign.CovidDataDataSet5TableAdapters.statesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).BeginInit();
@@ -76,8 +77,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -174,6 +173,16 @@ namespace NewOrderDesign
             this.deathsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.deathsDataGridViewTextBoxColumn.Name = "deathsDataGridViewTextBoxColumn";
             this.deathsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statesBindingSource5
+            // 
+            this.statesBindingSource5.DataMember = "states";
+            this.statesBindingSource5.DataSource = this.covidDataDataSet5;
+            // 
+            // covidDataDataSet5
+            // 
+            this.covidDataDataSet5.DataSetName = "CovidDataDataSet5";
+            this.covidDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // statesBindingSource4
             // 
@@ -303,17 +312,6 @@ namespace NewOrderDesign
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // Export_button
-            // 
-            this.Export_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Export_button.Location = new System.Drawing.Point(951, 430);
-            this.Export_button.Name = "Export_button";
-            this.Export_button.Size = new System.Drawing.Size(100, 38);
-            this.Export_button.TabIndex = 14;
-            this.Export_button.Text = "Export\r\n";
-            this.Export_button.UseVisualStyleBackColor = true;
-            this.Export_button.Click += new System.EventHandler(this.Export_button_Click);
-            // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -337,16 +335,6 @@ namespace NewOrderDesign
             this.textBox2.Text = "Leave search bar empty to show all states, correct spelling of state name require" +
     "d";
             // 
-            // covidDataDataSet5
-            // 
-            this.covidDataDataSet5.DataSetName = "CovidDataDataSet5";
-            this.covidDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // statesBindingSource5
-            // 
-            this.statesBindingSource5.DataMember = "states";
-            this.statesBindingSource5.DataSource = this.covidDataDataSet5;
-            // 
             // statesTableAdapter5
             // 
             this.statesTableAdapter5.ClearBeforeFill = true;
@@ -361,7 +349,6 @@ namespace NewOrderDesign
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.Export_button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -379,6 +366,8 @@ namespace NewOrderDesign
             this.Text = "TravelSite";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource3)).EndInit();
@@ -389,8 +378,6 @@ namespace NewOrderDesign
             ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.covidDataNYTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covidDataDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statesBindingSource5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,7 +413,6 @@ namespace NewOrderDesign
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button Export_button;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
         private CovidDataDataSet5 covidDataDataSet5;
